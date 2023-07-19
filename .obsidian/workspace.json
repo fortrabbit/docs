@@ -1,0 +1,188 @@
+{
+  "main": {
+    "id": "6629d5383607ad7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa0098411e63faa1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f34b22504ca9f5a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "50fe76194b6a2eae",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c6fc69809c088e1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dc7d1d3dc4bb10c9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fb596611be91f303",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "14b74f2a1be1a47c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "879cfbd665390588",
+    "type": "split",
+    "children": [
+      {
+        "id": "749f9a1c64b545a3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4a48d159456d75c1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a06f7408d03e6f32",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4334bce2eea3af5c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9e01c7d596210910",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "dc7d1d3dc4bb10c9",
+  "lastOpenFiles": [
+    "templates/default.md",
+    "README.md",
+    "4.development/git/git-deployment.md",
+    "6.troubleshooting/404-errors.md",
+    "6.troubleshooting/500-errors.md",
+    "2.getting-started/terminology.md",
+    "1.introduction/index.md",
+    "Untitled.md",
+    "6.troubleshooting/website-down.md",
+    "6.troubleshooting/index.md",
+    "6.troubleshooting/504-errors.md",
+    "6.troubleshooting/503-errors.md",
+    "6.troubleshooting/502-errors.md",
+    "6.troubleshooting/403-errors.md",
+    "6.troubleshooting",
+    "5.platform/concepts/3.environment/workers.md",
+    "5.platform/concepts/3.environment/waf-rules.md",
+    "5.platform/concepts/3.environment/settings.md",
+    "5.platform/concepts/3.environment/php.md",
+    "5.platform/concepts/3.environment/mysql.md",
+    "5.platform/concepts/3.environment/metrics.md",
+    "5.platform/concepts/3.environment/logs.md",
+    "5.platform/concepts/3.environment/index.md",
+    "5.platform/concepts/3.environment/git.md",
+    "5.platform/concepts/3.environment/firewall.md",
+    "5.platform/concepts/3.environment/env-vars.md",
+    "5.platform/concepts/3.environment/crons.md",
+    "5.platform/concepts/3.environment",
+    "5.platform/integrations",
+    "5.platform/details",
+    "5.platform/concepts",
+    "5.platform/billing",
+    "5.platform/collaboration",
+    "5.platform",
+    "4.development/mysql/_dir.yml",
+    "4.development/htaccess/5.more"
+  ]
+}
