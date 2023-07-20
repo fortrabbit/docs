@@ -1,4 +1,7 @@
 {
   "promptDelete": false,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "newFileLocation": "current"
 }

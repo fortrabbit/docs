@@ -64,7 +64,7 @@ After the guided web setup is done, you will be automatically redirected to the 
 
 ### Set up environment configuration
 
-We recommend having your WordPress application running in at least two installations: [Locally](/local-development) and with your fortrabbit App here. Using [environment variables](env-vars) in your `wp-config.php` instead of hard coded credentials allows you to leverage [environment detection](local-development#toc-environment-detection): run your WordPress locally and remotely without code or configuration file changes.
+We recommend having your WordPress application running in at least two installations: [Locally](/local-development) and with your fortrabbit App here. Using [environment variables](env-vars.md) in your `wp-config.php` instead of hard coded credentials allows you to leverage [environment detection](2.local-development.md#toc-environment-detection): run your WordPress locally and remotely without code or configuration file changes.
 
 Check if the file `wp-config.php` exists at the top level of your local WordPress installation. If it doesn't: create it by making a copy of `wp-config-sample.php` and naming it `wp-config.php`. Now open `wp-config.php` in an editor and modify it using [environment variables](/env-vars) as follows:
 
@@ -208,7 +208,7 @@ You cannot use [sendmail](quirks#toc-mailing) on fortrabbit but you can use a SM
 
 Some users might be too lazy to configure the mail delivery for WordPress via SMTP (see above). Now imagine they also forget the password for `wp-admin`. Without email, the forgot password function from WordPress will not work. The user can still set a new password in the database. Like so:
 
-1. Connect to the remote MySQL database from local (see [here how](mysql#toc-access-mysql-database-from-local))
+1. Connect to the remote MySQL database from local (see [here how](mysql.md#toc-access-mysql-database-from-local))
 2. Browse the MySQL tables to find the right admin user
 3. Choose a safe password
 4. Convert that password to a MD5 hash

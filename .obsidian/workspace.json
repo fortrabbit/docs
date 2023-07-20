@@ -4,16 +4,42 @@
     "type": "split",
     "children": [
       {
-        "id": "fa0098411e63faa1",
+        "id": "c69f19caa26196fa",
         "type": "tabs",
         "children": [
           {
-            "id": "f34b22504ca9f5a9",
+            "id": "5098499387082df6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "4.code-access/3.ssh.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bf4a4004e280f1be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4.code-access/index.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4b2941ecc60b0c31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "templates/Default help article template.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "4.code-access/3.ssh.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "4.code-access/3.ssh.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "4.code-access/3.ssh.md"
               }
             }
           }
@@ -148,41 +174,41 @@
   },
   "active": "dc7d1d3dc4bb10c9",
   "lastOpenFiles": [
-    "templates/default.md",
-    "README.md",
-    "4.development/git/git-deployment.md",
-    "6.troubleshooting/404-errors.md",
-    "6.troubleshooting/500-errors.md",
-    "2.getting-started/terminology.md",
-    "1.introduction/index.md",
-    "Untitled.md",
-    "6.troubleshooting/website-down.md",
-    "6.troubleshooting/index.md",
-    "6.troubleshooting/504-errors.md",
-    "6.troubleshooting/503-errors.md",
-    "6.troubleshooting/502-errors.md",
-    "6.troubleshooting/403-errors.md",
-    "6.troubleshooting",
-    "5.platform/concepts/3.environment/workers.md",
-    "5.platform/concepts/3.environment/waf-rules.md",
-    "5.platform/concepts/3.environment/settings.md",
-    "5.platform/concepts/3.environment/php.md",
-    "5.platform/concepts/3.environment/mysql.md",
-    "5.platform/concepts/3.environment/metrics.md",
-    "5.platform/concepts/3.environment/logs.md",
-    "5.platform/concepts/3.environment/index.md",
-    "5.platform/concepts/3.environment/git.md",
-    "5.platform/concepts/3.environment/firewall.md",
-    "5.platform/concepts/3.environment/env-vars.md",
-    "5.platform/concepts/3.environment/crons.md",
-    "5.platform/concepts/3.environment",
-    "5.platform/integrations",
-    "5.platform/details",
-    "5.platform/concepts",
-    "5.platform/billing",
-    "5.platform/collaboration",
-    "5.platform",
-    "4.development/mysql/_dir.yml",
-    "4.development/htaccess/5.more"
+    "4.code-access/4.sftp.md",
+    "4.code-access/3.ssh.md",
+    "4.code-access/mysql-access.md",
+    "4.code-access/14.ssh-keys.md",
+    "4.code-access/1.intro.md",
+    "4.code-access/2.deployment-methods.md",
+    "4.troubleshooting/access/2.sftp-troubleshooting.md",
+    "4.troubleshooting/access/2.ssh-troubleshooting.md",
+    "4.troubleshooting/access/3.git-troubleshooting.md",
+    "4.code-access/git/2.git-deployment.md",
+    "4.code-access/index.md",
+    "4.code-access/git/1.intro.md",
+    "4.code-access/rsync.md",
+    "templates/Default help article template.md",
+    "templates/Folder index template.md",
+    "4.code-access/sftp/Untitled.md",
+    "4.code-access/git/index.md",
+    "4.troubleshooting/http-errors/403.md",
+    "4.troubleshooting/index.md",
+    "4.troubleshooting/access",
+    "4.troubleshooting/http-errors/index.md",
+    "4.troubleshooting/http-errors/404.md",
+    "4.troubleshooting/http-errors/500.md",
+    "4.troubleshooting/http-errors/502.md",
+    "4.troubleshooting/http-errors/503.md",
+    "4.troubleshooting/http-errors/504.md",
+    "4.troubleshooting/http-errors",
+    "2.support/1.intro.md",
+    "4.code-access",
+    "2.support",
+    "4.troubleshooting",
+    "8.platform/concepts/3.environment",
+    "8.platform/integrations",
+    "8.platform/details",
+    "8.platform/concepts",
+    "8.platform/billing"
   ]
 }

@@ -26,7 +26,7 @@ This guide here follows the easiest path to get Craft up and running on fortrabb
 
 ## Get ready
 
-In any case, you should have [local development environment](local-development) and [Craft installed](/craft-install-local) and [configured](/craft-setup); also see our [get ready guide](/get-ready).
+In any case, you should have [local development environment](2.local-development.md) and [Craft installed](/craft-install-local) and [configured](/craft-setup); also see our [get ready guide](/get-ready).
 
 ## Upload Craft with SFTP
 
@@ -44,7 +44,7 @@ Doesn't work as expected? Keep calm and read on:
 
 ### File permissions
 
-You might need to change file permissions. See [here for more](403-errors#toc-file-permissions).
+You might need to change file permissions. See [here for more](403.md#toc-file-permissions).
 
 ### Hidden .htaccess file
 

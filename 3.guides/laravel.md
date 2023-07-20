@@ -267,7 +267,7 @@ $ ssh {{ssh-user}}@deploy.{{region}}.frbit.com php artisan migrate --force
 
 That's great for small use-cases and tinkering, but if your App handles very many queue messages you should consider [Redis](#toc-working-with-redis).
 
-Once you've decided the queue you want to use, just open `config/queue.php` and set `default` to either `redis`, `database`, `sqs` - or even better: set the `QUEUE_CONNECTION` [environment variable](env-vars) accordingly in the Dashboard.
+Once you've decided the queue you want to use, just open `config/queue.php` and set `default` to either `redis`, `database`, `sqs` - or even better: set the `QUEUE_CONNECTION` [environment variable](env-vars.md) accordingly in the Dashboard.
 
 To run `php artisan queue:work` in the background, spin up a new [Worker](worker) and define the artisan command as a **Nonstop Job**.
 
@@ -445,7 +445,7 @@ return [
 ];
 ```
 
-If you plan on using Redis as a cache, then open `config/cache.php` and set the `CACHE_DRIVER` [environment variable](env-vars) to `redis` in the Dashboard).
+If you plan on using Redis as a cache, then open `config/cache.php` and set the `CACHE_DRIVER` [environment variable](env-vars.md) to `redis` in the Dashboard).
 
 ## Setting up Memcache (Professional Stack)
 
@@ -519,7 +519,7 @@ return [
 ];
 ```
 
-In addition, set the `CACHE_DRIVER` [environment variable](env-vars) so that you can use `memcached` in your production App on fortrabbit. If you don't have memcached on your local machine, set the driver to `file` or `database` via `.env`.
+In addition, set the `CACHE_DRIVER` [environment variable](env-vars.md) so that you can use `memcached` in your production App on fortrabbit. If you don't have memcached on your local machine, set the driver to `file` or `database` via `.env`.
 
 ## Scheduling
 
