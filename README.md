@@ -21,7 +21,7 @@ excerpt:
 lead:        fortrabbit is not your grandma web host.
 navigation:  
 sidebar:     craft
-status:      todo
+prevNext:    true
 ---
 ```
 

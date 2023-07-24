@@ -4,46 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c69f19caa26196fa",
+        "id": "0924383b9b204d30",
         "type": "tabs",
         "children": [
           {
-            "id": "5098499387082df6",
+            "id": "421daadb7aaf01c5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4.code-access/3.ssh.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bf4a4004e280f1be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4.code-access/index.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4b2941ecc60b0c31",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "templates/Default help article template.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -75,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "self fun",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -112,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4.code-access/3.ssh.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4.code-access/3.ssh.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "4.code-access/3.ssh.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -169,46 +134,47 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
     }
   },
-  "active": "dc7d1d3dc4bb10c9",
+  "active": "421daadb7aaf01c5",
   "lastOpenFiles": [
-    "4.code-access/4.sftp.md",
-    "4.code-access/3.ssh.md",
-    "4.code-access/mysql-access.md",
-    "4.code-access/14.ssh-keys.md",
-    "4.code-access/1.intro.md",
-    "4.code-access/2.deployment-methods.md",
-    "4.troubleshooting/access/2.sftp-troubleshooting.md",
-    "4.troubleshooting/access/2.ssh-troubleshooting.md",
-    "4.troubleshooting/access/3.git-troubleshooting.md",
-    "4.code-access/git/2.git-deployment.md",
-    "4.code-access/index.md",
-    "4.code-access/git/1.intro.md",
-    "4.code-access/rsync.md",
-    "templates/Default help article template.md",
-    "templates/Folder index template.md",
-    "4.code-access/sftp/Untitled.md",
-    "4.code-access/git/index.md",
-    "4.troubleshooting/http-errors/403.md",
-    "4.troubleshooting/index.md",
-    "4.troubleshooting/access",
-    "4.troubleshooting/http-errors/index.md",
-    "4.troubleshooting/http-errors/404.md",
-    "4.troubleshooting/http-errors/500.md",
-    "4.troubleshooting/http-errors/502.md",
-    "4.troubleshooting/http-errors/503.md",
-    "4.troubleshooting/http-errors/504.md",
-    "4.troubleshooting/http-errors",
-    "2.support/1.intro.md",
-    "4.code-access",
-    "2.support",
-    "4.troubleshooting",
-    "8.platform/concepts/3.environment",
-    "8.platform/integrations",
-    "8.platform/details",
-    "8.platform/concepts",
-    "8.platform/billing"
+    "3.guides/10.others.md",
+    "3.guides/8.symfony.md",
+    "3.guides/7.grav.md",
+    "3.guides/6.kirby.md",
+    "13.integrations/index.md",
+    "13.integrations/_dir.yml",
+    "12.platform/_dir.yml",
+    "13.integrations/sendgrid.md",
+    "13.integrations/new-relic.md",
+    "13.integrations/cloudflare.md",
+    "13.integrations/blackfire.md",
+    "13.integrations/bitbucket.md",
+    "13.integrations",
+    "integrations/sendgrid.md",
+    "integrations/new-relic.md",
+    "integrations/cloudflare.md",
+    "integrations/blackfire.md",
+    "integrations/bitbucket.md",
+    "integrations",
+    "12.platform/redis.md",
+    "12.platform/software-presets.md",
+    "12.platform/live-code-examples.md",
+    "12.platform/directories.md",
+    "12.platform/free-trial.md",
+    "4.deployment/3.git.md",
+    "11.troubleshooting/3.git.md",
+    "10.dev-tips/http-errors/index.md",
+    "10.dev-tips/http-errors/_dir.yml",
+    "10.dev-tips/http-errors/504.md",
+    "10.dev-tips/http-errors/503.md",
+    "10.dev-tips/http-errors/502.md",
+    "10.dev-tips/http-errors",
+    "11.troubleshooting/http-errors/_dir.yml",
+    "11.troubleshooting/http-errors",
+    "7.domains/_dir.yml",
+    "7.domains"
   ]
 }

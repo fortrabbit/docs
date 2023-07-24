@@ -1,0 +1,63 @@
+---
+
+reviewed:         2022-05-25
+title:            Craft CMS SFTP upload
+naviTitle:        SFTP upload
+excerpt:          Lame legacy deployment mode
+lead:             Are you more "web designer" and less a "web developer"? Learn how to upload Craft in a classical way using SFTP. 
+sidebar:          craft
+
+keywords:
+  - craft
+  - craftCMS
+  - setup
+  - install-guide
+
+---
+
+This guide here follows the easiest path to get Craft up and running on fortrabbit.  We also have a more advanced workflow to [deploy Craft with Git](/craft-deploy-git).
+
+## Get ready
+
+In any case, you should have [local development environment](2.local-development.md) and [Craft installed](/craft-install-local) and [configured](/craft-setup); also see our [get ready guide](/get-ready).
+
+## Upload Craft with SFTP
+
+This workflow is simple and common. Everybody and his dog knows [how to use SFTP](/sftp). Check the [downloading an archive file manually](https://docs.craftcms.com/v3/installation.html#downloading-an-archive-file-manually) workflow from the official Craft docs as your detailed reference.
+
+On the fortrabbit side: Just grab your personal SFTP login credentials from the Dashboard. Use any SFTP client. Upload all contents of your local Craft folder into the `htdocs` folder of your fortrabbit App. And you are good to go.
+
+## Troubleshooting
+
+Doesn't work as expected? Keep calm and read on:
+
+### Connection error
+
+**Got an error while connecting with SFTP?** Doing this for the first time on fortrabbit? Please see the [access troubleshooting](/access-methods#toc-troubleshooting) and [SFTP](/sftp) guides to get started and all set up.
+
+### File permissions
+
+You might need to change file permissions. See [here for more](403.md#toc-file-permissions).
+
+### Hidden .htaccess file
+
+Don't forget to upload the hidden `web/.htaccess` file. This file is required. You cannot see that file in your Desktop, unless you set the option to show hidden files. The file browser from your SFTP client most likely will show that file by default. Leave the other hidden `.env` file — which is only for your local development — at home.
+
+### Service unavailable error
+
+If you don't follow our suggestion to have a local development environment and just upload the latest `.zip` package from Craft via SFTP, it will not work out of the box and will throw a service unavailable error. Within the logs you can see that the error was caused in line 515 in `Application.php`. If you look at the lines before in that file you can see that a condition for the installer to run is that it has to be in "dev" mode.
+
+**To fix that**: Change the ENV var in the Dashboard from: `ENVIRONMENT=production` to `ENVIRONMENT=dev`
+
+Run the installer like so (the base URL will still throw an error):  
+[{{app-name}}.frb.io/admin/](https://{{app-name}}.frb.io/admin/)
+
+You can then change the ENV variable back to `production`. We actually assume that the Craft you have on fortrabbit is the production version, and that all development is done locally. Please read our guides!
+
+## Consider
+
+A downside of the SFTP workflow is that you have to keep both of your Craft environments in sync manually. Our [manage assets with rsync](/craft-assets-uni) is optional but still helpful for SFTP users.
+
+## Next steps
+
+Your Craft fortrabbit App should already connect to the fortrabbit database, thanks to the [Software Preset](/app#toc-software-preset). Next, [configure Craft](/craft-setup) to complete your setup.
