@@ -1,18 +1,15 @@
 ---
-
 reviewed:         2022-02-03
 title:            CloudFlare
 excerpt:          Integrate the advanced DNS service
 lead:             Learn how to use CloudFlare with fortrabbit.
 sidebar:          cloudflare
-
-keywords:
-   - advanced
-   - CDN
-   - ddos
-   - ssl
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'advanced, CDN, ddos, ssl'
 ---
+
 ## About Cloudflare
 
 Cloudflare is a "magical" multi-purpose website performance & security service, which works at the DNS level. It can be used as a kind of Content Delivery Network and as a protection against Denial Of Service Attacks. It is also a popular choice to get SSL certificates for your domain without the costs and hassle.

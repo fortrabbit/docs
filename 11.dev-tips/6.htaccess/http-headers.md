@@ -1,18 +1,12 @@
 ---
-
 reviewed:    2022-03-31 12:00:47
 title:       HTTP headers
 excerpt:     Cache control and CORS
 lead:        'HTTP headers are part of an Hyper Text Transfer Protocol request and response. HTTP headers are defining the operating parameters of an HTTP transaction. Use htaccess to modify these.'
-
-keywords:
-  - HTTP Auth
-  - Apache config
-  - apache2.conf
-  - php
-  - ssi
-  - gzip
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'CORS, headers Apache config, apache2.conf, php, ssi, gzip'
 ---
 
 ## Cache-Control

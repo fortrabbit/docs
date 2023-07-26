@@ -1,19 +1,12 @@
 ---
-
 reviewed:    2023-07-09 15:17:36
 title:       Composer private repos
 excerpt:     How to access private composer repositories during git deployment
 lead:        Learn two different ways how to access private composer repositories during git deployment
-
-keywords:
-- Composer
-- Git
-- ssh
-- GitHub
-- Bitbucket
-- auth.json
-- oAuth
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'Composer, Git, ssh, GitHub, Bitbucket, auth.json, oAuth'
 ---
 
 Modern PHP app development utilizes [Composer](3.composer.md) as a dependency manager. There are many great open source packages [out there](http://packagist.org). But your company code is probably not intended to be released to the public or you rely on a third party package which is not open source. That's when you use private Composer repositories.

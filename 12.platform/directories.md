@@ -1,26 +1,16 @@
 ---
-
 reviewed:      2023-02-15 08:20:15
-
 title:         Directories
 lead:          Learn about your environment directory structure on fortrabbit.
 excerpt:       Default folder structure
 hideExamples:  yes
-
-keywords:
-  - create directory
-  - create
-  - folder
-  - directory
-  - directories
-  - linux
-  - unix
-  - web root
-  - doc root
-  - document root
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'folder, directory, directories, linux, unix, web root, doc root, document root' 
 ---
-```nohighlight
+
+```plain
 bin
 dev
 etc

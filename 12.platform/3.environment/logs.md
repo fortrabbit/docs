@@ -1,14 +1,12 @@
 ---
-
 reviewed:   2023-07-10 10:50:32
 title:      Logs
 excerpt:    Creating a password protected area
 lead:       Accessing logs of your App is essential for developing. Here is how you can do it on fortrabbit.
-
-keywords:
-  - Logging
-  - Logs
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'Logging, Logs, error logs, php logs, '
 ---
 
 You are developing your App and see the "white screen of death". You are getting a 5xx error and don't know why. You write debug logs and need them to trace a problem.

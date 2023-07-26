@@ -1,15 +1,12 @@
 ---
-
 reviewed:      2023-02-15 08:20:46
 title:         Reducing hosting costs
 excerpt:       Review and remove
 lead:          "We want you to succeed with your online business here on fortrabbit. This article helps you reviewing and cutting down your cloud costs."
-keywords:
-  - server costs
-  - IT costs
-  - cloud costs
-
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'server costs, IT costs, cloud costs'
 ---
 
 ## Use the costs overview

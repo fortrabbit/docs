@@ -1,19 +1,12 @@
 ---
-
-reviewed:      2023-07-11 09:13:17
-title:         MySQL
-excerpt:       Plans, settings, metrics
-lead:          How the common database on fortrabbit is implemented.
-
-keywords:
-   - mysql
-   - database
-   - innodb
-   - myisam
-   - heidisql
-   - tunnel
-   - nosql
-
+reviewed: 2023-07-11 09:13:17
+title:    MySQL
+excerpt:  Plans, settings, metrics
+lead:     How the common database on fortrabbit is implemented.
+head:
+  meta:
+    - name: 'keywords'
+      content: 'mysql, database, innodb, myisam, heidisql, tunnel, nosql'
 ---
 
 ## About MySQL

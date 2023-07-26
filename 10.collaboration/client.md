@@ -1,17 +1,12 @@
 ---
-
 reviewed:      2022-04-10 07:53:51
 title:         Client
 excerpt:       How to work with a non-techie client
 lead:          "fortrabbit is designed for people like us — web devs. But in real live the 'client' is sometimes not a techie at all. So there is a way to invite and work with a passive business owner — your clients."
-keywords:
-  - collaboration
-  - administrator
-  - platform design
-  - freelancer
-  - client
-  - web-developer
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'collaboration, administrator, platform design, freelancer, client, web-developer'
 ---
 
 ## Use cases
@@ -19,7 +14,7 @@ keywords:
 * You are a freelancer building websites › invite your clients
 * You are a developer in a digital agency › invite your boss
 
-```nohighlight
+```plain
   ┌───────────────────────────────────────────────────┐
   │Before: You have a trial App                       │
   │                                                   │
@@ -66,7 +61,6 @@ keywords:
 Your client will not be bothered with setting up SSH keys, nor will hir receive geeky newsletters. The client can login to the Dashboard to manage billing and team.
 
 ### The 35 seconds video
-
 
 ### Invitation details
 

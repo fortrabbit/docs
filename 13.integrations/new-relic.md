@@ -1,10 +1,9 @@
 ---
-
 reviewed:         2023-02-15 08:20:55
 title:            New Relic
 excerpt:          Enterprise PHP profiling
 lead:             Learn how to combine the popular software analysis tool with fortrabbit.
-
+sidebar:          newrelic
 ---
 
 ## About New Relic
@@ -17,7 +16,7 @@ fortrabbit has a Bring-Your-Own-License integration with New Relic. That basical
 
 ### Over at New Relic
 
-1. Sign up or log in to [New Relic](http://newrelic.com/).
+1. Sign up or log in to [New Relic](https://newrelic.com/).
 1. Add a new application
 1. Copy the license key
 

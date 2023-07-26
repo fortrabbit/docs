@@ -13,7 +13,7 @@ Simple truth: websites are better when faster. Don't let your users suffer when 
 
 ## Solution
 
-```nohighlight
+```plain
 |||||||||||                        ┌───────┐      ┌────────┐
 │         │                        │       │      │        │
 │ ◎    ◎  │                        │       │      │        │

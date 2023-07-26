@@ -1,14 +1,14 @@
 ---
-
 reviewed:      2023-06-02 10:31:13
 title:         PHP
 excerpt:       Book, configure, understand concepts
 lead:          PHP is — as you are probably aware — a popular web programming language. It's also the core Component here on fortrabbit. See here how to use and scale PHP.
-
-keywords:
-  - app-design
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'app-design'
 ---
+
 <!-- TODO: merge (maybe partly) with scaling-pro article (to similar topics) -->
 
 ## Booking PHP

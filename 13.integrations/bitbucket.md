@@ -1,20 +1,13 @@
 ---
-
-reviewed:       2023-07-09 16:10:49
-title:          Bitbucket
-excerpt:        Integrate the git from Atlassian
-lead:           Learn how to integrate the second most popular Git-as-a-service provider with your fortrabbit workflow.
-sidebar:        github
-
-keywords:
-  - addon
-  - add-on
-  - integrations
-  - integration
-  - API
-  - CI
-  - cloud
-
+reviewed:  2023-07-09 16:10:49
+title:     Bitbucket
+excerpt:   Integrate the git from Atlassian
+lead:      Learn how to integrate the second most popular Git-as-a-service provider with your fortrabbit workflow.
+sidebar:   bitbucket
+head:
+  meta:
+    - name: 'keywords'
+      content: 'addon, add-on, integrations, integration, API, CI, cloud'
 ---
 
 [Bitbucket](https://bitbucket.org?utm_source=fortrabbit) is a Git hosting service that offers advanced Git work-flows, such as 'pull requests'. It offers private repos in a free plan and is a popular choice in combination with fortrabbit. It also offers [paid plans](https://bitbucket.org/product/pricing) for "growing teams".

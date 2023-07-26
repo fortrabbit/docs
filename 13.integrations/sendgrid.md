@@ -1,13 +1,8 @@
 ---
-
 reviewed:         2023-02-15 08:20:37
 title:            SendGrid
 excerpt:          Transactional mail integration
 section:          Extending_fortrabbit
-
-keywords:
-  - "transactional mail"
-
 ---
 ## About SendGrid
 

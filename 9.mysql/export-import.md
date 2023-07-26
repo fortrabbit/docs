@@ -1,27 +1,13 @@
 ---
-
 reviewed:      2022-03-21 17:27:46
 title:         MySQL database export & import
 naviTitle:     Export & import
 excerpt:       How to export and import a MySQL database
 lead:          To set up an application environment, you may need to migrate existing data. The following examples deal with exporting and importing MySQL data from one environment (local machine) to another (fortrabbit). The same steps apply in reverse, but the to and from login details need to be swapped.
-
-keywords:
-   - localhost
-   - mysqldump
-   - dump
-   - mysql
-   - database
-   - innodb
-   - myisam
-   - phpmyadmin
-   - heidisql
-   - workbench
-   - sequel-pro
-   - sequel
-   - tunnel
-   - nosql
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'localhost, mysqldump, dump, mysql, database, innodb, myisam, phpmyadmin, heidisql, workbench, sequel-pro, sequel, tunnel, nosql'
 ---
 
 ## Get ready

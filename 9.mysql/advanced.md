@@ -4,22 +4,10 @@ title:         MySQL advanced topics
 naviTitle:     Advanced topics
 excerpt:       More sophisticated topics.
 lead:          More MySQL related topics.
-
-keywords:
-   - localhost
-   - mysqldump
-   - dump
-   - mysql
-   - database
-   - innodb
-   - myisam
-   - phpmyadmin
-   - heidisql
-   - workbench
-   - sequel-pro
-   - sequel
-   - tunnel
-   - nosql
+head:
+  meta:
+    - name: 'keywords'
+      content: 'localhost, mysqldump, dump, mysql, database, innodb, myisam, phpmyadmin, heidisql, workbench, sequel-pro, sequel, tunnel, nosql'
 ---
 
 ## Different time zone

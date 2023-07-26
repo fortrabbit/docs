@@ -1,18 +1,12 @@
 ---
-
 reviewed:   2023-02-15 08:21:30
 title:      ENV vars
 excerpt:    Using environment variables on fortrabbit
 lead:       ENV vars help to create and shape the environment of where the code runs. It's a good modern practice.
-
-keywords:
-  - ENV vars
-  - Environment variables
-  - php
-  - beginner
-  - phpdotenv
-  - dotenv
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'ENV vars, Environment variables, php, beginner, phpdotenv, dotenv'
 ---
 
 ## Problem

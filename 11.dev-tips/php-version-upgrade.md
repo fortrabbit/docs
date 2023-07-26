@@ -1,16 +1,12 @@
 ---
-
 reviewed:      2022-10-12 10:46:36
 title:         PHP version upgrade
 excerpt:       Switch to a new version with confidence
 lead:          This PHP upgrade path guides you through best practices upgrading the PHP version for your fortrabbit App.
-keywords:
-  - app-design
-  - deprecation
-  - migration
-  - EOl
-  - mcrypt
-
+head:
+  meta:
+    - name: 'keywords'
+      content: 'app-design, deprecation, migration, EOl, mcrypt'
 ---
 
 ## Prerequisites

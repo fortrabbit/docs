@@ -1,13 +1,11 @@
 ---
-
 reviewed:      2023-07-22
 title:         HTTPS issues
-excerpt:       What you may want to know about our SSL/TLS errors.
+excerpt:       Debugging SSL/TLS errors
 lead:          Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
-
 ---
 
-We provide free Let's Encrypt certificates for all domains. 
+We provide free Let's Encrypt certificates for all domains.
 
 ### Review certificates in the browser
 
