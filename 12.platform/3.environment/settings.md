@@ -26,7 +26,7 @@ While creating your (second) fortrabbit App you will be asked for an **App Name*
 
 Please note, that it is not possible to change the App Name later on for technical reasons — cool URLs don't change, anyways.
 
-This is not a bummer. Remember that the App Name is only an identifier to login and for development. The [App URL](#toc-app-url) is front-facing, but you'll only use it to develop, you will route your [own domains](/domains) later on anyways.
+This is not a bummer. Remember that the App Name is only an identifier to login and for development. The [App URL](#app-url) is front-facing, but you'll only use it to develop, you will route your [own domains](/domains) later on anyways.
 
 To identify the App within the Dashboard, you can also use App notes.
 
@@ -62,7 +62,7 @@ You can however set the root path afterwards at any given time by visiting the a
 
 #### Individual root paths per domain
 
-In some cases, you might want to route individual domains to different folders. Please mind that there are limited use cases for this and don't use one App to host multiple websites (see [above](/app#toc-one-website-per-app) as well).
+In some cases, you might want to route individual domains to different folders. Please mind that there are limited use cases for this and don't use one App to host multiple websites (see [above](/app#one-website-per-app) as well).
 
 When visiting the root path settings you will find a switch to change from a global root path for all domains to custom root paths for each domain. Bear in mind that you can also use `.htaccess` files with `RewriteRule` directives to handle different domains differently.
 
@@ -157,7 +157,7 @@ You can always delete Apps you own or administer. To delete an App, visit the Ap
 
 ### Recovering deleted Apps
 
-Deleting Apps & Accounts is "mostly" (see [below](#toc-recovering-backups)) FINAL here and can't be reversed. We delete as much as possible when a client requests so or when we have to because payments have bounced too often. We do so for privacy and security reasons. We believe that it should be your right to be forgotten. Imagine that we take your data as a hostage until you pay us. So in most cases that's actually good. Also read [how we handle bounced payments](/bounced-payments).
+Deleting Apps & Accounts is "mostly" (see [below](#recovering-backups)) FINAL here and can't be reversed. We delete as much as possible when a client requests so or when we have to because payments have bounced too often. We do so for privacy and security reasons. We believe that it should be your right to be forgotten. Imagine that we take your data as a hostage until you pay us. So in most cases that's actually good. Also read [how we handle bounced payments](/bounced-payments).
 
 ### Recovering Backups
 
@@ -179,7 +179,7 @@ Depending on your workflow, that might cause some strange results on Universal A
 
 As you hopefully know, we originally assume that you have a local development process, and that this is your "master" and all changes are done there first. Also, that the core code is always deployed with Git, and thus Git is up-to-date and that a re-deploy should therefore do no harm. So when you have been following our guides, everything should work for you.
 
-The strangeness occurs when you are mixing workflows and are going offroad: For example, you have initially deployed by Git and then later updated your CMS directly on the App itself from the Control Panel in the browser. Using the [overwrite but not delete strategy](deployment-methods-uni#toc-git-push-overwrite-but-not-deletes) the old files from Git get re-deployed. This can get messy, when the files are outdated but the database is already migrated to the newer version. We also saw this overwriting session and cache files (which might be excluded from Git anyways).
+The strangeness occurs when you are mixing workflows and are going offroad: For example, you have initially deployed by Git and then later updated your CMS directly on the App itself from the Control Panel in the browser. Using the [overwrite but not delete strategy](deployment-methods-uni#git-push-overwrite-but-not-deletes) the old files from Git get re-deployed. This can get messy, when the files are outdated but the database is already migrated to the newer version. We also saw this overwriting session and cache files (which might be excluded from Git anyways).
 
 The fix for that depends on your specific situation. In many cases we suggest to update your installation and bring that in order and then re-deploy the changes via Git one more time.
 

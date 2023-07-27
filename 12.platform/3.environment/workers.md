@@ -91,7 +91,7 @@ The interval timing is guaranteed, the exact time of execution is randomized. Fo
 
 ### Metrics
 
-There are two ways to monitor your worker: statistics (see [below](#toc-job-statistics)) via SSH and metrics within the App metrics overview in the Dashboard. The last will inform you about:
+There are two ways to monitor your worker: statistics (see [below](#job-statistics)) via SSH and metrics within the App metrics overview in the Dashboard. The last will inform you about:
 
 **Swap Usage**: The amount of swapped memory your Worker jobs are causing. Any swap greater than zero indicates that you should upgrade your Worker component
 

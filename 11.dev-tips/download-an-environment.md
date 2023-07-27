@@ -40,7 +40,7 @@ Beside the code base which you might have received via Git, take care to grab as
 
 #### Receiving assets and other files
 
-Remember Git works in [one direction only here](/deployment-methods-uni#toc-git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
+Remember Git works in [one direction only here](/deployment-methods-uni#git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
 
 - Login by SFTP and just download what is required - [see here](/sftp)
 - Login by SSH, zip the files and question and them from a public URL - [see here](/ssh-uni)

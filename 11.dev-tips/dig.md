@@ -38,4 +38,4 @@ help-frbit.eu2.frbit.net.  20    IN  A       52.48.51.144
 $ dig +short {{app-name}}.frb.io 
 ```
 
-See also [here](/quirks#toc-outgoing-ip-address) for why you'll probably need your App's IP.
+See also [here](/quirks#outgoing-ip-address) for why you'll probably need your App's IP.

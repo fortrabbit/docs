@@ -55,7 +55,7 @@ mysql -h127.0.0.1 -P13306 -u{{app-name}} -p {{app-name}} < dump.sql
 **Import to fortrabbit**:
 
 1. Open Workbench
-2. Create a new connection as [shown above](#toc-mysql-via-gui)
+2. Create a new connection as [shown above](#mysql-via-gui)
 3. Open the newly created remote database connection
 4. Choose: Server > Data Import from the menu
 5. Choose your previously generated dump file

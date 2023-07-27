@@ -31,7 +31,7 @@ Runtime data means all kinds of data, which is created by your App at runtime. U
 
 ## Migrate your databases
 
-If your App is using a MySQL database, you will need to migrate the database data as well. [Export the MySQL database from your old hosting and import](mysql.md#toc-export-amp-import) it to the fortrabbit database.
+If your App is using a MySQL database, you will need to migrate the database data as well. [Export the MySQL database from your old hosting and import](mysql.md#export-amp-import) it to the fortrabbit database.
 
 ## Sending e-mails
 
@@ -45,7 +45,7 @@ All fortrabbit Apps can be accessed using a free HTTPS App URL (`https://{{app-n
 
 Now that you have migrated your code, runtime data and database - and all the other stuff you needed - you are ready to push the button.
 
-Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](domains#toc-route-a-custom-domain). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
+Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](domains#route-a-custom-domain). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
 
 ## Migrating away from fortrabbit
 

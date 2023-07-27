@@ -27,7 +27,7 @@ This can happen, if the domain is brand new and the cert is not yet installed. I
 
 This can also happen, if your domain is not routed to fortrabbit (yet). Only domains that are already routed to fortrabbit will receive a Let's Encrypt cert. Please see the domain settings in the Dashboard.
 
-There are also other edge cases when this can happen, for example, if your domain [has set CAA records](/https#toc-secure-your-domain-with-a-caa-record) with DNS.
+There are also other edge cases when this can happen, for example, if your domain [has set CAA records](/https#secure-your-domain-with-a-caa-record) with DNS.
 
 ### The browser shows a mixed content warning
 

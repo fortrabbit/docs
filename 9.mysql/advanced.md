@@ -51,7 +51,7 @@ $pdo = new PDO(
 
 ## Resetting the MySQL password
 
-Instead of [looking up the existing MySQL password](#toc-obtain-the-mysql-password), you can also reset it. Do so in the Dashboard > Your App > Access > MySQL. Please mind that this comes with consequences:
+Instead of [looking up the existing MySQL password](#obtain-the-mysql-password), you can also reset it. Do so in the Dashboard > Your App > Access > MySQL. Please mind that this comes with consequences:
 
 * Unless your are using [env vars](env-vars.md): You'll need to change the password in your App's configuration files
 * Your coworkers need to change their password in their locally configured remote access tools (see below)

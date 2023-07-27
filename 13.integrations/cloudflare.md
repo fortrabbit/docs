@@ -74,7 +74,7 @@ While free SSL has become a commodity, there are other reasons to use Cloudflare
 
 ### Using Cloudflare for naked domains
 
-So, we tried to convince you that [a naked domain (a domain without www or other prefix) is not necessary at all](/domains#toc-naked-domains), but you still want a naked domain to be your primary domain instead of just a forward with fortrabbit: Cloudflare can help you here as well. You need to set two things in the Cloudflare Dashboard to make this work:
+So, we tried to convince you that [a naked domain (a domain without www or other prefix) is not necessary at all](/domains#naked-domains), but you still want a naked domain to be your primary domain instead of just a forward with fortrabbit: Cloudflare can help you here as well. You need to set two things in the Cloudflare Dashboard to make this work:
 
 1. **DNS Settings**: choose CNAME and enter the naked domain as Name and the App URL as value (this is only possible with Cloudflare black magic)
 2. **Page Rules**: `*.domainname.com/*` forward to `https://domainname.com` using 301 (that will catch someone entering your domain with www)

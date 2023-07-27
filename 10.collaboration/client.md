@@ -70,7 +70,7 @@ Client invitation also works with Apps in trial mode. This is super handy, as yo
 
 As an Admin you will see the App your client in the Dashboard. You can of course access code and change settings and scaling in the Dashboard. You can also book additional Apps on behalf of the clients Company and invite others.
 
-* [Learn what you can do as an Admin](/company-collaboration#toc-admin)
+* [Learn what you can do as an Admin](/company-collaboration#admin)
 * [Read the client invite feature announcement](https://blog.fortrabbit.com/invite-the-client)
 
 ## Quitting the client relation

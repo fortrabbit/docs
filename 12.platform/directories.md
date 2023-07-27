@@ -29,7 +29,7 @@ When you login with [SFTP](/sftp-uni) or [SSH](ssh-uni) to your [Universal App](
 
 ### htdocs
 
-The default web root (aka document root) of your App. Directory that forms the main directory tree visible from the web. You can change the [routing point](domains#toc-root-path), to any folder below the `htdocs` directory. The [Git deployment](3.guides/2.craft/more/git.md) syncs to the `htdocs` folder as well.
+The default web root (aka document root) of your App. Directory that forms the main directory tree visible from the web. You can change the [routing point](domains#root-path), to any folder below the `htdocs` directory. The [Git deployment](3.guides/2.craft/more/git.md) syncs to the `htdocs` folder as well.
 
 The `htdocs` folder is also your "login folder", i.e. the folder you are in when logging in via SSH/SFTP. The whole path looks something like this: `/srv/app/{{app-name}}/htdocs/admin`.
 

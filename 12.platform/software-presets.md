@@ -15,7 +15,7 @@ The software preset will **not install** the selected software on your behalf. T
 
 * Set a matching PHP version
 * Enable/disable PHP extensions — for best performance
-* Set a [root path](#toc-root-path) — to serve the App from the right location
+* Set a [root path](#root-path) — to serve the App from the right location
 * Populate [ENV vars](env-vars.md) — to connect to the database automatically
 
 So, the software preset saves you some work and helps to prevent errors.

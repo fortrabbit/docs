@@ -21,7 +21,7 @@ You'll find a PHP settings page with your App in the Dashboard. Here you can swi
 
 ## Scaling
 
-When first creating your App, you might or might not know how much memory (PHP memory limit) your application will need. The amount determines the [vertical scaling](scaling-pro#toc-vertical-scaling) plan you should choose.
+When first creating your App, you might or might not know how much memory (PHP memory limit) your application will need. The amount determines the [vertical scaling](scaling-pro#vertical-scaling) plan you should choose.
 
 We offer three main PHP scaling plan sizes: **PHP s, PHP m, PHP l**. Which of those fits your App best depends on the technology stack (framework, CMS …) and on the code you write. For the latter you should read our [application design](app-design) guide on how you can get the most performance out of your application.
 

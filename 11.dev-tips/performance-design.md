@@ -105,11 +105,11 @@ External services like Google Web Fonts or Typekit can help optimize font size a
 
 ### Caching assets
 
-Don't serve the same content to the same client twice. Cache it with their browser. While modern browsers are already doing great work here. You can further control the caching by altering the Cache-Control with the HTTP headers. See the [.htaccess section](/htaccess#toc-cache-control) for an example.
+Don't serve the same content to the same client twice. Cache it with their browser. While modern browsers are already doing great work here. You can further control the caching by altering the Cache-Control with the HTTP headers. See the [.htaccess section](/htaccess#cache-control) for an example.
 
 ### GZIP compression with Apache
 
-GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented on the web server — Apache in our case otherwise nginx — as a module. You can [enable and configure](quirks#toc-php-compression) it in your `.htaccess` file (see also our [htaccess article](/htaccess)).
+GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented on the web server — Apache in our case otherwise nginx — as a module. You can [enable and configure](quirks#php-compression) it in your `.htaccess` file (see also our [htaccess article](/htaccess)).
 
 It works like this: after all the HTML is rendered on the server side it gets compressed and send to the browser in such a minified format. The browser then has to decompress everything on the fly.
 
@@ -133,7 +133,7 @@ OK, your App is running, but it "feels slow", you want it faster? Here are the m
 
 ### External data sources
 
-If you are integrating external services, for example for any kind of REST API, make sure it does not slow you down. Set proper but very small timeouts and log response times once they exceed the threshold. Also make sure you [decouple](#toc-decouple-but-loosely) them.
+If you are integrating external services, for example for any kind of REST API, make sure it does not slow you down. Set proper but very small timeouts and log response times once they exceed the threshold. Also make sure you [decouple](#decouple-but-loosely) them.
 
 ### Database performance
 
