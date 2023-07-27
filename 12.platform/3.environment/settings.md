@@ -139,7 +139,7 @@ You can, of course, upgrade from your trial to a paid plan at any time. You can 
 
 When the trial is finally over, the trial App will be deleted. That might sound cruel, but please consider that we will not keep your data hostage until you pay us.
 
-Good news is: We will inform you by e-mail before it happens and you can start a new trial right away, after your current trial ended. In many cases you can easily re-deploy your code base to the new App: When deploying with [Git](2.git.md), you just change the remote and push again. When using our CMS/framework presets with predefined [ENV vars](env-vars.md) database access will work without code modification.
+Good news is: We will inform you by e-mail before it happens and you can start a new trial right away, after your current trial ended. In many cases you can easily re-deploy your code base to the new App: When deploying with [Git](2.git.md), you just change the remote and push again. When using our CMS/framework presets with predefined [ENV vars](../env-vars.md) database access will work without code modification.
 
 ## Restarting an App
 

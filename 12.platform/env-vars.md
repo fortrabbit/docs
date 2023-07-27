@@ -55,7 +55,7 @@ Now, how should your fortrabbit App know about it's ENV vars? Some users think t
 
 Recap: The PHP application itself will just query the ENV vars. A library just helps to populate the ENV vars into the code base, but only when they are not set already.
 
-The fortrabbit [Software Preset](/app#software-preset) is where the magic happens. While creating an App on fortrabbit, you'll choose your desired CMS or framework. This selection will configure the server ENV vars in ways, the software can work with it. For example, for Laravel and Craft, the ENV var `DB_PASSWORD` will be populated with the password of the Apps database. For Symfony we provide a ready to use DSN in the `DATABASE_URL` variable. Here is the link to the settings of your App:
+The fortrabbit [Software Preset](//12.platform/software-presets.md) is where the magic happens. While creating an App on fortrabbit, you'll choose your desired CMS or framework. This selection will configure the server ENV vars in ways, the software can work with it. For example, for Laravel and Craft, the ENV var `DB_PASSWORD` will be populated with the password of the Apps database. For Symfony we provide a ready to use DSN in the `DATABASE_URL` variable. Here is the link to the settings of your App:
 
 * [dashboard.fortrabbit.com/apps/{{app-name}}/vars](https://dashboard.fortrabbit.com/apps/{{app-name}}/vars)
 
@@ -63,7 +63,7 @@ So, most likely, your fortrabbit App will work out of the box. As a bonus you ev
 
 ### Adding and editing ENV vars on fortrabbit
 
-You can add ENV vars of your App in the [Dashboard](dashboard) > Your App > Settings > ENV Vars. The input supports the dotenv file format and allows you to create or update multiple variables at once.
+You can add ENV vars of your App in the [Dashboard](3.environment/dashboard) > Your App > Settings > ENV Vars. The input supports the dotenv file format and allows you to create or update multiple variables at once.
 
 <div markdown="1" data-user="known">
 [Add ENV vars to your App: **{{app-name}}**](https://dashboard.fortrabbit.com/apps/{{app-name}}/vars)
@@ -98,11 +98,11 @@ Those are the ones you add yourself in the Dashboard.
 Generic ENV vars cannot be overwritten by you. They are always available.
 
 * `APP_NAME` contains the name of your App
-* `APP_SECRETS` contains the path to a JSON encoded file containing [App Secrets](secrets)
+* `APP_SECRETS` contains the path to a JSON encoded file containing [App Secrets](3.environment/secrets)
 
 #### Software Preset ENV vars
 
-Depending on what you have selected in the [Software Preset](/app#software-preset) when creating your App, additional ENV vars will be seeded for you. For example: When choosing Laravel the ENV var `APP_KEY` with a random, 32 char long string will created (among others). You can replace or remove those Stack ENV vars after App creation the same way you can replace or remove your manually created ENV vars.
+Depending on what you have selected in the [Software Preset](//12.platform/software-presets.md) when creating your App, additional ENV vars will be seeded for you. For example: When choosing Laravel the ENV var `APP_KEY` with a random, 32 char long string will created (among others). You can replace or remove those Stack ENV vars after App creation the same way you can replace or remove your manually created ENV vars.
 
 #### Dynamic ENV vars
 
@@ -155,7 +155,7 @@ ANOTHER_VAR=something
 
 ### ENV vars vs security
 
-Storing credentials (passwords, secrets, ..) in environment variables is not without risk. They can be exposed, due to programming errors or oversights, for example when you forget to remove the `phpinfo()` from production. Please read an [in-depth discussion in our Blog](how-to-keep-a-secret). We offer a convenient solution for this problem with our [App secrets](secrets).
+Storing credentials (passwords, secrets, ..) in environment variables is not without risk. They can be exposed, due to programming errors or oversights, for example when you forget to remove the `phpinfo()` from production. Please read an [in-depth discussion in our Blog](3.environment/how-to-keep-a-secret). We offer a convenient solution for this problem with our [App secrets](3.environment/secrets).
 
 ### ENV var validation
 
