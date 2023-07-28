@@ -47,7 +47,7 @@ $ ssh {{ssh-user}}@log.{{region}}.frbit.com tail source:worker
 # --------------- PRO TIPS ---------------
 
 # Use the mono flag to force monochrome output, if your console displays colors incorrectly:
-$ ssh {{ssh-user}}@log.{{region}}.frbit.com tail {{app-name}} mono
+$ ssh {{ssh-user}}@log.{{region}}.frbit.com tail {{app-env-name}} mono
 
 # Use multiple source:name parameters at once:
 $ ssh {{ssh-user}}@log.{{region}}.frbit.com tail source:web_stderr source:web_php_error

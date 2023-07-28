@@ -51,7 +51,7 @@ How other users are testing mails: some clients are using mailtrap to test mails
 You can register your App to accept requests from any external domain you route to fortrabbit — see also [the domain article](/domains). To set up a domain routing, you add a new custom domain within your App's domain settings in the Dashboard.
 
 <div markdown="1" data-user="known">
-* [Set up a new domain for your App {{app-name}}](https://dashboard.fortrabbit.com/apps/{{app-name}}/domains/new)
+* [Set up a new domain for your App {{app-env-name}}](https://dashboard.fortrabbit.com/apps/{{app-env-name}}/domains/new)
 </div>
 
 #### Root path
@@ -78,7 +78,7 @@ Each App comes with "**Usage metrics**": Those show you the current status of th
 
 Some Apps also come with "**Performance metrics**": Those show you how fast your App is and where you might need to improve. Performance metrics are: requests, PHP response time, traffic, errors and other useful stuff. You can set different time intervals to monitor performance over time.
 
-- <https://dashboard.fortrabbit.com/apps/{{app-name}}/metrics>
+- <https://dashboard.fortrabbit.com/apps/{{app-env-name}}/metrics>
 
 ### App team
 

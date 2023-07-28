@@ -19,7 +19,7 @@ Crons are available as an optional [component](/platform/concepts/components).
 
 ## Usage
 
-You can configure your App's Cron Job in the Dashboard > {{app-name}} > Settings > Crons. To start a new cron job you'll need the set the following parameters:
+You can configure your App's Cron Job in the Dashboard > {{app-env-name}} > Settings > Crons. To start a new cron job you'll need the set the following parameters:
 
 ### Name
 

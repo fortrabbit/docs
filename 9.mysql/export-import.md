@@ -30,13 +30,13 @@ Next, open a tunnel and import the newly created dump file into your database. T
 open the tunnel in the first terminal
 
 ```bash
-ssh -N -L 13306:{{app-name}}.mysql.{{region}}.frbit.com:3306 {{ssh-user}}@tunnel.{{region}}.frbit.com
+ssh -N -L 13306:{{app-env-name}}.mysql.{{region}}.frbit.com:3306 {{ssh-user}}@tunnel.{{region}}.frbit.com
 ```
 
 open a new terminal and run the mysql import
 
 ```bash
-mysql -h127.0.0.1 -P13306 -u{{app-name}} -p {{app-name}} < dump.sql
+mysql -h127.0.0.1 -P13306 -u{{app-env-name}} -p {{app-env-name}} < dump.sql
 ```
 
 ## MySQL export import using MySQL Workbench (GUI)
@@ -71,13 +71,13 @@ You can export and import a large, single table with the following example:
 $ echo 'SELECT * FROM tablename;' | mysql database-name > tablename.sql
 
 # import everything via a tunnel to yourfortrabbit MySQL database
-$ mysql --local-infile=1 -h127.0.0.1 -P13306 -u{{app-name}} -p {{app-name}}
+$ mysql --local-infile=1 -h127.0.0.1 -P13306 -u{{app-env-name}} -p {{app-env-name}}
 
 # on the mysql shell
 $ mysql> LOAD DATA LOCAL INFILE '/path/to/tablename.sql' INTO TABLE tablename;
 ```
 
-**Note**: You will be asked to enter your App's database password. [Look it up in the Dashboard](https://dashboard.fortrabbit.com/apps/{{app-name}}#mysql).
+**Note**: You will be asked to enter your App's database password. [Look it up in the Dashboard](https://dashboard.fortrabbit.com/apps/{{app-env-name}}#mysql).
 
 ## Foreign keys
 

@@ -39,7 +39,7 @@ Simple `sendmail` won't work, see our [quirks article](/quirks#Mailing) on how t
 
 ## HTTPS (optional)
 
-All fortrabbit Apps can be accessed using a free HTTPS App URL (`https://{{app-name}}.frb.io`). Most Apps also offer free [HTTPS](/https) by Let's Encrypt for [custom domains](/domains).
+All fortrabbit Apps can be accessed using a free HTTPS App URL (`https://{{app-env-name}}.frb.io`). Most Apps also offer free [HTTPS](/https) by Let's Encrypt for [custom domains](/domains).
 
 ## Final switch: DNS
 

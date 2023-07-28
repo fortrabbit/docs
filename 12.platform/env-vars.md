@@ -57,7 +57,7 @@ Recap: The PHP application itself will just query the ENV vars. A library just h
 
 The fortrabbit [Software Preset](//12.platform/software-presets.md) is where the magic happens. While creating an App on fortrabbit, you'll choose your desired CMS or framework. This selection will configure the server ENV vars in ways, the software can work with it. For example, for Laravel and Craft, the ENV var `DB_PASSWORD` will be populated with the password of the Apps database. For Symfony we provide a ready to use DSN in the `DATABASE_URL` variable. Here is the link to the settings of your App:
 
-* [dashboard.fortrabbit.com/apps/{{app-name}}/vars](https://dashboard.fortrabbit.com/apps/{{app-name}}/vars)
+* [dashboard.fortrabbit.com/apps/{{app-env-name}}/vars](https://dashboard.fortrabbit.com/apps/{{app-env-name}}/vars)
 
 So, most likely, your fortrabbit App will work out of the box. As a bonus you even reset the database password without touching any configurations.
 
@@ -66,7 +66,7 @@ So, most likely, your fortrabbit App will work out of the box. As a bonus you ev
 You can add ENV vars of your App in the [Dashboard](3.environment/dashboard) > Your App > Settings > ENV Vars. The input supports the dotenv file format and allows you to create or update multiple variables at once.
 
 <div markdown="1" data-user="known">
-[Add ENV vars to your App: **{{app-name}}**](https://dashboard.fortrabbit.com/apps/{{app-name}}/vars)
+[Add ENV vars to your App: **{{app-env-name}}**](https://dashboard.fortrabbit.com/apps/{{app-env-name}}/vars)
 </div>
 
 The changes will be distributed after you save the page. It may take around 60 seconds, a re-deploy is not necessary. Some frameworks and CMS might cache the ENV vars, like Laravel, see [here](https://laravel.com/docs/5.6/configuration#configuration-caching).
@@ -106,7 +106,7 @@ Depending on what you have selected in the [Software Preset](//12.platform/softw
 
 #### Dynamic ENV vars
 
-Dynamic ENV vars become available if you have enabled *"Dynamic ENV vars"* in the Dashboard, which is the default for new Apps. They contain access details for services offered by fortrabbit. You can find them in the Dashboard > {{app-name}} > ENV vars on the right hand side. They will never overwrite existing, manually created ENV vars. This means: if you manually create an ENV var, we guarantee that we won't replace it's value by a dynamically generated ENV var.
+Dynamic ENV vars become available if you have enabled *"Dynamic ENV vars"* in the Dashboard, which is the default for new Apps. They contain access details for services offered by fortrabbit. You can find them in the Dashboard > {{app-env-name}} > ENV vars on the right hand side. They will never overwrite existing, manually created ENV vars. This means: if you manually create an ENV var, we guarantee that we won't replace it's value by a dynamically generated ENV var.
 
 Following a list of available dynamic ENV vars:
 

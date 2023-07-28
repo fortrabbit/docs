@@ -35,7 +35,7 @@ help-frbit.eu2.frbit.net.  20    IN  A       52.48.51.144
 
 ```bash
 # This will print out the IP of your App
-$ dig +short {{app-name}}.frb.io 
+$ dig +short {{app-env-name}}.frb.io 
 ```
 
 See also [here](/quirks#outgoing-ip-address) for why you'll probably need your App's IP.

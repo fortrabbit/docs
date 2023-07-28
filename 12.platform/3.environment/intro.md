@@ -7,7 +7,7 @@ lead:          Learn about environment concepts on fortrabbit and how to work wi
 
 ---
 
-An environment is a version of your website/project/application. While the Git repo is connected with the [app](/app), the environment can be mapped to a git branch. Git usage is optional but blends in nicely.
+An app environment is a version of your website/project/application. While the Git repo is connected with the [app](/app), the environment can be mapped to a git branch. Git usage is optional but blends in nicely.
 
 - An environment is a sub object of an app
 - Each app needs to have at least one environment
