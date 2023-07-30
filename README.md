@@ -18,7 +18,7 @@ The content get's rendered by Nuxt Content using Navigation to structure content
 
 Found a typo or an error? Do you want to add something about your framework or service of choice? Do you run a 3rd party service or an open source project that can be integrated with fortrabbit? You are more than welcome to contribute.
 
-### Sending pull requests
+### Pull requests
 
 Please find a good balance in the number of commits contained with a pull request. For small typos, just use one commit and one PR. For larger text changes, consider combining commits for readability.
 
@@ -36,6 +36,14 @@ sidebar:     craft
 showNext:    true
 ---
 ```
+
+## Code blocks
+
+Any code block should have a language defined. If applicable also define the file name like so ````php [info.php]`. The following languages are installed: 'apache', 'js', 'json', 'php', 'shell', 'sql', 'ts', 'twig', 'vue', 'yml'. Use apache for`.htaccess` & `.env` files. Use plain for anything else.
+
+Use `shell` not `bash` as the language label for terminal stuff.
+
+Indent with two spaces.
 
 ## Markdown editor setup
 
@@ -57,7 +65,7 @@ See the `.obsidian` folder.
 
 Use relative links to local files including the full folder and file name. Example:
 
-```markdown
+```md
 …if not see [here](/2.craft/1.setup.md).
 ```
 
@@ -79,7 +87,7 @@ There is currently no automatic deployment set up.
 
 Those values will be replaced by JS when users are logged in:
 
-```raw
+```plain
 SSH user: {{ssh-user}}
 Region:   {{region}}
 Your app: {{app-env-name}}
@@ -96,6 +104,12 @@ You can have certain parts in Markdown available only for Users who are logged i
 ```
 
 This parses markdown inside the DIV. With the data-user attribute it checks if the user is logged in. links to the Dashboard will be styled as buttons — use a verb to start them!
+
+## MDC components
+
+```md
+:DashboardLink{title="" route=""}
+```
 
 ## Writing conventions
 
