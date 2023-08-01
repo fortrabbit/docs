@@ -12,7 +12,7 @@ By default, outgoing traffic is limited on most non-standard ports for security 
 ## Opening certain ports for outgoing calls
 
 1. Login to the Dashboard
-2. Browse to your app / environment
+2. Browse to your app environment
 3. Go to settings
 5. Fill the form
 6. Wait until applied

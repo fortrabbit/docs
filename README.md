@@ -33,7 +33,7 @@ excerpt:
 lead:        fortrabbit is not your grandma web host.
 navigation:  
 sidebar:     craft
-showNext:    true
+nextNav:    true
 ---
 ```
 

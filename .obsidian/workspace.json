@@ -176,6 +176,7 @@
   },
   "active": "421daadb7aaf01c5",
   "lastOpenFiles": [
+    "4.statamic/_dir.yml",
     "10.components/5.backups.md",
     "13.platform/4.details/backup-recovery.md",
     "9.mysql/3.export-import.md",
@@ -205,7 +206,6 @@
     "12.platform/redis.md",
     "12.platform/software-presets.md",
     "12.platform/live-code-examples.md",
-    "12.platform/directories.md",
     "10.dev-tips/http-errors/_dir.yml",
     "10.dev-tips/http-errors",
     "11.troubleshooting/http-errors/_dir.yml",
