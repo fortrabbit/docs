@@ -176,6 +176,16 @@
   },
   "active": "421daadb7aaf01c5",
   "lastOpenFiles": [
+    "13.platform/4.details/redis.md",
+    "13.platform/4.details/workers copy.md",
+    "13.platform/4.details/workers.md",
+    "13.platform/2.objects/8.event-filter.md",
+    "13.platform/4.details/index.md",
+    "13.platform/2.objects/index.md",
+    "13.platform/2.objects/_dir.yml",
+    "13.platform/4.details/waf-rules.md",
+    "13.platform/4.details/firewall.md",
+    "13.platform/4.details/logs.md",
     "4.statamic/_dir.yml",
     "10.components/5.backups.md",
     "13.platform/4.details/backup-recovery.md",
@@ -197,20 +207,10 @@
     "13.integrations/blackfire.md",
     "13.integrations/bitbucket.md",
     "13.integrations",
-    "integrations/sendgrid.md",
-    "integrations/new-relic.md",
-    "integrations/cloudflare.md",
-    "integrations/blackfire.md",
-    "integrations/bitbucket.md",
     "integrations",
-    "12.platform/redis.md",
-    "12.platform/software-presets.md",
-    "12.platform/live-code-examples.md",
     "10.dev-tips/http-errors/_dir.yml",
     "10.dev-tips/http-errors",
     "11.troubleshooting/http-errors/_dir.yml",
-    "11.troubleshooting/http-errors",
-    "7.domains/_dir.yml",
-    "7.domains"
+    "11.troubleshooting/http-errors"
   ]
 }

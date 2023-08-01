@@ -15,7 +15,7 @@ You are developing your App and see the "white screen of death". You are getting
 
 Use the SSH logging in the terminal to get a live streams of all the logs for your Apps:
 
-```bash
+```shell
 # All sources tailed together:
 $ ssh {{ssh-user}}@log.{{region}}.frbit.com tail
 
@@ -55,9 +55,9 @@ $ ssh {{ssh-user}}@log.{{region}}.frbit.com tail source:web_stderr source:web_ph
 
 ## Historic log file access
 
-You can also access your log files, including older logs via [SSH](ssh-uni) or [SFTP](sftp-uni). They are usually stored in the folder `logs`, right above the `htdocs` folder. The `log` folder contains up to eight files, by type of log and time:
+You can also access your log files, including older logs via [SSH](../2.objects/3.environment/ssh-uni) or [SFTP](../2.objects/3.environment/sftp-uni). They are usually stored in the folder `logs`, right above the `htdocs` folder. The `log` folder contains up to eight files, by type of log and time:
 
-```bash
+```shell
 $ ls -1 ../logs
 
 # Apache access logs (current and historic)

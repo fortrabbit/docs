@@ -218,14 +218,14 @@ Create a secret key and use the `mcrypt_encrypt()` (PHP 5.6 only) function to en
 
 Start with generating a new key and storing this key somewhere in your app's bootstrap code:
 
-```bash
+```shell
 php encrypt.php genkey
 # QEbfdTYNH23YddNUa1srixRAwBVs2L5p
 ```
 
 Then you can encrypt the values of each environment variable, you want to store safely:
 
-```bash
+```shell
 php encrypt.php enc "The Key" "Some Value"
 # ENC:YToyOntp...t8CI7fQ==
 php encrypt.php enc "The Key" "Some Other Value"

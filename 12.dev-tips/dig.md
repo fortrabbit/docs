@@ -7,7 +7,7 @@ lead:          'Here is how to quickly query public DNS entries from the termina
 
 The `dig` command shows you if there are any CNAME entries and where they are pointing to. Here we look up `help.fortrabbit.com` and see a CNAME pointing to the App URL like `help-frbit.frb.io`.
 
-```bash
+```shell
 $ dig help.fortrabbit.com
 ;; Truncated, retrying in TCP mode.
 
@@ -33,7 +33,7 @@ help-frbit.eu2.frbit.net.  20    IN  A       52.48.51.144
 
 ### Dig an IP
 
-```bash
+```shell
 # This will print out the IP of your App
 $ dig +short {{app-env-name}}.frb.io 
 ```

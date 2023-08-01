@@ -1,9 +1,9 @@
 ---
-reviewed:         2023-02-15 08:19:56
-title:            Blackfire
-excerpt:          Integrate PHP profiling
-lead:             Blackfire is a popular PHP profiling tool from the makers of Symfony. Learn how to integrate it with fortrabbit.
-sidebar:          blackfire
+reviewed: 2023-02-15 08:19:56
+title:    Blackfire
+excerpt:  PHP profiling - identify and understand performance issues
+lead:     Blackfire is a popular PHP profiling tool from the makers of Symfony. Learn how to integrate it with fortrabbit.
+sidebar: blackfire
 head:
   meta:
     - name: 'keywords'

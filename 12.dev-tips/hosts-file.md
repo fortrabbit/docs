@@ -18,7 +18,7 @@ The hosts file is a text file (without file type ending). It can be found here:
 
 Your local file contains many entries: do not edit those. Just add a new line with the IP of your App and the domain you want to see routed there like so:
 
-```bash
+```shell
 # pattern (how it works)
 [your App's IP address] [your fully qualified domain name]
 

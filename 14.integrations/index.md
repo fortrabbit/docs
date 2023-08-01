@@ -1,6 +1,6 @@
 ---
 title:      Integrations
 excerpt:    Extend fortrabbit 
-lead:       H
+lead:       Extend fortrabbit with other services.
 navigation: false
 ---

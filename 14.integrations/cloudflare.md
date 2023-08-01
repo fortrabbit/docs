@@ -1,9 +1,9 @@
 ---
-reviewed:         2022-02-03
-title:            CloudFlare
-excerpt:          Integrate the advanced DNS service
-lead:             Learn how to use CloudFlare with fortrabbit.
-sidebar:          cloudflare
+reviewed: 2023-08-01 11:58:26
+title:    CloudFlare
+excerpt:  Advanced DNS service and DDOS protection
+lead:     Learn how to use CloudFlare with fortrabbit.
+sidebar:  cloudflare
 head:
   meta:
     - name: 'keywords'
@@ -30,8 +30,8 @@ In the following example you first register your domain with your domain provide
 2. Make sure to have added the domain in the fortrabbit Dashboard
 3. Route the domain using our instructions still with your old DNS provider
 4. Set up the domain with Cloudflare
-4. Cloudflare will scan and use the DNS settings already in place
-5. DONE
+5. Cloudflare will scan and use the DNS settings already in place
+6. DONE
 
 You might also start with a fresh domain from scratch within Cloudflare. Then Cloudflare will act as your DNS provider. Enter the DNS settings from the fortrabbit Dashboard with Cloudflare.
 
@@ -57,7 +57,7 @@ Cloudflare is a bit of black box, DNS-wise. When you visit a domain in the fortr
 
 ### Cloudflare SSL VS Let's Encrypt
 
-Many fortrabbit clients have used Cloudflare to get SSL (see our [HTTPS article](/https)) for their own custom domain, without the need to book and set up a custom cert here. Now, fortrabbit also offers free SSL certificates via (free and zero-config) Let's Encrypt. So if that is your aim, you might not need Cloudflare.
+Many fortrabbit clients have used Cloudflare to get SSL for their own custom domain, without the need to book and set up a custom cert here. Now, fortrabbit also offers free SSL certificates via (free and zero-config) Let's Encrypt. So if that is your aim, you might not need Cloudflare.
 
 ### Cloudflare and 2nd level subdomains
 
@@ -71,13 +71,6 @@ While free SSL has become a commodity, there are other reasons to use Cloudflare
 * CNAME Flattening for naked domains (naked domain directly with fortrabbit)
 * Domain analytics
 * …
-
-### Using Cloudflare for naked domains
-
-So, we tried to convince you that [a naked domain (a domain without www or other prefix) is not necessary at all](/domains#naked-domains), but you still want a naked domain to be your primary domain instead of just a forward with fortrabbit: Cloudflare can help you here as well. You need to set two things in the Cloudflare Dashboard to make this work:
-
-1. **DNS Settings**: choose CNAME and enter the naked domain as Name and the App URL as value (this is only possible with Cloudflare black magic)
-2. **Page Rules**: `*.domainname.com/*` forward to `https://domainname.com` using 301 (that will catch someone entering your domain with www)
 
 ### Prevent direct access
 
@@ -112,10 +105,8 @@ Allow from 2c0f:f248::/32
 Allow from 2a06:98c0::/29
 ```
 
-As the IP ranges might change from time to time, you should update them on a regular basis. [Here](https://www.cloudflare.com/ips/) you can find the current IP ranges. [This little script](https://gist.github.com/ostark/e9c577cd63a573b7417828d99da540e1) helps you to keep your whitelist up-to-date: you should ideally run it [during deployment](/deployment-file-v2).
+As the IP ranges might change from time to time, you should update them on a regular basis.
 
 ## Alternatives to Cloudflare
 
-Cloudflare is a magical package of different services all combined and streamlined in a single offering. Mind: by using Cloudflare, you make yourself dependent that this critical component (DNS/NS)) of your infrastructure is working correctly. It's another point of failure that makes your setup more complex. But overall, it's more likely that your website will stay up with Cloudflare enabled.
-
-Some of our clients prefer a separation of services. Instead of Cloudflare, they might use dedicated services for DNS/domain and CDN.
+Cloudflare is a magical package of different services all combined and streamlined in a single offering. Mind: by using Cloudflare, you make yourself dependent that this critical component (DNS/NS)) of your infrastructure is working correctly. It's another point of failure that makes your setup more complex. But overall, it's more likely that your website will stay up with Cloudflare enabled. Some of our clients prefer a separation of services. Instead of Cloudflare, they might use dedicated services for DNS/domain and CDN.
