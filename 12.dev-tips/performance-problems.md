@@ -38,6 +38,10 @@ The fortrabbit Dashboard offers a metric section (your hosting provider likely w
 
 Most slow websites can be backtraced to a PEBCAK - problem exists between chair and keyboard. In other words: It's the website developers responsibility to create code that ships fast. Most often it's oversight or missing experience and attention about [performance design](/11.dev-tips/performance-design.md).
 
+## Swap issues
+
+In some cases swap usage by the application is not possible. In these cases you might see dreaded white-pages and along going error messages in the log: "Allowed memory size of 1234.. bytes exhausted (tried to allocate 234 bytes)." This should be understand as an urgent reminder to scale up the [PHP plan](/10.components/1.php.md).
+
 ## What to do on PHP performance problems
 
 ### Use load testing

@@ -11,8 +11,39 @@
             "id": "421daadb7aaf01c5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "13.platform/4.details/backup-recovery.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ae7b73aef51d30bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13.platform/4.details/backup-recovery.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d99474dc113b3aeb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10.components/2.mysql.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "13.platform/4.details/backup-recovery.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "13.platform/4.details/backup-recovery.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,14 +151,17 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "13.platform/4.details/backup-recovery.md"
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -140,6 +176,13 @@
   },
   "active": "421daadb7aaf01c5",
   "lastOpenFiles": [
+    "10.components/5.backups.md",
+    "13.platform/4.details/backup-recovery.md",
+    "9.mysql/3.export-import.md",
+    "10.components/2.mysql.md",
+    "10.components/4.traffic.md",
+    "10.components/3.web-storage.md",
+    "10.components/1.php.md",
     "3.guides/10.others.md",
     "3.guides/8.symfony.md",
     "3.guides/7.grav.md",
@@ -163,14 +206,7 @@
     "12.platform/software-presets.md",
     "12.platform/live-code-examples.md",
     "12.platform/directories.md",
-    "12.platform/free-trial.md",
-    "4.deployment/3.git.md",
-    "11.troubleshooting/3.git.md",
-    "10.dev-tips/http-errors/index.md",
     "10.dev-tips/http-errors/_dir.yml",
-    "10.dev-tips/http-errors/504.md",
-    "10.dev-tips/http-errors/503.md",
-    "10.dev-tips/http-errors/502.md",
     "10.dev-tips/http-errors",
     "11.troubleshooting/http-errors/_dir.yml",
     "11.troubleshooting/http-errors",
