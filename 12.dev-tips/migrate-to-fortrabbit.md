@@ -12,7 +12,7 @@ This article covers the general basics as well as some deep links for moving you
 
 ## 1. Create your fortrabbit app
 
-Each website or web application is represented by an [app](/12.platform/2.objects/1.app.md) with at least one [environment](/12.platform/2.objects/2.environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
+Each website or web application is represented by an [app](/12.platform/2.objects/1.app.md) with at least one [environment](/12.platform/2.objects/2.app-environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
 
 ## 2. Prepare your domains
 
@@ -38,13 +38,13 @@ Take care when you application needs to send mails. Simple `sendmail` won't work
 
 ## 7. HTTPS
 
-All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/8.domains/1.intro.md).
+All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/8.dns/1.setup.md).
 
 ## 8 Final switch: DNS
 
 Now that you have migrated your code, runtime data and database - and all the other stuff you needed - you are ready to push the button.
 
-Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](/8.domains/1.intro.md). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
+Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](/8.dns/1.setup.md). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
 
 ## Migrating away from fortrabbit
 
