@@ -2,7 +2,7 @@
 navigation: false
 ---
 
-# fortrabbit help pages WIP
+# fortrabbit help pages
 
 Welcome! This repo contains the contents of the (new) fortrabbit help pages.
 
@@ -26,14 +26,15 @@ Please find a good balance in the number of commits contained with a pull reques
 
 ```yml
 ---
-reviewed:    2023-06-12
-title:       About fortrabbit 
-naviTitle:    
-excerpt:     
-lead:        fortrabbit is not your grandma web host.
-navigation:  
-sidebar:     craft
-nextNav:    true
+reviewed: 2023-06-12 # Last reviewed date (and time)
+title:               # Long title with page
+naviTitle:           # short title for list views
+excerpt:             # additional details for list views
+lead: blabla         # large text shown at the beginning
+navigation: true     # lists this page with navigation
+sidebar: craft       # shows meta data with 
+nextNav: true        # will show
+structureNav: true   # shows other pages in this folder
 ---
 ```
 
@@ -93,23 +94,19 @@ Region:   {{region}}
 Your app: {{app-env-name}}
 ```
 
-It will dynamically show the correct code examples and Dashboard links.
-
-## Dashboard links TODO
-
-You can have certain parts in Markdown available only for Users who are logged in like so:
-
-```html
-
-```
-
-This parses markdown inside the DIV. With the data-user attribute it checks if the user is logged in. links to the Dashboard will be styled as buttons — use a verb to start them!
+It will dynamically show the correct code examples and dashboard links.
 
 ## MDC components
 
+There are some Markdown Components (powered by Nuxt Content) to use:
+
+### DashboardLink
+
 ```md
-:DashboardLink{title="" route=""}
+:DashboardLink{title="" path=""}
 ```
+
+This parses markdown inside the DIV. With the data-user attribute it checks if the user is logged in, links to the Dashboard will be styled as buttons — use a verb to start them!
 
 ## Writing conventions
 
@@ -130,7 +127,9 @@ While some implicit technical details are obvious to you, they might not be for 
 - Output should be a comment `#`
 - Use comments in between commands to explain what's going on
 - `$` to start a command
-- Start code examples right away: PHP without `<?php`, Bash without `#!/bin/bash`
+- Start code examples right away
+  - PHP without `<?php`
+  - Bash without `#!/bin/bash`
 
 ### Writing
 

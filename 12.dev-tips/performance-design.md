@@ -1,27 +1,24 @@
 ---
-reviewed:      2023-02-15 08:19:49
-title:         Performance design
-excerpt:       Optimize code for speed
-lead:          "Best practices: from development to production, from backend to frontend."
+reviewed: 2023-02-15 08:19:49
+title:    Performance design
+excerpt:  Optimize code for speed
+lead:     Make it fast - from development to production, from backend to frontend.
 ---
 
-Of course: in case of a performance problem we can always throw more hardware on your App, but that won't always help when the problem is in the code somewhere. We want you to encourage to **design for performance** and scalability. And that is all about thinking a bit ahead.
+You can always throw more hardware on [performance problems](/12.dev-tips/performance-problems.md). But that won't always help when the problem is in the code somewhere. We want you to encourage to **design for performance** and scalability. And that is all about thinking a bit ahead.
 
-## Backend design
+## Backend performance design
 
-The performance of a modern web application depends on the hosting environment AND the application design. In short: **We are in this together!** We — fortrabbit — as your hosting vendor, are responsible to provide a great, scalable and [secure](https://www.fortrabbit.com/security) infrastructure. You, as the developer, are responsible to leverage this infrastructure by good application design.
+This is the part where fortrabbit is involved the most. The TTFB depends on how fast the service can compute. Your code plays a major role. Also see the [PHP processes article](/12.dev-tips/3.php-processes.md) to learn about limits when executing PHP.
 
 ### Prepare to cache
 
-If you begin developing, you might not instantly utilize a pair of multi gigabyte memcached servers. Still: make sure to implement caching early on and to use abstraction, so you can later on switch to those memcached machines when you need them. On fortrabbit you can use the following caches:
+If you begin developing, you might not instantly utilize a pair of multi gigabyte Redis servers. Still: make sure to implement caching early on and to use abstraction, so you can later on switch to those caching machines when you need them. Available caching solutions on fortrabbit:
 
-* **File**: Disk storage is not very fast and does not scale horizontally. It should be used for testing only!
-* **Database**: Normally faster than disk. A good idea if you need to cache data for a long time (i.e. weeks).
-* **APC**: All App plans include APC. Aside from opcode caching which happens automatically, you can use APC as an object cache very similar to _Memcache_. However APC lives in local memory, which is not shared between multiple Nodes.
-* **Memcache**: Very fast, in-memory network cache, for Pro Apps.
-* **Redis**: If you want to use Redis, just sign up with a third party Redis vendor and let us know the port they assigned to you.
-
-A high cache hit rate indicates if your caching strategy works as expected. For APC and Memcache we provide Dashboard Metrics for _APC/Memcache misses_ (that's the hit rate from another angle). The rule of thumb in production: <10% misses is okay, <2% misses is better.
+* File: Disk storage is not very fast.
+* Database: Faster than disk. Use if you need to cache data for a long time.
+* APC: Aside from opcode caching which happens automatically, you can use APC as an object cache very similar to Memcache or Redis.
+* Redis: Modern key value im memory caching service, see the [Redis component article](/10.components/8.redis.md)
 
 ### Reduce I/O
 
@@ -37,10 +34,6 @@ It's always a good idea to reduce file input/output operations on the disk to th
 Leverage the power of the cloud: Span your App across multiple services. If you need image or video encoding: use an external service for this. If you want to send mass mails: use an external service for this. Why? Because it balances the load of your App and thereby gives it more resources for each individual task it has to perform.
 
 However, if one of those external service (temporarily) breaks, make sure you can switch it off in seconds! You still want your shopping basket to run, if your image transformation has a problem.
-
-### Scale out, not up
-
-Up-scaling (bigger boxes) might be simpler, but with out-scaling (more boxes) you can grow nearly limitless. To be able to scale out means to be able to run your App across multiple nodes. Make sure you don't use local files or APC - or at least use abstraction, as mentioned above, so you can replace them transparently. Also, using multiple Nodes to deliver your websites comes with a feature you don't want to miss: high-availability. Horizontal scaling is available for [Pro Apps](/app-pro).
 
 ### Prepare for CDN
 
@@ -70,50 +63,44 @@ Frontend requests should always return a swift answer. The number of PHP process
 
 So for most cases, short is better.
 
-## Frontend design
+### Database performance
 
-Are you a full-stack developer? So far we have mostly covered performance on the PHP side. A lot of delivery can be optimized in the front facing side of your application. Let's have a look what can be done on the last meters and how to optimize content efficiency:
+MySQL can scale. Make sure you have the correct size selected. Also very common: check your JOIN queries! If they ran fast when your dataset was small, it doesn't mean they still do! Utilize caches to buffer costly databases results.
 
-### Dealing with assets
+## Frontend performance design
 
-Assets are static (not dynamically generated) files. JS, CSS, images are the usual suspects here. We recommend to have two versions of your asset files:
+Are you a full-stack developer? A lot of delivery can be optimized in the front facing side of your application. Let's have a look what can be done on the last meters and how to optimize content efficiency:
 
-* **SRC** - the original files, that you can edit, propbably LESS, SASS, COFFEESCRIPT, included in Git
-* **DIST** - the optimized files that are served in production, usually not included in Git
+### JS & CSS
 
-It's handy to automate the process of building the production files with a pipeline tool like [Gulp](http://gulpjs.com/).
+Assets are static files, such as JS, CSS, SVG and some images. It's common to have two versions of your asset files:
 
-#### Images
+* the original files, that you can edit, probably SASS, POSTCSS, TS … (included in Git)
+* the optimized files that are served in production (usually not included in Git)
 
-Images represent around 60% of the total footprint of an average website. Of course you know all about JPG, PNG, SVG and probably WebP. But did you know that there are tools that can optimize your images even further than your image editor (Photoshop)? Have you ever heard about: jpegoptim, jpegtran, jpegtran, OptiPNG, GIFsicle?
+Minifying JS/CSS files removes unnecessary extra spaces, line breaks and indentations. Modern tools support tree shaking as well. Another technique is to combine — concating —  different JS or CSS files into one file. This brings you: less requests and probably better GZIP compression ratios. Finally, there are specific techniques to further reduce size: For JS, variable names can be changed automatically for shorter ones, in CSS you can use shorthands and short notations of colors and values.
 
-There are plugins for your build tool to do that.
+You can hook in Node.js pipelining tasks during [deployment build steps](/6.deployment/4.build-steps.md).
 
-#### JS & CSS
+### Images
 
-Minifying JS/CSS files removes unnecessary extra spaces, line breaks and indentations. Another technique is to combine — concating —  different JS or CSS files into one file. This brings you: less requests and probably better GZIP compression ratios.
+Images (JPG, PNG, SVG, WebP …) represent around 70% of the total footprint of an average website. Most images are user generated content, for example when an editor uploads a photo to a CMS. Invest some time to tune your image transformations. Deliver only required sizes to the website visitor. Try different compression settings and even image formats. Consider using a third party service to host images, if your website needs a lot or if it has many visitors or you need to serve large versions og images.
 
-Finally, there are specific techniques to further reduce size: For JS, variable names can be changed automatically for shorter ones, in CSS you can use shorthands and short notations of colors and values.
+### Videos
 
-There are plugins for your build tool to do that.
+Our [traffic tiers](/10.components/4.traffic.md) are not designed to host local videos. It's recommended to outsource video hosting to a 3rd party. That will also help with compression and delivery.
 
-#### Web fonts
+### Web fonts
 
-Web fonts are nice but they also come with a footprint. The file size is determined by the number of glyphs, metadata and compression. On top of that, there are four different formats and you probably need to include all to have the best coverage.
-
-External services like Google Web Fonts or Typekit can help optimize font size and delivery. Take care to only include the font weights and glyphs you require.
+Web fonts are nice but they also come with a footprint. The file size is determined by the number of glyphs, metadata and compression. On top of that, there are four different formats and you probably need to include all to have the best coverage. External services can help to optimize font size and delivery.
 
 ### Caching assets
 
-Don't serve the same content to the same client twice. Cache it with their browser. While modern browsers are already doing great work here. You can further control the caching by altering the Cache-Control with the HTTP headers. See the [.htaccess section](/htaccess#cache-control) for an example.
+Don't serve the same content to the same client twice. Cache it with their browser. While modern browsers are already doing great work here. You can further control the caching by altering the Cache-Control with the HTTP headers.
 
-### GZIP compression with Apache
+GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented on the web server — Apache in our case otherwise nginx — as a module. You can enable and configure it in your `.htaccess` file (see also our [htaccess GZIP article](/12.dev-tips/6.htaccess/4.gzip.md)).
 
-GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented on the web server — Apache in our case otherwise nginx — as a module. You can [enable and configure](quirks#php-compression) it in your `.htaccess` file (see also our [htaccess article](/htaccess)).
-
-It works like this: after all the HTML is rendered on the server side it gets compressed and send to the browser in such a minified format. The browser then has to decompress everything on the fly.
-
-So as you can imagine: that of course saves bandwidth but also costs a little bit of CPU on both sides. It is in general recommended to use it but can cause strange effects when combined with other techniques, like caching.
+It works like this: after all the HTML is rendered on the server side it gets compressed and send to the browser in such a minified format. The browser then has to decompress everything on the fly. So as you can imagine: that of course saves bandwidth but also costs a little bit of CPU on both sides. It is in general recommended to use it but can cause strange effects when combined with other techniques, like caching.
 
 ### Cookies
 
@@ -125,28 +112,10 @@ You might parallelize downloads across host names. This may help speed up delive
 
 ### Check your speed
 
-Faster websites and apps are more fun to use and are better ranked in search engines. Measure the performance of your App. Master the web developer tools of your browser and use external services such as Google PageSpeed, YSlow and GTmetrix.
-
-## Troubleshooting performance
-
-OK, your App is running, but it "feels slow", you want it faster? Here are the most common mistakes and issues we've encountered.
+Faster websites and apps are more fun to use and are better ranked in search engines. Measure the performance of your App. Master the web developer tools of your browser and use external services such as Google PageSpeed (Lighthouse), YSlow and GTmetrix.
 
 ### External data sources
 
-If you are integrating external services, for example for any kind of REST API, make sure it does not slow you down. Set proper but very small timeouts and log response times once they exceed the threshold. Also make sure you [decouple](#decouple-but-loosely) them.
+If you are integrating external services, for example for any kind of REST API, make sure it does not slow you down. Set proper but very small timeouts and log response times once they exceed the threshold.
 
-### Database performance
-
-Our MySQL Add-Ons can scale. Make sure you have the correct size selected. Also very common: check your JOIN queries! If they ran fast when your dataset was small, it doesn't mean they still do! Utilize caches to buffer costly databases results.
-
-### Massive I/O
-
-Heavily used session-files and cache-files can easily slow your App gravely down. Switch to an in-memory cache and/or try to outsource data into your database!
-
-### No cache
-
-If your App runs fast with only a few visitors it doesn't mean it can handle the load once you gain more traction. Cache, then cache some more and finally cache more. It's hard to overstate the importance and the possible speed gain of caching!
-
-## Security design
-
-Last not least: Take care to keep your App secure. Check our [security page](/security-design) with some best practices and duties.
+Congrats. You came all the way to the bottom.

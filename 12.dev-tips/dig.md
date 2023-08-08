@@ -2,10 +2,10 @@
 reviewed:      2023-02-15 08:20:13
 title:         Dig
 excerpt:       'Query public DNS entries from the terminal'
-lead:          'Here is how to quickly query public DNS entries from the terminal using the dig command.'
+lead:          'Query public DNS entries from the terminal using the dig command.'
 ---
 
-The `dig` command shows you if there are any CNAME entries and where they are pointing to. Here we look up `help.fortrabbit.com` and see a CNAME pointing to the App URL like `help-frbit.frb.io`.
+The `dig` command shows you if there are any DNS entries and where they are pointing to. Here we look up `help.fortrabbit.com`.
 
 ```shell
 $ dig help.fortrabbit.com
@@ -37,5 +37,3 @@ help-frbit.eu2.frbit.net.  20    IN  A       52.48.51.144
 # This will print out the IP of your App
 $ dig +short {{app-env-name}}.frb.io 
 ```
-
-See also [here](/quirks#outgoing-ip-address) for why you'll probably need your App's IP.

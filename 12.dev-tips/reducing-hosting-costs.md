@@ -1,8 +1,8 @@
 ---
-reviewed:  2023-07-30 10:00:27
-title:     Reducing hosting costs
-excerpt:   Review and remove
-lead:      We want you to succeed with your online business here on fortrabbit. This article helps you reviewing and cutting down your cloud costs.
+reviewed: 2023-08-01 18:05:03
+title:    Reducing hosting costs
+excerpt:  Review and remove
+lead:     We want you to succeed with your online business here on fortrabbit. This article helps you reviewing and cutting down your cloud hosting costs.
 head:
   meta:
     - name: 'keywords'
@@ -11,22 +11,12 @@ head:
 
 ## Use the costs overview
 
-With our dashboard under each of your [payment methods](/payment-methods) you can find an invoice archive. There is also an invoice draft for the currently ongoing costs for the month so far. Our pro-rate daily billing helps you to remove unnecessary Components with immediate effect. You need to have the Owner role within your Company.
+With our dashboard under each of your [payment methods](/13.objects/9.payment-method.md) you can find an invoice archive. There is also an invoice draft for the currently ongoing costs for the month so far. The [pro-rated daily billing](/15.billing/3.pro-rated-billing.md) helps you to remove unnecessary [components](/14.concepts/components.md) with immediate effect.
 
-## Review your Apps
+## Review your apps and environments
 
-See if you have any unnecessary Apps hanging around — maybe some out-of-date side project, or something that is half finished? Our Apps are designed to be disposable.
+See if you have any unnecessary [apps](/13.objects/1.app.md) or [environments](/13.objects/2.app-environment.md) hanging around — maybe some out-of-date side project, or something half finished? Delete! Make sure you have an up-to-date and complete local backup. That way, you can easily re-deploy it again at a later stage.
 
-### Create a backup before deleting any Apps
+### Check your component plans
 
-Make sure you have an up-to-date and complete local backup of your App. That way, you can easily re-deploy it again at a later stage to a new App.
-
-### Check multi staging Apps
-
-Do you have Apps for multi-staging here? Do you make active use of them? Remove inactive staging Apps.
-
-### Check your scaling
-
-Pro Apps can easily be scaled up **and down**. Review if your currently selected Components. Compare with visitors. You can experiment with a lower scaling of PHP and MySQL. Keep an eye on PHP requests and performance. Maybe you can scale down from high availability to a single Node plan. See our [scaling tips](/scaling-pro).
-
-Sorry, Universal Apps can not be scaled down at the time of this writing (missing feature). Suggested work-around: You might spin up a new smaller App and deploy your App to that one. We are happy to assist you with that.
+Review your currently selected [components](/14.concepts/components.md). Compare with visitors. You can experiment with a lower scaling of PHP and MySQL. Keep an eye on PHP requests and performance.

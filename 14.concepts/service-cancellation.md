@@ -1,0 +1,55 @@
+---
+reviewed: 2023-08-06 17:46:33
+title: Service cancellation
+naviTitle: Service cancellation
+excerpt: How to quit fortrabbit
+lead: Fully or partly cancel fortrabbit hosting services with immediate effect, irreversibly.
+head:
+  meta:
+    - name: 'keywords'
+      content: 'subscription, membership, cancel, hosting'
+---
+
+You want to fully cancel any connection to fortrabbit? Delete all [payments methods](#delete-payment-methods) you have access on, then [delete your personal access](#cancel-your-account) so there are no left overs.
+
+You want to clean up, remove unnecessary stuff, reduce costs? See our [reduce hosting costs article](/12.dev-tips/reducing-hosting-costs.md) first, then come back here.
+
+## Delete apps
+
+An [app](/13.objects/1.app.md) represents a website or web application. When deleting apps, all it's environments and associated domains will get deleted along. Team members might loose access. Files and databases will be deleted. Costs will be billed up until the day of deletion. Make sure to take backups before deleting apps.
+
+:DashboardLink{title="Delete an app" path="/manage/app-delete/"}
+
+## Delete environments
+
+[Environments](/13.objects/2.app-environment.md) are versions of websites. When environments associated domains will get deleted along. Team members might loose access. Files and databases will be deleted. Make sure to take backups before deleting environments.
+
+:DashboardLink{title="Delete an environment" path="/manage/environment-delete/"}
+
+## Delete teams
+
+[Teams](/13.objects/4.team.md) are groups of developers sharing app access. Payment methods, apps and environments that are not shared with other teams or clients will be deleted alongside, when deleting a team. Team developers will loose access to the team. Their accounts will not be deleted immediately.
+
+:DashboardLink{title="Delete a team" path="/manage/team-delete/"}
+
+## Delete payment methods
+
+Make sure to review invoices, pay pay past due invoices if any, download previous invoices. When deleting a payment method, all the apps and attached environments it owns will be deleted alongside. Mind that the [pro rated billing](/15.billing/3.pro-rated-billing.md) cycle is monthly after usage. There will be pending charges for the current month. Even after deleting the payment method one last partial invoice will be sent.
+
+:DashboardLink{title="Delete a payment method" path="/manage/payment-method-delete/"}
+
+## Cancel your account
+
+When cancelling your [account](/13.objects/3.person.md#account-settings), you will remove personal access to the fortrabbit hosting system. By cancelling your account, all non-shared payment methods including all it's apps will get irreversibly deleted along.
+
+Everything that is shared with other owners or clients attached will NOT be deleted when you cancel your personal account. When you are involved in shared [teams](/13.objects/4.team.md) with other owners, the teams will not be deleted. You will just leave the teams. The same applies to shared [payment methods](/13.objects/9.payment-method.md) and the [apps](/13.objects/1.app.md) that are owned by them.
+
+:DashboardLink{title="Cancel your account" path="/manage/account-delete-confirm"}
+
+## Auto deletion of inactive accounts
+
+Abandoned accounts without access to paid objects and no activity will get auto-deleted after a period of time.  This is a privacy feature.
+
+## A note on personal data
+
+We try to remove as much as

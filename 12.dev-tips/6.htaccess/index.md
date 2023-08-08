@@ -1,7 +1,6 @@
 ---
-reviewed:    2022-03-24 15:00:00
-title:       Htaccess
-naviTitle:   Htaccess
+title:       .htaccess overview
+naviTitle:   .htaccess
 excerpt:     'All about .htaccess'
 lead:        'Meet the powerful Apache .htaccess configuration file.'
 navigation:   false

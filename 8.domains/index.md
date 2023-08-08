@@ -1,4 +1,0 @@
----
-title: Domains
-navigation:  false
----
