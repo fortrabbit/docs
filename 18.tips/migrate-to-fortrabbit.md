@@ -38,13 +38,13 @@ Take care when you application needs to send mails. Simple `sendmail` won't work
 
 ## 7. HTTPS
 
-All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/8.dns/1.setup.md).
+All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/18.tips/dns-external-domains.md).
 
 ## 8 Final switch: DNS
 
 Now that you have migrated your code, runtime data and database - and all the other stuff you needed - you are ready to push the button.
 
-Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](/8.dns/1.setup.md). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
+Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](/18.tips/dns-external-domains.md). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
 
 ## Migrating away from fortrabbit
 

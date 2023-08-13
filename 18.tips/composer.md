@@ -11,7 +11,7 @@ head:
 
 ## Get ready
 
-It's recommended that you have a [local development environment](/11.dev-tips/2.local-development.md) running including Composer and that you are making use of it already. Have a good understanding of [deplpoyment in general](/6.deployment/1.intro.md) and the specific [fortrabbit deployment features](/6.deployment/2.features.md).
+It's recommended that you have a [local development environment](/11.dev-tips/2.local-development.md) running including Composer and that you are making use of it already. Have a good understanding of [deplpoyment in general](/6.deployment/1.intro.md) and the specific [fortrabbit deployment features](/6.deployment/1.intro.md).
 
 ## Composer as part of deployment
 

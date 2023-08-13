@@ -5,11 +5,11 @@ excerpt:  Optimize code for speed
 lead:     Make it fast - from development to production, from backend to frontend.
 ---
 
-You can always throw more hardware on [performance problems](/12.dev-tips/performance-problems.md). But that won't always help when the problem is in the code somewhere. We want you to encourage to **design for performance** and scalability. And that is all about thinking a bit ahead.
+You can always throw more hardware on [performance problems](/18.tips/performance-problems.md). But that won't always help when the problem is in the code somewhere. We want you to encourage to **design for performance** and scalability. And that is all about thinking a bit ahead.
 
 ## Backend performance design
 
-This is the part where fortrabbit is involved the most. The TTFB depends on how fast the service can compute. Your code plays a major role. Also see the [PHP processes article](/12.dev-tips/3.php-processes.md) to learn about limits when executing PHP.
+This is the part where fortrabbit is involved the most. The TTFB depends on how fast the service can compute. Your code plays a major role. Also see the [PHP processes article](/18.tips/php-processes.md) to learn about limits when executing PHP.
 
 ### Prepare to cache
 
@@ -98,7 +98,7 @@ Web fonts are nice but they also come with a footprint. The file size is determi
 
 Don't serve the same content to the same client twice. Cache it with their browser. While modern browsers are already doing great work here. You can further control the caching by altering the Cache-Control with the HTTP headers.
 
-GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented on the web server — Apache in our case otherwise nginx — as a module. You can enable and configure it in your `.htaccess` file (see also our [htaccess GZIP article](/12.dev-tips/6.htaccess/4.gzip.md)).
+GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented on the web server — Apache in our case otherwise nginx — as a module. You can enable and configure it in your `.htaccess` file (see also our [htaccess GZIP article](/18.tips/6.htaccess/4.gzip.md)).
 
 It works like this: after all the HTML is rendered on the server side it gets compressed and send to the browser in such a minified format. The browser then has to decompress everything on the fly. So as you can imagine: that of course saves bandwidth but also costs a little bit of CPU on both sides. It is in general recommended to use it but can cause strange effects when combined with other techniques, like caching.
 

@@ -55,7 +55,7 @@ Now, how should your fortrabbit App know about it's ENV vars? Some users think t
 
 Recap: The PHP application itself will just query the ENV vars. A library just helps to populate the ENV vars into the code base, but only when they are not set already.
 
-The fortrabbit [Software Preset](//12.platform/software-presets.md) is where the magic happens. While creating an App on fortrabbit, you'll choose your desired CMS or framework. This selection will configure the server ENV vars in ways, the software can work with it. For example, for Laravel and Craft, the ENV var `DB_PASSWORD` will be populated with the password of the Apps database. For Symfony we provide a ready to use DSN in the `DATABASE_URL` variable. Here is the link to the settings of your App:
+The fortrabbit [Software Preset](/12.platform/software-presets.md) is where the magic happens. While creating an App on fortrabbit, you'll choose your desired CMS or framework. This selection will configure the server ENV vars in ways, the software can work with it. For example, for Laravel and Craft, the ENV var `DB_PASSWORD` will be populated with the password of the Apps database. For Symfony we provide a ready to use DSN in the `DATABASE_URL` variable. Here is the link to the settings of your App:
 
 * [dashboard.fortrabbit.com/apps/{{app-env-name}}/vars](https://dashboard.fortrabbit.com/apps/{{app-env-name}}/vars)
 
@@ -102,7 +102,7 @@ Generic ENV vars cannot be overwritten by you. They are always available.
 
 #### Software Preset ENV vars
 
-Depending on what you have selected in the [Software Preset](//12.platform/software-presets.md) when creating your App, additional ENV vars will be seeded for you. For example: When choosing Laravel the ENV var `APP_KEY` with a random, 32 char long string will created (among others). You can replace or remove those Stack ENV vars after App creation the same way you can replace or remove your manually created ENV vars.
+Depending on what you have selected in the [Software Preset](/12.platform/software-presets.md) when creating your App, additional ENV vars will be seeded for you. For example: When choosing Laravel the ENV var `APP_KEY` with a random, 32 char long string will created (among others). You can replace or remove those Stack ENV vars after App creation the same way you can replace or remove your manually created ENV vars.
 
 #### Dynamic ENV vars
 

@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-08-08 11:15:16
 title: DNS setup for external domains
-naviTitle: Setup
+naviTitle: DNS settings
 excerpt: The world of DNS and domains
 lead: Basic DNS configuration to route external domains to fortrabbit services
 head:

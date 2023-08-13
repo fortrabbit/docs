@@ -43,7 +43,7 @@ These solution stacks are easy to handle through a graphical interface and they 
 - [MAMP](https://www.mamp.info/) GUI for macOS and Windows (free and paid version)
 - [XAAMP](https://www.apachefriends.org/index.html) GUI for Windows, macOS, Linux
 
-Please mind that those don't include [Git](3.guides/2.craft/more/git.md) and [Composer](3.composer.md).
+Please mind that those don't include [Git](3.guides/2.craft/more/git.md) and [Composer](composer.md).
 
 #### Laravel Valet
 

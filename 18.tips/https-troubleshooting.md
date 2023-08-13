@@ -1,13 +1,14 @@
 ---
-reviewed:      2023-07-22
-title:         HTTPS issues
-excerpt:       Debugging SSL/TLS errors
-lead:          Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
+reviewed:  2023-08-09 09:56:23
+title:     HTTPS troubleshooting
+naviTitle: HTTPS troubleshooting
+excerpt:   Debugging SSL/TLS errors
+lead:      Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
 ---
 
-We provide free Let's Encrypt certificates for all domains.
+Let's Encrypt certificates are provided for all domains. See the [HTTPS article](/14.concepts/4.https.md) for general features and configuration.
 
-### Review certificates in the browser
+## Review certificates in the browser
 
 To troubleshoot TLS/SSL issues, it's often helpful to view the certificate in the browser. In Chrome and Firefox you can:
 
@@ -15,7 +16,7 @@ To troubleshoot TLS/SSL issues, it's often helpful to view the certificate in th
 2. click on the lock icon
 3. click on the "certificate" to reveal the cert
 
-### You see a certificate warning
+## You see a certificate warning
 
 You visit your Apps domain under the `https://` address and the browser throws an error that the certificate can't be verified. If you inspect the cert in the browser, you see that the cert is issued for `*.frb.io` not for your domain. The error might be:
 
@@ -29,7 +30,7 @@ This can also happen, if your domain is not routed to fortrabbit (yet). Only dom
 
 There are also other edge cases when this can happen, for example, if your domain [has set CAA records](/https#secure-your-domain-with-a-caa-record) with DNS.
 
-### The browser shows a mixed content warning
+## The browser shows a mixed content warning
 
 The cert is installed but you are seeing an error like this:
 
@@ -39,11 +40,7 @@ Your website is requesting external resources over non-secure addresses (http). 
 
 You can use `https://` instead or you just leave out the protocol entirely like so: `//`. The last method will use whatever has been used before, so that works especially well, with different environments, for instance when your local development machine doesn't have TLS.
 
-### It's not working with Internet Explorer 8 or older
-
-Sorry, IE8 is not supported any more. All our TLS implementations are based on SNI.
-
-### Solve SSL verification errors
+## Solve SSL verification errors
 
 This is the fix for verification errors when using ssl_verify. If you are receiving an error like the following:
 

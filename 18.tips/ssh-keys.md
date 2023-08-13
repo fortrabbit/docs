@@ -1,0 +1,89 @@
+---
+title:     SSH key setup
+naviTitle: SSH keys
+excerpt:   Set up SSH keys on your local machine
+lead:      About SSH keys and how to create an SSH key pair on your local machine and how to add it your fortrabbit account.
+head:
+  meta:
+    - name: 'keywords'
+      content: 'ssh key, public key, git, ssh, Putty, PuttyGen, CygWin, Windows, Git Bash, RSA keys, DSA, RSA2, RSA1, SSH-2 RSA, OpenSSH, secure shell'
+---
+
+## SSH key authentication on fortrabbit
+
+SSH key authentication is used to securely identify you for [code access](/7.code-access/1.intro.md). Remember, on fortrabbit an account represents a [person](/13.objects/3.person.md). Your fortrabbit account may store the public parts of several SSH keys.
+
+## Do you already have a SSH key?
+
+To see any existing keys, open a terminal to list the `~/.ssh` folder:
+
+```shell
+$ find ~/.ssh
+#/…/.ssh/config
+#/…/.ssh/id_ed25519      ← private key part
+#/…/.ssh/id_ed25519.pub  ← public key part
+#/…/.ssh/known_hosts
+```
+
+Proceed to the next section if you don't have any key pairs or get an error about a missing folder. If you do see key pairs like above, then you can [upload the public SSH key](#importing-ssh-keys-to-fortrabbit).
+
+## Generate a SSH key pair
+
+```shell
+# NOTE: me@fortrabbit is just an identifier, use what suits you 
+$ ssh-keygen -t ed25519 -C me@fortrabbit
+# Generating public/private ed25519 key pair.
+# Enter file in which to save the key (/home/user/.ssh/id_ed25519):
+# Enter passphrase (empty for no passphrase):
+# Enter same passphrase again:
+```
+
+## Importing SSH keys to fortrabbit
+
+The public part of the key must be imported in the fortrabbit dashboard.
+
+:DashboardLink{title="Add a new SSH key" route="/new/ssh-key"}
+
+Make sure you paste the public part of the key and not the private part. It's also possible to import SSH keys from GitHub account into your fortrabbit account.
+
+### Copy your public SSH key value
+
+The value to paste into the text field can be read into the clipboard.
+
+```shell
+# macOS
+$ pbcopy < ~/.ssh/id_ed25519.pub
+
+# Linux
+$ xclip -i < ~/.ssh/id_ed25519.pub
+
+# Windows
+# Open the `id_ed25519.pub` file, select all, then copy.
+```
+
+<!-- TODO: Do we have?
+
+### App-only SSH keys
+
+In certain scenarios, you may want to grant someone or something access to an App without creating a new Account. For these purposes, you can use App-only keys that are separate from any Account on fortrabbit. The App-only keys are managed via the Dashboard with the Apps. Adding and removing such keys follows the same concepts as described above. -->
+
+## Specify a different key than the default
+
+If you use an unprotected key (no passphrase) and still get asked about a password, it may be the case that the key in the default location is not imported into fortrabbit. To use a specific key run SSH like this:
+
+```shell
+$ ssh -i ~/.ssh/CUSTOM_KEY {{app-env-name}}@deploy.{{region}}.frbit.com
+# Replace CUSTOM_KEY with a key on your machine
+```
+
+## SSH keys generation on Windows
+
+The procedure to create SSH keys is slightly different on macOS and Linux compared to Windows. There are different ways to set up and use Git with Windows and also different ways set up and store the keys. We recommend using the official installer from the Git website, together with Git Bash.
+
+### SSH keys under Windows with PuTTY
+
+If you generated an SSH key with PuTTY, you will need to make sure that the private key is saved in the location where `git.exe` or `ssh.exe` are looking for it or take steps to specify where the key is. Additionally, PuTTY uses a special format to store the private key, which also requires additional steps to use with other tools. Because of these reasons and previous experience with clients, we advise against using PuTTY.
+
+## About SSH public key authentication
+
+SSH key authentication is a more secure and convenient way to log in than using passwords. Instead of a short password, you use a virtually impossible to guess key file. The public part of the key is safe to share, while the private part should be kept secure. Once you import a public key into your account, it can be used to authenticate you. When you connect, the server will encrypt some secret using the public key. If you can decrypt the secret with the private key and send it back to the server, then the server knows that you can be trusted.

@@ -12,7 +12,7 @@ head:
 
 You want to fully cancel any connection to fortrabbit? Delete all [payments methods](#delete-payment-methods) you have access on, then [delete your personal access](#cancel-your-account) so there are no left overs.
 
-You want to clean up, remove unnecessary stuff, reduce costs? See our [reduce hosting costs article](/12.dev-tips/reducing-hosting-costs.md) first, then come back here.
+You want to clean up, remove unnecessary stuff, reduce costs? See our [reduce hosting costs article](/18.tips/reducing-hosting-costs.md) first, then come back here.
 
 ## Delete apps
 

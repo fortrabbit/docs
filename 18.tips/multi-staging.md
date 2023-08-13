@@ -39,7 +39,7 @@ The production environment is the stable live environment. The development envir
 
 ### Multi-staging and local development
 
-Most likely you are developing with a [local PHP development environment](/12.dev-tips/2.local-development.md) on your machine. So your laptop is already a of kind of **staging** while the actual part at fortrabbit is usually **production**.
+Most likely you are developing with a [local PHP development environment](/18.tips/local-development.md) on your machine. So your laptop is already a of kind of **staging** while the actual part at fortrabbit is usually **production**.
 
 ## Multi-staging on fortrabbit
 
