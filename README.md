@@ -67,7 +67,7 @@ See the `.obsidian` folder.
 Use relative links to local files including the full folder and file name. Example:
 
 ```md
-…if not see [here](/2.craft/1.setup.md).
+…if not see [here](/3.craft/1.setup.md).
 ```
 
 Your editor should offer autocomplete for this. Also such links can be automatically updated when the file name changes. Make use of that to avoid dead links.

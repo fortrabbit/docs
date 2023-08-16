@@ -11,8 +11,13 @@
             "id": "1842aebab86487a1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "14.tips/performance-design.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "14.tips/performance-design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "14.tips/performance-design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "14.tips/performance-design.md"
+              }
             }
           }
         ]
@@ -141,25 +150,25 @@
   },
   "active": "1842aebab86487a1",
   "lastOpenFiles": [
+    "10.components/1.php.md",
     "10.components/2.mysql.md",
-    "14.concepts/backup-recovery.md",
-    "14.concepts/components.md",
-    "14.concepts/redis.md",
-    "14.concepts/workers copy.md",
-    "14.concepts/workers.md",
-    "13.objects/8.event-filter.md",
-    "14.concepts/index.md",
-    "13.objects/index.md",
-    "13.objects/_dir.yml",
-    "14.concepts/waf-rules.md",
-    "14.concepts/firewall.md",
-    "14.concepts/logs.md",
+    "11.concepts/backup-recovery.md",
+    "11.concepts/components.md",
+    "11.concepts/redis.md",
+    "11.concepts/workers copy.md",
+    "11.concepts/workers.md",
+    "10.objects/8.event-filter.md",
+    "11.concepts/index.md",
+    "10.objects/index.md",
+    "10.objects/_dir.yml",
+    "11.concepts/waf-rules.md",
+    "11.concepts/firewall.md",
+    "11.concepts/logs.md",
     "4.statamic/_dir.yml",
     "10.components/5.backups.md",
     "9.mysql/3.export-import.md",
     "10.components/4.traffic.md",
     "10.components/3.web-storage.md",
-    "10.components/1.php.md",
     "3.guides/10.others.md",
     "3.guides/8.symfony.md",
     "3.guides/7.grav.md",
