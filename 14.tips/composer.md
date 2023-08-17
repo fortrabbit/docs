@@ -11,29 +11,23 @@ head:
 
 ## Get ready
 
-It's recommended that you have a [local development environment](/14.tips/local-development.md) running including Composer and that you are making use of it already. Have a good understanding of [deplpoyment in general](/6.deployment/1.intro.md) and the specific [fortrabbit deployment features](/6.deployment/1.intro.md).
+It's recommended that you have a [local development environment](/14.tips/local-development.md) running including Composer and that you are making use of it already. Have a good understanding of [deployment in general](/6.deployment/1.intro.md) and on fortrabbit.
 
 ## Composer as part of deployment
 
-We recommend to run Composer as part of the build pipeline. When you deploy code with Git and Composer is defined as a [build step](/6.deployment/4.build-steps.md), it will run automatically with each deployment. New and updated dependencies will be synced into the web space.
+We recommend to run `composer install` as part of the build pipeline. When you deploy code with Git and Composer is defined as a [build step](/6.deployment/4.build-steps.md), it will run automatically with each deployment. New and updated dependencies will be synced into the web space.
 
-## The vendor folder
+## Composer and Git
 
 The `vendor` folder should NOT be in Git: Make sure that folder is included in your `.gitignore` file. This directory is created by Composer within your project locally and contains all the packages you are using locally. Make sure that both the `composer.lock` file and the `composer.json` file are present and part of Git.
 
-<!-- TODO: Clean up deployment file sections  -->
-
-<!-- ## Composer in the deployment file
-
-You can fine-tune your deployment behavior and aspects of Composer in the deployment file. See the options under the `composer:` keyword [here](deployment-file-v2). -->
-
 ## Alternative locations
 
-If your `composer.json` and `composer.lock` files are not on the top level, then they will be ignored by the deployment. <!-- However, you can use the `pre` directive from the [deployment file](deployment-file) to set up a custom composer run in a different directory. -->
+Your `composer.json` and `composer.lock` files need to be stored in the root folder of your application.
 
-### Private repositories in Composer
+## Private repositories in Composer
 
-You need to add the private repositories into your `composer.json` file? Read on [here](/composer-auth.md).
+You need to add the private repositories into your `composer.json` file? Read on [here](/14.tips/composer-private-repos.md).
 
 ## Composer from SSH
 
@@ -44,6 +38,4 @@ ssh {{ssh-user}}@deploy.{{region}}.frbit.com
 composer install
 ```
 
-This way Composer will be executed within the web delivery environment, which is not optimized for such tasks. **Don't use `composer update` as this might cause Composer to hit the App's memory limits.**
-
-The most common Composer issue is, when users are running into memory problems when trying to execute composer while logged in via SSH here. The general answer on that is: Please don't. Use Composer together with Git deployment as described above.
+This way Composer will be executed within the web delivery environment, which is not optimized for such tasks. **Don't use `composer update` as this might cause Composer to hit the App's memory limits.** The most common Composer issue is, when users are running into memory problems when trying to execute composer while logged in via SSH here. The general answer on that is: Please don't. Use Composer together with Git deployment as described above.

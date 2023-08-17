@@ -7,10 +7,10 @@ lead: Fully or partly cancel fortrabbit hosting services with immediate effect, 
 head:
   meta:
     - name: 'keywords'
-      content: 'subscription, membership, cancel, hosting'
+      content: 'subscription, membership, cancel, hosting, payment portal, remove my card'
 ---
 
-You want to fully cancel any connection to fortrabbit? Delete all [payments methods](#delete-payment-methods) you have access on, then [delete your personal access](#cancel-your-account) so there are no left overs.
+You want to fully cancel any connection to fortrabbit, access the payment portal to remove your card? Delete all [payments methods](#delete-payment-methods) you have access on, then [delete your personal access](#cancel-your-account) so there are no left overs.
 
 You want to clean up, remove unnecessary stuff, reduce costs? See our [reduce hosting costs article](/14.tips/reducing-hosting-costs.md) first, then come back here.
 

@@ -10,7 +10,11 @@ head:
       content: 'TLD, Top Level Domain, top-level-domain, registration, ordering, zone apex, apex domain, root domain, subdomain, domain masking, domain name server, DNS, ns, lookup'
 ---
 
-In classical hosting, domain registration & e-mail hosting were bundled in packages. Today you can find specialized domain services. There are various offerings, so you should consider upfront what you'll need. We look at:
+## About domain registration
+
+Domain registration is the process of acquiring a web address for a website - a Top Level Domain. To do this, you need to go through a domain registrar, which will check availability and let you purchase the domain, usually for a year in advance. Once registered, you can link the domain to your fortrabbit app environments by setting appropriate DNS records. See the [domain article](/10.objects/10.domain.md).
+
+With classical shared and VPS hosting, domain registration and e-mail hosting were often bundled in packages. Today you can find dedicated services. There are various offerings, so you should consider upfront what you'll need. We look at:
 
 1. Additional IMAP/POP3 e-mail hosting
 2. Additional SSL certificate ordering
