@@ -61,7 +61,7 @@ $ xclip -i < ~/.ssh/id_ed25519.pub
 # Open the `id_ed25519.pub` file, select all, then copy.
 ```
 
-<!-- TODO: Do we have?
+<!-- TODO: Review by infra. Do we have?
 
 ### App-only SSH keys
 

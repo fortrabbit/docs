@@ -7,4 +7,6 @@ lead:          Learn about events with the fortrabbit dashboard.
 
 ---
 
+<!-- TODO: Extend at least a bit -->
+
 With the dashboard you will find a list of performed actions. This includes your and your teams operations. Seeing who did what when makes your work transparent and helps to increase security.

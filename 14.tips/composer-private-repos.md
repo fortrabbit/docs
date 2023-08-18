@@ -1,15 +1,15 @@
 ---
-reviewed:    2021-07-09
-title:       Composer private repos
-excerpt:     Access during git deployment
-lead:        How to access private composer repositories during git deployment.
+reviewed: 2023-08-17 22:07:15
+title:    Composer private repos
+excerpt:  Access during git deployment
+lead:     How to access private composer repositories during git deployment.
 head:
   meta:
     - name: 'keywords'
       content: 'Composer, Git, ssh, GitHub, Bitbucket, auth.json, oAuth'
 ---
 
-<!-- TODO: Review! -->
+<!-- TODO: Review from infra -->
 
 ## What are private Composer packages?
 
@@ -17,17 +17,11 @@ Modern PHP app development utilizes [Composer](/14.tips/composer.md) as a depend
 
 ## A - Using oAuth or HTTP Basic Auth
 
-In the script below we generate a global `auth.json` file that contains credentials to access a GitHub repo using oAuth, and another private repo which is protected with Basic HTTP auth, in our example Laravel Nova.
-
-This is just for the sake of demonstration, you will probably need to adjust it to your needs.
+In the script below we generate a global `auth.json` file that contains credentials to access a GitHub repo using oAuth, and another private repo which is protected with Basic HTTP auth, in our example Laravel Nova. This is just for the sake of demonstration, you will probably need to adjust it to your needs.
 
 Since you don't want to keep secrets in your git history, you can store them in [ENV vars](/11.concepts/env-vars.md).
 
-```php
-<?php
-
-# add-auth.php
-
+```php [add-auth.php]
 // Github token example
 if ($github_oauth =  getenv("GH_TOKEN")) {
     echo "Configure auth for github-oauth.github.com" . PHP_EOL;
@@ -43,12 +37,12 @@ if (getenv("NOVA_USER") && getenv("NOVA_PASS")) {
 }
 ```
 
-The script you created needs to be executed before Composer tries to install packages. Create a fortrabbit.yml file with the following structure:
+<!-- The script you created needs to be executed before Composer tries to install packages. Create a fortrabbit.yml file with the following structure:
 
 ```yaml
 version: 2
 pre: add-auth.php
-```
+``` -->
 
 Additionally, you need to set the `COMPOSER_HOME` env var and the env vars you use in the script in the dashboard:
 
