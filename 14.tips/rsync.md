@@ -8,11 +8,7 @@ lead:        rsync is one of the best ways to deploy code fast and without hassl
 
 ## About rsync
 
-`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes.
-
-### Read before using
-
-rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/7.code-access/3.ssh.md), so it's also secure and extra convenient when using [SSH key auth](/14.tips/ssh-keys.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit app environment directly.
+`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes. rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/7.code-access/3.ssh.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit app environment directly.
 
 ## Installing rsync
 
@@ -27,39 +23,19 @@ For Windows 10 we recommend to install the Linux subsystem (WSL). For Windows 7 
 
 ## Use cases
 
-There are multiple ways to deploy here on fortrabbit: with [Git](/git-deployment), with [SFTP](/sftp) and/or [SSH](/ssh). You can hook in `rsync` in most deployment work-flows, either as an enhancement or as a replacement. Only it doesn't work well with [Professional Apps](/app-pro) as those have ephemeral storage and no direct SSH access. These are your main options for using `rsync` to deploy code to fortrabbit [Universal Apps](/app-uni):
+You can [deploy with Git](/6.deployment/1.intro.md) or [upload files  with SFTP](/7.code-access/4.sftp.md) and/or [use SSH](/7.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
 
 ### rsync instead of SFTP
 
-Not using Git and **still using [SFTP](/7.code-access/4.sftp.md)?** Consider `rsync` as a replacement. With SFTP - unless your SFTP client has some kind of synchronization method (which still will be slower) - you will copy each file manually, one by one. This is mundane and can also be dangerous when forgetting to copy critical files. `rsync` can work as a two way street directly on the file system. Easily synchronize files up and down from your [local development](/local-development) to the [App](/app).
+Consider `rsync` as a replacement for SFTP. With SFTP - unless your SFTP client has some kind of synchronization method (which still will be slower) - you will copy each file manually, one by one. This is mundane and can also be dangerous when forgetting to copy critical files. `rsync` can work as a two way street directly on the file system. Easily synchronize files up and down from your [local development](/14.tips/local-development.md) to the [app environment](/10.objects/2.app-environment.md).
 
 ### rsync in addition to Git
 
-**Using [Git to deploy](/6.deployment/1.intro.md)?** Consider `rsync` as an essential addition. Why? Your dependencies are managed with Composer and thus excluded from Git. They will be installed and managed with [Composer](/14.tips/composer.md). So you are keeping your Git repo clean by just including the source files of your very own code. But there is more. Your project includes run time data and static assets:
+Consider `rsync` as an essential addition. Why? Your dependencies are managed with Composer and thus excluded from Git. They will be installed and managed with [Composer](/14.tips/composer.md). So you are keeping your Git repo clean by just including the source files of your very own code. But there is more. Your project includes run time data and static assets:
 
-#### Deploy bundled frontend builds with rsync
+## The rsync command structure
 
-You are likely making use of some kind of frontend bundling process - a build tool like webpack, Brunch, Parcel, browserify, gulp.js or the like. That includes compiling, concatenating and minifying of Javascript, SASS, LESS, stylus and maybe also images. Most modern build tools are based on JavaScript and Node.js. fortrabbit Apps do not support triggering such a frontend build process. So we advise running the production build process [locally](/local-development). That has the advantage that you can optimally debug errors. But you also need to copy those files to your remote App somehow!
-
-**Option 1: Just include built files in Git!** You can just include the uglyfied files within your Git repo and deploy it along with the rest of the code. That's not clean, but can be practical when your build process is not that complex. Mind that you might have separate development and production build tasks.
-
-**Option 2: Deploy separately.** Ideally, those bundled binary-like files should be excluded from Git. Deployment is faster when the Git repo is small. And only uncompressed text can be "diffed". Those one-line files can not be tracked for changes. You can upload those files manually or even better use rsync to upload those bundles.
-
-See our old ["I love assets" blog post](https://blog.fortrabbit.com/i-love-assets) on that matter as well.
-
-#### Synchronize uploaded assets with rsync
-
-Also, there likely will be files, like image uploads and the like, on the App's file system itself which will [not be reflected in Git](deployment-methods-uni#git-works-only-one-way). The only way to get those files back into your local development so far was to SFTP or SSH in and grab the files manually. So, here, assuming that you have a live application where content editors are changing files on the App itself, you likely would want to download certain files from the App into your local development.
-
-PRO TIP: For [Craft CMS](/craft-start) we have developed [Craft Copy](https://github.com/fortrabbit/craft-copy), which besides other nice features, also incorporates rsync to keep the assets in sync.
-
-## Using rsync
-
-Hooked? So let's jump into your local terminal:
-
-### The rsync command structure
-
-```
+```shell
 # sync all files UP
 #
 #      options
@@ -73,7 +49,7 @@ $ rsync -av ./ {{app-env-name}}@deploy.{{region}}.frbit.com:~/
 * **source**: This is your local source directory.
 * **destination**: The target URL, where the files should end up.
 
-### Common usage
+## Common usage
 
 Here are the most common rsync commands. Likely you will even come by using only the first two:
 
@@ -93,11 +69,11 @@ $ rsync -av ~/projects/{{app-env-name}}/ ~/projects/{{app-env-name}}.copy/
 $ rsync -av {{app-env-name}}@deploy.{{region}}.frbit.com:~/ {{app-name-2}}@deploy.{{region}}.frbit.com:~/
 ```
 
-#### Remote paths
+### Remote paths
 
 Remote URLs consist of `{{user}}@{{host}}:{{folder}}`. In the examples here [fortrabbit App placeholders](access-methods#the-code-example-helper) are used.
 
-#### Local paths
+### Local paths
 
 rsync accepts all ways to define local paths. `./`  will translate to the current directory. You can also use absolute paths like `/home/your-user/projects/{{app-env-name}}` or relative paths like `../{{app-env-name}}`.
 
@@ -124,7 +100,7 @@ Here are some common options to alter the sync mode:
 
 For an exhaustive list of all the possible options and more in depth info on the above options, check out the official [rsync man page](https://linux.die.net/man/1/rsync). Mind that rsync options can be chained, `rsync -av` combines the two flags `-a` and `-v`.
 
-#### Previewing changes
+### Previewing changes
 
 The handy `--dry-run` option can be shortened to just `-n` and also be merged with other options to something like `-avn`. It will give you a preview of what will happen before doing anything:
 
@@ -143,7 +119,7 @@ total size is 23,325,044  speedup is 593.29 (DRY RUN)
 
 Now, running this will print out everything that `rsync` **would** transfer - without doing anything. Better always execute a dry run before actually syncing. Once you're sure, that only files which you want to transfer are in the change set, you can just remove the `n` again from the options and execute it normally.
 
-#### Syncing single folders
+### Syncing single folders
 
 This is a use-case for rsync as an additional step when primarily working with Git. In this case you only want to include a specific folder and its contents. You might want to "upload" your `dist` folder with your compiled CSS, JS and images. Or you want to "download" the assets folder, when an editor has uploaded new images to the CMS. This is the basic command:
 
@@ -153,7 +129,7 @@ rsync -av --include='/{{folder}}/***' --exclude='*' ./ {{app-env-name}}@deploy.{
 
 With the `--include` parameter you can specify the path to include, but you still need to exclude everything else. The include/exclude syntax is flexible as you can include patterns and multiple folders at once. Alternatively you can also just define the local folder and the remote folder.
 
-#### Excluding files
+### Excluding files
 
 Sometimes you want to omit files from being synced. You can just add `--exclude=path/to/file`. Say we don't want the `404.php` from the previous example to be transferred, you would just do:
 
@@ -174,7 +150,7 @@ $ rsync -avC --exclude 404.php ./ {{app-env-name}}@deploy.{{region}}.frbit.com:~
 
 NOTE: The initial `/` character is important. `--exclude 404.php` and `--exclude /404.php` are _not_ the same. The former means: Any path which contains "404.php" is to be excluded. The latter means: Any path which starts with "/404.php" is to be excluded.
 
-##### Advanced exclude patterns
+### Advanced exclude patterns
 
 You can also use wildcard characters. For example:
 
@@ -191,7 +167,7 @@ $ rsync -av --exclude "themes/**/*.css" ...
 
 Also, as you can see, in the JPEG example, you can add any amount of `--exclude` options to the command.
 
-#### Remembering excludes in a file
+### Remembering excludes in a file
 
 If you have a set of files which you always want to exclude, you can create an file containing all exclusions and then use it via `--exclude-from <file>`:
 
