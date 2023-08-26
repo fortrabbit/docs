@@ -1,12 +1,22 @@
 ---
-
-reviewed:      2023-02-15 08:20:04
-title:         Event filters
-excerpt:       Audit log and notification system
-lead:          Learn about events with the fortrabbit dashboard.
-
+reviewed: 2023-08-25 21:24:54
+title:    Event filters
+excerpt:  Audit log and notification system
+lead:     Learn about events with the fortrabbit dashboard.
 ---
 
-<!-- TODO: Extend at least a bit -->
+<!-- TODO: Extend some more, maybe hide before launch, when feature is not ready -->
 
-With the dashboard you will find a list of performed actions. This includes your and your teams operations. Seeing who did what when makes your work transparent and helps to increase security.
+With the dashboard you will find a list of performed actions. This includes your and your teams operations. Seeing who did what when makes your work transparent and helps to increase security. Event filters here allow you to narrow down your view only on certain type of events. On the events page in the dashboard you can see event filter options, as well as predefined event filters.
+
+:DashboardLink{title="Event filters list" path="/event-filters"}
+
+## Saved event filters
+
+You can create your own event filters in the dashboard. Beside the actual filter settings, choose a name you can easily memorize. You can create a filter to output only metric issues, or a deployment log or billing related events. Saved event filters are stored with your account and are thus not shared.
+
+:DashboardLink{title="Create a new new filter" path="/new/event-filter"}
+
+## Exporting event filters
+
+Saved event filters can also be send to a third party event stream service, such as Slack. This will allow the fortrabbit platform to post on a channel you will need to choose.

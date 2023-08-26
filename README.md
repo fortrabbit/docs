@@ -72,14 +72,6 @@ Use relative links to local files including the full folder and file name. Examp
 
 Your editor should offer autocomplete for this. Also such links can be automatically updated when the file name changes. Make use of that to avoid dead links.
 
-## Custom MDC components
-
-TODO: Describe available components available in Markdown editing mode.
-
-## Editing
-
-TODO: Describe Obsidian setup or VS Code or alternatives.
-
 ## Deployment
 
 There is currently no automatic deployment set up.
