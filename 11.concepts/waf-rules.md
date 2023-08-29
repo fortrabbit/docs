@@ -1,10 +1,10 @@
 ---
-
 reviewed:      2022-03-02
 title:         Web Application Firewall
 excerpt:       Protect your App against common attacks and harmful requests
-
 ---
+
+<!-- TODO: Review. Old Stuff -->
 ## Problem
 
 Your App is exposed to the World Wide Web to give your users access. Unfortunately not every request is made by friendly humans. In fact there are bots, crawlers and attackers that scan your site for vulnerabilities. Even if they are not successful those requests are harmful because they eat resources which are meant for your users.

@@ -9,6 +9,8 @@ head:
       content: 'CORS, headers Apache config, apache2.conf, php, ssi, gzip'
 ---
 
+<!-- TODO: Review. Old Stuff -->
+
 ## Cache-Control
 
 Don't serve the same content to the same client twice! Control how the browser of the client caches results and files locally. This is especially useful for asset resources that don't change often. Caching reduces the number of request and the data transmitted. On the HTTP part of your App/website caching is achieved by using HTTP headers. You can control the caching in htaccess like so:

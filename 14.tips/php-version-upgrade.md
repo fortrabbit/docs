@@ -9,6 +9,8 @@ head:
       content: 'app-design, deprecation, migration, EOl, mcrypt'
 ---
 
+<!-- TODO: Review. Old Stuff -->
+
 ## Prerequisites
 
 This is how PHP versions are handled with fortrabbit:
