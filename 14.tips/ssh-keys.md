@@ -61,9 +61,9 @@ $ xclip -i < ~/.ssh/id_ed25519.pub
 # Open the `id_ed25519.pub` file, select all, then copy.
 ```
 
-<!-- TODO: Review by infra. Do we have?
+<!-- TODO: When and how we will have this? Requires dedicated article and dedicated object. Stage 2+ ?
 
-### App-only SSH keys
+### Deploy keys
 
 In certain scenarios, you may want to grant someone or something access to an App without creating a new Account. For these purposes, you can use App-only keys that are separate from any Account on fortrabbit. The App-only keys are managed via the Dashboard with the Apps. Adding and removing such keys follows the same concepts as described above. -->
 

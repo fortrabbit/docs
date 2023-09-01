@@ -9,7 +9,7 @@ head:
       content: 'ENV vars, Environment variables, php, beginner, phpdotenv, dotenv'
 ---
 
-<!-- TODO: Review by infra -->
+<!-- TODO: Review by infra (see comments below as well) -->
 
 ## Problem
 
@@ -41,7 +41,11 @@ So, most likely, your fortrabbit App will work out of the box. As a bonus you ev
 
 ## Adding and editing ENV vars on fortrabbit
 
-You can add ENV vars of your App in the [dashboard](/11.concepts/dashboard.md) with the app environment. The input supports the dotenv file format and allows you to create or update multiple variables at once. The changes will be distributed after you save the page. It may take around 60 seconds.
+You can add ENV vars of your App in the [dashboard](/11.concepts/dashboard.md) with the app environment.
+
+:DashboardLink{title="Edit ENV vars for {{ app-env-name }}" path="/environments/{{app-env-name}}/env-vars"}
+
+The input supports the dotenv file format and allows you to create or update multiple variables at once. The changes will be distributed after you save the page. It may take around 60 seconds.
 
 ## Accessing ENV vars from raw PHP
 
@@ -61,12 +65,13 @@ There are four different kinds of ENV vars here on fortrabbit which are availabl
 
 Those are the ones you add yourself in the dashboard.
 
-### App ENV vars
+### fortrabbit ENV vars
+
+<!-- TODO: Add default ENV vars we know about 2023-08-30 14:01:44  -->
 
 Generic ENV vars cannot be overwritten by you. They are always available.
 
 * `APP_NAME` contains the name of your App
-* `APP_SECRETS` contains the path to a JSON encoded file containing [App Secrets](./3.environment/secrets)
 
 ### Software preset ENV vars
 
@@ -90,11 +95,15 @@ You can use simple, [nested variables](https://github.com/vlucas/phpdotenv#nesti
 
 ```apache
 # will work:
-MY_VAR=${OTHER_VAR}
 OTHER_VAR=something
+MY_VAR=${OTHER_VAR}
 ```
 
-We do not support multiple levels of interpolation, which means that you cannot use variables, which reference other variables, which again reference other variables, for example:
+Order matters. First define something before referencing.
+
+<!-- TODO: Review if multiple levels work. -->
+
+We do NOT support multiple levels of interpolation, which means that you cannot use variables, which reference other variables, which again reference other variables, for example:
 
 ```apache
 # will not work:
@@ -108,6 +117,8 @@ ANOTHER_VAR=something
 Storing credentials (passwords, secrets, ..) in environment variables is not without risk. They can be exposed, due to programming errors or oversights, for example when you forget to remove the `phpinfo()` from production.
 
 ## ENV var validation
+
+<!-- Review! -->
 
 Strict validation rules for ENV vars are in use in the dashboard while entering. Chars like the "$" sign can be harmful in Linux systems. Here is the regex we use to validate the ENV var input in the dashboard:
 

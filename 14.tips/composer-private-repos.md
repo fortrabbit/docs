@@ -9,13 +9,27 @@ head:
       content: 'Composer, Git, ssh, GitHub, Bitbucket, auth.json, oAuth'
 ---
 
-<!-- TODO: Review from infra -->
+<!-- TODO: Review and finish. -->
+
+<!--
+
+2023-08-30 14:14:43 
+
+-->
 
 ## What are private Composer packages?
 
 Modern PHP app development utilizes [Composer](/14.tips/composer.md) as a dependency manager. There are many great open source packages [out there](http://packagist.org). But your company code is probably not intended to be released to the public or you rely on a third party package which is not open source. That's when you use private Composer repositories.
 
-## A - Using oAuth or HTTP Basic Auth
+## A - Using SSH Keys
+
+<!-- 2023-08-30 14:17:25 - TODO: there is a key installed with each app environment (and it could be visible with the dashboard as well.)  -->
+
+Alternatively you can limit access to a specific SSH keys. To use your private Composer repo in [Git deployment](/6.deployment/1.intro.md) you need to set up authentication so your fortrabbit app can access your external repo (probably hosted on GitHub). For this you need a public and private SSH key-pair.
+
+The private key will be stored in the deployment environment of your App that composer can use it but nobody else. The command shows the public key, in the example is starting with `ssh-rsa AAA...` and ending with `..odTimp`. You can now install the key in your private git repository. You can re-run this command at any time to view or change the current key of your app.
+
+## B - Using oAuth or HTTP Basic Auth
 
 In the script below we generate a global `auth.json` file that contains credentials to access a GitHub repo using oAuth, and another private repo which is protected with Basic HTTP auth, in our example Laravel Nova. This is just for the sake of demonstration, you will probably need to adjust it to your needs.
 
@@ -36,6 +50,8 @@ if (getenv("NOVA_USER") && getenv("NOVA_PASS")) {
     shell_exec("/usr/local/bin/composer config --global http-basic.nova.laravel.com {$nova_username} {$nova_password}");
 }
 ```
+
+<!-- TODO: Below will be build step  -->
 
 <!-- The script you created needs to be executed before Composer tries to install packages. Create a fortrabbit.yml file with the following structure:
 
@@ -70,18 +86,3 @@ Now you can add your private repositories to your `composer.json` file as usual:
   }
 }
 ```
-
-## B - Using SSH Keys
-
-Alternatively you can limit access to a specific SSH keys. To use your private Composer repo in [Git deployment](/6.deployment/1.intro.md) you need to set up authentication so your fortrabbit app can access your external repo (probably hosted on GitHub). For this you need a public and private SSH key-pair. Here is how you generate it for your app environment:
-
-```shell
-ssh {{ssh-user}}@deploy.{{region}}.frbit.com keygen
-# Generating new SSH key pair
-#   Done 321ms
-#
-# Your SSH public key:
-# ssh-rsa AAAAB3NzaC1yc2EAA...ixx47pDIa1xtMV4odTimp
-```
-
-The private key will be stored in the deployment environment of your App that composer can use it but nobody else. The command shows the public key, in the example is starting with `ssh-rsa AAA...` and ending with `..odTimp`. You can now install the key in your private git repository. You can re-run this command at any time to view or change the current key of your app.

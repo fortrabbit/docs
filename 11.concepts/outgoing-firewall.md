@@ -5,6 +5,7 @@ excerpt:       Making requests to the outer world from the environment
 lead:          Learn how to make outgoing calls from your within your application hosted on fortrabbit.
 ---
 
+<!-- TODO: Write it! -->
 <!-- TODO: Review by infra. -->
 
 By default, outgoing traffic is limited on most non-standard ports for security reasons. See our [specs](http://www.fortrabbit.com/specs#firewall). Please make sure to visit that page before making your request to open ports.

@@ -2,6 +2,7 @@
 reviewed:  2023-08-03 14:09:00
 title:     Multi stage life cycles
 naviTitle: Multi-staging
+excerpt:   development, staging, production setups
 lead:      About development/production environment setups and how they can be used on fortrabbit.
 ---
 

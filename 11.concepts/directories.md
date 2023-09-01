@@ -1,5 +1,5 @@
 ---
-reviewed:      2023-02-15 08:20:15
+reviewed:      2023-08-30 13:54:22
 title:         Directories
 lead:          The app environment directory structure on fortrabbit.
 excerpt:       Default folder structure
@@ -10,21 +10,18 @@ head:
       content: 'folder, directory, directories, linux, unix, web root, doc root, document root' 
 ---
 
-<!-- TODO: Review by infra -->
-
 ```plain
 bin
 dev
 etc
 lib64
 proc
-tmp               < 2GB temporary files
+tmp
 usr
 srv
   app
-    {{app-env-name}}
-      htdocs      < default root path
-      logs        < log files
+    htdocs      < default root path
+    home        < bash history …
 ```
 
 When you login with [SFTP](/7.code-access/4.sftp.md) or [SSH](/7.code-access/3.ssh.md) to your [app environment](/10.objects/2.app-environment.md) you can see the file directory structure. In this article you can learn the predefined set of folders and what they are for.
@@ -36,6 +33,10 @@ The default web root (aka document root) directory is the main tree 'visible' fr
 ## tmp
 
 Temporary folder; limited to 2GB of storage. Files older than 15 days will be automatically purged. Typical use cases are the default PHP session file folder or a temp destination for file uploads via PHP (before `move_uploaded_file()` is called).
+
+## home
+
+Like your `~` on your local machine. Contains bash history, private SSH keys.
 
 ## Other folders
 

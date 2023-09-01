@@ -1,21 +1,19 @@
 ---
-reviewed:    2022-03-31 12:00:47
-title:       HTTP headers
-excerpt:     Cache control and CORS
-lead:        'HTTP headers are part of an Hyper Text Transfer Protocol request and response. HTTP headers are defining the operating parameters of an HTTP transaction. Use htaccess to modify these.'
+reviewed: 2023-08-31 14:33:23
+title:    HTTP headers
+excerpt:  Cache control and CORS
+lead:     'HTTP headers are part of an Hyper Text Transfer Protocol request and response. HTTP headers are defining the operating parameters of an HTTP transaction. Use htaccess to modify these.'
 head:
   meta:
     - name: 'keywords'
       content: 'CORS, headers Apache config, apache2.conf, php, ssi, gzip'
 ---
 
-<!-- TODO: Review. Old Stuff -->
-
 ## Cache-Control
 
 Don't serve the same content to the same client twice! Control how the browser of the client caches results and files locally. This is especially useful for asset resources that don't change often. Caching reduces the number of request and the data transmitted. On the HTTP part of your App/website caching is achieved by using HTTP headers. You can control the caching in htaccess like so:
 
-```plain
+```apache [.htaccess]
 # Example to cache images and CSS files
 # adjust and extend to your needs
 <ifModule mod_headers.c>
@@ -38,7 +36,7 @@ Beware: Adding this also introduces the main problem of caching. If you later de
 
 For "Cross-Site XMLHttpRequests" you'll need "Cross-origin resource sharing" or in short CORS headers. Those are mostly used in context of JavaScript AJAX requests across different domains. Like when `domain-a.com` loads a script from `domain-b.com`. Per default this is not possible for security reasons. But you can enable it for certain or even all origins:
 
-```plain
+```apache [.htaccess]
 # Access all areas (use carefully)
 Header add Access-Control-Allow-Origin "*"
 Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
