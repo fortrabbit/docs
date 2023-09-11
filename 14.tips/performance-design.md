@@ -55,9 +55,9 @@ Web applications are usually fast after the launch, but degrade over time. They 
 
 This is an opinionated topic. If you come from searching 504 time out errors, you will often read to increase the `max_execution_time` setting to allow a certain process to finish it's task.
 
-By the way: You can adjust this setting with your App under "PHP settings" in the Dashboard.
+By the way: You can adjust this setting with your app environment under "PHP settings" in the dashboard.
 
-In some cases that makes sense, but it's often a poor design decision. Image transformations with imageMagick are often long running, therefore you might want to increase the execution time to avoid time outs. But, as stated here often: long running tasks should best be separated from the frontend tasks into the background. We also have a [Worker service](/worker-pro) for that.
+In some cases that makes sense, but it's often a poor design decision. Image transformations with imageMagick are often long running, therefore you might want to increase the execution time to avoid time outs. But, as stated here often: long running tasks should best be separated from the frontend tasks into the background. We also have a [Worker service](/9.components/7.workers.md) for that.
 
 Frontend requests should always return a swift answer. The number of PHP processes is limited. When all PHP processes are occupied with long running tasks, new requests need to wait. That can easily pile up. A lower max execution time limit often results in faster errors. And that's often what you want. When making an API call to an external service, usually that reply should be there within a second, how long should you wait for it max? Maybe 10 seconds is reasonable. It's not likely that there will be an answer when you wait longer.
 

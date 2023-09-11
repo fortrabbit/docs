@@ -22,9 +22,9 @@ fortrabbit has a Bring-Your-Own-License integration with New Relic. That basical
 
 ### At fortrabbit
 
-1. Log in to the Dashboard
-1. Navigate to your App > Settings > PHP > Debugging
+1. Log in to the dashboard
+1. Navigate to your app environment > settings > New Relic
 1. Paste the New Relic license key
-1. Save the PHP Settings
+1. Save
 
 You are all good! After 5 minutes you should start to see data in your NewRelic dashboard. To get more information about how to use NewRelic, head to their [documentation](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm).

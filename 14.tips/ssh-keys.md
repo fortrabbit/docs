@@ -65,7 +65,7 @@ $ xclip -i < ~/.ssh/id_ed25519.pub
 
 ### Deploy keys
 
-In certain scenarios, you may want to grant someone or something access to an App without creating a new Account. For these purposes, you can use App-only keys that are separate from any Account on fortrabbit. The App-only keys are managed via the Dashboard with the Apps. Adding and removing such keys follows the same concepts as described above. -->
+In certain scenarios, you may want to grant someone or something access to an App without creating a new Account. For these purposes, you can use App-only keys that are separate from any Account on fortrabbit. The App-only keys are managed via the dashboard with the app environments. Adding and removing such keys follows the same concepts as described above. -->
 
 ## Specify a different key than the default
 

@@ -4,15 +4,11 @@ navigation: false
 
 # fortrabbit help pages
 
-Welcome! This repo contains the contents of the (new) fortrabbit help pages.
+Welcome! This repo contains the contents of the (new) fortrabbit docs.
 
 ## Git repo
 
 - <https://github.com/fortrabbit/help-new>
-
-## Structure
-
-The content get's rendered by Nuxt Content using Navigation to structure content based on the given folder structure. Please be aware of that.
 
 ## Contributing
 
@@ -72,6 +68,14 @@ Use relative links to local files including the full folder and file name. Examp
 
 Your editor should offer autocomplete for this. Also such links can be automatically updated when the file name changes. Make use of that to avoid dead links.
 
+## Navigation structure
+
+The content get's rendered by Nuxt Content using Navigation to structure content based on the given folder structure. Please be aware of that. The numbers in front of the folder and files names are for sorting the navigation. The folders are creating a navigation structure.
+
+## Local development
+
+fortrabbit staff can run the fortrabbit docs locally to see documents rendered in the browser. See the instructions of the repo on how to integrate this.
+
 ## Deployment
 
 There is currently no automatic deployment set up.
@@ -98,7 +102,7 @@ There are some Markdown Components (powered by Nuxt Content) to use:
 :DashboardLink{title="" path=""}
 ```
 
-This parses markdown inside the DIV. With the data-user attribute it checks if the user is logged in, links to the Dashboard will be styled as buttons — use a verb to start them!
+This parses markdown inside the DIV. With the data-user attribute it checks if the user is logged in, links to the dashboard will be styled as buttons — use a verb to start them!
 
 ## Writing conventions
 
