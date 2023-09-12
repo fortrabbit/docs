@@ -87,7 +87,7 @@ Those values will be replaced by JS when users are logged in:
 ```plain
 SSH user: {{ssh-user}}
 Region:   {{region}}
-Your app: {{app-env-name}}
+Your app: {{app-env-slug}}
 ```
 
 It will dynamically show the correct code examples and dashboard links.

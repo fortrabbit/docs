@@ -27,7 +27,7 @@ head:
 5. Check if your website is still working after a few minutes
 6. You can safely switch back the version if it doesn't work
 
-:DashboardLink{title="Change the PHP version for {{ app-env-name }}" path="/environments/{{ app-env-name }}/settings/php-version"}
+:DashboardLink{title="Change the PHP version for {{app-env-slug}}" path="/environments/{{app-env-slug}}/settings/php-version"}
 
 This will update the PHP runtime on fortrabbit. You may also want to update your local development environment as well, read on.
 
@@ -86,7 +86,7 @@ Updating the PHP version for your fortrabbit App is as simple as pie:
 
 Changes can take two minutes to be applied. You can also test-run this. When your App is not running under the newer version of PHP you can switch back to the deprecated version for another while and find out why first.
 
-:DashboardLink{title="Change the PHP version for {{ app-env-name }}" path="/environments/{{ app-env-name }}/settings/php-version"}
+:DashboardLink{title="Change the PHP version for {{app-env-slug}}" path="/environments/{{app-env-slug}}/settings/php-version"}
 
 #### 4.2 - Deploy changes
 

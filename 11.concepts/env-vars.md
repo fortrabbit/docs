@@ -43,7 +43,7 @@ So, most likely, your fortrabbit App will work out of the box. As a bonus you ev
 
 You can add ENV vars of your App in the [dashboard](/11.concepts/dashboard.md) with the app environment.
 
-:DashboardLink{title="Edit ENV vars for {{ app-env-name }}" path="/environments/{{app-env-name}}/env-vars"}
+:DashboardLink{title="Edit ENV vars for {{app-env-slug}}" path="/environments/{{app-env-slug}}/env-vars"}
 
 The input supports the dotenv file format and allows you to create or update multiple variables at once. The changes will be distributed after you save the page. It may take around 60 seconds.
 

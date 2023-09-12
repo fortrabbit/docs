@@ -35,5 +35,5 @@ help-frbit.eu2.frbit.net.  20    IN  A       52.48.51.144
 
 ```shell
 # This will print out the IP of your App
-$ dig +short {{app-env-name}}.frb.io 
+$ dig +short {{app-env-slug}}.frb.io 
 ```

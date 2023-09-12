@@ -28,7 +28,7 @@ When you login with [SFTP](/7.code-access/4.sftp.md) or [SSH](/7.code-access/3.s
 
 ## htdocs
 
-The default web root (aka document root) directory is the main tree 'visible' from the web. You can change the routing root path, to any folder below the `htdocs` directory. The [git deployment](/6.deployment/1.intro.md) syncs to the `htdocs` folder as well. `htdocs` is also your 'login folder' - starting point for SSH/SFTP. The whole path looks something like this: `/srv/app/{{app-env-name}}/htdocs/admin`.
+The default web root (aka document root) directory is the main tree 'visible' from the web. You can change the routing root path, to any folder below the `htdocs` directory. The [git deployment](/6.deployment/1.intro.md) syncs to the `htdocs` folder as well. `htdocs` is also your 'login folder' - starting point for SSH/SFTP. The whole path looks something like this: `/srv/app/{{app-env-slug}}/htdocs/admin`.
 
 ## tmp
 
