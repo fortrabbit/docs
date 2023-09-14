@@ -13,6 +13,10 @@ head:
 
 SSH key authentication is used to securely identify you for [code access](/7.code-access/1.intro.md). Remember, on fortrabbit an account represents a [person](/10.objects/3.person.md). Your fortrabbit account may store the public parts of several SSH keys.
 
+## Consider reusing your GitHub SSH keys
+
+Already using GitHub and our [deployment flows](/6.deployment/1.intro.md)? The fortrabbit dashboard can directly import public keys associated with your GitHub account so you don't need to setup additional keys for this.
+
 ## Do you already have a SSH key?
 
 To see any existing keys, open a terminal to list the `~/.ssh` folder:
@@ -37,6 +41,9 @@ $ ssh-keygen -t ed25519 -C me@fortrabbit
 # Enter passphrase (empty for no passphrase):
 # Enter same passphrase again:
 ```
+
+We suggest to use `me@fortrabbit` so that you can identify the key as being associated with your fortrabbit account later on. Use anything you like.
+It's just a comment.
 
 ## Importing SSH keys to fortrabbit
 
