@@ -10,7 +10,7 @@ head:
       content: 'folder, directory, directories, linux, unix, web root, doc root, document root' 
 ---
 
-```plain
+```raw
 bin
 dev
 etc

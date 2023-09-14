@@ -122,7 +122,7 @@ Storing credentials (passwords, secrets, ..) in environment variables is not wit
 
 Strict validation rules for ENV vars are in use in the dashboard while entering. Chars like the "$" sign can be harmful in Linux systems. Here is the regex we use to validate the ENV var input in the dashboard:
 
-```plain
+```raw
 /^[\p{L}\p{N}\ _\-\+=\.,:;\?!@~%&\*\(\)\[\]\{\}<>\/\\#]+$/u
 ```
 
