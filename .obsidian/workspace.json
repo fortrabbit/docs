@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d41ff444f5cee14a",
+        "id": "de15b7d5b2a58999",
         "type": "tabs",
         "children": [
           {
-            "id": "1842aebab86487a1",
+            "id": "9909fe985497cfc1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "14.tips/performance-design.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "14.tips/performance-design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "14.tips/performance-design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "14.tips/performance-design.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -148,8 +139,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "1842aebab86487a1",
+  "active": "9909fe985497cfc1",
   "lastOpenFiles": [
+    "1.get-started/1.intro.md",
+    "14.tips/performance-design.md",
     "10.components/1.php.md",
     "10.components/2.mysql.md",
     "11.concepts/backup-recovery.md",
@@ -178,8 +171,6 @@
     "12.platform/_dir.yml",
     "13.integrations/sendgrid.md",
     "13.integrations/new-relic.md",
-    "13.integrations/cloudflare.md",
-    "13.integrations/blackfire.md",
     "13.integrations",
     "integrations",
     "11.troubleshooting/http-errors/_dir.yml",
