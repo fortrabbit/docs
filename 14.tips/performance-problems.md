@@ -11,7 +11,7 @@ For web server performance "PHP response time" is an important metric. It can be
 
 ## Understand PHP processes and execution time
 
-Please see our dedicated [PHP processes article](/12.platform/4.details/php-processes.md).
+Please see our dedicated [PHP processes article](/14.tips/php-processes.md).
 
 ## How to identify PHP performance problems
 

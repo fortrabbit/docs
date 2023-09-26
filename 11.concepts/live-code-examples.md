@@ -6,7 +6,7 @@ excerpt:    Live code examples
 
 ---
 
-When you have your app environment ready at fortrabbit and you are currently logged in the Dashboard, the help pages here will show you [live code examples](access-methods#the-code-example-helper) matching the settings for your individual App, so you can easily copy/paste them.
+When you have your app environment ready at fortrabbit and you are currently logged in the Dashboard, the help pages here will show you live code examples matching the settings for your individual App, so you can easily copy/paste them.
 
 ## The code example helper
 

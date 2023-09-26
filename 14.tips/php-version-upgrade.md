@@ -56,7 +56,7 @@ Issuing `composer outdated` in the Terminal will give you a list of outdated pac
 You can also ask Composer why you currently can not upgrade to a PHP version:
 
 ```shell
-$ composer why-not php 8
+composer why-not php 8
 ```
 
 To update a dependency, simply change any required versions in your `composer.json` to a newer version and then issue a `composer update` to actually install the required updates. Keep in mind that the  `composer outdated` command does not care about PHP versions. It will only tell you about available updates for your dependencies, but hopefully newer packages should support newer PHP versions as well.
@@ -65,7 +65,7 @@ To update a dependency, simply change any required versions in your `composer.js
 
 Many Content Management Systems, like WordPress and Craft CMS come with a built in update feature. So you can simply login to the admin area of the CMS and hit a button to update.
 
-**Beware:** With fortrabbit, those changes only happen on the file system and are not reflected in Git. This is fine when you are using SFTP, otherwise read more in our [setup guide for WordPress](https://help.fortrabbit.com/install-wordpress-4-uni#updating-wordpress) or [update guide for Craft CMS](/3.craft/7.updating.md).
+**Beware:** With fortrabbit, those changes only happen on the file system and are not reflected in Git. This is fine when you are using SFTP, otherwise read more in our [setup guide for WordPress](/5.guides/5.wordpress.md) or [update guide for Craft CMS](/3.craft/7.updating.md).
 
 ### 3 - Test it locally
 

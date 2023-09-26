@@ -141,6 +141,8 @@
   },
   "active": "9909fe985497cfc1",
   "lastOpenFiles": [
+    "1.get-started/3.first-steps.md",
+    "1.get-started/2.target-audience.md",
     "1.get-started/1.intro.md",
     "14.tips/performance-design.md",
     "10.components/1.php.md",
@@ -169,8 +171,6 @@
     "13.integrations/index.md",
     "13.integrations/_dir.yml",
     "12.platform/_dir.yml",
-    "13.integrations/sendgrid.md",
-    "13.integrations/new-relic.md",
     "13.integrations",
     "integrations",
     "11.troubleshooting/http-errors/_dir.yml",

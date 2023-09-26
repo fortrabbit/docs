@@ -13,11 +13,11 @@ The software preset will **not install** the selected software on your behalf. T
 
 * Set a matching PHP version
 * Enable/disable PHP extensions — for best performance
-* Set a [root path](#root-path) — to serve the App from the right location
-* Populate [ENV vars](../env-vars.md) — to connect to the database automatically
+* Set a root path — to serve the App from the right location
+* Populate [ENV vars](/11.concepts/env-vars.md) — to connect to the database automatically
 
 So, the software preset saves you some work and helps to prevent errors.
 
 It's non-destructive, you can change all settings later on as you wish.
 
-This is especially handy with modern software that supports [ENV var](../env-vars.md) configuration and environment detection — like [Laravel](../install-laravel) or [Craft CMS](../craft-deploy-git) do. It makes the application really portable, you can deploy the same code base to any App and it will work out of the box.
+This is especially handy with modern software that supports [ENV var](/11.concepts/env-vars.md) configuration and environment detection — like Laravel or Craft CMS do. It makes the application really portable, you can deploy the same code base to any App and it will work out of the box.

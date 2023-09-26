@@ -157,7 +157,6 @@ While some implicit technical details are obvious to you, they might not be for 
 When creating new files:
 
 - use dashes instead of spaces or low dashes for file names
-- use the short versions: `-uni`, `-pro` at the end for different stacks
 
 ### fortrabbit owned words and common casing
 

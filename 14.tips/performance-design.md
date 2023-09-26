@@ -41,7 +41,7 @@ If you're planning on growing large and expect a lot of traffic, you will end up
 
 ### Database considerations
 
-Well, talking about database optimization could easily fill a whole book — or books. We have a help article about the most basic tips for relational databases, such as MySQL, [over here](/mysql-performance).
+Well, talking about database optimization could easily fill a whole book — or books. We have a help article about the most basic tips for relational databases, such as MySQL.
 
 ### Static file separation
 

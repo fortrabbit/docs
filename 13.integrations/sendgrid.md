@@ -32,4 +32,4 @@ The **SendGrid PHP library** [here on GitHub](https://github.com/sendgrid/sendgr
 }
 ```
 
-To send e-mails via the API, you'll need to specify your SendGrid API key. We recommend to store this with your [App secrets](/secrets). There is also an [PHP SendGrid example on GitHub](https://github.com/sendgrid/sendgrid-php-example) which makes use of both, the API and the SMTP gateway.
+To send e-mails via the API, you'll need to specify your SendGrid API key. There is also an [PHP SendGrid example on GitHub](https://github.com/sendgrid/sendgrid-php-example) which makes use of both, the API and the SMTP gateway.

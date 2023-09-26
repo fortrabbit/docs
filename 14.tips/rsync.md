@@ -71,7 +71,7 @@ $ rsync -av {{app-env-slug}}@deploy.{{region}}.frbit.com:~/ {{app-name-2}}@deplo
 
 ### Remote paths
 
-Remote URLs consist of `{{user}}@{{host}}:{{folder}}`. In the examples here [fortrabbit App placeholders](access-methods#the-code-example-helper) are used.
+Remote URLs consist of `{{user}}@{{host}}:{{folder}}`. In the examples here fortrabbit placeholders are used.
 
 ### Local paths
 
@@ -186,11 +186,11 @@ There is still a lot more you can do with exclude and filtering. Not only is the
 
 ### Dealing with obsolete files
 
-`rsync` will work in a non-destructive way by default, like our [overwrite but not delete](deployment-methods-uni#git-push-overwrite-but-not-deletes) strategy. So new files will be written and replaced, but old files will not get deleted. Sometimes that's not what you want. Sometimes you want an exact copy - a mirror.
+`rsync` will work in a non-destructive way by default, like our overwrite but not delete strategy. So new files will be written and replaced, but old files will not get deleted. Sometimes that's not what you want. Sometimes you want an exact copy - a mirror.
 
 So, how to remove obsolete files on the remote? The short answer is: add the option `--delete` to your command line and you are done. To give you and example, using the WordPress setup from before: say you deleted this pesky `404.php` file locally. Now, if you run `rsync` without the `--delete` option (and no other added or modified files), `rsync` would tell you that it will do nothing:
 
-```
+```shell
 $ rsync -av ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
 sending incremental file list
 wp-content/themes/your-theme/
