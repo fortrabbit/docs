@@ -12,7 +12,7 @@ This article covers the general basics as well as some deep links for moving you
 
 ## 1. Create your fortrabbit app
 
-Each website or web application is represented by an [app](/12.platform/2.objects/1.app.md) with at least one [environment](/12.platform/2.objects/2.app-environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
+Each website or web application is represented by an [app](/10.objects/1.app.md) with at least one [environment](/10.objects/2.app-environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
 
 ## 2. Prepare your domains
 
@@ -30,11 +30,11 @@ Runtime data means all kinds of data, which is created by your App at runtime. U
 
 ## 5. Migrate your databases
 
-If your App is using a MySQL database, you will need to migrate the database data as well. [Export the MySQL database from your old hosting and import](/9.mysql/3.export-import.md) it to the fortrabbit database.
+If your App is using a MySQL database, you will need to migrate the database data as well. [Export the MySQL database from your old hosting and import](/8.mysql/3.export-import.md) it to the fortrabbit database.
 
 ## 6. Sending e-mails
 
-Take care when you application needs to send mails. Simple `sendmail` won't work, see our [quirks article](/12.platform/4.details/4.quirks.md#mailing) on how to send mails, either via SMTP or 3rd party provider.
+Take care when you application needs to send mails. Simple `sendmail` won't work, see our [quirks article](/11.concepts/4.quirks.md#mailing) on how to send mails, either via SMTP or 3rd party provider.
 
 ## 7. HTTPS
 

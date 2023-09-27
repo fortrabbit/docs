@@ -18,7 +18,7 @@ If you begin developing, you might not instantly utilize a pair of multi gigabyt
 * File: Disk storage is not very fast.
 * Database: Faster than disk. Use if you need to cache data for a long time.
 * APC: Aside from opcode caching which happens automatically, you can use APC as an object cache very similar to Memcache or Redis.
-* Redis: Modern key value im memory caching service, see the [Redis component article](/10.components/8.redis.md)
+* Redis: Modern key value im memory caching service, see the [Redis component article](/9.components/8.redis.md)
 
 ### Reduce I/O
 
@@ -49,7 +49,7 @@ Sure, a request to a static file can be delivered faster than a request handled 
 
 ### Profile your code
 
-Web applications are usually fast after the launch, but degrade over time. They receive more requests and process more data. You add more features and at some point everything or some parts of your app become slow. Profilers give you deep insights of your code and all dependencies that are involved to handle requests. XDEBUG profiler and XHPROF are the defacto open source standard, but you need additional tools to visualize the data. The [blackfire profiler](blackfire.md) makes it really easy to start profiling in minutes.
+Web applications are usually fast after the launch, but degrade over time. They receive more requests and process more data. You add more features and at some point everything or some parts of your app become slow. Profilers give you deep insights of your code and all dependencies that are involved to handle requests. XDEBUG profiler and XHPROF are the defacto open source standard, but you need additional tools to visualize the data. The [blackfire profiler](/13.integrations/blackfire.md) makes it really easy to start profiling in minutes.
 
 ### Reduce the max execution time
 
@@ -80,7 +80,7 @@ Assets are static files, such as JS, CSS, SVG and some images. It's common to ha
 
 Minifying JS/CSS files removes unnecessary extra spaces, line breaks and indentations. Modern tools support tree shaking as well. Another technique is to combine — concating —  different JS or CSS files into one file. This brings you: less requests and probably better GZIP compression ratios. Finally, there are specific techniques to further reduce size: For JS, variable names can be changed automatically for shorter ones, in CSS you can use shorthands and short notations of colors and values.
 
-You can hook in Node.js pipelining tasks during [deployment build steps](/6.deployment/4.build-steps.md).
+You can hook in Node.js pipelining tasks during [deployment build steps](/6.deployment/3.build-steps.md).
 
 ### Images
 
@@ -88,7 +88,7 @@ Images (JPG, PNG, SVG, WebP …) represent around 70% of the total footprint of 
 
 ### Videos
 
-Our [traffic tiers](/10.components/4.traffic.md) are not designed to host local videos. It's recommended to outsource video hosting to a 3rd party. That will also help with compression and delivery.
+Our [traffic tiers](/9.components/4.traffic.md) are not designed to host local videos. It's recommended to outsource video hosting to a 3rd party. That will also help with compression and delivery.
 
 ### Web fonts
 
@@ -98,7 +98,7 @@ Web fonts are nice but they also come with a footprint. The file size is determi
 
 Don't serve the same content to the same client twice. Cache it with their browser. While modern browsers are already doing great work here. You can further control the caching by altering the Cache-Control with the HTTP headers.
 
-GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented on the web server — Apache in our case otherwise nginx — as a module. You can enable and configure it in your `.htaccess` file (see also our [htaccess GZIP article](/14.tips/6.htaccess/4.gzip.md)).
+GZIP provides lossless compression for text files such as HTML, CSS or JS. It's implemented on the web server — Apache in our case otherwise nginx — as a module. You can enable and configure it in your `.htaccess` file (see also our [htaccess GZIP article](/14.tips/htaccess/4.gzip.md)).
 
 It works like this: after all the HTML is rendered on the server side it gets compressed and send to the browser in such a minified format. The browser then has to decompress everything on the fly. So as you can imagine: that of course saves bandwidth but also costs a little bit of CPU on both sides. It is in general recommended to use it but can cause strange effects when combined with other techniques, like caching.
 

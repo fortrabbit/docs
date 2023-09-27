@@ -17,7 +17,7 @@ PHP, MySQL, but also traffic and web storage are components. Most components are
 | PHP           |         XXX MB  |        S |       $X  |
 | MySQL         |         XXX MB  |        M |       $X  |
 
-See the [components list](/10.components/index.md) for all available components. The [pricing page](https://www.fortrabbit.com/pricing) gives you an overview. The [pricing intro](/15.billing/1.pricing.md) explains level billing concepts.
+See the [components list](/9.components/index.md) for all available components. The [pricing page](https://www.fortrabbit.com/pricing) gives you an overview. The [pricing intro](/12.billing/1.pricing.md) explains level billing concepts.
 
 ## Required and optional components
 
@@ -25,4 +25,4 @@ The components PHP, traffic and web storage are required, they can not be desele
 
 ## Components during the free trial
 
-All components are available with the [free trial](/13.concepts/2.free-trial.md). They are however limited to the smallest plan.
+All components are available with the [free trial](/11.concepts/2.free-trial.md). They are however limited to the smallest plan.
