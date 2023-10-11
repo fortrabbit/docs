@@ -6,9 +6,9 @@ navigation: false
 
 Welcome! This repo contains the contents of the (new) fortrabbit docs.
 
-## Git repo
+## Git repo (this)
 
-- <https://github.com/fortrabbit/help-new>
+- [github.com/fortrabbit/docs>](https://github.com/fortrabbit/docs)
 
 ## Contributing
 
