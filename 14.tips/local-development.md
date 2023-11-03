@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-08-13 19:16:25
 title:    Local development
-excerpt:  Websites running on your local computer
+navigation.excerpt:  Websites running on your local computer
 lead:     Set up a local development environment on your local machine so that you can see your software while you are building it.
 head:
   meta:

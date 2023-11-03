@@ -2,7 +2,7 @@
 reviewed:  2023-08-01 18:38:06
 title:     Components intro
 naviTitle: Components
-excerpt:   Individually scalable hosting resources
+navigation.excerpt:   Individually scalable hosting resources
 lead:      Individually scalable hosting resources for each app environment.
 ---
 

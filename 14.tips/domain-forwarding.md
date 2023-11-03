@@ -2,7 +2,7 @@
 reviewed:  2023-08-09 10:05:26
 title:     Forwarding domains
 naviTitle: Forwarding domains
-excerpt:   Redirect one domain to another
+navigation.excerpt:   Redirect one domain to another
 lead:      Redirect one domain to another. Here are your options.
 head:
   meta:

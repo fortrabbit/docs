@@ -1,7 +1,7 @@
 ---
 reviewed:      2023-02-15 08:20:13
 title:         Dig
-excerpt:       'Query public DNS entries from the terminal'
+navigation.excerpt:       'Query public DNS entries from the terminal'
 lead:          'Query public DNS entries from the terminal using the dig command.'
 ---
 

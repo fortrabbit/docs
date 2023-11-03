@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-02-15 08:19:49
 title:    Performance design
-excerpt:  Optimize code for speed
+navigation.excerpt:  Optimize code for speed
 lead:     Make it fast - from development to production, from backend to frontend.
 ---
 

@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-08-15 13:47:18
 title:    Logs
-excerpt:  Access and error logs
+navigation.excerpt:  Access and error logs
 lead:     'Analyzing logs is an important part of maintaining a stable and secure website. Error logs often help to identify bugs and other issues. Here is how on fortrabbit.'
 head:
   meta:

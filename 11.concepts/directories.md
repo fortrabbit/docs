@@ -2,7 +2,7 @@
 reviewed:      2023-08-30 13:54:22
 title:         Directories
 lead:          The app environment directory structure on fortrabbit.
-excerpt:       Default folder structure
+navigation.excerpt:       Default folder structure
 hideExamples:  yes
 head:
   meta:

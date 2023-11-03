@@ -1,7 +1,7 @@
 ---
 reviewed:      2023-08-06 12:18:35
 title:         Events
-excerpt:       Audit log for all 
+navigation.excerpt:       Audit log for all 
 lead:          Events capture activities by people on the fortrabbit hosting platform.
 ---
 

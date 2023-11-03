@@ -2,7 +2,7 @@
 reviewed: 2023-07-31
 title: Backup recovery
 naviTitle: Backup recovery
-excerpt: 
+navigation.excerpt: 
 lead: How to use the files downloaded from the backup component to actually restore a website
 ---
 There are two types of backups: MySQL and web storage. Here is how you recover from either:

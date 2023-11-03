@@ -2,7 +2,7 @@
 reviewed:  2023-08-09 09:56:23
 title:     HTTPS troubleshooting
 naviTitle: HTTPS troubleshooting
-excerpt:   Debugging SSL/TLS errors
+navigation.excerpt:   Debugging SSL/TLS errors
 lead:      Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
 ---
 

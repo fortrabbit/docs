@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-08-25 16:20:40
 title:    Download an environment
-excerpt:  Get all data to have it running locally
+navigation.excerpt:  Get all data to have it running locally
 lead:     "This article helps you downloading all the application data required directly from our services to run it elsewhere. Tech skills are required to do this."
 ---
 

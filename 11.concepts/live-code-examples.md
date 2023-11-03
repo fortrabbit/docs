@@ -2,7 +2,7 @@
 
 reviewed:   2023-02-15 08:21:22
 title:      Live code examples
-excerpt:    Live code examples
+navigation.excerpt:    Live code examples
 
 ---
 

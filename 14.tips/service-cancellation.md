@@ -2,7 +2,7 @@
 reviewed: 2023-08-06 17:46:33
 title: Service cancellation
 naviTitle: Service cancellation
-excerpt: How to quit fortrabbit
+navigation.excerpt: How to quit fortrabbit
 lead: Fully or partly cancel fortrabbit hosting services with immediate effect, irreversibly.
 head:
   meta:

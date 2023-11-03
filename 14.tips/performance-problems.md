@@ -1,7 +1,7 @@
 ---
 title:     PHP performance problems
 naviTitle: PHP performance problems
-excerpt:  Optimize code for speed
+navigation.excerpt:  Optimize code for speed
 lead:     "What you may want to know about PHP related performance issues."
 ---
 

@@ -2,7 +2,7 @@
 reviewed: 2023-02-15 08:19:53
 title:    How to download previous invoices
 naviTitle:  Download invoices
-excerpt:  Visit the invoice archive
+navigation.excerpt:  Visit the invoice archive
 lead: Options to download previous invoices from fortrabbit.
 head:
   meta:

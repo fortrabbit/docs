@@ -2,17 +2,13 @@
 reviewed: 2023-08-08 11:15:16
 title: DNS setup for external domains
 naviTitle: DNS settings
-excerpt: The world of DNS and domains
-lead: Basic DNS configuration to route external domains to fortrabbit services
+navigation.excerpt: The world of DNS and domains
+lead: Basic DNS configuration to route external domains to fortrabbit services.
 head:
   meta:
     - name: 'keywords'
       content: 'TLD, Top Level Domain, top-level-domain, registration, ordering, zone apex, apex domain, root domain, subdomain, domain masking, domain name server, DNS, ns, lookup'
 ---
-
-## Get ready
-
-Have a basic
 
 ### 1. Tell fortrabbit about your domain
 

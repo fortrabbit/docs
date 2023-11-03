@@ -2,7 +2,7 @@
 reviewed:   2023-08-14 08:15:08
 title:      Git intro
 naviTitle:  Git intro
-excerpt:    Install, learn, enjoy
+navigation.excerpt:    Install, learn, enjoy
 lead:       This is a quick intro to Git, how to set it up and how to get started with it on fortrabbit.
 head:
   meta:

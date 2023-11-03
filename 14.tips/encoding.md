@@ -1,7 +1,7 @@
 ---
 reviewed:   2023-02-15 08:21:33
 title:      Encoding
-excerpt:    UTF-8 alternatives
+navigation.excerpt:    UTF-8 alternatives
 lead:       UTF-8 is assumed as the default encoding. You can set a different encoding manually — if you really want. This is on how to change the character encodings with fortrabbit.
 head:
   meta:

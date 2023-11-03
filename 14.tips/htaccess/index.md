@@ -1,7 +1,7 @@
 ---
 title:       .htaccess overview
 naviTitle:   .htaccess
-excerpt:     'All about .htaccess'
+navigation.excerpt:     'All about .htaccess'
 lead:        'Meet the powerful Apache .htaccess configuration file.'
 navigation:   false
 head:

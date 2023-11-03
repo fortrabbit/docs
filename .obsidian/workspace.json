@@ -14,8 +14,19 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "a2d0aef2b049ff83",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.16"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -139,7 +150,7 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "9909fe985497cfc1",
+  "active": "a2d0aef2b049ff83",
   "lastOpenFiles": [
     "1.get-started/3.first-steps.md",
     "1.get-started/2.target-audience.md",

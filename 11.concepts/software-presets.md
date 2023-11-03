@@ -1,7 +1,7 @@
 ---
 reviewed:      2023-07-07 09:07:46
 title:         Software presets
-excerpt:       Pre-configuration for quick setup
+navigation.excerpt:       Pre-configuration for quick setup
 lead:          While creating an app you can choose from a variety of popular open source PHP software types. This article explain what it does and what not.
 ---
 

@@ -2,7 +2,7 @@
 reviewed:  2023-08-08 08:16:09
 naviTitle: One website per app
 title:     One website per app
-excerpt:   How apps are different than servers
+navigation.excerpt:   How apps are different than servers
 lead:      fortrabbit app hosting is different. With vps hosting you may rent out one server to host multiple websites. This can be an economical solution but may also not be very professional.
 ---
 

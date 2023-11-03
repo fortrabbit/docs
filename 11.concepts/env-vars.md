@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-08-18 08:14:49
 title:    ENV vars
-excerpt:  Using environment variables on fortrabbit
+navigation.excerpt:  Using environment variables on fortrabbit
 lead:     ENV vars help to create and shape the environment of where the code runs.
 head:
   meta:

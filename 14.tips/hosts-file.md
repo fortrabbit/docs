@@ -1,7 +1,7 @@
 ---
 reviewed:      2023-07-08 15:00:38
 title:         Hosts file 
-excerpt:       Testing domain routing with your local hosts file
+navigation.excerpt:       Testing domain routing with your local hosts file
 lead:          ''
 ---
 

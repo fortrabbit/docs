@@ -2,7 +2,7 @@
 reviewed:  2023-08-08 17:20:02
 title:     Invite someone for billing
 naviTitle: Invite a client
-excerpt:   Give someone access to a payment method
+navigation.excerpt:   Give someone access to a payment method
 lead:      Two ways to share billing access with another person with fortrabbit.
 head:
   meta:

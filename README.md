@@ -25,7 +25,7 @@ Please find a good balance in the number of commits contained with a pull reques
 reviewed: 2023-06-12 # Last reviewed date (and time)
 title:               # Long title with page
 naviTitle:           # short title for list views
-excerpt:             # additional details for list views
+navigation.excerpt:             # additional details for list views
 lead: blabla         # large text shown at the beginning
 navigation: true     # lists this page with navigation
 sidebar: craft       # shows meta data with 

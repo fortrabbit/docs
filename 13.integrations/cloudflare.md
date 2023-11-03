@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-08-01 11:58:26
 title:    CloudFlare
-excerpt:  DNS service and DDOS protection
+navigation.excerpt:  DNS service and DDOS protection
 lead:     Use CloudFlare with fortrabbit.
 sidebar:  cloudflare
 head:

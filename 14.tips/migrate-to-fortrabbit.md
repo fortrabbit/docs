@@ -2,7 +2,7 @@
 reviewed:   2023-08-15 13:29:46
 title:      Migrate to fortrabbit
 naviTitle:  Migrate to fortrabbit
-excerpt:    Website transfer to fortrabbit
+navigation.excerpt:    Website transfer to fortrabbit
 lead:       How to transfer your website to fortrabbit with confidence.
 ---
 

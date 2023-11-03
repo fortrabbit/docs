@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-08-25 21:24:54
 title:    Event filters
-excerpt:  Audit log and notification system
+navigation.excerpt:  Audit log and notification system
 lead:     Learn about events with the fortrabbit dashboard.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title:     SSH key setup
 naviTitle: SSH keys
-excerpt:   Set up SSH keys on your local machine
+navigation.excerpt:   Set up SSH keys on your local machine
 lead:      About SSH keys and how to create an SSH key pair on your local machine and how to add it your fortrabbit account.
 head:
   meta:

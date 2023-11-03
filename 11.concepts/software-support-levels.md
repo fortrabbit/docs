@@ -2,7 +2,7 @@
 reviewed: 2023-07-21
 title: Software support levels
 naviTitle: Software support
-excerpt: What to expect from help
+navigation.excerpt: What to expect from help
 ---
 
 ## Software support levels

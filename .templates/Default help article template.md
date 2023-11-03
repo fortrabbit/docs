@@ -2,7 +2,7 @@
 reviewed: 
 title: 
 naviTitle: 
-excerpt:    
+navigation.excerpt:    
 lead: 
 navigation: 
 sidebar: 

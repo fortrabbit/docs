@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-08-08 08:49:04
 title:    Dashboard
-excerpt:  The master control panel
+navigation.excerpt:  The master control panel
 lead:     On fortrabbit you won't find a server admin control panel like CPanel or Plesk. Meet the fortrabbit master control panel
 head:
   meta:

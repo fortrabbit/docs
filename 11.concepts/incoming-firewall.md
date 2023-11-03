@@ -1,7 +1,7 @@
 ---
 reviewed:  2023-08-30 08:09:43
 title:     Web Application Firewall
-excerpt:   'Incoming firewall: Protection against common attacks and harmful requests'
+navigation.excerpt:   'Incoming firewall: Protection against common attacks and harmful requests'
 lead:      Bots and crawlers scan your website for vulnerabilities and content. Even unsuccessful requests do harm by consuming hosting resources and spamming logs.
 ---
 

@@ -2,7 +2,7 @@
 reviewed:    2023-08-09 09:50:04
 title:       DNS and domain troubleshooting
 naviTitle:   DNS troubleshooting
-excerpt:     Solving domain routing issues.
+navigation.excerpt:     Solving domain routing issues.
 lead:        Solving common DNS problems when connecting an external domain to fortrabbit.
 ---
 

@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-08-17 22:07:15
 title:    Composer private repos
-excerpt:  Access during git deployment
+navigation.excerpt:  Access during git deployment
 lead:     How to access private composer repositories during git deployment.
 head:
   meta:

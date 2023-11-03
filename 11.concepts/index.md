@@ -1,6 +1,6 @@
 ---
 title: Concepts overview
 navigation: false
-excerpt: Firewall, ENV vars, free trial
+navigation.excerpt: Firewall, ENV vars, free trial
 lead: Nuts and bolts that make up the fortrabbit hosting platform.
 ---
