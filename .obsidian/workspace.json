@@ -11,22 +11,16 @@
             "id": "9909fe985497cfc1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "a2d0aef2b049ff83",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.4.16"
+                "file": "3.craft/2.deployment.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "3.craft/2.deployment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "3.craft/2.deployment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "3.craft/2.deployment.md"
+              }
             }
           }
         ]
@@ -150,8 +148,22 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "a2d0aef2b049ff83",
+  "active": "9909fe985497cfc1",
   "lastOpenFiles": [
+    "3.craft/1.setup.md",
+    "3.craft/2.deployment.md",
+    "3.craft/3.tune.md",
+    "3.craft/4.craft-copy.md",
+    "3.craft/5.assets.md",
+    "3.craft/6.performance.md",
+    "3.craft/7.updating.md",
+    "3.craft/8.headless.md",
+    "3.craft/10.troubleshooting.md",
+    "3.craft/index.md",
+    "5.guides/5.wordpress.md",
+    "5.guides/6.kirby.md",
+    "2.laravel/3.tune.md",
+    "2.laravel/index.md",
     "1.get-started/3.first-steps.md",
     "1.get-started/2.target-audience.md",
     "1.get-started/1.intro.md",
@@ -164,22 +176,8 @@
     "11.concepts/workers copy.md",
     "11.concepts/workers.md",
     "10.objects/8.event-filter.md",
-    "11.concepts/index.md",
-    "10.objects/index.md",
     "10.objects/_dir.yml",
-    "11.concepts/waf-rules.md",
-    "11.concepts/firewall.md",
-    "11.concepts/logs.md",
     "4.statamic/_dir.yml",
-    "10.components/5.backups.md",
-    "9.mysql/3.export-import.md",
-    "10.components/4.traffic.md",
-    "10.components/3.web-storage.md",
-    "3.guides/10.others.md",
-    "3.guides/8.symfony.md",
-    "3.guides/7.grav.md",
-    "3.guides/6.kirby.md",
-    "13.integrations/index.md",
     "13.integrations/_dir.yml",
     "12.platform/_dir.yml",
     "13.integrations",
