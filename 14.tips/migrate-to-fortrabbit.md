@@ -6,7 +6,7 @@ navigation.excerpt:    Website transfer to fortrabbit
 lead:       How to transfer your website to fortrabbit with confidence.
 ---
 
-fortrabbit is not your traditional shared or VPS hosting. It may require some tinkering on your application and we recommend reading the [intro](/1.get-started/1.intro.md) as well as our specific install guides for various frameworks & CMS to get the concepts and features.
+fortrabbit is not your traditional shared or VPS hosting. It may require some tinkering on your application and we recommend reading the [intro](/.1.get-started/1.intro.md) as well as our specific install guides for various frameworks & CMS to get the concepts and features.
 
 This article covers the general basics as well as some deep links for moving your App from any hosting provider to fortrabbit. This will hopefully cover everything you need to realize a smooth transition. Each App is different, adjust your plan accordingly and don't hesitate to [contact us](/20.get-help/2.contact-us.md) with your specific questions.
 

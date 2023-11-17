@@ -20,7 +20,7 @@ You see a [500 error](/14.tips/http-errors/500.md) and you need to know why. PHP
 
 ## Deployment logs
 
-You are using [Git deployment](/6.deployment/1.intro.md) with some [build steps](/6.deployment/3.build-steps.md) but for some reason nothing get's deployed or you are expecting a different result. Use the deployment logs to see what's happening during deployment.
+You are using [Git deployment](/6.deployment/1.intro.md) with some [build steps](/6.deployment/3.build-commands.md) but for some reason nothing get's deployed or you are expecting a different result. Use the deployment logs to see what's happening during deployment.
 
 ## Apache access logs
 
