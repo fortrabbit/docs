@@ -30,7 +30,6 @@ lead: blabla         # large text shown at the beginning
 navigation: true     # lists this page with navigation
 sidebar: craft       # shows meta data with 
 nextNav: true        # will show
-structureNav: true   # shows other pages in this folder
 ---
 ```
 
