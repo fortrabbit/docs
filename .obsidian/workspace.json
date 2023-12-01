@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "de15b7d5b2a58999",
+        "id": "cfda2fb9484328b6",
         "type": "tabs",
         "children": [
           {
-            "id": "9909fe985497cfc1",
+            "id": "c4bb9d3cba4f4c8e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3.craft/2.deployment.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3.craft/2.deployment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3.craft/2.deployment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "3.craft/2.deployment.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -148,10 +139,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "9909fe985497cfc1",
+  "active": "c4bb9d3cba4f4c8e",
   "lastOpenFiles": [
-    "3.craft/1.setup.md",
     "3.craft/2.deployment.md",
+    "3.craft/1.setup.md",
     "3.craft/3.tune.md",
     "3.craft/4.craft-copy.md",
     "3.craft/5.assets.md",

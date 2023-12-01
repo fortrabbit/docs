@@ -13,9 +13,9 @@ head:
 
 Manage all hosting aspects, from code access, runtime data, server configuration to collaboration and billing.
 
-## Accessing the dashboard
+<!-- ## Accessing the dashboard
 
-:DashboardLink{title="Dashboard home" path="/"}
+:DashboardLink{title="Dashboard home" path="/"} -->
 
 ## System requirements
 

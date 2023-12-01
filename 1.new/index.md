@@ -1,6 +1,6 @@
 ---
 title: What's new
-Slead: There is a new platform version. What has changed.
+lead: What is changing with the new fortrabbit platform experience.
 navigation: false
 ---
 
