@@ -3,9 +3,9 @@
 title: Statamic overview
 naviTitle: Statamic
 navigation.excerpt: an extendable Laravel CMS package
-lead:             "A self-hosted publishing platform, a file based CMS, extendable, built as a Laravel CMS package, made in Florida."
+lead: 'A self-hosted publishing platform, a file based CMS, extendable, built as a Laravel CMS package, made in Florida.'
 # sidebar:          statamic
-navigation:       false
+navigation: false
 head:
   meta:
     - name: 'keywords'
