@@ -2,9 +2,13 @@
 title: Craft CMS overview
 naviTitle: Craft CMS
 navigation.excerpt: a flexible, user-friendly CMS
-lead: The CMS you and your clients will love. We love it too. Our aim is to help you — the developer — to successfully develop and deploy Craft here.
+# lead: Develop and deploy Craft here.
 navigation: false
-sidebar: craft-cms
+figure:
+  icon: simple-icons:craftcms
+  text: Install, deploy, tune, repeat.
+  color: '#ce6572'
+# sidebar: craft-cms
 head:
   meta:
     - name: keywords
