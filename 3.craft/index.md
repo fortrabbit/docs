@@ -7,7 +7,7 @@ navigation: false
 figure:
   icon: simple-icons:craftcms
   text: Install, deploy, tune, repeat.
-  color: '#ce6572'
+  color: '#e5422b'
 # sidebar: craft-cms
 head:
   meta:
