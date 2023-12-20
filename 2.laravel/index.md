@@ -1,5 +1,5 @@
 ---
-title: Laravel overview
+title: Laravel
 naviTitle: Laravel
 navigation.excerpt: Install Laravel on fortrabbit
 lead: Laravel is the defacto web framework standard. How to install and run it on fortrabbit.
