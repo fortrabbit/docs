@@ -1,5 +1,5 @@
 ---
-title: Craft CMS overview
+title: Craft CMS
 naviTitle: Craft CMS
 navigation.excerpt: a flexible, user-friendly CMS
 # lead: Develop and deploy Craft here.

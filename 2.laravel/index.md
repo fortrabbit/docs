@@ -2,9 +2,11 @@
 title: Laravel
 naviTitle: Laravel
 navigation.excerpt: Install Laravel on fortrabbit
-lead: Laravel is the defacto web framework standard. How to install and run it on fortrabbit.
+# lead: How to install and run it on fortrabbit.
+navigation: false
 figure:
   icon: simple-icons:laravel
+  text: The defacto web framework standard
   color: 'rgb(249 50 44)'
 head:
   meta:
