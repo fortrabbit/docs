@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cfda2fb9484328b6",
+        "id": "705e042d97fe894f",
         "type": "tabs",
         "children": [
           {
-            "id": "c4bb9d3cba4f4c8e",
+            "id": "9a070f04fdc7b7d8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.3"
+              }
             }
           }
         ]
@@ -139,7 +141,7 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "c4bb9d3cba4f4c8e",
+  "active": "9a070f04fdc7b7d8",
   "lastOpenFiles": [
     "3.craft/2.deployment.md",
     "3.craft/1.setup.md",
