@@ -2,13 +2,13 @@
 navigation: false
 ---
 
-# fortrabbit help pages
+# fortrabbit docs
 
 Welcome! This repo contains the contents of the (new) fortrabbit docs.
 
 ## Git repo (this)
 
-- [github.com/fortrabbit/docs>](https://github.com/fortrabbit/docs)
+- [github.com/fortrabbit/docs](https://github.com/fortrabbit/docs)
 
 ## Contributing
 
@@ -23,13 +23,13 @@ Please find a good balance in the number of commits contained with a pull reques
 ```yml
 ---
 reviewed: 2023-06-12 # Last reviewed date (and time)
-title:               # Long title with page
-naviTitle:           # short title for list views
-navigation.excerpt:             # additional details for list views
-lead: blabla         # large text shown at the beginning
-navigation: true     # lists this page with navigation
-sidebar: craft       # shows meta data with 
-nextNav: true        # will show
+title: # Long title with page
+naviTitle: # short title for list views
+navigation.excerpt: # additional details for list views
+lead: blabla # large text shown at the beginning
+navigation: true # lists this page with navigation
+sidebar: craft-cms # shows meta data with
+nextNav: true # will show
 ---
 ```
 
@@ -243,11 +243,3 @@ When referencing a hypothetical person, such as "a user with a session cookie", 
 - his or her, use their
 - his or hers, use theirs
 - himself or herself, use themselves
-
-### Corporate identity
-
-There is no fortrabbit logo as graphic file. To create the brand logo just type: "• fortrabbit" — bullet character, a normal space and then name of the company with a f. Use the [Georgia Typeface](http://en.wikipedia.org/wiki/Georgia_(typeface)) in bold and italic. Use lot's of whitespace around the logo, don't put other text nearby the logo. When using the company name within a paragraph of text, write "fortrabbit" with a f, even at the beginning of a sentence. Don't use the bullet or any other typeface here.
-
-### Logos and brand assets
-
-Place logos for external services and projects in the media folder. They ideally should be svg or either PNG with transparent background. Favor an "image mark" over a "word image mark".
