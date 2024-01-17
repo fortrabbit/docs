@@ -1,8 +1,8 @@
 ---
-reviewed: 2023-08-18 08:14:49
-title:    ENV vars
-navigation.excerpt:  Using environment variables on fortrabbit
-lead:     ENV vars help to create and shape the environment of where the code runs.
+reviewed: 2024-01-17 16:57:41
+title: ENV vars
+navigation.excerpt: Using environment variables on fortrabbit
+lead: ENV vars help to create and shape the environment of where the code runs.
 head:
   meta:
     - name: 'keywords'
@@ -23,8 +23,8 @@ Everything specific to the environment should be stored in environment variables
 
 The `.env` file format is a plain text configuration file that lives on top level of your code base. It has `KEY=VALUE` pairs, is easy to write for humans and runtime agnostic. You need an additional parser library, that reads the file and makes the ENV vars accessible from the code base. Here are the most popular .env parsers for PHP:
 
-* [github.com/vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) - Everyone
-* [github.com/symfony/dotenv](https://github.com/symfony/dotenv) - Symfony
+- [github.com/vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) - Everyone
+- [github.com/symfony/dotenv](https://github.com/symfony/dotenv) - Symfony
 
 Modern PHP frameworks like [Laravel](/2.laravel/1.setup.md) and [Symfony](/5.guides/8.symfony.md) …) and some CMS like [Craft CMS](/3.craft/1.setup.md) use `.env` files for configuration and include a parser already.
 
@@ -32,12 +32,16 @@ Modern PHP frameworks like [Laravel](/2.laravel/1.setup.md) and [Symfony](/5.gui
 
 The `.env` file is usually excluded from Git and thus will NOT be [deployed](/6.deployment/1.intro.md). Now, how should your fortrabbit app environment know about it's ENV vars?
 
-* Create an additional `.env` file on the app environment by SSH or SFTP - not recommended.
-* **Manage ENV vars in the dashboard** - recommended
+- Create an additional `.env` file on the app environment by SSH or SFTP - No, not recommended.
+- **Manage ENV vars in the dashboard** - Yes, recommended
 
-The fortrabbit [software preset](/11.concepts/software-presets.md) will help. While creating an App on fortrabbit, you'll choose your desired CMS or framework. This selection will configure the server ENV vars in ways, the software can work with it. For example, for Laravel and Craft, the ENV var `DB_PASSWORD` will be populated with the password of the Apps database. For Symfony we provide a ready to use DSN in the `DATABASE_URL` variable. Here is the link to the settings of your App:
+The fortrabbit [software preset](/11.concepts/software-presets.md) will help. While creating an app on fortrabbit, you'll choose your desired CMS or framework. This selection will configure the server ENV vars in ways, the software can work with it. For example, for Laravel and Craft, an ENV var like `DB_PASSWORD` will be populated with the password of the database. Here is the link to the settings of your environment:
 
-So, most likely, your fortrabbit App will work out of the box. As a bonus you even reset the database password without touching any configurations.
+So, most likely, your fortrabbit app environment will work out of the box. As a bonus you even reset the database password without touching any configurations.
+
+### Using an .env file on fortrabbit
+
+Like mentioned above, we highly recommend to NOT include a `.env` with your Git repo for obvious security concerns. You can however manually create such a file by SSH/SFTP or some automation. In that case, you may remove all custom ENV vars from the dashboard to avoid confusion about conflicting sources. Many CMS and frameworks will use `phpdotenv` to parse that file automatically. Now depending on the configuration set by the CMS or framework, the ENV vars from the `.env` file may or may not overwrite the values provided by the fortrabbit dashboard. To avoid confusion, either use the ENV vars provided by the dashboard or an `.env` file.
 
 ## Adding and editing ENV vars on fortrabbit
 
@@ -65,14 +69,6 @@ There are four different kinds of ENV vars here on fortrabbit which are availabl
 
 Those are the ones you add yourself in the dashboard.
 
-### fortrabbit ENV vars
-
-<!-- TODO: Add default ENV vars we know about 2023-08-30 14:01:44  -->
-
-Generic ENV vars cannot be overwritten by you. They are always available.
-
-* `APP_NAME` contains the name of your App
-
 ### Software preset ENV vars
 
 Depending on what you have selected in the [software preset](/11.concepts/software-presets.md) when creating your App, additional ENV vars will be seeded for you. For example: When choosing Laravel the ENV var `APP_KEY` with a random long string will created (among others). You can replace or remove those stack ENV vars after creation the same way you can replace or remove your manually created ENV vars.
@@ -82,9 +78,9 @@ Depending on what you have selected in the [software preset](/11.concepts/softwa
 Dynamic ENV vars are automatically updated values that contain access details for services offered by fortrabbit. For example:
 
 ```apache
-MY_MYSQL=${MYSQL_PASSWORD}
+MY_MYSQL=${FORTRABBIT_MYSQL_PASSWORD}
 # MY_SQL is your key
-# ${MYSQL_PASSWORD} is populated by fortrabbit
+# ${FORTRABBIT_MYSQL_PASSWORD} is an alias for a value populated by fortrabbit
 ```
 
 Dynamic ENV vars will not overwrite existing, manually created ENV vars. This means: if you manually create an ENV var, we guarantee that we won't replace it's value by a dynamically generated ENV var.
@@ -142,25 +138,11 @@ And [this example](https://github.com/laravel/ideas/issues/416#issuecomment-2804
 
 There are some names you can not use here:
 
-* APP_NAME
-* DOCUMENT_ROOT
-* FCGI_ROLE
-* GATEWAY_INTERFACE
-* GROUP
-* HOME
-* PATH
-* PS1
-* QUERY_STRING
-* SESSION
-* USER
-
-Also names cannot begin with:
-
-* HTTP_
-* PHP_
-* REDIRECT_
-* REMOTE_
-* REQUEST_
-* SCRIPT_
-* SERVER_
-* LC_
+_, \_\_FRBIT\_\_, argc, argv, AUTH*TYPE, CHARSET, CONTEXT_DOCUMENT_ROOT, CONTEXT_PREFIX, DOCUMENT_ROOT,
+FCGI_ROLE, FORTRABBIT*_, GATEWAY*INTERFACE, GROUP, HOME, HTTP*\_, HTTPS, LANG, LC\_\_, LOGNAME, MAIL,
+MUSL_LOCPATH, OLDPWD, ORIG_PATH_INFO, PAGER, PATH, PATH_INFO, PATH_TRANSLATED, PHP_AUTH_DIGEST, PHP_AUTH_PW,
+PHP_AUTH_USER, PHP_SELF, PS0, PS1, PS2, PS3, PS4, PWD, QUERY_STRING, REDIRECT_REMOTE_USER, REMOTE_ADDR,
+REMOTE_HOST, REMOTE_PORT, REMOTE_USER, REQUEST_METHOD, REQUEST_SCHEME, REQUEST_TIME, REQUEST_TIME_FLOAT,
+REQUEST_URI, SCRIPT_FILENAME, SCRIPT_NAME, SCRIPT_URI, SCRIPT_URL, SERVER_ADDR, SERVER_ADMIN, SERVER_NAME,
+SERVER_PORT, SERVER_PROTOCOL, SERVER_SIGNATURE, SERVER_SOFTWARE, SHELL, SHLVL, SSH_CLIENT, SSH_CONNECTION,
+SSH_TTY, TERM, USER
