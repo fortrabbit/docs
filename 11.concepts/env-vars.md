@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-01-17 16:57:41
+reviewed: 2024-01-25 20:50:49
 title: ENV vars
 navigation.excerpt: Using environment variables on fortrabbit
 lead: ENV vars help to create and shape the environment of where the code runs.
@@ -73,9 +73,9 @@ Those are the ones you add yourself in the dashboard.
 
 Depending on what you have selected in the [software preset](/11.concepts/software-presets.md) when creating your App, additional ENV vars will be seeded for you. For example: When choosing Laravel the ENV var `APP_KEY` with a random long string will created (among others). You can replace or remove those stack ENV vars after creation the same way you can replace or remove your manually created ENV vars.
 
-### Dynamic ENV vars
+### System ENV vars
 
-Dynamic ENV vars are automatically updated values that contain access details for services offered by fortrabbit. For example:
+System ENV vars are automatically updated values that contain access details for services offered by fortrabbit. For example:
 
 ```apache
 MY_MYSQL=${FORTRABBIT_MYSQL_PASSWORD}
@@ -83,7 +83,7 @@ MY_MYSQL=${FORTRABBIT_MYSQL_PASSWORD}
 # ${FORTRABBIT_MYSQL_PASSWORD} is an alias for a value populated by fortrabbit
 ```
 
-Dynamic ENV vars will not overwrite existing, manually created ENV vars. This means: if you manually create an ENV var, we guarantee that we won't replace it's value by a dynamically generated ENV var.
+System ENV vars will not overwrite existing, manually created ENV vars. This means: if you manually create an ENV var, we guarantee that we won't replace it's value by a dynamically generated ENV var.
 
 ### Nested ENV vars
 
