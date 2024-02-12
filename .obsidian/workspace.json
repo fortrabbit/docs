@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "993c347fee5e82e1",
+        "id": "cca9f26c3d5e2ff5",
         "type": "tabs",
         "children": [
           {
-            "id": "75732016f1f16018",
+            "id": "50a6c860980e02ff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "5.guides/5.wordpress.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -49,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "a modern",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +61,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5.guides/5.wordpress.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5.guides/5.wordpress.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5.guides/5.wordpress.md"
+                "file": "2024-02-11.md"
               }
             }
           }
@@ -149,8 +141,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "fb596611be91f303",
+  "active": "dc7d1d3dc4bb10c9",
   "lastOpenFiles": [
+    "2024-02-11.md",
+    "5.guides/5.wordpress.md",
     "3.craft/2.deployment.md",
     "3.craft/1.setup.md",
     "3.craft/3.tune.md",
@@ -161,7 +155,6 @@
     "3.craft/8.headless.md",
     "3.craft/10.troubleshooting.md",
     "3.craft/index.md",
-    "5.guides/5.wordpress.md",
     "5.guides/6.kirby.md",
     "2.laravel/3.tune.md",
     "2.laravel/index.md",
@@ -176,7 +169,6 @@
     "11.concepts/redis.md",
     "11.concepts/workers copy.md",
     "11.concepts/workers.md",
-    "10.objects/8.event-filter.md",
     "10.objects/_dir.yml",
     "4.statamic/_dir.yml",
     "13.integrations/_dir.yml",

@@ -44,11 +44,11 @@ When cancelling your [account](/10.objects/3.person.md#account-settings), you wi
 
 Everything that is shared with other owners or clients attached will NOT be deleted when you cancel your personal account. When you are involved in shared [teams](/10.objects/4.team.md) with other owners, the teams will not be deleted. You will just leave the teams. The same applies to shared [payment methods](/10.objects/9.payment-method.md) and the [apps](/10.objects/1.app.md) that are owned by them.
 
-:DashboardLink{title="Cancel your account" path="/manage/account-delete-confirm"}
+:DashboardLink{title="Cancel your account" path="/confirm/account-delete"}
 
 ## Auto deletion of inactive accounts
 
-Abandoned accounts without access to paid objects and no activity will get auto-deleted after a period of time.  This is a privacy feature.
+Abandoned accounts without access to paid objects and no activity will get auto-deleted after a period of time. This is a privacy feature.
 
 ## A note on personal data
 
