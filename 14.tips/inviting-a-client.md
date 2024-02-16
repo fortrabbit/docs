@@ -1,9 +1,9 @@
 ---
-reviewed:  2023-08-08 17:20:02
-title:     Invite someone for billing
+reviewed: 2023-08-08 17:20:02
+title: Invite someone for billing
 naviTitle: Invite a client
-navigation.excerpt:   Give someone access to a payment method
-lead:      Two ways to share billing access with another person with fortrabbit.
+navigation.excerpt: Give someone access to a payment method
+lead: Two ways to share billing access with another person with fortrabbit.
 head:
   meta:
     - name: 'keywords'
@@ -25,13 +25,13 @@ This flow is often used by developers to invite their client to take over hostin
 1. Login to the fortrabbit dashboard
 2. Click on "Manage" > "Invite someone to taker over billing"
 3. Follow the steps to send an invitation
-    1. Choose which apps you'd like to transfer
-    2. Choose how you would like to have access in the future
+   1. Choose which apps you'd like to transfer
+   2. Choose how you would like to have access in the future
 4. They will receive a payment request by e-mail
 5. They will sign-up or login
 6. They will need to create a new payment method to take over hosting costs
 
-:DashboardLink{title="Invite someone to take over hosting costs" path="/manage/payment-method-create-invite/"}
+:DashboardLink{title="Invite someone to take over hosting costs" path="/invite/payment-method-create/"}
 
 ## B - Invite someone to an existing payment method
 
@@ -44,7 +44,7 @@ This is often used by developers in digital agencies to invite the boss or someo
 5. They will sign-up or login
 6. They will have access on the payment method
 
-:DashboardLink{title="Invite someone to a payment method" path="/manage/person-payment-method-invite/"}
+:DashboardLink{title="Invite someone to a payment method" path="/invite/person-payment-method/"}
 
 ## Details
 
