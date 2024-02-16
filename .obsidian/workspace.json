@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cca9f26c3d5e2ff5",
+        "id": "a2e1ab88df440985",
         "type": "tabs",
         "children": [
           {
-            "id": "50a6c860980e02ff",
+            "id": "5ca3d1f14a7daf08",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-02-11.md"
+                "file": "Invoice.md"
               }
             }
           }
@@ -143,6 +143,7 @@
   },
   "active": "dc7d1d3dc4bb10c9",
   "lastOpenFiles": [
+    "Invoice.md",
     "2024-02-11.md",
     "5.guides/5.wordpress.md",
     "3.craft/2.deployment.md",
@@ -168,7 +169,6 @@
     "11.concepts/components.md",
     "11.concepts/redis.md",
     "11.concepts/workers copy.md",
-    "11.concepts/workers.md",
     "10.objects/_dir.yml",
     "4.statamic/_dir.yml",
     "13.integrations/_dir.yml",
