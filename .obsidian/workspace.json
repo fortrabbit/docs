@@ -11,8 +11,10 @@
             "id": "5ca3d1f14a7daf08",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.12"
+              }
             }
           }
         ]
@@ -118,9 +120,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Invoice.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -141,7 +141,7 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "dc7d1d3dc4bb10c9",
+  "active": "5ca3d1f14a7daf08",
   "lastOpenFiles": [
     "Invoice.md",
     "2024-02-11.md",
