@@ -10,6 +10,7 @@
   },
   "prettier.proseWrap": "always",
   "cSpell.words": [
+    "fortrabbit",
     "Laravel",
     "licence",
     "Livewire",
