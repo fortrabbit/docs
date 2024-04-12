@@ -1,14 +1,13 @@
 ---
 reviewed: 2023-08-15 13:47:18
-title:    Logs
-navigation.excerpt:  Access and error logs
-lead:     'Analyzing logs is an important part of maintaining a stable and secure website. Error logs often help to identify bugs and other issues. Here is how on fortrabbit.'
+title: Logs
+navigation.excerpt: Access and error logs
+lead: 'Analyzing logs is an important part of maintaining a stable and secure website. Error logs often help to identify bugs and other issues. Here is how on fortrabbit.'
 head:
   meta:
     - name: 'keywords'
       content: 'Logging, Logs, error logs, php logs, white screen of death'
 ---
-
 
 ## Log access
 
@@ -38,7 +37,7 @@ Your [worker job](/9.components/7.workers.md) is crashing. You want to know why.
 
 Mind that your CMS or framework might pipe logs to a different location, other than `stderr` and `stdout`. If they do, you will not see the error output in the fortrabbit dashboard. You can still access the logs by [SSH](/7.code-access/3.ssh.md) or [SFTP](/7.code-access/4.sftp.md), please see your CMS / framework docs where the logs are stored.
 
-Most CMS and frameworks also offer options to send these logs to the standard locations. With the [software preset](/11.concepts/software-presets.md) the setting is getting pre-populated, if possible, by ENV var.
+Most CMS and frameworks also offer options to send these logs to the standard locations. With the [software template](/11.concepts/software-templates.md) the setting is getting pre-populated, if possible, by ENV var.
 
 - [Craft CMS logging](/3.craft/3.tune.md#logging)
 - [Laravel logging](/2.laravel/3.tune.md#logging)

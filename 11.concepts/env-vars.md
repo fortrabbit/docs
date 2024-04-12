@@ -35,7 +35,7 @@ The `.env` file is usually excluded from Git and thus will NOT be [deployed](/6.
 - Create an additional `.env` file on the app environment by SSH or SFTP - No, not recommended.
 - **Manage ENV vars in the dashboard** - Yes, recommended
 
-The fortrabbit [software preset](/11.concepts/software-presets.md) will help. While creating an app on fortrabbit, you'll choose your desired CMS or framework. This selection will configure the server ENV vars in ways, the software can work with it. For example, for Laravel and Craft, an ENV var like `DB_PASSWORD` will be populated with the password of the database. Here is the link to the settings of your environment:
+The fortrabbit [software templates](/11.concepts/software-templates.md) will help. While creating an app on fortrabbit, you'll choose your desired CMS or framework. This selection will configure the server ENV vars in ways, the software can work with it. For example, for Laravel and Craft, an ENV var like `DB_PASSWORD` will be populated with the password of the database. Here is the link to the settings of your environment:
 
 So, most likely, your fortrabbit app environment will work out of the box. As a bonus you even reset the database password without touching any configurations.
 
@@ -69,9 +69,9 @@ There are four different kinds of ENV vars here on fortrabbit which are availabl
 
 Those are the ones you add yourself in the dashboard.
 
-### Software preset ENV vars
+### Software template ENV vars
 
-Depending on what you have selected in the [software preset](/11.concepts/software-presets.md) when creating your App, additional ENV vars will be seeded for you. For example: When choosing Laravel the ENV var `APP_KEY` with a random long string will created (among others). You can replace or remove those stack ENV vars after creation the same way you can replace or remove your manually created ENV vars.
+Depending on what you have selected in the [software template](/11.concepts/software-templates.md) when creating your App, additional ENV vars will be seeded for you. For example: When choosing Laravel the ENV var `APP_KEY` with a random long string will created (among others). You can replace or remove those stack ENV vars after creation the same way you can replace or remove your manually created ENV vars.
 
 ### System ENV vars
 
