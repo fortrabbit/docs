@@ -187,10 +187,10 @@ When creating new files:
 
 ### Metric units
 
-- **16 MB** — ~~mb~~, capital letters, a space between value and unit
-- **3 GB** ~~3078 MB~~ < prefer a readable unit
+- **16 MiB** — ~~mb~~, capital letters, a space between value and unit
+- **3 GiB** ~~3078 MB~~ < prefer a readable unit
 - **0 B**
-- **16 KB**
+- **16 KiB**
 - 10k — ~~10,000~~
 - times a value: ×, `&times`; ~~x~~
 
