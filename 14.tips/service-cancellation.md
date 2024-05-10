@@ -18,25 +18,17 @@ You want to clean up, remove unnecessary stuff, reduce costs? See our [reduce ho
 
 An [app](/10.objects/1.app.md) represents a website or web application. When deleting apps, all it's environments and associated domains will get deleted along. Team members might loose access. Files and databases will be deleted. Costs will be billed up until the day of deletion. Make sure to take backups before deleting apps.
 
-:DashboardLink{title="Delete an app" path="/manage/app-deletion/"}
-
 ## Delete environments
 
 [Environments](/10.objects/2.app-environment.md) are versions of websites. When environments associated domains will get deleted along. Team members might loose access. Files and databases will be deleted. Make sure to take backups before deleting environments.
-
-:DashboardLink{title="Delete an environment" path="/manage/environment-delete/"}
 
 ## Delete teams
 
 [Teams](/10.objects/4.team.md) are groups of developers sharing app access. Payment methods, apps and environments that are not shared with other teams or clients will be deleted alongside, when deleting a team. Team developers will loose access to the team. Their accounts will not be deleted immediately.
 
-:DashboardLink{title="Delete a team" path="/manage/team-delete/"}
-
 ## Delete payment methods
 
 Make sure to review invoices, pay pay past due invoices if any, download previous invoices. When deleting a payment method, all the apps and attached environments it owns will be deleted alongside. Mind that the [pro rated billing](/15.billing/3.pro-rated-billing.md) cycle is monthly after usage. There will be pending charges for the current month. Even after deleting the payment method one last partial invoice will be sent.
-
-:DashboardLink{title="Delete a payment method" path="/manage/payment-method-delete/"}
 
 ## Cancel your account
 
