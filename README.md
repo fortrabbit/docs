@@ -219,7 +219,7 @@ When creating new files:
 - **SSH Key** — ~~pubkey~~, ~~public SSH key~~
 - **SSH**
 - **SSL cert** — ~~SSL certificate~~
-- **web storage** — ~~webspace~~
+- **storage** — ~~webspace~~
 - **Composer** — ~~composer~~
 - **macOS** — ~~Mac OS X~~
 
