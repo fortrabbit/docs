@@ -1,5 +1,5 @@
 ---
-reviewed: 2023-08-06 17:46:33
+reviewed: 2024-06-07 17:31:05
 title: Service cancellation
 naviTitle: Service cancellation
 navigation.excerpt: How to quit fortrabbit
@@ -34,14 +34,10 @@ Make sure to review invoices, pay pay past due invoices if any, download previou
 
 When cancelling your [account](/10.objects/3.person.md#account-settings), you will remove personal access to the fortrabbit hosting system. By cancelling your account, all non-shared payment methods including all it's apps will get irreversibly deleted along.
 
-Everything that is shared with other owners or clients attached will NOT be deleted when you cancel your personal account. When you are involved in shared [teams](/10.objects/4.team.md) with other owners, the teams will not be deleted. You will just leave the teams. The same applies to shared [payment methods](/10.objects/9.payment-method.md) and the [apps](/10.objects/1.app.md) that are owned by them.
+Everything that is shared with other team members or clients will NOT be deleted when you cancel your personal account. When you are involved in shared [teams](/10.objects/4.team.md) with other members, the teams will not be deleted. You will just leave the teams. The same applies to shared [payment methods](/10.objects/9.payment-method.md) and the [apps](/10.objects/1.app.md) that are owned by them.
 
 :DashboardLink{title="Cancel your account" path="/confirm/account-deletion"}
 
 ## Auto deletion of inactive accounts
 
 Abandoned accounts without access to paid objects and no activity will get auto-deleted after a period of time. This is a privacy feature.
-
-## A note on personal data
-
-We try to remove as much as
