@@ -1,9 +1,9 @@
 ---
-reviewed:  2023-02-15 08:20:37
-title:     SendGrid
-navigation.excerpt:   Transactional mail integration
-section:   Extending_fortrabbit
-sidebar:   sendgrid
+reviewed: 2023-02-15 08:20:37
+title: SendGrid
+navigation.excerpt: Transactional mail integration
+section: Extending_fortrabbit
+sidebar: sendgrid
 ---
 
 ## About SendGrid
@@ -16,7 +16,7 @@ Choose your desired plan to initiate the sign up. You'll first just need to choo
 
 ## Setting it up
 
-In order to get your mails through the SPAM filter of your users, you'll need to authorize the ownership of the domain you are using — think DNS modifications. fortrabbit is not envolved here. You do this with your domain or DNS provider of choice. This is done with DKIM and SPF.
+In order to get your mails through the SPAM filter of your users, you'll need to authorize the ownership of the domain you are using — think DNS modifications. fortrabbit is not involved here. You do this with your domain or DNS provider of choice. This is done with DKIM and SPF.
 
 ## Using SendGrid with fortrabbit
 
