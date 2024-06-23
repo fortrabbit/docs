@@ -12,7 +12,7 @@ head:
 
 ## Get ready
 
-Understand the [collaboration concepts](/11.concepts/1.collaboration.md) on fortrabbit. Most importantly note, your personal access to fortrabbit should not be shared.
+Understand the [collaboration concepts](//15.collaboration/1.intro.md) on fortrabbit. Most importantly note, your personal access to fortrabbit should not be shared.
 
 ## Billing sharing concepts
 
@@ -48,5 +48,5 @@ This is often used by developers in digital agencies to invite the boss or someo
 
 ## Details
 
-- The invited person can choose their [account type](/11.concepts/1.collaboration.md#developers-and-clients): client or developer.
+- The invited person can choose their [account type](//15.collaboration/1.intro.md#developers-and-clients): client or developer.
 - Invitations work with apps in [trial mode](/11.concepts/2.free-trial.md).
