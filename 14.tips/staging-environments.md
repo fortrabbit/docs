@@ -1,9 +1,9 @@
 ---
-reviewed:  2023-08-03 14:09:00
-title:     Multi stage life cycles
-naviTitle: Multi-staging
-navigation.excerpt:   development, staging, production setups
-lead:      About development/production environment setups and how they can be used on fortrabbit.
+reviewed: 2024-06-27 21:35:21
+title: Staging environments
+naviTitle: Staging environments
+navigation.excerpt: development, staging, production setups
+lead: About development/production environment setups and how they can be used on fortrabbit.
 ---
 
 ## Goal
@@ -12,9 +12,9 @@ lead:      About development/production environment setups and how they can be u
 
 ## Use cases
 
-* **Feature development**: Build a new version while still being able to fix bugs in the running version without uploading all the new feature code.
-* **Purpose separation**: The backend team can break things while the frontend team can still work uninterrupted.
-* **Continuous integration**: Code needs to be tested and monitored before being deployed live.
+- **Feature development**: Build a new version while still being able to fix bugs in the running version without uploading all the new feature code.
+- **Purpose separation**: The backend team can break things while the frontend team can still work uninterrupted.
+- **Continuous integration**: Code needs to be tested and monitored before being deployed live.
 
 The use of multiple environments is optional. For smaller websites it might be overkill, for less experienced developers, implications can be a bit mind bending.
 
@@ -30,9 +30,9 @@ The production environment is the stable live environment. The development envir
 
 ## Common multi-staging set ups
 
-* **staging + production**: "Staging" is where you do your development. "Production" runs the live code. From time to time you migrate all the (stable) changes from staging into production.
-* **temporary + production**: Same as above, it's more of a one-time-developed project. Maybe once a year there is an upgrade, a re-brush or alike. For this you utilize an additional, temporary environment, in which you do the upgrades.
-* **testing + staging + production**: Code changes are made to the testing environment. Once they seem stable, they get published to the staging where they are monitored and further tested. Finally they get published to production.
+- **staging + production**: "Staging" is where you do your development. "Production" runs the live code. From time to time you migrate all the (stable) changes from staging into production.
+- **temporary + production**: Same as above, it's more of a one-time-developed project. Maybe once a year there is an upgrade, a re-brush or alike. For this you utilize an additional, temporary environment, in which you do the upgrades.
+- **testing + staging + production**: Code changes are made to the testing environment. Once they seem stable, they get published to the staging where they are monitored and further tested. Finally they get published to production.
 
 ### Multi-staging and local development
 
