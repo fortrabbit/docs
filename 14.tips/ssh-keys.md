@@ -1,8 +1,8 @@
 ---
-title:     SSH key setup
+title: SSH key setup
 naviTitle: SSH keys
-navigation.excerpt:   Set up SSH keys on your local machine
-lead:      About SSH keys and how to create an SSH key pair on your local machine and how to add it your fortrabbit account.
+navigation.excerpt: Set up SSH keys on your local machine
+lead: About SSH keys and how to create an SSH key pair on your local machine and how to add it your fortrabbit account.
 head:
   meta:
     - name: 'keywords'
@@ -13,7 +13,7 @@ head:
 
 SSH key authentication is used to securely identify you for [code access](/7.code-access/1.intro.md). Remember, on fortrabbit an account represents a [person](/10.objects/3.person.md). Your fortrabbit account may store the public parts of several SSH keys.
 
-## Consider reusing your GitHub SSH keys
+## Reuse your GitHub SSH keys
 
 Already using GitHub and our [deployment flows](/6.deployment/1.intro.md)? The fortrabbit dashboard can directly import public keys associated with your GitHub account so you don't need to setup additional keys for this.
 
@@ -34,7 +34,7 @@ Proceed to the next section if you don't have any key pairs or get an error abou
 ## Generate a SSH key pair
 
 ```shell
-# NOTE: me@fortrabbit is just an identifier, use what suits you 
+# NOTE: me@fortrabbit is just an identifier, use what suits you
 $ ssh-keygen -t ed25519 -C me@fortrabbit
 # Generating public/private ed25519 key pair.
 # Enter file in which to save the key (/home/user/.ssh/id_ed25519):
