@@ -25,13 +25,9 @@ You are using [Git deployment](/6.deployment/1.intro.md) with some [build steps]
 
 You want to know about traffic patterns of your website. The Apache logs provide a detailed record of server activity, including requests for files, HTTP error codes, and other important information. These logs can be used to troubleshoot issues and monitor server performance.
 
-## Cron logs
+## Worker and cron logs
 
-Your [cron job](/9.components/6.crons.md) is crashing. You want to know why. Use the cron logs to see what your crons have been doing.
-
-## Worker logs
-
-Your [worker job](/9.components/7.workers.md) is crashing. You want to know why. Use the worker logs to see what your workers have been doing.
+Your [worker or cron job](/9.components/7.workers-crons.md) is crashing. You want to know why. Use the logs to see what your workers have been doing.
 
 ## Log files in your CMS or framework
 

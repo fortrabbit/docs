@@ -1,7 +1,7 @@
 ---
 reviewed: 2023-11-24 10:47:05
 title: Performance design
-navigation.excerpt:  Optimize code for speed
+navigation.excerpt: Optimize code for speed
 lead: Make it fast - from development to production, from backend to frontend. Do it for your wallet, your users and the environment.
 ---
 
@@ -15,19 +15,19 @@ This is the part where fortrabbit is involved the most. The TTFB depends on how 
 
 If you begin developing, you might not instantly utilize a pair of multi gigabyte Redis servers. Still: make sure to implement caching early on and to use abstraction, so you can later on switch to those caching machines when you need them. Available caching solutions on fortrabbit:
 
-* File: Disk storage is not very fast.
-* Database: Faster than disk. Use if you need to cache data for a long time.
-* APC: Aside from opcode caching which happens automatically, you can use APC as an object cache very similar to Memcache or Redis.
-* Redis: Modern key value im memory caching service, see the [Redis component article](/9.components/8.redis.md)
+- File: Disk storage is not very fast.
+- Database: Faster than disk. Use if you need to cache data for a long time.
+- APC: Aside from opcode caching which happens automatically, you can use APC as an object cache very similar to Memcache or Redis.
+- Redis: Modern key value im memory caching service, see the [Redis component article](/9.components/8.redis.md)
 
 ### Reduce I/O
 
 It's always a good idea to reduce file input/output operations on the disk to the minimum. In PHP this means:
 
-* **PHP includes**: Reduce amount of includes as much as possible. Always use absolute path names, which reduces the amount of lookups.
-* **Avert files**: Don't use file-sessions, file-caches or anything `file-*`, if you can replace it with an in-memory cache or even the database.
-* **Outsource static files**: Put your static files on an object storage. Sure, they could be delivered very fast from local, but still, they will create I/O which your (PHP) App will be missing.
-* **Shrink your loader chain**: Make sure you load only the classes (files) you need. For a production App (in which code changes do not occur often) you can set `apc.stat` or `pcache.validate_timestamps` to `0`, which reduces I/O on `.php` files even further, but requires an APC/OPcache flush for changed files to apply.
+- **PHP includes**: Reduce amount of includes as much as possible. Always use absolute path names, which reduces the amount of lookups.
+- **Avert files**: Don't use file-sessions, file-caches or anything `file-*`, if you can replace it with an in-memory cache or even the database.
+- **Outsource static files**: Put your static files on an object storage. Sure, they could be delivered very fast from local, but still, they will create I/O which your (PHP) App will be missing.
+- **Shrink your loader chain**: Make sure you load only the classes (files) you need. For a production App (in which code changes do not occur often) you can set `apc.stat` or `pcache.validate_timestamps` to `0`, which reduces I/O on `.php` files even further, but requires an APC/OPcache flush for changed files to apply.
 
 ### Decouple, but loosely
 
@@ -57,7 +57,7 @@ This is an opinionated topic. If you come from searching 504 time out errors, yo
 
 By the way: You can adjust this setting with your app environment under "PHP settings" in the dashboard.
 
-In some cases that makes sense, but it's often a poor design decision. Image transformations with imageMagick are often long running, therefore you might want to increase the execution time to avoid time outs. But, as stated here often: long running tasks should best be separated from the frontend tasks into the background. We also have a [Worker service](/9.components/7.workers.md) for that.
+In some cases that makes sense, but it's often a poor design decision. Image transformations with imageMagick are often long running, therefore you might want to increase the execution time to avoid time outs. But, as stated here often: long running tasks should best be separated from the frontend tasks into the background. With the [workers & crons](/9.components/7.workers-crons.md) component you can outsource jobs.
 
 Frontend requests should always return a swift answer. The number of PHP processes is limited. When all PHP processes are occupied with long running tasks, new requests need to wait. That can easily pile up. A lower max execution time limit often results in faster errors. And that's often what you want. When making an API call to an external service, usually that reply should be there within a second, how long should you wait for it max? Maybe 10 seconds is reasonable. It's not likely that there will be an answer when you wait longer.
 
@@ -79,10 +79,10 @@ Are you a full-stack developer? A lot of delivery can be optimized in the front 
 
 Assets are static files, such as JS, CSS, SVG and some images. It's common to have two versions of your asset files:
 
-* the original files, that you can edit, probably SASS, POSTCSS, TS … (included in Git)
-* the optimized files that are served in production (usually not included in Git)
+- the original files, that you can edit, probably SASS, POSTCSS, TS … (included in Git)
+- the optimized files that are served in production (usually not included in Git)
 
-Minifying JS/CSS files removes unnecessary extra spaces, line breaks and indentations. Modern tools support tree shaking as well. Another technique is to combine — concating —  different JS or CSS files into one file. This brings you: less requests and probably better GZIP compression ratios. Finally, there are specific techniques to further reduce size: For JS, variable names can be changed automatically for shorter ones, in CSS you can use shorthands and short notations of colors and values.
+Minifying JS/CSS files removes unnecessary extra spaces, line breaks and indentations. Modern tools support tree shaking as well. Another technique is to combine — concating — different JS or CSS files into one file. This brings you: less requests and probably better GZIP compression ratios. Finally, there are specific techniques to further reduce size: For JS, variable names can be changed automatically for shorter ones, in CSS you can use shorthands and short notations of colors and values.
 
 You can hook in Node.js pipelining tasks during [deployment build steps](/6.deployment/3.build-commands.md).
 
