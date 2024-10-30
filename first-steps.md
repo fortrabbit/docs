@@ -1,5 +1,5 @@
 ---
-title: First steps with fortrabbit
+title: First steps
 naviTitle: First steps
 navigation.excerpt: Onboarding outline
 # lead: See if fortrabbit is for you.

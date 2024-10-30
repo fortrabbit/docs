@@ -7,13 +7,13 @@ lead: While creating an app you can choose from a variety of popular open source
 
 ## What it does not do
 
-The software template will **not install** the selected software on your behalf. Installing software with composer is easy. We expect you to have a local development running before. In many cases developers bring existing projects.
+The software template will **NOT install** the selected software on your behalf. Installing software with composer is easy. We expect you to have a local development running before. In many cases developers bring existing projects.
 
 ## What it does do
 
 - Set a matching PHP version, if required
 - Enable/disable PHP extensions — for best performance, if required
-- Set a root path — to serve the App from the right location
+- Set a [root path](/11.concepts/root-path.md) — to serve from the right location
 - Populate [ENV vars](/11.concepts/env-vars.md) — to connect to the database automatically
 
 The software template saves you some work and helps to prevent errors. It's non-destructive, you can change all settings later on as you wish.
