@@ -21,27 +21,19 @@ APEX domains should not be routed using a `CNAME` record; they should be routed 
 
 ### Our opinion about APEX domains
 
-Yes, naked domains may look more pleasing to the eye, but don't take this too seriously. All big players, like Google, use a `www.` subdomain, without you noticing, and most bigger sites you'll visit do the same.
+Naked domains may look pleasing, but don't take this too seriously. Big players like Google use a `www.` subdomain without you noticing, and most bigger sites do the same. Safari and Chrome don't show the `www.` prefix in the address bar anymore. Firefox greys out the protocol of this trivial domain. The `www.` prefix is so common, you hardly recognize it.
 
-Safari and Chrome don't even show the `www.` prefix any more in the address bar. Firefox is greying out the protocol of this so-called trivial domain.
+We provide a forwarding service so that all requests on the APEX domain will get forwarded to the `www.` domain, including deep-links and https links. So you can still print the bare domain on flyers or in your email signature.
 
-The `www.` prefix is so common, you'll hardly hardly recognize it. Is Facebook with `www.`? Is Google with `www.`? Is Wikipedia with `www.`? Yes, they all are and you don't care. It's just the best way to deal with DNS.
+Sometimes, moving from bare to `www.` is thought to impact SEO negatively. This should not be the case if done properly. As long as the APEX domain works and forwards all requests, don't worry too much.
 
-We are providing a forwarding service, so that all requests on the bare domain will get forwarded to the `www.` domain, even deeplinks and https links. So you can still print the bare domain on flyers or in your e-mail signature.
-
-Sometimes we have heard that the move from bare to `www.` can impact SEO in a negative way. This should not be the case, if you do it properly, as all your old URLs and deeplinks should be redirected to the new ones, using a standard `301 Moved Permanently` HTTP header.
-
-So please, as long as the bare domain works and will forward all requests, don't worry too much. If your boss still says so, use an external DNS provider that supports CNAME flattening (sometimes called ANAME).
+If your boss insists, use an external DNS provider that supports CNAME flattening (sometimes called ANAME).
 
 ### Practices to avoid for APEX domains
 
-You could grab the IP of your App and use that as an `A`-record for your domain. It's technically possible, but then your App will be offline once we move it to a another Node (which changes the IP address).
+**Use the IP of the environment**: You could grab the IP of your app environment and use that as an `A`-record for your domain. It's technically possible, but then your App will be offline once we move it to a another Node (which changes the IP address).
 
-In some cases you could just use `CNAME` routing for your bare domain. It's theoretically possible, but not recommended by the [DNS specs](http://www.ietf.org/rfc/rfc1035.txt), and would also break any e-mail delivery for your domain.
-
-### Forwarding a APEX domain to www
-
-You should still care about your APEX domain, as some users might type it in directly in the browser address bar. So you usually want to forward all requests from your APEX domain to your primary canonical subdomain. That's why you'll get two routing values, the main `CNAME` target (for the `www.` domain) and an additional `A`-record (for the bare domain).
+**Just use the CNAME with the APEX domain**: It's theoretically possible, but not recommended by the [DNS specs](http://www.ietf.org/rfc/rfc1035.txt), and would also break any e-mail delivery for your domain.
 
 ## Domain forwarding service explained
 
@@ -57,9 +49,7 @@ Optional but highly recommended: The fortrabbit domain forwarding service redire
 
 In general you can expect our redirect service to work. However, in case of a redirect service outage if all or your links depend on it - by pointing to `http://naked.domain/foobar` instead of `http://www.naked.domain/foobarz` - your whole website will stop working.
 
-Even more importantly, requesting a resource via the redirect service forces an additional http-redirect making your website function slower.
-
-For SEO purposes, keep in mind that all redirects on the redirect service are marked as 301 (moved permanently). That way search engines will pick up the <www>. subdomain as the primary address or URL for the website.
+Even more importantly, requesting a resource via the redirect service forces an additional http-redirect making your website function slower. For SEO purposes, keep in mind that all redirects on the redirect service are marked as 301 (moved permanently). That way search engines will pick up the <www>. subdomain as the primary address or URL for the website.
 
 ## Alternative ways to use a APEX domain
 
