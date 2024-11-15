@@ -1,8 +1,8 @@
 ---
-reviewed:      2023-02-15 08:20:13
-title:         Dig
-navigation.excerpt:       'Query public DNS entries from the terminal'
-lead:          'Query public DNS entries from the terminal using the dig command.'
+reviewed: 2024-11-15 10:42:08
+title: Dig
+navigation.excerpt: 'Query public DNS entries from the terminal'
+lead: 'Query public DNS entries from the terminal using the dig command.'
 ---
 
 The `dig` command shows you if there are any DNS entries and where they are pointing to. Here we look up `help.fortrabbit.com`.
@@ -35,5 +35,5 @@ help-frbit.eu2.frbit.net.  20    IN  A       52.48.51.144
 
 ```shell
 # This will print out the IP of your App
-$ dig +short {{app-env-slug}}.frb.io 
+$ dig +short {{app-env-slug}}.frb.io
 ```
