@@ -1,9 +1,9 @@
 ---
-reviewed:    2023-08-15 13:32:24
-title:       rsync deployment
-naviTitle:   rsync deployment
-navigation.excerpt:     Copy and sync like a boss
-lead:        rsync is one of the best ways to deploy code fast and without hassle. It's also an often overlooked option. Let's change this! This article gives you some direction on how to use it in general and especially here on fortrabbit.
+reviewed: 2024-11-25 08:30:00
+title: rsync deployment
+naviTitle: rsync deployment
+navigation.excerpt: Copy and sync like a boss
+lead: rsync is one of the best ways to deploy code fast and without hassle. It's also an often overlooked option. Let's change this! This article gives you some direction on how to use it in general and especially here on fortrabbit.
 ---
 
 ## About rsync
@@ -15,7 +15,7 @@ lead:        rsync is one of the best ways to deploy code fast and without hassl
 Chances are that you already have it: **rsync is built-in with Linux and macOS**. Check if it is installed. Run this command in the Terminal of your local machine:
 
 ```shell
-$ rsync --version 
+$ rsync --version
 # If installed, it will output the version number.
 ```
 
@@ -23,7 +23,7 @@ For Windows 10 we recommend to install the Linux subsystem (WSL). For Windows 7 
 
 ## Use cases
 
-You can [deploy with Git](/6.deployment/1.intro.md) or [upload files  with SFTP](/7.code-access/4.sftp.md) and/or [use SSH](/7.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
+You can [deploy with Git](/6.deployment/1.intro.md) or [upload files with SFTP](/7.code-access/4.sftp.md) and/or [use SSH](/7.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
 
 ### rsync instead of SFTP
 
@@ -45,9 +45,9 @@ $ rsync -av ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
 #          source           destination
 ```
 
-* **options**: How to sync, see [below](#options).
-* **source**: This is your local source directory.
-* **destination**: The target URL, where the files should end up.
+- **options**: How to sync, see [below](#options).
+- **source**: This is your local source directory.
+- **destination**: The target URL, where the files should end up.
 
 ## Common usage
 
@@ -75,28 +75,28 @@ Remote URLs consist of `{{user}}@{{host}}:{{folder}}`. In the examples here fort
 
 ### Local paths
 
-rsync accepts all ways to define local paths. `./`  will translate to the current directory. You can also use absolute paths like `/home/your-user/projects/{{app-env-slug}}` or relative paths like `../{{app-env-slug}}`.
+rsync accepts all ways to define local paths. `./` will translate to the current directory. You can also use absolute paths like `/home/your-user/projects/{{app-env-slug}}` or relative paths like `../{{app-env-slug}}`.
 
 ### Options
 
 Here are some common options to alter the sync mode:
 
-| Option     | Description   |
-|----------- |---------------|
-| `-a`       | Shorthand for `--archive`, like the set of options: `-rlptgoD`. |
-| `-v`       | Verbose output shows all transmitted files and statistical data. Increase verbosity using `-vv` or `-vvv` |
-| `-n`       | Shorthand for `--dry-run`. See [below](#previewing-changes). |
-| `-r`       | Recursive, so all files and directories below the source directory. |
-| `-l`       | Keep symbolic links. |
-| `-p`       | Permissions will be synchronized. |
-| `-t`       | Preserve modification times. |
-| `-g`       | Set Unix group of file/folder on destination to group in source. Also: use group as check criteria |
-| `-o`       | Set Unix group of file/folder on destination to group in source. Also: use group as check criteria |
-| `-c`       | Instead of modification time and size, use checksum of the file contents. Use with caution when  modification time on destination is not reliable. |
-| `-C`       | Shorthand for `--cvs-exclude`. Exclude version control files like `.git`, `.hg`, `.svn`. |
-| `-h`       | Human readable output: display byte sizes in MiB, GiB instead of plain bytes. |
-| `--delete`  | Remove unused files. See [below](#dealing-with-obsolete-files) |
-| `--exclude` | Omit files from being synced. See [below](#excluding-files) |
+| Option      | Description                                                                                                                                       |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-a`        | Shorthand for `--archive`, like the set of options: `-rlptgoD`.                                                                                   |
+| `-v`        | Verbose output shows all transmitted files and statistical data. Increase verbosity using `-vv` or `-vvv`                                         |
+| `-n`        | Shorthand for `--dry-run`. See [below](#previewing-changes).                                                                                      |
+| `-r`        | Recursive, so all files and directories below the source directory.                                                                               |
+| `-l`        | Keep symbolic links.                                                                                                                              |
+| `-p`        | Permissions will be synchronized.                                                                                                                 |
+| `-t`        | Preserve modification times.                                                                                                                      |
+| `-g`        | Set Unix group of file/folder on destination to group in source. Also: use group as check criteria                                                |
+| `-o`        | Set Unix group of file/folder on destination to group in source. Also: use group as check criteria                                                |
+| `-c`        | Instead of modification time and size, use checksum of the file contents. Use with caution when modification time on destination is not reliable. |
+| `-C`        | Shorthand for `--cvs-exclude`. Exclude version control files like `.git`, `.hg`, `.svn`.                                                          |
+| `-h`        | Human readable output: display byte sizes in MiB, GiB instead of plain bytes.                                                                     |
+| `--delete`  | Remove unused files. See [below](#dealing-with-obsolete-files)                                                                                    |
+| `--exclude` | Omit files from being synced. See [below](#excluding-files)                                                                                       |
 
 For an exhaustive list of all the possible options and more in depth info on the above options, check out the official [rsync man page](https://linux.die.net/man/1/rsync). Mind that rsync options can be chained, `rsync -av` combines the two flags `-a` and `-v`.
 
@@ -236,5 +236,5 @@ Say you have changed ten files in your local code set and want to deploy them no
 
 This article is loosely based on our still popular [blog post](https://blog.fortrabbit.com/deploying-code-with-rsync) which is even more complete and includes more details. Also of interest:
 
-* [Manual page of rsync](https://linux.die.net/man/1/rsync)
-* [How does rsync work](https://rsync.samba.org/how-rsync-works.html)
+- [Manual page of rsync](https://linux.die.net/man/1/rsync)
+- [How does rsync work](https://rsync.samba.org/how-rsync-works.html)
