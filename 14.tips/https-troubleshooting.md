@@ -1,9 +1,9 @@
 ---
-reviewed:  2023-08-09 09:56:23
-title:     HTTPS troubleshooting
+reviewed: 2024-11-27 08:58:20
+title: HTTPS troubleshooting
 naviTitle: HTTPS troubleshooting
-navigation.excerpt:   Debugging SSL/TLS errors
-lead:      Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
+navigation.excerpt: Debugging SSL/TLS errors
+lead: Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
 ---
 
 Let's Encrypt certificates are provided for all domains. See the [HTTPS article](/11.concepts/4.https.md) for general features and configuration.
@@ -24,9 +24,9 @@ You visit your Apps domain under the `https://` address and the browser throws a
 NET::ERR_CERT_COMMON_NAME_INVALID
 ```
 
-This can happen, if the domain is brand new and the cert is not yet installed. It can take up to 24 hours for the certs to get installed. The cert for the naked domain (for forwarding) usually takes a bit longer than the other one.
+This can happen, if the domain is brand new and the cert is not yet installed. It can take up to 24 hours for the certs to get installed. The cert for the APEX domain (for forwarding) usually takes a bit longer than the other one.
 
-This can also happen, if your domain is not routed to fortrabbit (yet). Only domains that are already routed to fortrabbit will receive a Let's Encrypt cert. Please see the domain settings in the Dashboard.
+This can also happen, if your domain is not routed to fortrabbit (yet). Only domains that are already routed to fortrabbit will receive a TLS cert. Please see the domain settings in the Dashboard.
 
 There are also other edge cases when this can happen, for example, if your domain has set CAA records with DNS.
 

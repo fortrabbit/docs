@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-11-13 17:39:06
+reviewed: 2024-11-27 08:56:51
 naviTitle: APEX domains
 title: APEX domains and www forwarding
 navigation.excerpt: Landing directory for public access
@@ -21,7 +21,7 @@ APEX domains should not be routed using a `CNAME` record; they should be routed 
 
 ### Our opinion about APEX domains
 
-Naked domains may look pleasing, but don't take this too seriously. Big players like Google use a `www.` subdomain without you noticing, and most bigger sites do the same. Safari and Chrome don't show the `www.` prefix in the address bar anymore. Firefox greys out the protocol of this trivial domain. The `www.` prefix is so common, you hardly recognize it.
+Bare domains may look pleasing, but don't take this too seriously. Big players like Google use a `www.` subdomain without you noticing, and most bigger sites do the same. Safari and Chrome don't show the `www.` prefix in the address bar anymore. Firefox greys out the protocol of this trivial domain. The `www.` prefix is so common, you hardly recognize it.
 
 We provide a forwarding service so that all requests on the APEX domain will get forwarded to the `www.` domain, including deep-links and https links. So you can still print the bare domain on flyers or in your email signature.
 

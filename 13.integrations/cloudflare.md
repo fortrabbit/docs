@@ -1,9 +1,9 @@
 ---
 reviewed: 2023-08-01 11:58:26
-title:    CloudFlare
-navigation.excerpt:  DNS service and DDOS protection
-lead:     Use CloudFlare with fortrabbit.
-sidebar:  cloudflare
+title: CloudFlare
+navigation.excerpt: DNS service and DDOS protection
+lead: Use CloudFlare with fortrabbit.
+sidebar: cloudflare
 head:
   meta:
     - name: 'keywords'
@@ -67,10 +67,9 @@ If you see an `SSL_ERROR_NO_CYPHER_OVERLAP` error, but you think you have set up
 
 While free SSL has become a commodity, there are other reasons to use Cloudflare:
 
-* Enhanced DDoS protection
-* CNAME Flattening for naked domains (naked domain directly with fortrabbit)
-* Domain analytics
-* …
+- Enhanced DDoS protection
+- CNAME Flattening for [APEX domains](/11.concepts/apex-domains.md)
+- Domain analytics
 
 ### Prevent direct access
 
