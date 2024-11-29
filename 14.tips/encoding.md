@@ -1,8 +1,8 @@
 ---
-reviewed:   2023-02-15 08:21:33
-title:      Encoding
-navigation.excerpt:    UTF-8 alternatives
-lead:       UTF-8 is assumed as the default encoding. You can set a different encoding manually — if you really want. This is on how to change the character encodings with fortrabbit.
+reviewed: 2024-11-29 12:53:45
+title: Encoding
+navigation.excerpt: UTF-8 alternatives
+lead: UTF-8 is assumed as the default encoding. You can set a different encoding manually — if you really want. This is on how to change the character encodings with fortrabbit.
 head:
   meta:
     - name: 'keywords'
@@ -33,9 +33,7 @@ AddDefaultCharset iso-8859-1
 
 ### MySQL
 
-When you store or fetch data from MySQL, you need to make sure to fit the encoding of the database when you connect to it. Further more, you can set specific encoding to your columns.
-
-To set a different encoding than UTF8 for your database sessions from PHP you can use the `mysql_set_charset` method. Here is an example:
+When you store or fetch data from MySQL, you need to make sure to fit the encoding of the database when you connect to it. Further more, you can set specific encoding to your columns. To set a different encoding than UTF8 for your database sessions from PHP you can use the `mysql_set_charset` method. Here is an example:
 
 ```php
 mysql_set_charset('ISO-8895-15', $connection);

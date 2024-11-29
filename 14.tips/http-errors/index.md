@@ -1,5 +1,6 @@
 ---
 title: HTTP errors
 navigation.excerpt: 504,503,404,403 …
-navigation:  false
+navigation: false
+lead: HTTP response errors explained by numbers.
 ---
