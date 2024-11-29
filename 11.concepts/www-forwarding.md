@@ -1,0 +1,37 @@
+---
+reviewed: 2024-11-29 20:45:22
+naviTitle: WWW domain forwarding service
+title: WWW domain forwarding service
+navigation.excerpt: Automatically redirect all requests to www
+lead: The fortrabbit domain forwarding service redirects incoming requests on the APEX domain to  'www.'.
+hideExamples: yes
+links:
+  - title: Domain
+    route: /objects/domain
+    property: docs
+  - title: APEX domains
+    route: /concepts/apex-domains
+    property: docs
+---
+
+- It uses '301 Moved Permanently' headers
+- It works for `https`
+- It also works for deep links like `https://your-domain.com/page`
+- It works for `www.` no other subdomains
+
+## How to use
+
+When adding a www domain to the dashboard you will be provided a CNAME record (host name) for the www prefix and an A record (IP address) for the APEX domain. The IP address is the forwarding service. You will add both records with your domain provider.
+
+## Recommendations
+
+- Use `www.domain.tld` instead of just `domain.tld` in all links
+- Send your external traffic (e.g. advertisement clicks) to the `www.` domain
+- Configure your uptime checks with a URL to the the `www.` domain
+
+## Alternatives
+
+You don't have to use the fortrabbit free domain forwarding service, other options:
+
+- [ALIAS / ANAME routing](/14.tips/aname-alias-records.md)
+- Forwarding, using your domain provider

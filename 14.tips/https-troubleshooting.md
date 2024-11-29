@@ -1,12 +1,12 @@
 ---
-reviewed: 2024-11-27 08:58:20
+reviewed: 2024-11-29 20:54:10
 title: HTTPS troubleshooting
 naviTitle: HTTPS troubleshooting
 navigation.excerpt: Debugging SSL/TLS errors
 lead: Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
 ---
 
-Let's Encrypt certificates are provided for all domains. See the [HTTPS article](/11.concepts/4.https.md) for general features and configuration.
+TLS certificates are provided for all [domains](/10.objects/10.domain.md). See the [HTTPS article](/11.concepts/4.https.md) for general features and configuration.
 
 ## Review certificates in the browser
 
