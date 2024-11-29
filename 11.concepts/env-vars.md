@@ -13,7 +13,7 @@ head:
 
 ## Problem
 
-You most likely run at least two environments of your app: A [local one for development](/14.tips/local-development.md) and one here on fortrabbit for production. Both instances probably have access to a database. Your local MySQL has of course different credentials than the remote one. Your `config.php` file is under Git version control. So how to deal with different environment-specific configurations, from database credentials to API keys? Also, how to work in a team when everyone has it's own local settings? How to separate code from configuration, so that the code is portable and no secrets are shared?
+You most likely run at least two environments of your app: A [local one for development](/15.tips/local-development.md) and one here on fortrabbit for production. Both instances probably have access to a database. Your local MySQL has of course different credentials than the remote one. Your `config.php` file is under Git version control. So how to deal with different environment-specific configurations, from database credentials to API keys? Also, how to work in a team when everyone has it's own local settings? How to separate code from configuration, so that the code is portable and no secrets are shared?
 
 ## Solution
 

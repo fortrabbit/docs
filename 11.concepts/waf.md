@@ -13,4 +13,4 @@ We use [nG Firewall](https://perishablepress.com/ng-firewall/) by Perishable Pre
 
 The feature is currently in BETA testing. We are testing performance impacts. While this keeps the Apache more busy with each request, fewer requests will reach the PHP engine.
 
-There are rules which may be specific to your use case but which are not necessarily required for everyone. Use an `.htaccess` file to write your own rules. See our [htaccess section](/14.tips/htaccess/) for more.
+There are rules which may be specific to your use case but which are not necessarily required for everyone. Use an `.htaccess` file to write your own rules. See our [htaccess section](/15.tips/htaccess/) for more.

@@ -6,7 +6,7 @@ navigation.excerpt: Onboarding outline
 navigation: false
 ---
 
-fortrabbit is a hosting platform to run PHP websites and web applications. The [GitHub integration](/6.deployment/2.github-app.md) provides deployment directly from the repo. Projects are represented as [apps](/10.objects/1.app.md) with [environments](/10.objects/2.app-environment.md). The [collaboration features](//15.collaboration/1.intro.md) map real world relations between developers and stakeholders.
+fortrabbit is a hosting platform to run PHP websites and web applications. The [GitHub integration](/6.deployment/2.github-app.md) provides deployment directly from the repo. Projects are represented as [apps](/10.objects/1.app.md) with [environments](/10.objects/2.app-environment.md). The [collaboration features](//16.collaboration/1.intro.md) map real world relations between developers and stakeholders.
 
 ### 1. Sign up
 
@@ -30,4 +30,4 @@ Please :ContactUs if you have a question or want to leave feedback.
 
 ### 4. Start for real
 
-If you like what you see, [migrate existing](/14.tips/migrate-to-fortrabbit.md) or start new projects here. Invite other developers or your clients to [collaborate](//15.collaboration/1.intro.md) here.
+If you like what you see, [migrate existing](/15.tips/migrate-to-fortrabbit.md) or start new projects here. Invite other developers or your clients to [collaborate](//16.collaboration/1.intro.md) here.
