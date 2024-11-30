@@ -6,18 +6,21 @@ navigation.excerpt: Serve APEX domains with fortrabbit
 lead: To serve APEX domain directly with fortrabbit you need a domain provider that supports so called ALIAS or ANAME records.
 hideExamples: yes
 links:
-  - title: Domain
+  - title: Domain intro
     route: /objects/domain
     property: docs
+  - title: External domains
+    route: /dns/external-domains
+    property: docs
   - title: APEX domains
-    route: /concepts/apex-domains
+    route: /dns/apex-domains
     property: docs
   - title: WWW forwarding
-    route: /concepts/www-forwarding
+    route: /dns/www-forwarding
     property: docs
 ---
 
-The functionality is also called CNAME flattening (the hostname target is resolved to the IP). This is a list of domain / DNS providers who offer these special records:
+The functionality is also called CNAME flattening (the hostname target is resolved to the IP). More and more [domain / dns providers](/14.integrations/10.domain-providers.md) are supporting ANAME / ALIAS records:
 
 - [AWS Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
 - [Cloudflare: CNAME flattening](https://developers.cloudflare.com/dns/cname-flattening/), also see [Cloudflare integration](/14.integrations/cloudflare.md)

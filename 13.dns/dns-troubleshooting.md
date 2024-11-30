@@ -4,6 +4,13 @@ title: DNS and domain troubleshooting
 naviTitle: DNS troubleshooting
 navigation.excerpt: Solving domain routing issues.
 lead: Solving common DNS problems when connecting an external domain to fortrabbit.
+links:
+  - title: Domain intro
+    route: /objects/domain
+    property: docs
+  - title: External domains
+    route: /dns/external-domains
+    property: docs
 ---
 
 ## Common issues

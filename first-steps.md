@@ -4,6 +4,10 @@ naviTitle: First steps
 navigation.excerpt: Onboarding outline
 # lead: See if fortrabbit is for you.
 navigation: false
+figure:
+  emoji: 👣
+  text: Every journey needs a first step.
+  color: rgb(97, 97, 97)
 ---
 
 fortrabbit is a hosting platform to run PHP websites and web applications. The [GitHub integration](/6.deployment/2.github-app.md) provides deployment directly from the repo. Projects are represented as [apps](/10.objects/1.app.md) with [environments](/10.objects/2.app-environment.md). The [collaboration features](//16.collaboration/1.intro.md) map real world relations between developers and stakeholders.
