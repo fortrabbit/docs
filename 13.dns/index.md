@@ -1,5 +1,5 @@
 ---
 title: DNS and domains
-navigation.excerpt: DNS, APEX, ANAME, HTTPS
+navigation.excerpt: DNS, Apex, ANAME, HTTPS
 navigation: false
 ---

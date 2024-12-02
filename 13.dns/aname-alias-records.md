@@ -1,9 +1,9 @@
 ---
 reviewed: 2024-11-29 11:57:06
 naviTitle: ANAME/ALIAS records
-title: ANAME / APEX records
-navigation.excerpt: Serve APEX domains with fortrabbit
-lead: To serve APEX domain directly with fortrabbit you need a domain provider that supports so called ALIAS or ANAME records.
+title: ANAME / Apex records
+navigation.excerpt: Serve Apex domains with fortrabbit
+lead: To serve Apex domain directly with fortrabbit you need a domain provider that supports so called ALIAS or ANAME records.
 hideExamples: yes
 links:
   - title: Domain intro
@@ -12,7 +12,7 @@ links:
   - title: External domains
     route: /dns/external-domains
     property: docs
-  - title: APEX domains
+  - title: Apex domains
     route: /dns/apex-domains
     property: docs
   - title: WWW forwarding

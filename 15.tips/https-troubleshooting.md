@@ -24,7 +24,7 @@ You visit your Apps domain under the `https://` address and the browser throws a
 NET::ERR_CERT_COMMON_NAME_INVALID
 ```
 
-This can happen, if the domain is brand new and the cert is not yet installed. It can take up to 24 hours for the certs to get installed. The cert for the APEX domain (for forwarding) usually takes a bit longer than the other one.
+This can happen, if the domain is brand new and the cert is not yet installed. It can take up to 24 hours for the certs to get installed. The cert for the Apex domain (for forwarding) usually takes a bit longer than the other one.
 
 This can also happen, if your domain is not routed to fortrabbit (yet). Only domains that are already routed to fortrabbit will receive a TLS cert. Please see the domain settings in the Dashboard.
 

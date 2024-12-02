@@ -7,7 +7,7 @@ lead: In the cases above you forward all requests to the ONE main domain you are
 hideExamples: yes
 figure:
   emoji: 🌐
-  text: APEX domains deep dive
+  text: Apex domains deep dive
 links:
   - title: Domain
     route: /objects/domain
