@@ -1,9 +1,9 @@
 ---
-reviewed: 2024-11-29 11:57:06
+reviewed: 2024-12-05 11:28:02
 naviTitle: ANAME/ALIAS records
 title: ANAME / Apex records
 navigation.excerpt: Serve Apex domains with fortrabbit
-lead: To serve Apex domain directly with fortrabbit you need a domain provider that supports so called ALIAS or ANAME records.
+lead: To serve apex domain directly special domain providers allow ALIAS or ANAME records to resolve host names to IPs.
 hideExamples: yes
 links:
   - title: Domain intro
@@ -16,11 +16,19 @@ links:
     route: /dns/apex-domains
     property: docs
   - title: WWW forwarding
-    route: /dns/www-forwarding
+    route: /dns/domain-forwarding
     property: docs
 ---
 
-The functionality is also called CNAME flattening (the hostname target is resolved to the IP). More and more [domain / dns providers](/14.integrations/10.domain-providers.md) are supporting ANAME / ALIAS records:
+The functionality is also called CNAME flattening (the hostname target is resolved to the IP).
+
+## ANAME records are currently not actively supported
+
+Due to possible upcoming breaking features we ask you to use the forwarding service and no ANAME/ALIAS records with our service for now. :ContactUs
+
+## Domain providers with ANAME support
+
+More and more [domain / dns providers](/14.integrations/10.domain-providers.md) are supporting ANAME / ALIAS records:
 
 - [AWS Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
 - [Cloudflare: CNAME flattening](https://developers.cloudflare.com/dns/cname-flattening/), also see [Cloudflare integration](/14.integrations/cloudflare.md)
@@ -36,4 +44,4 @@ As far as we know, by the time of this writing, the following providers do not s
 
 - GoDaddy - see [this SO question](https://webmasters.stackexchange.com/questions/141075/aname-record-not-accepted) ☠️
 
-If your provider does not support CNAME flattening, but you would like to take advantage of it, we recommend switching to that does or consider using our [www forwarding service](/11.concepts/www-forwarding.md).
+If your provider does not support CNAME flattening, but you would like to take advantage of it, we recommend switching to that does or consider using our [www forwarding service](/11.concepts/domain-forwarding.md).
