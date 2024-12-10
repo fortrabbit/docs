@@ -1,9 +1,9 @@
 ---
 reviewed: 2024-12-05 11:28:02
-naviTitle: ANAME/ALIAS records
-title: ANAME / Apex records
+naviTitle: ANAME / ALIAS records
+title: ANAME / ALIAS records
 navigation.excerpt: Serve Apex domains with fortrabbit
-lead: To serve apex domain directly special domain providers allow ALIAS or ANAME records to resolve host names to IPs.
+lead: To serve apex domain directly some domain providers allow ALIAS or ANAME records to resolve host names to IPs. It is sometimes called CNAME flattening. The host name is resolved to an IP.
 hideExamples: yes
 links:
   - title: Domain intro
@@ -20,11 +20,9 @@ links:
     property: docs
 ---
 
-The functionality is also called CNAME flattening (the hostname target is resolved to the IP).
-
-## ANAME records are currently not actively supported
-
-Due to possible upcoming breaking features we ask you to use the forwarding service and no ANAME/ALIAS records with our service for now. :ContactUs
+::CallOut{alert}
+Due to potential upcoming changes, we recommend using the [WWW forwarding service](/13.dns/2.domain-forwarding.md) instead of ANAME/ALIAS records with our service at this time.
+::
 
 ## Domain providers with ANAME support
 
