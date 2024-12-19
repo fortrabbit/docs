@@ -12,7 +12,7 @@ siblings: Backups
 
 ## Requirements
 
-To restore from a backup, the [backup component](/9.components/5.backups.md) needs to be booked and at least one backup already needs to be present to be chosen as backup source.
+To restore from a backup, the [backup component](/9.components/5.backups.md) needs to be booked and at least one backup already needs to be present with the [environment](/10.objects/2.app-environment.md) to be chosen as backup source.
 
 ## Use cases
 
