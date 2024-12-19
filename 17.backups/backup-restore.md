@@ -1,39 +1,46 @@
 ---
 reviewed: 2024-12-19 09:25:33
-title: Backup restoration
-naviTitle: Backup restoration
+title: Restore from backup
+naviTitle: Restore from backup
 navigation.excerpt:
-lead: How to use the backup restoration feature to rollback an environment to a prior state.
+lead: Rollback an environment to a prior state.
 ---
 
-To use the backup restore feature the [backup component](/9.components/5.backups.md) needs to be booked and at least one backup already needs to be present to be chosen as backup source.
+## Requirements
 
-## How to trigger a restore
-
-- Visit the backups section of an environment
-- With the list of available backups choose the one you want to restore
-- Click the restore button, confirm, wait until finished
-
-The process can take a bit of time.
-
-## What is happening during restore
+To restore from a backup, the [backup component](/9.components/5.backups.md) needs to be booked and at least one backup already needs to be present to be chosen as backup source.
 
 ## Use cases
 
 - Something broke the site, you want to go back to a working state
 - The site has been hacked
 
+## How to restore a backup
+
+- Visit the backups section of an environment
+- With the list of available backups choose the one you want to restore
+- Click the restore button, confirm, wait until finished
+
+The process can take a while. The time it takes depends on the size of the project. It is usually finished within a couple a couple of minutes but can also take hours. While the backup restore is in progress, the environment will stay online for most of the time, but may have degraded performance. A short downtime is expected.
+
+## What happens during restore
+
+The chosen backup will be unpacked and prepared. Once ready, the state will be switched. The environment will serve the state of backup, the **previous state will be deleted**.
+
 ## Recommendations
 
-- Make sure to have the current state backed up as well, either by manually triggering a backup or by [downloading a snapshot](/15.tips/download-a-website.md)
+- Back up the current state, by manual backup or by [downloading a snapshot](/15.tips/download-a-website.md)
 - Know about the state of the backup you are about to roll back to, see [backup files](/17.backups/backup-files.md)
+- Don't change anything while the backup rollback is in progress
 
-## Gotchas
+## No guarantees
 
-### No guarantees
+It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](/15.tips/http-errors/500.md), which is easy to debug, by looking at the logs.
 
-It can not be guaranteed that the backup restoration will leave the environment in a working state. Their are plenty of documented edge cases where the environment returned an error after the restoration.
+## Backup restore VS git deployment
 
-### Backup restore VS git deployment
+Mind that the backup includes the actual state of files present at the time when the backup was made. When [git deployment](/6.deployment/1.intro.md) is used, the head of the connected branch might be ahead. So it's possible that the next git deployment will cause issues. One way to deal with that is to reset the connected git repo to a state that matches the restored backup, but there is no general rule of thumb for that.
 
-Mind the backup excludes
+## Backup excludes
+
+See [backup excludes](/17.backups/backup-files.md#backup-excludes).

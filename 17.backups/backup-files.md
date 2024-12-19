@@ -27,7 +27,7 @@ Storage backups are stored in an uncompressed `.tar` archive file. How to recove
 Some run-time and cache files, like a `storage` folder, are excluded from the file backups to save some space within the backups. For the same reason `*.mysql` files are excluded - we already provide MySQL backups without affecting performance while creating. Whole exclude list:
 
 ```raw
-# Craft 3 and 4
+# Craft
 storage/backups
 storage/logs
 storage/runtime
