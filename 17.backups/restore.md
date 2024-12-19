@@ -2,12 +2,12 @@
 reviewed: 2024-12-19 09:25:33
 title: Restore from backup
 naviTitle: Restore from backup
-navigation.excerpt:
+navigation.excerpt: automated rollback
 lead: Rollback an environment to a prior state.
 siblings: Backups
-# links:
-#   - title: Backup component
-#     route: /components/backups
+links:
+  - title: Backup component
+    route: /components/backups
 ---
 
 ## Requirements

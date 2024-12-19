@@ -2,12 +2,12 @@
 reviewed: 2024-12-19 16:38:33
 title: Backup files
 naviTitle: Backup files
-navigation.excerpt:
+navigation.excerpt: files and database
 lead: What is included and excluded. How to use the files downloaded from the backup component to actually restore a website.
 siblings: Backups
-# links:
-#   - title: Backup component
-#     route: /components/backups
+links:
+  - title: Backup component
+    route: /components/backups
 ---
 
 The fortrabbit [backup component](/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/10.objects/2.app-environment.md) at a given time, see [retention](/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
