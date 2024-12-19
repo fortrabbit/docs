@@ -4,6 +4,10 @@ title: Restore from backup
 naviTitle: Restore from backup
 navigation.excerpt:
 lead: Rollback an environment to a prior state.
+siblings: Backups
+# links:
+#   - title: Backup component
+#     route: /components/backups
 ---
 
 ## Requirements
@@ -30,7 +34,7 @@ The chosen backup will be unpacked and prepared. Once ready, the state will be s
 ## Recommendations
 
 - Back up the current state, by manual backup or by [downloading a snapshot](/15.tips/download-a-website.md)
-- Know about the state of the backup you are about to roll back to, see [backup files](/17.backups/backup-files.md)
+- Know about the state of the backup you are about to roll back to, see [backup files](/17.backups/files.md)
 - Don't change anything while the backup rollback is in progress
 
 ## No guarantees
@@ -43,4 +47,4 @@ Mind that the backup includes the actual state of files present at the time when
 
 ## Backup excludes
 
-See [backup excludes](/17.backups/backup-files.md#backup-excludes).
+See [backup excludes](/17.backups/files.md#excludes).

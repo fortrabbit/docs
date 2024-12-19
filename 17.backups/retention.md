@@ -4,6 +4,10 @@ title: Backup retention
 naviTitle: Backup retention
 navigation.excerpt: monthly, weekly, daily
 lead: The nitty gritty details of the automatic backup retention model.
+# siblings: Backups
+# links:
+#   - title: Backup component
+#     route: /components/backups
 ---
 
 The [backup component](/9.components/5.backups.md) is available in different plans. Larger ones include more backups. What kinda backups can be expected when?
