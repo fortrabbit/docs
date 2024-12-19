@@ -37,7 +37,7 @@ After cloning the Git repo, you might need to install the dependencies to make y
 
 Beside the code base which you might have received via Git, take care to grab assets and runtime data as well. This can be some compiled CSS/JS files that got deployed along with pipelining or uploads done by users of the application.
 
-#### Assets and other files
+### Assets and other files
 
 Remember Git works in [one direction only here](/6.deployment/1.intro.md#git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
 

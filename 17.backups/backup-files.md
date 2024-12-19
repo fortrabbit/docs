@@ -1,12 +1,14 @@
 ---
-reviewed: 2023-07-31
-title: Backup recovery
-naviTitle: Backup recovery
+reviewed: 2024-12-18 20:11:53
+title: Backup files
+naviTitle: Backup files
 navigation.excerpt:
-lead: How to use the files downloaded from the backup component to actually restore a website
+lead: How to use the files downloaded from the backup component to actually restore a website.
 ---
 
-There are two types of backups: MySQL and storage. Here is how you recover from either:
+The fortrabbit [backup component](/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/10.objects/2.app-environment.md) at a given time (see [retention](/17.backups/backup-retention.md)).
+
+This archive contains everything required to restore the state of that backup.
 
 ### Recover the database
 
