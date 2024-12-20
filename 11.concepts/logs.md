@@ -27,7 +27,7 @@ You want to know about traffic patterns of your website. The Apache logs provide
 
 ## Worker and cron logs
 
-Your [worker or cron job](/9.components/7.workers-crons.md) is crashing. You want to know why. Use the logs to see what your workers have been doing.
+Your [worker or cron job](/9.components/7.jobs.md) is crashing. You want to know why. Use the logs to see what your workers have been doing.
 
 ## Log files in your CMS or framework
 

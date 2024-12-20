@@ -57,7 +57,7 @@ This is an opinionated topic. If you come from searching 504 time out errors, yo
 
 By the way: You can adjust this setting with your app environment under "PHP settings" in the dashboard.
 
-In some cases that makes sense, but it's often a poor design decision. Image transformations with imageMagick are often long running, therefore you might want to increase the execution time to avoid time outs. But, as stated here often: long running tasks should best be separated from the frontend tasks into the background. With the [workers & crons](/9.components/7.workers-crons.md) component you can outsource jobs.
+In some cases that makes sense, but it's often a poor design decision. Image transformations with imageMagick are often long running, therefore you might want to increase the execution time to avoid time outs. But, as stated here often: long running tasks should best be separated from the frontend tasks into the background. With the [jobs](/9.components/7.jobs.md) component you can outsource jobs.
 
 Frontend requests should always return a swift answer. The number of PHP processes is limited. When all PHP processes are occupied with long running tasks, new requests need to wait. That can easily pile up. A lower max execution time limit often results in faster errors. And that's often what you want. When making an API call to an external service, usually that reply should be there within a second, how long should you wait for it max? Maybe 10 seconds is reasonable. It's not likely that there will be an answer when you wait longer.
 
