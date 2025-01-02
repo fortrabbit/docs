@@ -1,8 +1,9 @@
 ---
-reviewed:      2023-08-06 12:18:35
-title:         Events
-navigation.excerpt:       Audit log for all 
-lead:          Events capture activities by people on the fortrabbit hosting platform.
+reviewed: 2025-01-02 15:40:37
+title: Events
+navigation.excerpt: Audit log for all
+wip: true
+lead: Events capture activities by people on the fortrabbit hosting platform.
 ---
 
 <!-- TODO: Extend at least a bit -->
