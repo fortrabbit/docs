@@ -1,5 +1,5 @@
 ---
-reviewed: 2023-08-17 22:04:38
+reviewed: 2025-01-02 16:54:10
 title: Quirks
 navigation.excerpt: Restrictions, permissions
 lead: "Restrictions, permissions — aren't there always some? Heads up so it doesn't cost you hours of researching in the wrong direction."
