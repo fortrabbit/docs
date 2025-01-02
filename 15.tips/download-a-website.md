@@ -49,7 +49,7 @@ You can use the methods above for the whole code base when you haven't been depl
 
 ### Database backup
 
-Last not least you likely will need the contents of your database. Use a local MySQL client to connect to your fortrabbit database and export a dump of it. Detailed instructions over [here](/8.mysql/2.access.md).
+Last not least you likely will need the contents of your database. Use a local MySQL client to connect to your fortrabbit database and export a dump of it. Detailed instructions over [here](/8.database/2.access.md).
 
 ## Using our backups
 
