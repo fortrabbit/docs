@@ -1,5 +1,5 @@
 ---
-reviewed: 2023-08-01 18:38:06
+reviewed: 2025-01-04 16:06:01
 title: Components intro
 naviTitle: Components
 navigation.excerpt: Individually scalable hosting resources
