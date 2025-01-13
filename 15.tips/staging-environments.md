@@ -44,7 +44,7 @@ All you need to utilize multi-staging on fortrabbit is an [app](/10.objects/1.ap
 
 ## Multi-staging with your framework or CMS
 
-Most modern CMS and frameworks anticipate and support multi-staging workflows. The concepts are similar, implementation differs in detail. In most cases, the stage is defined by an [ENV var](/11.concepts/env-vars.md).
+Most modern CMS and frameworks anticipate and support multi-staging workflows. The concepts are similar, implementation differs in detail. In most cases, the stage is defined by an [ENV var](/19.env-vars/).
 
 ## Multi-staging and Git
 
