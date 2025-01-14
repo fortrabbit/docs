@@ -2,7 +2,6 @@
 title: Laravel
 naviTitle: Laravel
 navigation.excerpt: Install Laravel on fortrabbit
-# lead: How to install and run it on fortrabbit.
 navigation: false
 figure:
   icon: simple-icons:laravel
