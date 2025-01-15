@@ -26,9 +26,10 @@ Explore all the settings in the dashboard. Login by [SSH](/7.code-access/3.ssh.m
 
 - [Craft CMS](/3.craft/1.setup.md)
 - [Laravel](/2.laravel/1.setup.md)
+- [Kirby CMS](/4.kirby/1.intro.md)
 - [Statamic](/4.statamic/1.setup.md)
 - [October CMS](/5.guides/6.october-cms.md)
-- [WordPress](/5.guides/5.wordpress.md)
+- and even [WordPress](/5.guides/5.wordpress.md)
 
 Please :ContactUs if you have a question or want to leave feedback.
 

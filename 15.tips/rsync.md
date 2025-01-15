@@ -49,7 +49,7 @@ $ rsync -av ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
 - **source**: This is your local source directory.
 - **destination**: The target URL, where the files should end up.
 
-## Common usage
+## Usage
 
 Here are the most common rsync commands. Likely you will even come by using only the first two:
 
