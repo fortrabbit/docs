@@ -37,7 +37,7 @@ First update your local version, once that is working, deploy to fortrabbit and 
 
 ### 1 - Update your local development environment
 
-We recommend to have a local development environment, also see our [help article on that](/15.tips/local-development.md). First, make sure that your local PHP version is up-to-date. Depending on how your local development is set up, the path to upgrade is different.
+We recommend to have a local development environment, also see our [help article on that](/15.tips/1.local-development.md). First, make sure that your local PHP version is up-to-date. Depending on how your local development is set up, the path to upgrade is different.
 
 If you are running PHP directly on your computer, then a simple `php -v` prints out the PHP version. Beware, if you are using [MAMP](https://www.mamp.info/en/) or [XAMPP](https://www.apachefriends.org/index.html), this is not the version of PHP your code runs on. With these tools you have to use their GUI to select the PHP version you want.
 
@@ -49,7 +49,7 @@ Get your dependencies up-to-date:
 
 #### 2.1 - Updating with Composer
 
-Applications based on PHP frameworks like Laravel and Symfony are usually updated with [Composer](/15.tips/composer.md) which keeps track of all dependencies.
+Applications based on PHP frameworks like Laravel and Symfony are usually updated with [Composer](/15.tips/2.composer.md) which keeps track of all dependencies.
 
 Issuing `composer outdated` in the Terminal will give you a list of outdated packages. Those in red need can easily be updated. Those in yellow also need to be updated but might cause trouble because they are major version upgrades.
 

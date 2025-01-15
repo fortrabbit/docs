@@ -27,11 +27,11 @@ You can [deploy with Git](/6.deployment/1.intro.md) or [upload files with SFTP](
 
 ### rsync instead of SFTP
 
-Consider `rsync` as a replacement for SFTP. With SFTP - unless your SFTP client has some kind of synchronization method (which still will be slower) - you will copy each file manually, one by one. This is mundane and can also be dangerous when forgetting to copy critical files. `rsync` can work as a two way street directly on the file system. Easily synchronize files up and down from your [local development](/15.tips/local-development.md) to the [app environment](/10.objects/2.app-environment.md).
+Consider `rsync` as a replacement for SFTP. With SFTP - unless your SFTP client has some kind of synchronization method (which still will be slower) - you will copy each file manually, one by one. This is mundane and can also be dangerous when forgetting to copy critical files. `rsync` can work as a two way street directly on the file system. Easily synchronize files up and down from your [local development](/15.tips/1.local-development.md) to the [app environment](/10.objects/2.app-environment.md).
 
 ### rsync in addition to Git
 
-Consider `rsync` as an essential addition. Why? Your dependencies are managed with Composer and thus excluded from Git. They will be installed and managed with [Composer](/15.tips/composer.md). So you are keeping your Git repo clean by just including the source files of your very own code. But there is more. Your project includes run time data and static assets:
+Consider `rsync` as an essential addition. Why? Your dependencies are managed with Composer and thus excluded from Git. They will be installed and managed with [Composer](/15.tips/2.composer.md). So you are keeping your Git repo clean by just including the source files of your very own code. But there is more. Your project includes run time data and static assets:
 
 ## The rsync command structure
 

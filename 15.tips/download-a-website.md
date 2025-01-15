@@ -8,7 +8,7 @@ lead: This guide explains how to download all necessary application data from a 
 
 ## Get ready
 
-It's assumed that you have access to your hosting provider. We recommend maintaining a local development environment for your website. Development should occur locally first, and the local copy should be kept up-to-date. For more information, see our [local development article](/15.tips/local-development.md). That means, under normal situations the developer should always have a working copy of the website running locally already.
+It's assumed that you have access to your hosting provider. We recommend maintaining a local development environment for your website. Development should occur locally first, and the local copy should be kept up-to-date. For more information, see our [local development article](/15.tips/1.local-development.md). That means, under normal situations the developer should always have a working copy of the website running locally already.
 
 ## Use cases
 
@@ -31,7 +31,7 @@ When you deployed using Git, you can clone the existing Git repo. Most likely yo
 
 ### Composer dependencies
 
-After cloning the Git repo, you might need to install the dependencies to make your local installation complete. The `composer.json` contains all the instructions. Run `composer install` locally in your root folder. See our [Composer article](/15.tips/composer.md) for more details. This insures the installed dependencies are up-to-date and match you local development environment.
+After cloning the Git repo, you might need to install the dependencies to make your local installation complete. The `composer.json` contains all the instructions. Run `composer install` locally in your root folder. See our [Composer article](/15.tips/2.composer.md) for more details. This insures the installed dependencies are up-to-date and match you local development environment.
 
 ### Runtime data
 
