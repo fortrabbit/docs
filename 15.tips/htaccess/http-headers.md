@@ -1,8 +1,8 @@
 ---
-reviewed: 2023-08-31 14:33:23
-title:    HTTP headers
-navigation.excerpt:  Cache control and CORS
-lead:     'HTTP headers are part of an Hyper Text Transfer Protocol request and response. HTTP headers are defining the operating parameters of an HTTP transaction. Use htaccess to modify these.'
+reviewed: 2024-08-31 14:33:23
+title: HTTP headers
+navigation.excerpt: Cache control and CORS
+lead: 'HTTP headers are part of an Hyper Text Transfer Protocol request and response. HTTP headers are defining the operating parameters of an HTTP transaction. Use htaccess to modify these.'
 head:
   meta:
     - name: 'keywords'

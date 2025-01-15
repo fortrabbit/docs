@@ -1,5 +1,5 @@
 ---
-reviewed: 2023-08-09 09:50:04
+reviewed: 2024-08-09 09:50:04
 title: DNS and domain troubleshooting
 naviTitle: DNS troubleshooting
 navigation.excerpt: Solving domain routing issues.

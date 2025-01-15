@@ -1,9 +1,8 @@
 ---
-
-reviewed:      2023-07-07 09:07:46
-title:         PHP info
-navigation.excerpt:       Dump all configuration
-lead:          Sometimes, you might be unsure on configuration settings, such as which extension in which version is exactly enabled or which ENV vars are actually available. phpinfo to the rescue!
+reviewed: 2024-07-07 09:07:46
+title: PHP info
+navigation.excerpt: Dump all configuration
+lead: Sometimes, you might be unsure on configuration settings, such as which extension in which version is exactly enabled or which ENV vars are actually available. phpinfo to the rescue!
 ---
 
 `phpinfo()` is a built-in PHP function that displays information about the current server settings, including:

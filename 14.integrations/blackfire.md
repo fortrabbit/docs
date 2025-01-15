@@ -1,8 +1,8 @@
 ---
-reviewed: 2023-02-15 08:19:56
-title:    Blackfire
-navigation.excerpt:  PHP profiling - identify performance issues
-lead:     Blackfire is a popular PHP profiling tool from the makers of Symfony. Integrate it with fortrabbit.
+reviewed: 2024-02-15 08:19:56
+title: Blackfire
+navigation.excerpt: PHP profiling - identify performance issues
+lead: Blackfire is a popular PHP profiling tool from the makers of Symfony. Integrate it with fortrabbit.
 sidebar: blackfire
 head:
   meta:
@@ -28,24 +28,24 @@ To use Blackfire with your fortrabbit App, you only need to paste the Agent cred
 
 ### Over at Blackfire
 
-* Sign up or log in to [Blackfire](https://blackfire.io).
-* Click your Profile > Account -> Credentials -> [My Server Credentials](https://blackfire.io/my/settings/credentials)
-* Copy the credentials: Server ID and Server Token
+- Sign up or log in to [Blackfire](https://blackfire.io).
+- Click your Profile > Account -> Credentials -> [My Server Credentials](https://blackfire.io/my/settings/credentials)
+- Copy the credentials: Server ID and Server Token
 
 ### At fortrabbit
 
-* Log in to the dashboard
-* Navigate to your App > PHP > Debugging
-* Enable Blackfire
-* Paste the Blackfire Server ID and Server Token
-* Save the PHP Settings
-* Wait at least one minute, so that the containers are restarted with the new configuration
+- Log in to the dashboard
+- Navigate to your App > PHP > Debugging
+- Enable Blackfire
+- Paste the Blackfire Server ID and Server Token
+- Save the PHP Settings
+- Wait at least one minute, so that the containers are restarted with the new configuration
 
 ### At your browser
 
-* Install the [Chrome Extension](https://blackfire.io/docs/integrations/chrome) or the [Firefox one](https://blackfire.io/docs/integrations/browsers/firefox) depending on your favorite browser
-* Browse to your App
-* Hit the Blackfire button to start profiling
+- Install the [Chrome Extension](https://blackfire.io/docs/integrations/chrome) or the [Firefox one](https://blackfire.io/docs/integrations/browsers/firefox) depending on your favorite browser
+- Browse to your App
+- Hit the Blackfire button to start profiling
 
 ## Limitations
 

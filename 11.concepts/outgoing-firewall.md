@@ -1,8 +1,8 @@
 ---
-reviewed:      2023-08-29 20:32:51
-title:         Outgoing firewall
-navigation.excerpt:       Making requests to the outer world from the environment
-lead:          Learn how to make outgoing calls from your within your application hosted on fortrabbit.
+reviewed: 2024-08-29 20:32:51
+title: Outgoing firewall
+navigation.excerpt: Making requests to the outer world from the environment
+lead: Learn how to make outgoing calls from your within your application hosted on fortrabbit.
 ---
 
 <!-- TODO: Write it! -->

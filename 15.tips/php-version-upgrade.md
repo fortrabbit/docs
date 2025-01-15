@@ -1,5 +1,5 @@
 ---
-reviewed: 2023-08-30 18:19:13
+reviewed: 2024-08-30 18:19:13
 title: PHP version upgrade
 navigation.excerpt: Switch to a new version with confidence
 lead: Best practices upgrading the PHP version.

@@ -1,5 +1,5 @@
 ---
-reviewed: 2023-11-24 18:45:10
+reviewed: 2024-11-24 18:45:10
 title: Web Application Firewall BETA
 naviTitle: WAF
 beta: true

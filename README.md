@@ -22,7 +22,7 @@ Please find a good balance in the number of commits contained with a pull reques
 
 ```yml
 ---
-reviewed: 2023-06-12 # Last reviewed date (and time)
+reviewed: 2024-06-12 # Last reviewed date (and time)
 title: # Long title with page
 naviTitle: # short title for list views
 navigation.excerpt: # additional details for list views

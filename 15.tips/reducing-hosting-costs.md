@@ -1,8 +1,8 @@
 ---
-reviewed: 2023-08-01 18:05:03
-title:    Reducing hosting costs
-navigation.excerpt:  Review and remove
-lead:     We want you to succeed with your online business here on fortrabbit. This article helps you reviewing and cutting down your cloud hosting costs.
+reviewed: 2024-08-01 18:05:03
+title: Reducing hosting costs
+navigation.excerpt: Review and remove
+lead: We want you to succeed with your online business here on fortrabbit. This article helps you reviewing and cutting down your cloud hosting costs.
 head:
   meta:
     - name: 'keywords'

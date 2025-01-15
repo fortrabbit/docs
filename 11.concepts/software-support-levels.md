@@ -1,5 +1,5 @@
 ---
-reviewed: 2023-07-21
+reviewed: 2024-07-21
 title: Software support levels
 naviTitle: Software support
 navigation.excerpt: What to expect from help

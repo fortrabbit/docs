@@ -1,7 +1,7 @@
 ---
-reviewed: 2023-07-29 20:02:50
-title:    PHP processes
-navigation.excerpt:  How do they work, what to expect
+reviewed: 2024-07-29 20:02:50
+title: PHP processes
+navigation.excerpt: How do they work, what to expect
 ---
 
 ## About PHP processes

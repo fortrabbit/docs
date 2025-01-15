@@ -1,9 +1,9 @@
 ---
-reviewed:      2023-02-15 08:20:42
-title:         Security tips
-naviTitle:     Security tips
-navigation.excerpt:       "Stay safe online"
-lead:          "Some basic tips to keep your fortrabbit account and your code base secure."
+reviewed: 2024-02-15 08:20:42
+title: Security tips
+naviTitle: Security tips
+navigation.excerpt: 'Stay safe online'
+lead: 'Some basic tips to keep your fortrabbit account and your code base secure.'
 ---
 
 ## Dashboard and passwords security

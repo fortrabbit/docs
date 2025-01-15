@@ -1,5 +1,5 @@
 ---
-reviewed: 2023-11-24 10:47:05
+reviewed: 2024-11-24 10:47:05
 title: Performance design
 navigation.excerpt: Optimize code for speed
 lead: Make it fast - from development to production, from backend to frontend. Do it for your wallet, your users and the environment.

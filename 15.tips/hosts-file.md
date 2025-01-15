@@ -1,8 +1,8 @@
 ---
-reviewed:      2023-07-08 15:00:38
-title:         Hosts file 
-navigation.excerpt:       Testing domain routing with your local hosts file
-lead:          ''
+reviewed: 2024-07-08 15:00:38
+title: Hosts file
+navigation.excerpt: Testing domain routing with your local hosts file
+lead: ''
 ---
 
 Let's say you are developing a website soon to launch and want to test your custom domain before actually switching the DNS routing it to fortrabbit. Just add the domain to fortrabbit, as you would do with any actually routed domain, then modify your local hosts file, which lets your local machine know ahead of time that the domain is to be served from your fortrabbit e.
@@ -11,8 +11,8 @@ Let's say you are developing a website soon to launch and want to test your cust
 
 The hosts file is a text file (without file type ending). It can be found here:
 
-* MacOS & Linux: `/etc/hosts`
-* Windows: `c:\windows\system32\drivers\etc\hosts`
+- MacOS & Linux: `/etc/hosts`
+- Windows: `c:\windows\system32\drivers\etc\hosts`
 
 ### Editing your local hosts file
 
