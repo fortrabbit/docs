@@ -79,14 +79,15 @@ fortrabbit staff can run the fortrabbit docs locally to see documents rendered i
 
 There is currently no automatic deployment set up.
 
-## Dynamic help TODO
+## Dynamic code examples
 
-Those values will be replaced by JS when users are logged in:
+Those values will be replaced by Javascript when users are logged in:
 
 ```raw
-SSH user: {{ssh-user}}
-Region:   {{region}}
-Your app: {{app-env-id}}
+region: {{region}}
+environment-id: {{app-env-id}}
+app-env-name: {{app-env-id}}
+app-name: {{app-name}}
 ```
 
 It will dynamically show the correct code examples and dashboard links.
