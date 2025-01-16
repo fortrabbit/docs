@@ -18,7 +18,7 @@ To troubleshoot TLS/SSL issues, it's often helpful to view the certificate in th
 
 ## You see a certificate warning
 
-You visit your Apps domain under the `https://` address and the browser throws an error that the certificate can't be verified. If you inspect the cert in the browser, you see that the cert is issued for `*.frb.io` not for your domain. The error might be:
+You visit your Apps domain under the `https://` address and the browser throws an error that the certificate can't be verified. If you inspect the cert in the browser, you see that the cert is issued for `*.frbit.app` not for your domain. The error might be:
 
 ```raw
 NET::ERR_CERT_COMMON_NAME_INVALID

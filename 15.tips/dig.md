@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-11-15 10:42:08
+reviewed: 2025-01-16 09:53:20
 title: Dig
 navigation.excerpt: 'Query public DNS entries from the terminal'
 lead: 'Query public DNS entries from the terminal using the dig command.'
@@ -21,8 +21,7 @@ $ dig help.fortrabbit.com
 ;help.fortrabbit.com.       IN  ANY
 
 ;; ANSWER SECTION:
-help.fortrabbit.com.      600    IN  CNAME   help-frbit.frb.io.
-help-frbit.frb.io.        300    IN  CNAME   help-frbit.eu2.frbit.net.
+help.fortrabbit.com.      600    IN  CNAME   help-frbit..frbit.app.
 help-frbit.eu2.frbit.net.  20    IN  A       52.48.51.144
 
 ;; Query time: 863 msec
@@ -35,5 +34,5 @@ help-frbit.eu2.frbit.net.  20    IN  A       52.48.51.144
 
 ```shell
 # This will print out the IP of your App
-$ dig +short {{app-env-slug}}.frb.io
+$ dig +short {{app-env-slug}}.frbit.app
 ```

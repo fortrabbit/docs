@@ -18,9 +18,7 @@ Using Blackfire in production will gain even better insights, once your App will
 
 ## Pricing
 
-Blackfire is integrated with a BYO (Bring Your Own) license model. You can use Blackfire free in your local development environment, which is already valuable. Additionally, as long as your App here is only running on your `*.frb.io` domain and you have no custom domain routed yet, you can use your free Blackfire plan on your fortrabbit App.
-
-Once your App is ready for production and you have routed a domain, you will need a [Blackfire paid plan](https://blackfire.io/pricing).
+Blackfire is integrated with a BYO (Bring Your Own) license model. Once your project is ready for production and you have routed a domain, you will need a [Blackfire paid plan](https://www.blackfire.io/pricing/).
 
 ## Integration
 
