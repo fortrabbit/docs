@@ -40,7 +40,7 @@ Consider `rsync` as an essential addition. Why? Your dependencies are managed wi
 #
 #      options
 #       ─┴─
-$ rsync -av ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+$ rsync -av ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 #           ─┬─ ──────────────────┬────────────────────────
 #          source           destination
 ```
@@ -55,18 +55,18 @@ Here are the most common rsync commands. Likely you will even come by using only
 
 ```shell
 # DOWN: from remote to local
-$ rsync -av {{app-env-slug}}@deploy.{{region}}.frbit.com:~/ ./
+$ rsync -av {{app-env-id}}@deploy.{{region}}.frbit.com:~/ ./
 
 # UP: from local to remote
-$ rsync -av ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+$ rsync -av ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 
 
 
 # LOCAL: two local folders
-$ rsync -av ~/projects/{{app-env-slug}}/ ~/projects/{{app-env-slug}}.copy/
+$ rsync -av ~/projects/{{app-env-id}}/ ~/projects/{{app-env-id}}.copy/
 
 # REMOTE TO REMOTE: from App to App
-$ rsync -av {{app-env-slug}}@deploy.{{region}}.frbit.com:~/ {{app-name-2}}@deploy.{{region}}.frbit.com:~/
+$ rsync -av {{app-env-id}}@deploy.{{region}}.frbit.com:~/ {{app-name-2}}@deploy.{{region}}.frbit.com:~/
 ```
 
 ### Remote paths
@@ -75,7 +75,7 @@ Remote URLs consist of `{{user}}@{{host}}:{{folder}}`. In the examples here fort
 
 ### Local paths
 
-rsync accepts all ways to define local paths. `./` will translate to the current directory. You can also use absolute paths like `/home/your-user/projects/{{app-env-slug}}` or relative paths like `../{{app-env-slug}}`.
+rsync accepts all ways to define local paths. `./` will translate to the current directory. You can also use absolute paths like `/home/your-user/projects/{{app-env-id}}` or relative paths like `../{{app-env-id}}`.
 
 ### Options
 
@@ -105,7 +105,7 @@ For an exhaustive list of all the possible options and more in depth info on the
 The handy `--dry-run` option can be shortened to just `-n` and also be merged with other options to something like `-avn`. It will give you a preview of what will happen before doing anything:
 
 ```shell
-$ rsync -avn ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+$ rsync -avn ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 sending incremental file list
 ./
 index.php
@@ -124,7 +124,7 @@ Now, running this will print out everything that `rsync` **would** transfer - wi
 This is a use-case for rsync as an additional step when primarily working with Git. In this case you only want to include a specific folder and its contents. You might want to "upload" your `dist` folder with your compiled CSS, JS and images. Or you want to "download" the assets folder, when an editor has uploaded new images to the CMS. This is the basic command:
 
 ```shell
-rsync -av --include='/{{folder}}/***' --exclude='*' ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+rsync -av --include='/{{folder}}/***' --exclude='*' ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 ```
 
 With the `--include` parameter you can specify the path to include, but you still need to exclude everything else. The include/exclude syntax is flexible as you can include patterns and multiple folders at once. Alternatively you can also just define the local folder and the remote folder.
@@ -135,17 +135,17 @@ Sometimes you want to omit files from being synced. You can just add `--exclude=
 
 ```shell
 # use absolute path, as viewed from the source root
-$ rsync -avC --exclude wp-content/themes/your-theme/404.php ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+$ rsync -avC --exclude wp-content/themes/your-theme/404.php ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 ```
 
 The value of `--exclude` is a pattern. It can be matched against the files to be transferred. In this case, the following patterns will have the same effect:
 
 ```shell
 # use partial path
-$ rsync -avC --exclude themes/your-theme/404.php ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+$ rsync -avC --exclude themes/your-theme/404.php ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 
 # use smallest possible partial path
-$ rsync -avC --exclude 404.php ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+$ rsync -avC --exclude 404.php ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 ```
 
 NOTE: The initial `/` character is important. `--exclude 404.php` and `--exclude /404.php` are _not_ the same. The former means: Any path which contains "404.php" is to be excluded. The latter means: Any path which starts with "/404.php" is to be excluded.
@@ -177,7 +177,7 @@ $ echo 404.php >> .rsyncignore
 $ echo something-else.php >> .rsyncignore
 
 # run rsync, using the .rsyncignore file
-$ rsync -av --exclude-from .rsyncignore ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+$ rsync -av --exclude-from .rsyncignore ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 ```
 
 NOTE: The file name `.rsyncignore` is just an example name, use any name you want for your excludes.
@@ -191,7 +191,7 @@ There is still a lot more you can do with exclude and filtering. Not only is the
 So, how to remove obsolete files on the remote? The short answer is: add the option `--delete` to your command line and you are done. To give you and example, using the WordPress setup from before: say you deleted this pesky `404.php` file locally. Now, if you run `rsync` without the `--delete` option (and no other added or modified files), `rsync` would tell you that it will do nothing:
 
 ```shell
-$ rsync -av ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+$ rsync -av ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 sending incremental file list
 wp-content/themes/your-theme/
 
@@ -202,7 +202,7 @@ total size ...
 Although it marks the folder `wp-content/themes/your-theme/`, as if there have been changes (the removal of `404.php`), rsync will not apply any changes. Now, if you run it with the `--delete` option, the file will be removed from the destination. **This is a feature, not a bug**, meaning: `rsync` won't let you down by deleting files without your say-so. Either way, on the first delete run, as always, use the condensed form `-n` of the `--dry-run` option, to show you exactly what would be deleted:
 
 ```shell
-$ rsync -avn --delete ./ {{app-env-slug}}@deploy.{{region}}.frbit.com:~/
+$ rsync -avn --delete ./ {{app-env-id}}@deploy.{{region}}.frbit.com:~/
 sending incremental file list
 deleting wp-content/themes/your-theme/404.php
 
@@ -222,10 +222,10 @@ Should you need to set specific SSH options, for example, if you need to provide
 
 ```shell
 # use specific private key
-$ rsync -av -e 'ssh -i /path/to/your/key' {{app-env-slug}}@deploy.{{region}}.frbit.com:~/ ./
+$ rsync -av -e 'ssh -i /path/to/your/key' {{app-env-id}}@deploy.{{region}}.frbit.com:~/ ./
 
 # enforce password authentication
-$ rsync -av -e 'ssh -o PreferredAuthentications=password' {{app-env-slug}}@deploy.{{region}}.frbit.com:~/ ./
+$ rsync -av -e 'ssh -o PreferredAuthentications=password' {{app-env-id}}@deploy.{{region}}.frbit.com:~/ ./
 ```
 
 ### How rsync transfers only changes

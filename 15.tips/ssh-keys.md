@@ -79,7 +79,7 @@ In certain scenarios, you may want to grant someone or something access to an Ap
 If you use an unprotected key (no passphrase) and still get asked about a password, it may be the case that the key in the default location is not imported into fortrabbit. To use a specific key run SSH like this:
 
 ```shell
-$ ssh -i ~/.ssh/CUSTOM_KEY {{app-env-slug}}@deploy.{{region}}.frbit.com
+$ ssh -i ~/.ssh/CUSTOM_KEY {{app-env-id}}@deploy.{{region}}.frbit.com
 # Replace CUSTOM_KEY with a key on your machine
 ```
 

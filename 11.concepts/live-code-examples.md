@@ -11,5 +11,5 @@ Try it out by changing the select to the right and watch the values below:
 ```plain
 {{app-name}} - name of the currently selected app.
 {{app-env-name}} - name of currently selected environment.
-{{app-env-slug}} - ID of the currently selected environment.
+{{app-env-id}} - ID of the currently selected environment.
 ```
