@@ -36,11 +36,11 @@ The production environment is the stable live environment. The development envir
 
 ### Multi-staging and local development
 
-Most likely you are developing with a [local PHP development environment](/15.tips/1.local-development.md) on your machine. So your laptop is already a of kind of **staging** while the actual part at fortrabbit is usually **production**.
+Most likely you are developing with a [local PHP development environment](/3.dev/1.local-development.md) on your machine. So your laptop is already a of kind of **staging** while the actual part at fortrabbit is usually **production**.
 
 ## Multi-staging on fortrabbit
 
-All you need to utilize multi-staging on fortrabbit is an [app](/10.objects/1.app.md) with multiple [app environments](/10.objects/2.app-environment.md). App environments are made to support multi staging setups.
+All you need to utilize multi-staging on fortrabbit is an [app](/1.platform/10.objects/1.app.md) with multiple [app environments](/1.platform/10.objects/2.app-environment.md). App environments are made to support multi staging setups.
 
 ## Multi-staging with your framework or CMS
 
@@ -48,7 +48,7 @@ Most modern CMS and frameworks anticipate and support multi-staging workflows. T
 
 ## Multi-staging and Git
 
-Multi-staging is mostly associated with [Git deployment](/6.deployment/1.intro.md). Git supports multiple, named branches of your code. On fortrabbit, each branch can be mapped to an [app environment](/10.objects/2.app-environment.md).
+Multi-staging is mostly associated with [Git deployment](/6.deployment/1.intro.md). Git supports multiple, named branches of your code. On fortrabbit, each branch can be mapped to an [app environment](/1.platform/10.objects/2.app-environment.md).
 
 ## Caveat runtime data
 

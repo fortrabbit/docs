@@ -3,14 +3,13 @@ title: First steps
 naviTitle: First steps
 navigation.excerpt: Onboarding outline
 # lead: See if fortrabbit is for you.
-navigation: false
 figure:
   emoji: 👣
   text: Every journey needs a first step.
   color: rgb(97, 97, 97)
 ---
 
-fortrabbit is a hosting platform to run PHP websites and web applications. The [GitHub integration](/6.deployment/2.github-app.md) provides deployment directly from the repo. Projects are represented as [apps](/10.objects/1.app.md) with [environments](/10.objects/2.app-environment.md). The [collaboration features](//16.collaboration/1.intro.md) map real world relations between developers and stakeholders.
+fortrabbit is a hosting platform to run PHP websites and web applications. The [GitHub integration](/3.dev//6.deployment/2.github-app.md) provides deployment directly from the repo. Projects are represented as [apps](/1.platform/10.objects/1.app.md) with [environments](/1.platform/10.objects/2.app-environment.md). The [collaboration features](//16.collaboration/1.intro.md) map real world relations between developers and stakeholders.
 
 ### 1. Sign up
 
@@ -18,21 +17,21 @@ Create a free personal account over at our dashboard.
 
 ### 2. Create a free trial app
 
-During boarding you will be guided to create your first app. Choose the [free trial](/11.concepts/2.free-trial.md) for a quick test drive.
+During boarding you will be guided to create your first app. Choose the [free trial](/1.platform/11.concepts/2.free-trial.md) for a quick test drive.
 
 ### 3. Explore
 
-Explore all the settings in the dashboard. Login by [SSH](/7.code-access/3.ssh.md) or [SFTP](/7.code-access/4.sftp.md). [Deploy](/6.deployment/1.intro.md) some code. Browse our [docs](/) here. There are extensive guides for:
+Explore all the settings in the dashboard. Login by [SSH](/3.dev/7.code-access/3.ssh.md) or [SFTP](/3.dev/7.code-access/4.sftp.md). [Deploy](/6.deployment/1.intro.md) some code. Browse our [docs](/) here. There are extensive guides for:
 
-- [Craft CMS](/3.craft/1.setup.md)
-- [Laravel](/2.laravel/1.setup.md)
-- [Kirby CMS](/4.kirby/1.intro.md)
-- [Statamic](/4.statamic/1.setup.md)
-- [October CMS](/5.guides/6.october-cms.md)
-- and even [WordPress](/5.guides/5.wordpress.md)
+- [Craft CMS](/2.guides/3.craft/1.setup.md)
+- [Laravel](/2.guides/2.laravel/1.setup.md)
+- [Kirby CMS](/2.guides/4.kirby/1.intro.md)
+- [Statamic](/2.guides/4.statamic/1.setup.md)
+- [October CMS](/2.guides/5.more/6.october-cms.md)
+- and even [WordPress](/2.guides/4.wordpress/1.setup.md)
 
 Please :ContactUs if you have a question or want to leave feedback.
 
 ### 4. Start for real
 
-If you like what you see, [migrate existing](/15.tips/migrate-to-fortrabbit.md) or start new projects here. Invite other developers or your clients to [collaborate](//16.collaboration/1.intro.md) here.
+If you like what you see, [migrate existing](/3.dev/15.tips/migrate-to-fortrabbit.md) or start new projects here. Invite other developers or your clients to [collaborate](/1.platform//16.collaboration/1.intro.md) here.

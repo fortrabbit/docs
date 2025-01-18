@@ -11,11 +11,11 @@ head:
 
 ## Log access
 
-All logs are available through the [fortrabbit dashboard](/11.concepts/dashboard.md), individual per [app environment](/10.objects/2.app-environment.md). A live log stream as well as historical logs are available for `stdout` and `stderr`.
+All logs are available through the [fortrabbit dashboard](/1.platform/11.concepts/dashboard.md), individual per [app environment](/1.platform/10.objects/2.app-environment.md). A live log stream as well as historical logs are available for `stdout` and `stderr`.
 
 ## PHP error logs
 
-You see a [500 error](/15.tips/http-errors/500.md) and you need to know why. PHP error logs contain information about issues that occur while executing PHP code. Use these logs to identify bugs in the code or configuration. PHP error logs typically include information such as the time and date of the error, the type of error, and the file and line number where the error occurred.
+You see a [500 error](/3.dev/http-errors/500.md) and you need to know why. PHP error logs contain information about issues that occur while executing PHP code. Use these logs to identify bugs in the code or configuration. PHP error logs typically include information such as the time and date of the error, the type of error, and the file and line number where the error occurred.
 
 ## Deployment logs
 
@@ -31,12 +31,12 @@ Your [worker or cron job](/9.components/7.jobs.md) is crashing. You want to know
 
 ## Log files in your CMS or framework
 
-Mind that your CMS or framework might pipe logs to a different location, other than `stderr` and `stdout`. If they do, you will not see the error output in the fortrabbit dashboard. You can still access the logs by [SSH](/7.code-access/3.ssh.md) or [SFTP](/7.code-access/4.sftp.md), please see your CMS / framework docs where the logs are stored.
+Mind that your CMS or framework might pipe logs to a different location, other than `stderr` and `stdout`. If they do, you will not see the error output in the fortrabbit dashboard. You can still access the logs by [SSH](/3.dev/7.code-access/3.ssh.md) or [SFTP](/3.dev/7.code-access/4.sftp.md), please see your CMS / framework docs where the logs are stored.
 
-Most CMS and frameworks also offer options to send these logs to the standard locations. With the [software template](/11.concepts/software-templates.md) the setting is getting pre-populated, if possible, by ENV var.
+Most CMS and frameworks also offer options to send these logs to the standard locations. With the [software template](/1.platform/11.concepts/software-templates.md) the setting is getting pre-populated, if possible, by ENV var.
 
-- [Craft CMS logging](/3.craft/3.tune.md#logging)
-- [Laravel logging](/2.laravel/3.tune.md#logging)
+- [Craft CMS logging](/2.guides/3.craft/3.tune.md#logging)
+- [Laravel logging](/2.guides/2.laravel/3.tune.md#logging)
 
 ### Verbose logging
 

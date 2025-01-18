@@ -10,7 +10,7 @@ links:
     route: /components/backups
 ---
 
-The fortrabbit [backup component](/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/10.objects/2.app-environment.md) at a given time, see [retention](/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
+The fortrabbit [backup component](/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/2.app-environment.md) at a given time, see [retention](/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
 
 - Files: Everything present on the file system
 - Database: a database dump file, if [database](/9.components/2.database.md) is booked
@@ -58,7 +58,7 @@ While you can [restore from backup](/17.backups/restore.md) using the dashboard,
 
 ### Restore files
 
-To recover files from a backup, first ensure to have the unpacked files from the backup archive on your local machine. Then upload these files to your environment at using SFTP or [rsync](/15.tips/rsync.md). Be sure to remove any unnecessary files from the remote environment and don't forget to include hidden files.
+To recover files from a backup, first ensure to have the unpacked files from the backup archive on your local machine. Then upload these files to your environment at using SFTP or [rsync](/3.dev/rsync.md). Be sure to remove any unnecessary files from the remote environment and don't forget to include hidden files.
 
 ### Restore database
 

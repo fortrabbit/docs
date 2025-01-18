@@ -7,11 +7,11 @@ lead: 'What you may want to know about PHP related performance issues.'
 
 ## Understand Time To First Byte and PHP response time
 
-For web server performance "PHP response time" is an important metric. It can be roughly translated to the Time To First Byte ([Wikipedia](https://en.wikipedia.org/wiki/Time_to_first_byte)), which also includes network latency effects. Most websites should be able to attain a "PHP response time" of 250ms or even less. This is possible with attention to best practices - see our [performance design article](/15.tips/performance-design.md) as well.
+For web server performance "PHP response time" is an important metric. It can be roughly translated to the Time To First Byte ([Wikipedia](https://en.wikipedia.org/wiki/Time_to_first_byte)), which also includes network latency effects. Most websites should be able to attain a "PHP response time" of 250ms or even less. This is possible with attention to best practices - see our [performance design article](/3.dev/performance-design.md) as well.
 
 ## Understand PHP processes and execution time
 
-Please see our dedicated [PHP processes article](/15.tips/php-processes.md).
+Please see our dedicated [PHP processes article](/3.dev/php-processes.md).
 
 ## How to identify PHP performance problems
 
@@ -36,7 +36,7 @@ The fortrabbit dashboard offers a metric section (your hosting provider likely w
 
 ## Common sources for PHP performance issues
 
-Most slow websites can be backtraced to a PEBCAK - problem exists between chair and keyboard. In other words: It's the website developers responsibility to create code that ships fast. Most often it's oversight or missing experience and attention about [performance design](/15.tips/performance-design.md).
+Most slow websites can be backtraced to a PEBCAK - problem exists between chair and keyboard. In other words: It's the website developers responsibility to create code that ships fast. Most often it's oversight or missing experience and attention about [performance design](/3.dev/performance-design.md).
 
 ## Swap issues
 
@@ -54,7 +54,7 @@ There are also commercial, professional profiling services providing helpful det
 
 ### Refactor code
 
-Only good code can fly. Review your code. Make it perform better. See our [performance design article](/15.tips/performance-design.md) for inspiration.
+Only good code can fly. Review your code. Make it perform better. See our [performance design article](/3.dev/performance-design.md) for inspiration.
 
 ### Book more hosting resources
 

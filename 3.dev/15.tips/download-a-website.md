@@ -8,7 +8,7 @@ lead: This guide explains how to download all necessary application data from a 
 
 ## Get ready
 
-It's assumed that you have access to your hosting provider. We recommend maintaining a local development environment for your website. Development should occur locally first, and the local copy should be kept up-to-date. For more information, see our [local development article](/15.tips/1.local-development.md). That means, under normal situations the developer should always have a working copy of the website running locally already.
+It's assumed that you have access to your hosting provider. We recommend maintaining a local development environment for your website. Development should occur locally first, and the local copy should be kept up-to-date. For more information, see our [local development article](/3.dev/1.local-development.md). That means, under normal situations the developer should always have a working copy of the website running locally already.
 
 ## Use cases
 
@@ -31,7 +31,7 @@ When you deployed using Git, you can clone the existing Git repo. Most likely yo
 
 ### Composer dependencies
 
-After cloning the Git repo, you might need to install the dependencies to make your local installation complete. The `composer.json` contains all the instructions. Run `composer install` locally in your root folder. See our [Composer article](/15.tips/2.composer.md) for more details. This insures the installed dependencies are up-to-date and match you local development environment.
+After cloning the Git repo, you might need to install the dependencies to make your local installation complete. The `composer.json` contains all the instructions. Run `composer install` locally in your root folder. See our [Composer article](/3.dev/2.composer.md) for more details. This insures the installed dependencies are up-to-date and match you local development environment.
 
 ### Runtime data
 
@@ -41,9 +41,9 @@ Beside the code base which you might have received via Git, take care to grab as
 
 Remember Git works in [one direction only here](/6.deployment/1.intro.md#git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
 
-- Login by SFTP and just download what is required - [see here](/7.code-access/4.sftp.md)
-- Login by SSH, zip the files and question and them from a public URL - [see here](/7.code-access/3.ssh.md)
-- Use rsync to download a folder or even the entire project - [see here](/15.tips/rsync.md)
+- Login by SFTP and just download what is required - [see here](/3.dev/7.code-access/4.sftp.md)
+- Login by SSH, zip the files and question and them from a public URL - [see here](/3.dev/7.code-access/3.ssh.md)
+- Use rsync to download a folder or even the entire project - [see here](/3.dev/rsync.md)
 
 You can use the methods above for the whole code base when you haven't been deploying with Git before or you are unsure if the git repo contains the latest changes.
 

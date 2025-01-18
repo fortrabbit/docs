@@ -12,7 +12,7 @@ This article covers the general basics as well as some deep links for moving you
 
 ## 1. Create your fortrabbit app
 
-Each website or web application is represented by an [app](/10.objects/1.app.md) with at least one [environment](/10.objects/2.app-environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
+Each website or web application is represented by an [app](/1.platform/10.objects/1.app.md) with at least one [environment](/1.platform/10.objects/2.app-environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
 
 ## 2. Prepare your domains
 
@@ -34,17 +34,17 @@ If your App is using a MySQL database, you will need to migrate the database dat
 
 ## 6. Sending e-mails
 
-Take care when you application needs to send mails. Simple `sendmail` won't work, see our [quirks article](/11.concepts/4.quirks.md#mailing) on how to send mails, either via SMTP or 3rd party provider.
+Take care when you application needs to send mails. Simple `sendmail` won't work, see our [quirks article](/1.platform/11.concepts/4.quirks.md#mailing) on how to send mails, either via SMTP or 3rd party provider.
 
 ## 7. HTTPS
 
-All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/15.tips/dns-external-domains.md).
+All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/3.dev/dns-external-domains.md).
 
 ## 8 Final switch: DNS
 
 Now that you have migrated your code, runtime data and database - and all the other stuff you needed - you are ready to push the button.
 
-Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](/15.tips/dns-external-domains.md). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
+Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](/3.dev/dns-external-domains.md). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
 
 ## Migrating away from fortrabbit
 

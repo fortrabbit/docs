@@ -55,4 +55,4 @@ By configuring the `public/` directory, you prevent direct web access to sensiti
 
 ## Root path setting on fortrabbit
 
-On fortrabbit you can set the root path for each app environment with the routing settings in the dashboard. When choosing a [software template](/11.concepts/software-templates.md) the correct root path will pre-configured.
+On fortrabbit you can set the root path for each app environment with the routing settings in the dashboard. When choosing a [software template](/1.platform/11.concepts/software-templates.md) the correct root path will pre-configured.

@@ -11,12 +11,12 @@ head:
 
 ## Use the costs overview
 
-With our dashboard under each of your [payment methods](/10.objects/9.payment-method.md) you can find an invoice archive. There is also an invoice draft for the currently ongoing costs for the month so far. The [pro-rated daily billing](/15.billing/3.pro-rated-billing.md) helps you to remove unnecessary [components](/11.concepts/components.md) with immediate effect.
+With our dashboard under each of your [payment methods](/1.platform/10.objects/9.payment-method.md) you can find an invoice archive. There is also an invoice draft for the currently ongoing costs for the month so far. The [pro-rated daily billing](/15.billing/3.pro-rated-billing.md) helps you to remove unnecessary [components](/1.platform/11.concepts/components.md) with immediate effect.
 
 ## Review your apps and environments
 
-See if you have any unnecessary [apps](/10.objects/1.app.md) or [environments](/10.objects/2.app-environment.md) hanging around — maybe some out-of-date side project, or something half finished? Delete! Make sure you have an up-to-date and complete local backup. That way, you can easily re-deploy it again at a later stage.
+See if you have any unnecessary [apps](/1.platform/10.objects/1.app.md) or [environments](/1.platform/10.objects/2.app-environment.md) hanging around — maybe some out-of-date side project, or something half finished? Delete! Make sure you have an up-to-date and complete local backup. That way, you can easily re-deploy it again at a later stage.
 
 ### Check your component plans
 
-Review your currently selected [components](/11.concepts/components.md). Compare with visitors. You can experiment with a lower scaling of PHP and MySQL. Keep an eye on PHP requests and performance.
+Review your currently selected [components](/1.platform/11.concepts/components.md). Compare with visitors. You can experiment with a lower scaling of PHP and MySQL. Keep an eye on PHP requests and performance.

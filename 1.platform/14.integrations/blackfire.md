@@ -22,7 +22,7 @@ Blackfire is integrated with a BYO (Bring Your Own) license model. Once your pro
 
 ## Integration
 
-To use Blackfire with your fortrabbit App, you only need to paste the Agent credentials from Blackfire into the fortrabbit [dashboard](/11.concepts/dashboard.md). Here is a detailed step by step guide:
+To use Blackfire with your fortrabbit App, you only need to paste the Agent credentials from Blackfire into the fortrabbit [dashboard](/1.platform/11.concepts/dashboard.md). Here is a detailed step by step guide:
 
 ### Over at Blackfire
 

@@ -21,7 +21,7 @@ head:
 ## Simple PHP version upgrade path
 
 1. Make sure the software you are using is up-to-date
-2. In the [dashboard](/11.concepts/dashboard.md)
+2. In the [dashboard](/1.platform/11.concepts/dashboard.md)
 3. Navigate to the app environment and then click on Settings > PHP version
 4. Change to a newer PHP version and hit "save"
 5. Check if your website is still working after a few minutes
@@ -37,7 +37,7 @@ First update your local version, once that is working, deploy to fortrabbit and 
 
 ### 1 - Update your local development environment
 
-We recommend to have a local development environment, also see our [help article on that](/15.tips/1.local-development.md). First, make sure that your local PHP version is up-to-date. Depending on how your local development is set up, the path to upgrade is different.
+We recommend to have a local development environment, also see our [help article on that](/3.dev/1.local-development.md). First, make sure that your local PHP version is up-to-date. Depending on how your local development is set up, the path to upgrade is different.
 
 If you are running PHP directly on your computer, then a simple `php -v` prints out the PHP version. Beware, if you are using [MAMP](https://www.mamp.info/en/) or [XAMPP](https://www.apachefriends.org/index.html), this is not the version of PHP your code runs on. With these tools you have to use their GUI to select the PHP version you want.
 
@@ -49,7 +49,7 @@ Get your dependencies up-to-date:
 
 #### 2.1 - Updating with Composer
 
-Applications based on PHP frameworks like Laravel and Symfony are usually updated with [Composer](/15.tips/2.composer.md) which keeps track of all dependencies.
+Applications based on PHP frameworks like Laravel and Symfony are usually updated with [Composer](/3.dev/2.composer.md) which keeps track of all dependencies.
 
 Issuing `composer outdated` in the Terminal will give you a list of outdated packages. Those in red need can easily be updated. Those in yellow also need to be updated but might cause trouble because they are major version upgrades.
 
@@ -65,7 +65,7 @@ To update a dependency, simply change any required versions in your `composer.js
 
 Many Content Management Systems, like WordPress and Craft CMS come with a built in update feature. So you can simply login to the admin area of the CMS and hit a button to update.
 
-**Beware:** With fortrabbit, those changes only happen on the file system and are not reflected in Git. This is fine when you are using SFTP, otherwise read more in our [setup guide for WordPress](/5.guides/5.wordpress.md) or [update guide for Craft CMS](/3.craft/7.updating.md).
+**Beware:** With fortrabbit, those changes only happen on the file system and are not reflected in Git. This is fine when you are using SFTP, otherwise read more in our [setup guide for WordPress](/5.more/5.wordpress.md) or [update guide for Craft CMS](/2.guides/3.craft/7.updating.md).
 
 ### 3 - Test it locally
 
@@ -90,6 +90,6 @@ Changes can take two minutes to be applied. You can also test-run this. When you
 
 #### 4.2 - Deploy changes
 
-Now, quickly after the new PHP version is in place, deploy your updated code from your local development, either with [Git](//6.deployment/1.intro.md or simply by [SFTP](/7.code-access/4.sftp.md) or by [rsync](/15.tips/rsync.md).
+Now, quickly after the new PHP version is in place, deploy your updated code from your local development, either with [Git](//6.deployment/1.intro.md or simply by [SFTP](/3.dev/7.code-access/4.sftp.md) or by [rsync](/3.dev/rsync.md).
 
 Don't forget that you might also have to run database migrations so that your database structure matches the latest code version. WordPress and Craft CMS automatically handle this in the web UI. For any other system, see their documentation on how to properly update the database.

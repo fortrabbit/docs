@@ -68,7 +68,7 @@ If you see an `SSL_ERROR_NO_CYPHER_OVERLAP` error, but you think you have set up
 While free SSL has become a commodity, there are other reasons to use Cloudflare:
 
 - Enhanced DDoS protection
-- CNAME Flattening for [apex domains](/11.concepts/apex-domains.md)
+- CNAME Flattening for [apex domains](/1.platform/11.concepts/apex-domains.md)
 - Domain analytics
 
 ### Prevent direct access

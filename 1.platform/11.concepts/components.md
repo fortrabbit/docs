@@ -8,7 +8,7 @@ lead: Individually scalable hosting resources for each app environment.
 
 ## Intro
 
-With VPS hosting you pay for size of your box. Within that box you can run different services. fortrabbit on the other side has a micro service oriented architecture with services running in isolated containers. This architecture is reflected in the pricing. A component represents a service that can be booked and scaled individually per [app environment](/10.objects/2.app-environment.md).
+With VPS hosting you pay for size of your box. Within that box you can run different services. fortrabbit on the other side has a micro service oriented architecture with services running in isolated containers. This architecture is reflected in the pricing. A component represents a service that can be booked and scaled individually per [app environment](/1.platform/10.objects/2.app-environment.md).
 
 PHP, database, but also traffic and storage are components. Most components are available in different sizes, those are called plans and are titled like t-shirt labels: XS, S, M, L …. Different resource attributes are associated with the plans as well.
 
@@ -25,4 +25,4 @@ The components PHP, traffic and storage are required, they can not be deselected
 
 ## Components during the free trial
 
-All components are available with the [free trial](/11.concepts/2.free-trial.md). They are however limited to the smallest plan.
+All components are available with the [free trial](/1.platform/11.concepts/2.free-trial.md). They are however limited to the smallest plan.

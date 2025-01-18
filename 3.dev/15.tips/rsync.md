@@ -8,7 +8,7 @@ lead: rsync is one of the best ways to deploy code fast and without hassle. It's
 
 ## About rsync
 
-`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes. rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/7.code-access/3.ssh.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit app environment directly.
+`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes. rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/3.dev/7.code-access/3.ssh.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit app environment directly.
 
 ## Installing rsync
 
@@ -23,15 +23,15 @@ For Windows 10 we recommend to install the Linux subsystem (WSL). For Windows 7 
 
 ## Use cases
 
-You can [deploy with Git](/6.deployment/1.intro.md) or [upload files with SFTP](/7.code-access/4.sftp.md) and/or [use SSH](/7.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
+You can [deploy with Git](/6.deployment/1.intro.md) or [upload files with SFTP](/3.dev/7.code-access/4.sftp.md) and/or [use SSH](/3.dev/7.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
 
 ### rsync instead of SFTP
 
-Consider `rsync` as a replacement for SFTP. With SFTP - unless your SFTP client has some kind of synchronization method (which still will be slower) - you will copy each file manually, one by one. This is mundane and can also be dangerous when forgetting to copy critical files. `rsync` can work as a two way street directly on the file system. Easily synchronize files up and down from your [local development](/15.tips/1.local-development.md) to the [app environment](/10.objects/2.app-environment.md).
+Consider `rsync` as a replacement for SFTP. With SFTP - unless your SFTP client has some kind of synchronization method (which still will be slower) - you will copy each file manually, one by one. This is mundane and can also be dangerous when forgetting to copy critical files. `rsync` can work as a two way street directly on the file system. Easily synchronize files up and down from your [local development](/3.dev/1.local-development.md) to the [app environment](/1.platform/10.objects/2.app-environment.md).
 
 ### rsync in addition to Git
 
-Consider `rsync` as an essential addition. Why? Your dependencies are managed with Composer and thus excluded from Git. They will be installed and managed with [Composer](/15.tips/2.composer.md). So you are keeping your Git repo clean by just including the source files of your very own code. But there is more. Your project includes run time data and static assets:
+Consider `rsync` as an essential addition. Why? Your dependencies are managed with Composer and thus excluded from Git. They will be installed and managed with [Composer](/3.dev/2.composer.md). So you are keeping your Git repo clean by just including the source files of your very own code. But there is more. Your project includes run time data and static assets:
 
 ## The rsync command structure
 

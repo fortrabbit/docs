@@ -27,7 +27,7 @@ Many domain providers default to a long TTL (Time To Live). The TTL value is in 
 
 ### Internal routing issues
 
-When you see a 404 - file not found error after the domain is correctly via DNS and ending up at fortrabbit, then most likely your code configuration is not setup to receive traffic for the domain. This can be a wrong root path setting, or a siteUrl setting that is wrong. Also check our [404 tips](/15.tips/http-errors/404.md).
+When you see a 404 - file not found error after the domain is correctly via DNS and ending up at fortrabbit, then most likely your code configuration is not setup to receive traffic for the domain. This can be a wrong root path setting, or a siteUrl setting that is wrong. Also check our [404 tips](/3.dev/http-errors/404.md).
 
 ### No DNS settings
 
@@ -35,7 +35,7 @@ Depending on your browser you might see a _DNS_PROBE_FINISHED_NXDOMAIN_ or _This
 
 ### Certificate errors
 
-Once a domain is correctly routed, the [TLS certificate](/13.dns/4.https.md) needs to be installed. This takes some additional time in which requests to the https version of the website will display a certificate warning in the browser. This is actually not a DNS issue, see the [HTTPS troubleshooting guide](/15.tips/https-troubleshooting.md).
+Once a domain is correctly routed, the [TLS certificate](/13.dns/4.https.md) needs to be installed. This takes some additional time in which requests to the https version of the website will display a certificate warning in the browser. This is actually not a DNS issue, see the [HTTPS troubleshooting guide](/3.dev/https-troubleshooting.md).
 
 ### No domain configured with fortrabbit
 
@@ -47,11 +47,11 @@ The following tips can help you to verify DNS settings for your domain. This is 
 
 ### Use the dashboard as a guidance
 
-When visiting your external domain within the [dashboard](/11.concepts/dashboard.md), you'll see the desired and the currently active DNS values for the domain. Those two settings should match.
+When visiting your external domain within the [dashboard](/1.platform/11.concepts/dashboard.md), you'll see the desired and the currently active DNS values for the domain. Those two settings should match.
 
 ### Use dig to verify current DNS values
 
-You can verify DNS settings with the [dig command](/15.tips/dig.md).
+You can verify DNS settings with the [dig command](/3.dev/dig.md).
 
 ### Use a DNS checker website
 

@@ -12,7 +12,7 @@ links:
 
 ## Requirements
 
-To restore from a backup, the [backup component](/9.components/5.backups.md) needs to be booked and at least one backup already needs to be present with the [environment](/10.objects/2.app-environment.md) to be chosen as backup source.
+To restore from a backup, the [backup component](/9.components/5.backups.md) needs to be booked and at least one backup already needs to be present with the [environment](/1.platform/10.objects/2.app-environment.md) to be chosen as backup source.
 
 ## Use cases
 
@@ -33,13 +33,13 @@ The chosen backup will be unpacked and prepared. Once ready, the state will be s
 
 ## Recommendations
 
-- Back up the current state, by manual backup or by [downloading a snapshot](/15.tips/download-a-website.md)
+- Back up the current state, by manual backup or by [downloading a snapshot](/3.dev/download-a-website.md)
 - Know about the state of the backup you are about to roll back to, see [backup files](/17.backups/files.md)
 - Don't change anything while the backup rollback is in progress
 
 ## No guarantees
 
-It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](/15.tips/http-errors/500.md), which is easy to debug, by looking at the logs.
+It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](/3.dev/http-errors/500.md), which is easy to debug, by looking at the logs.
 
 ## Backup restore VS git deployment
 

@@ -10,7 +10,7 @@ head:
       content: 'folder, directory, directories, linux, unix, web root, doc root, document root'
 ---
 
-When you login with [SFTP](/7.code-access/4.sftp.md) or [SSH](/7.code-access/3.ssh.md) to your [app environment](/10.objects/2.app-environment.md) you can see the file directory structure. This is what you'll find:
+When you login with [SFTP](/3.dev/7.code-access/4.sftp.md) or [SSH](/3.dev/7.code-access/3.ssh.md) to your [app environment](/1.platform/10.objects/2.app-environment.md) you can see the file directory structure. This is what you'll find:
 
 ```raw
 srv
@@ -21,7 +21,7 @@ srv
 
 ## www
 
-The default web root (aka document root) directory is the main tree 'visible' from the web. You can change the routing [root path](/11.concepts/root-path.md), to any folder below the `htdocs` directory. The [git deployment](/6.deployment/1.intro.md) syncs to the `htdocs` folder as well. `htdocs` is also your 'login folder' - starting point for SSH/SFTP. The whole path looks something like this:
+The default web root (aka document root) directory is the main tree 'visible' from the web. You can change the routing [root path](/1.platform/11.concepts/root-path.md), to any folder below the `htdocs` directory. The [git deployment](/6.deployment/1.intro.md) syncs to the `htdocs` folder as well. `htdocs` is also your 'login folder' - starting point for SSH/SFTP. The whole path looks something like this:
 
 - `/srv/data/www`
 

@@ -9,13 +9,13 @@ lead: "Restrictions, permissions — aren't there always some? Heads up so it do
 
 ## This is not VPS hosting
 
-The fortrabbit platform has a service oriented architecture with individually scalable as components. The [app environment](/10.objects/2.app-environment.md) are lightweight containers that are optimized for speedy web delivery of PHP applications. If you are shopping for as much hardware resources as possible for as little money as possible, you might look elsewhere.
+The fortrabbit platform has a service oriented architecture with individually scalable as components. The [app environment](/1.platform/10.objects/2.app-environment.md) are lightweight containers that are optimized for speedy web delivery of PHP applications. If you are shopping for as much hardware resources as possible for as little money as possible, you might look elsewhere.
 
 - [Learn about the differences to VPS hosting](https://www.fortrabbit.com/why-not-vps)
 
 ## No 1-click installers
 
-When creating an app we ask for the desired software you are about to use. This can be Laravel, Craft CMS, WordPress or alike. That will not install the software. Read more more about the [software templates here](/11.concepts/software-templates.md).
+When creating an app we ask for the desired software you are about to use. This can be Laravel, Craft CMS, WordPress or alike. That will not install the software. Read more more about the [software templates here](/1.platform/11.concepts/software-templates.md).
 
 ## No root shell
 
@@ -48,7 +48,7 @@ We believe in a clear division of security concerns. We - fortrabbit - take care
 
 ## Service location
 
-A data center can be chosen for each app individually, but can't be changed later on. The service is available in Euro (€) or US Dollars ($): This can be chosen with each [payment method](/10.objects/9.payment-method.md). The fortrabbit headquarters is based in Berlin, time zone is: CET.
+A data center can be chosen for each app individually, but can't be changed later on. The service is available in Euro (€) or US Dollars ($): This can be chosen with each [payment method](/1.platform/10.objects/9.payment-method.md). The fortrabbit headquarters is based in Berlin, time zone is: CET.
 
 ## Mailing
 
