@@ -99,7 +99,7 @@ There are some Markdown Components (powered by Nuxt Content) to use:
 ### DashboardLink
 
 ```md
-:DashboardLink{title="" path=""}
+:BlockLink{title="" path=""}
 ```
 
 This parses markdown inside the DIV. With the data-user attribute it checks if the user is logged in, links to the dashboard will be styled as buttons — use a verb to start them!

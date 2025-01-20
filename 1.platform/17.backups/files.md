@@ -10,7 +10,7 @@ links:
     route: /components/backups
 ---
 
-The fortrabbit [backup component](/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/2.app-environment.md) at a given time, see [retention](/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
+The fortrabbit [backup component](/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/2.app-environment.md) at a given time, see [retention](/1.platform/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
 
 - Files: Everything present on the file system
 - Database: a database dump file, if [database](/9.components/2.database.md) is booked
@@ -21,7 +21,7 @@ The fortrabbit [backup component](/9.components/5.backups.md) provides you with 
 - Restore only the database but not the files
 - Additional backups: store backups offsite for long time retention
 - Boarding a new developer: Set up a local development
-- Verifying the state of a backup before [restoring](/17.backups/restore.md)
+- Verifying the state of a backup before [restoring](/1.platform/17.backups/restore.md)
 
 ## Backups VS git deployment
 
@@ -54,7 +54,7 @@ storage/logs
 
 ## Restore from backup files
 
-While you can [restore from backup](/17.backups/restore.md) using the dashboard, you also have the option to manually revert to a previous state by uploading the necessary files to the environment.
+While you can [restore from backup](/1.platform/17.backups/restore.md) using the dashboard, you also have the option to manually revert to a previous state by uploading the necessary files to the environment.
 
 ### Restore files
 

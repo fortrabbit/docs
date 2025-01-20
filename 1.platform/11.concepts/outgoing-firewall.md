@@ -14,4 +14,4 @@ By default, outgoing traffic is limited on most non-standard ports for security 
 
 You can open ports with [App environment](/1.platform/10.objects/2.app-environment.md) settings in the dashboard.
 
-:DashboardLink{title="Outgoing firewall settings for {{app-env-id}}" path="/environments/{{app-env-id}}/settings/firewall-outgoing"}
+:BlockLink{title="Outgoing firewall settings for {{app-env-id}}" path="/environments/{{app-env-id}}/settings/firewall-outgoing"}

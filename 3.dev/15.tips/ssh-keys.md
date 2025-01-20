@@ -49,7 +49,7 @@ It's just a comment.
 
 The public part of the key must be imported in the fortrabbit dashboard.
 
-:DashboardLink{title="Add a new SSH key" path="/new/ssh-key"}
+:BlockLink{title="Add a new SSH key" path="/new/ssh-key"}
 
 Make sure you paste the public part of the key and not the private part. It's also possible to import SSH keys from GitHub account into your fortrabbit account.
 

@@ -15,7 +15,7 @@ Manage all hosting aspects, from code access, runtime data, server configuration
 
 <!-- ## Accessing the dashboard
 
-:DashboardLink{title="Dashboard home" path="/"} -->
+:BlockLink{title="Dashboard home" path="/"} -->
 
 ## System requirements
 

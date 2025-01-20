@@ -36,7 +36,7 @@ When cancelling your [account](/1.platform/10.objects/3.person.md#account-settin
 
 Everything that is shared with other team members or clients will NOT be deleted when you cancel your personal account. When you are involved in shared [teams](/1.platform/10.objects/4.team.md) with other members, the teams will not be deleted. You will just leave the teams. The same applies to shared [payment methods](/1.platform/10.objects/9.payment-method.md) and the [apps](/1.platform/10.objects/1.app.md) that are owned by them.
 
-:DashboardLink{title="Cancel your account" path="/confirm/account-delete"}
+:BlockLink{title="Cancel your account" path="/confirm/account-delete"}
 
 ## Auto deletion of inactive accounts
 

@@ -21,7 +21,7 @@ The current WAF implementation is a 'poor mans WAF'. [nG Firewall](https://peris
 
 We provide an easy to use interface to turn on/off a WAF. Visit the PHP settings of the app environment to enable or disable the setting.
 
-:DashboardLink{title="Set WAF for {{app-env-id}}" path="/environments/{{app-env-id}}/settings/firewall-incoming"}
+:BlockLink{title="Set WAF for {{app-env-id}}" path="/environments/{{app-env-id}}/settings/firewall-incoming"}
 
 ## Quirks
 

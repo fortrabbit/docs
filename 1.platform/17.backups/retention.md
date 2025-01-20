@@ -7,10 +7,10 @@ lead: Details of the automatic backup retention model.
 siblings: Backups
 links:
   - title: Backup component
-    route: /components/backups
+    route: /platform/components/backups
 ---
 
-The [backup component](/9.components/5.backups.md) is available in different plans. Larger ones include more backups. Backup retention determines how long backups are kept. This concept is crucial for ensuring data availability, compliance, and efficient storage management.
+The [backup component](/1.platform/9.components/5.backups.md) is available in different plans. Larger ones include more backups. Backup retention determines how long backups are kept. This concept is crucial for ensuring data availability, compliance, and efficient storage management.
 
 Depending on the plan chosen, multiple backups of the same type might be included. If the plan includes three monthly backups, then monthly backups are retained for three months.
 
