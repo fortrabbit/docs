@@ -1,7 +1,7 @@
 ---
 title: How to
-navigation.excerpt: Working with crons and workers.
+navigation.excerpt: Git things done
 lead: Git things done.
 navigation: false
-wip: true
+wip: false
 ---
