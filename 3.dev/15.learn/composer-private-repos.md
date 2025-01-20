@@ -25,7 +25,7 @@ Modern PHP app development utilizes [Composer](/3.dev/2.composer.md) as a depend
 
 <!-- 2024-08-30 14:17:25 - TODO: there is a key installed with each app environment (and it could be visible with the dashboard as well.)  -->
 
-Alternatively you can limit access to a specific SSH keys. To use your private Composer repo in [Git deployment](/6.deployment/1.intro.md) you need to set up authentication so your fortrabbit app can access your external repo (probably hosted on GitHub). For this you need a public and private SSH key-pair.
+Alternatively you can limit access to a specific SSH keys. To use your private Composer repo in [Git deployment](/3.dev/2.deployment/1.intro.md) you need to set up authentication so your fortrabbit app can access your external repo (probably hosted on GitHub). For this you need a public and private SSH key-pair.
 
 The private key will be stored in the deployment environment of your App that composer can use it but nobody else. The command shows the public key, in the example is starting with `ssh-rsa AAA...` and ending with `..odTimp`. You can now install the key in your private git repository. You can re-run this command at any time to view or change the current key of your app.
 
@@ -33,7 +33,7 @@ The private key will be stored in the deployment environment of your App that co
 
 In the script below we generate a global `auth.json` file that contains credentials to access a GitHub repo using oAuth, and another private repo which is protected with Basic HTTP auth, in our example Laravel Nova. This is just for the sake of demonstration, you will probably need to adjust it to your needs.
 
-Since you don't want to keep secrets in your git history, you can store them in [ENV vars](/19.env-vars/).
+Since you don't want to keep secrets in your git history, you can store them in [ENV vars](/3.dev/19.env-vars/).
 
 ```php [add-auth.php]
 // Github token example

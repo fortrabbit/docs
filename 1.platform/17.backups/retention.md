@@ -33,5 +33,5 @@ Depending on the plan chosen, multiple backups of the same type might be include
 
 In addition to automatically scheduled backups, it's possible to trigger the immediate creation a backup from the dashboard. This backup will be treated like a new daily backup.
 
-- If the currently booked [backup plan](/9.components/5.backups.md) includes one daily backup, the new manual backup will replace the current backup.
+- If the currently booked [backup plan](/1.platform/9.components/5.backups.md) includes one daily backup, the new manual backup will replace the current backup.
 - If the currently booked backup plan includes two daily backups, the oldest backup from two days ago will be deleted and the backup from yesterday will move down one slot.

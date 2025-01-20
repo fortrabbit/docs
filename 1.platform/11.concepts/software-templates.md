@@ -14,8 +14,8 @@ The software template will **NOT install** the selected software on your behalf.
 - Set a matching PHP version, if required
 - Enable/disable PHP extensions — for best performance, if required
 - Set a [root path](/1.platform/11.concepts/root-path.md) — to serve from the right location
-- Populate [ENV vars](/19.env-vars/) — to connect to the database automatically
+- Populate [ENV vars](/3.dev/19.env-vars/) — to connect to the database automatically
 
 The software template saves you some work and helps to prevent errors. It's non-destructive, you can change all settings later on as you wish.
 
-This is especially handy with modern software that supports [ENV var](/19.env-vars/2.usage.md) configuration and environment detection — like Laravel or Craft CMS do. It makes the application really portable, you can deploy the same code base to anywhere else and it will work out of the box.
+This is especially handy with modern software that supports [ENV var](/3.dev/19.env-vars/2.usage.md) configuration and environment detection — like Laravel or Craft CMS do. It makes the application really portable, you can deploy the same code base to anywhere else and it will work out of the box.

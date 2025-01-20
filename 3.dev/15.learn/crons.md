@@ -45,4 +45,4 @@ Crons are common and have been around for a long time in the PHP world. You can 
 
 ## Crons on fortrabbit
 
-The fortrabbit platform offers additional abstraction. Crons are part of the [jobs component](/9.components/7.jobs.md).
+The fortrabbit platform offers additional abstraction. Crons are part of the [jobs component](/1.platform/9.components/7.jobs.md).

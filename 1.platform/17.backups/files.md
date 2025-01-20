@@ -10,10 +10,10 @@ links:
     route: /components/backups
 ---
 
-The fortrabbit [backup component](/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/2.app-environment.md) at a given time, see [retention](/1.platform/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
+The fortrabbit [backup component](/1.platform/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/2.app-environment.md) at a given time, see [retention](/1.platform/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
 
 - Files: Everything present on the file system
-- Database: a database dump file, if [database](/9.components/2.database.md) is booked
+- Database: a database dump file, if [database](/1.platform/9.components/2.database.md) is booked
 
 ## Use cases
 
@@ -25,7 +25,7 @@ The fortrabbit [backup component](/9.components/5.backups.md) provides you with 
 
 ## Backups VS git deployment
 
-Developers using [git deployment](/6.deployment/1.intro.md) already have access to an archive with a complete history of the code base. The fortrabbit backups also contain runtime data such as the vendor folder contents and user uploads. Given the nature of most PHP based applications.
+Developers using [git deployment](/3.dev/2.deployment/1.intro.md) already have access to an archive with a complete history of the code base. The fortrabbit backups also contain runtime data such as the vendor folder contents and user uploads. Given the nature of most PHP based applications.
 
 ## Backup file sizes differ to metrics
 

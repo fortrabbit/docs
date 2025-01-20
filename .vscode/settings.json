@@ -15,6 +15,7 @@
     "licence",
     "Livewire",
     "Statamic",
-    "Symfony"
+    "Symfony",
+    "Valkey"
   ]
 }

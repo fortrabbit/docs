@@ -39,7 +39,7 @@ Beside the code base which you might have received via Git, take care to grab as
 
 ### Assets and other files
 
-Remember Git works in [one direction only here](/6.deployment/1.intro.md#git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
+Remember Git works in [one direction only here](/3.dev/2.deployment/1.intro.md#git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
 
 - Login by SFTP and just download what is required - [see here](/3.dev/7.code-access/4.sftp.md)
 - Login by SSH, zip the files and question and them from a public URL - [see here](/3.dev/7.code-access/3.ssh.md)
@@ -53,7 +53,7 @@ Last not least you likely will need the contents of your database. Use a local M
 
 ## Using our backups
 
-When the above is not working for you for some reason and your website is hosted with fortrabbit, you might just use our [backups](/9.components/5.backups.md) (when booked) as a source. With that you can download the latest state from the dashboard.
+When the above is not working for you for some reason and your website is hosted with fortrabbit, you might just use our [backups](/1.platform/9.components/5.backups.md) (when booked) as a source. With that you can download the latest state from the dashboard.
 
 ## Check for data consistency
 

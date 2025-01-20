@@ -22,7 +22,7 @@ During boarding you will be guided to create your first app. Choose the [free tr
 
 ### 3. Explore
 
-Explore all the settings in the dashboard. Login by [SSH](/3.dev/7.code-access/3.ssh.md) or [SFTP](/3.dev/7.code-access/4.sftp.md). [Deploy](/6.deployment/1.intro.md) some code. Browse our [docs](/) here. There are extensive guides for:
+Explore all the settings in the dashboard. Login by [SSH](/3.dev/7.code-access/3.ssh.md) or [SFTP](/3.dev/7.code-access/4.sftp.md). [Deploy](/3.dev/2.deployment/1.intro.md) some code. Browse our [docs](/) here. There are extensive guides for:
 
 - [Craft CMS](/2.guides/3.craft/1.setup.md)
 - [Laravel](/2.guides/2.laravel/1.setup.md)

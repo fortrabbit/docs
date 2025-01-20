@@ -13,11 +13,11 @@ Our friendly support chat can help you with all general hosting questions as wel
 
 ### A grade support
 
-We have really solid hands-on experience with this. Ask us anything on [Craft CMS](/2.guides/3.craft/1.setup.md), [Laravel](/2.guides/2.laravel/1.setup.md), [Symfony](/5.more/8.symfony.md)
+We have really solid hands-on experience with this. Ask us anything on [Craft CMS](/2.guides/3.craft/1.setup.md), [Laravel](/2.guides/2.laravel/1.setup.md), [Symfony](/2.guides/5.more/8.symfony.md)
 
 ### B grade support
 
-We know how to install it here but have no hands-on experience here in-house: [WordPress](/5.more/5.wordpress.md), [Statamic](/2.guides/4.statamic/1.setup.md), [Kirby](/5.more/6.kirby.md), [Grav](/5.more/7.grav.md), October CMS, ExpressionEngine, Yii2 …
+We know how to install it here but have no hands-on experience here in-house: [WordPress](/2.guides/5.more/5.wordpress.md), [Statamic](/2.guides/4.statamic/1.setup.md), [Kirby](/2.guides/5.more/6.kirby.md), [Grav](/2.guides/5.more/7.grav.md), October CMS, ExpressionEngine, Yii2 …
 
 ### C grade support
 

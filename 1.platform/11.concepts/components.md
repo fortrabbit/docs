@@ -17,7 +17,7 @@ PHP, database, but also traffic and storage are components. Most components are 
 | PHP           | XXX MB        |       XS |        $X |
 | Database      | XXX MB        |       MD |        $X |
 
-See the [components list](/9.components/index.md) for all available components. The [pricing page](https://www.fortrabbit.com/pricing) gives you an overview. The [pricing intro](/12.billing/1.pricing.md) explains level billing concepts.
+See the [components list](/1.platform/9.components/index.md) for all available components. The [pricing page](https://www.fortrabbit.com/pricing) gives you an overview. The [pricing intro](/12.billing/1.pricing.md) explains level billing concepts.
 
 ## Required and optional components
 
