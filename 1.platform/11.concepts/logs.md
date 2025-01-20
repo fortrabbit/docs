@@ -15,7 +15,7 @@ All logs are available through the [fortrabbit dashboard](/1.platform/11.concept
 
 ## PHP error logs
 
-You see a [500 error](/3.dev/http-errors/500.md) and you need to know why. PHP error logs contain information about issues that occur while executing PHP code. Use these logs to identify bugs in the code or configuration. PHP error logs typically include information such as the time and date of the error, the type of error, and the file and line number where the error occurred.
+You see a [500 error](/3.dev/http-errors/1.500.md) and you need to know why. PHP error logs contain information about issues that occur while executing PHP code. Use these logs to identify bugs in the code or configuration. PHP error logs typically include information such as the time and date of the error, the type of error, and the file and line number where the error occurred.
 
 ## Deployment logs
 

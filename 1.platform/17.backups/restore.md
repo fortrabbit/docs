@@ -39,7 +39,7 @@ The chosen backup will be unpacked and prepared. Once ready, the state will be s
 
 ## No guarantees
 
-It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](/3.dev/http-errors/500.md), which is easy to debug, by looking at the logs.
+It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](/3.dev/http-errors/1.500.md), which is easy to debug, by looking at the logs.
 
 ## Backup restore VS git deployment
 
