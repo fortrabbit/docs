@@ -3,6 +3,7 @@ title: First steps
 naviTitle: First steps
 navigation.excerpt: Onboarding outline
 # lead: See if fortrabbit is for you.
+wip: true
 figure:
   emoji: 👣
   text: Every journey needs a first step.

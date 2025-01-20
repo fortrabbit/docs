@@ -26,7 +26,7 @@ The tricky part is the data size. Say you have a blog with comments using a data
 ## PHP processes, PHP requests and PHP response time
 
 - By design PHP requests should only take a very short time to execute.
-  - If it takes longer, it’s likely your code is slow. Refactor it for performance!
+  - If it takes longer, it's likely your code is slow. Refactor it for performance!
 - Aim for 250 ms or less on average.
   - Our dashboard shows you PHP response time metrics.
 - A new incoming PHP request will have to wait if all PHP processes are busy.

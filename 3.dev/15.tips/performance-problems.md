@@ -5,11 +5,11 @@ navigation.excerpt: Optimize code for speed
 lead: 'What you may want to know about PHP related performance issues.'
 ---
 
-## Understand Time To First Byte and PHP response time
+## Time To First Byte and PHP response time
 
 For web server performance "PHP response time" is an important metric. It can be roughly translated to the Time To First Byte ([Wikipedia](https://en.wikipedia.org/wiki/Time_to_first_byte)), which also includes network latency effects. Most websites should be able to attain a "PHP response time" of 250ms or even less. This is possible with attention to best practices - see our [performance design article](/3.dev/performance-design.md) as well.
 
-## Understand PHP processes and execution time
+## PHP processes and execution time
 
 Please see our dedicated [PHP processes article](/3.dev/php-processes.md).
 

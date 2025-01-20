@@ -42,7 +42,7 @@ Most likely you are developing with a [local PHP development environment](/3.dev
 
 All you need to utilize multi-staging on fortrabbit is an [app](/1.platform/10.objects/1.app.md) with multiple [app environments](/1.platform/10.objects/2.app-environment.md). App environments are made to support multi staging setups.
 
-## Multi-staging with your framework or CMS
+## Multi-staging with framework or CMS
 
 Most modern CMS and frameworks anticipate and support multi-staging workflows. The concepts are similar, implementation differs in detail. In most cases, the stage is defined by an [ENV var](/19.env-vars/).
 
