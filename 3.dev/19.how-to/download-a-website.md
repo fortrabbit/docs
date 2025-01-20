@@ -8,7 +8,7 @@ lead: This guide explains how to download all necessary application data from a 
 
 ## Get ready
 
-It's assumed that you have access to your hosting provider. We recommend maintaining a local development environment for your website. Development should occur locally first, and the local copy should be kept up-to-date. For more information, see our [local development article](/3.dev/1.local-development.md). That means, under normal situations the developer should always have a working copy of the website running locally already.
+It's assumed that you have access to your hosting provider. We recommend maintaining a local development environment for your website. Development should occur locally first, and the local copy should be kept up-to-date. For more information, see our [local development article]/3.dev/19.how-to/1.local-development.md). That means, under normal situations the developer should always have a working copy of the website running locally already.
 
 ## Use cases
 
