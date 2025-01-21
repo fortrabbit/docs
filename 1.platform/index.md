@@ -1,0 +1,5 @@
+---
+title: Platform
+lead: Familiarize yourself with the building blocks of fortrabbit.
+navigation: false
+---
