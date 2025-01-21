@@ -35,4 +35,4 @@ Please :ContactUs if you have a question or want to leave feedback.
 
 ### 4. Start for real
 
-If you like what you see, [migrate existing](/3.dev/19.how-to/migrate-to-fortrabbit.md) or start new projects here. Invite other developers or your clients to [collaborate](/1.platform//16.collaboration/1.intro.md) here.
+If you like what you see, [migrate existing](/3.dev/20.how-to/migrate-to-fortrabbit.md) or start new projects here. Invite other developers or your clients to [collaborate](/1.platform//16.collaboration/1.intro.md) here.
