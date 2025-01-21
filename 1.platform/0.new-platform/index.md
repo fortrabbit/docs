@@ -1,6 +1,5 @@
 ---
-title: Early access
+title: New platform
 lead: What is changing with the new fortrabbit platform experience.
 navigation: false
-highlight:
 ---
