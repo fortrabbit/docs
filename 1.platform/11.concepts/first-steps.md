@@ -29,7 +29,7 @@ Explore all the settings in the dashboard. Login by [SSH](/3.dev/7.code-access/3
 - [Kirby CMS](/2.guides/4.kirby/1.intro.md)
 - [Statamic](/2.guides/4.statamic/1.setup.md)
 - [October CMS](/2.guides/5.more/6.october-cms.md)
-- and even [WordPress](/2.guides/4.wordpress/1.setup.md)
+- and even [WordPress](/2.guides/6.wordpress/1.setup.md)
 
 Please :ContactUs if you have a question or want to leave feedback.
 
