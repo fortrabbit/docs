@@ -7,5 +7,5 @@ navigation: false
 figure:
   icon: cib:kirby
   text: the CMS that adapts to you
-  color: 'rgb(253, 197, 0)'
+  color: 'rgb(233, 182, 1)'
 ---

@@ -15,7 +15,7 @@ We have really solid hands-on experience with this. Ask us anything on [Craft CM
 
 ### B grade support
 
-We know how to install it here but have no hands-on experience here in-house: [WordPress](/2.guides/5.more/5.wordpress.md), [Statamic](/2.guides/4.statamic/1.setup.md), [Kirby](/2.guides/5.more/6.kirby.md), [Grav](/2.guides/5.more/7.grav.md), October CMS, ExpressionEngine, Yii2 …
+We know how to install it here but have no hands-on experience here in-house: [WordPress](/2.guides/5.more/5.wordpress.md), [Statamic](/2.guides/4.statamic), [Kirby](/2.guides/4.kirby/), [Grav](/2.guides/5.more/7.grav.md), October CMS, ExpressionEngine, Yii2 …
 
 ### C grade support
 
