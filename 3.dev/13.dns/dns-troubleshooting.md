@@ -6,10 +6,10 @@ navigation.excerpt: Solving domain routing issues.
 lead: Solving common DNS problems when connecting an external domain to fortrabbit.
 links:
   - title: Domain intro
-    route: /objects/domain
+    route: /platform/objects/domain
     property: docs
   - title: External domains
-    route: /dns/external-domains
+    route: /dev/dns/external-domains
     property: docs
 ---
 

@@ -10,7 +10,7 @@ figure:
   text: Apex domains deep dive
 links:
   - title: Domain
-    route: /objects/domain
+    route: /platform/objects/domain
     property: docs
 head:
   meta:

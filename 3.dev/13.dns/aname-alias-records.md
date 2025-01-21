@@ -7,16 +7,16 @@ lead: To serve apex domain directly some domain providers allow ALIAS or ANAME r
 hideExamples: yes
 links:
   - title: Domain intro
-    route: /objects/domain
+    route: /platform/objects/domain
     property: docs
   - title: External domains
-    route: /dns/external-domains
+    route: /dev/dns/external-domains
     property: docs
   - title: Apex domains
-    route: /dns/apex-domains
+    route: /dev/dns/apex-domains
     property: docs
   - title: WWW forwarding
-    route: /dns/domain-forwarding
+    route: /dev/dns/domain-forwarding
     property: docs
 ---
 

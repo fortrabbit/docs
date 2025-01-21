@@ -10,10 +10,10 @@ hideExamples: yes
 #   text: Apex domains deep dive
 links:
   - title: Domain
-    route: /objects/domain
+    route: /platform/objects/domain
     property: docs
   - title: ANAME / ALIAS records
-    route: /dns/aname-alias-records
+    route: /dev/dns/aname-alias-records
     property: docs
 head:
   meta:
