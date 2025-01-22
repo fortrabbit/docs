@@ -21,6 +21,15 @@ head:
 
 Modern PHP app development utilizes [Composer](/3.dev/2.composer.md) as a dependency manager. There are many great open source packages [out there](http://packagist.org). But your company code is probably not intended to be released to the public or you rely on a third party package which is not open source. That's when you use private Composer repositories.
 
+## Hosting private Composer repos
+
+Private composer repos can be hosted.
+
+- Private GitHub repos
+- Self hosted Satis like service such as [Packeton](https://github.com/vtsykun/packeton)
+- [Packagist.com](https://packagist.com/) - commercial by makers of Composer with
+- [Repman.io](https://repman.io/) - by Buddy.works
+
 ## A - Using SSH Keys
 
 <!-- 2024-08-30 14:17:25 - TODO: there is a key installed with each app environment (and it could be visible with the dashboard as well.)  -->
