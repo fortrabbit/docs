@@ -19,8 +19,8 @@ Manage all hosting aspects, from code access, runtime data, server configuration
 
 ## System requirements
 
-The fortrabbit Dashboard is supposed to work in modern desktop browsers, including Chrome, Firefox, Safari, IE11/Edge. JavaScript needs to be turned on. Cookies are used.
+The fortrabbit Dashboard is supposed to work in modern desktop browsers, including Chrome, Firefox, Safari, IE11/Edge. JavaScript needs to be turned on. Functional cookies are used to preserve state.
 
 ## Regaining access
 
-See [access recovery](/20.get-help/5.access-recovery.md).
+See [account access recovery](/1.platform/20.support/4.account-recovery.md).
