@@ -7,7 +7,7 @@ lead: The root path refers to the directory that serves as the entry point for p
 hideExamples: yes
 links:
   - title: Directory structure
-    route: /concepts/directories
+    route: /platform/concepts/directories
     property: docs
 head:
   meta:
