@@ -4,6 +4,7 @@ title: How to download previous invoices
 naviTitle: Download invoices
 navigation.excerpt: Visit the invoice archive
 lead: Options to download previous invoices from fortrabbit.
+siblings: Billing
 head:
   meta:
     - name: 'keywords'
