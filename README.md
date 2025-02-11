@@ -35,9 +35,7 @@ nextNav: true # will show
 
 ## Code blocks
 
-Any code block should have a language defined. If applicable also define the file name like so ````php [info.php]`. The following languages are installed: 'apache', 'js', 'json', 'php', 'shell', 'sql', 'ts', 'twig', 'vue', 'yml'. Use apache for`.htaccess` & `.env` files. Use plain for anything else.
-
-Use `shell` not `bash` as the language label for terminal stuff.
+Any code block should have a language defined. If applicable also define the file name like so ````php [info.php]`. The following languages are installed: 'apache', 'js', 'json', 'php', 'shell', 'sql', 'ts', 'twig', 'vue', 'yml'. Use apache for`.htaccess` & `.env` files. Use plain for anything else. Use `shell` not `bash` as the language label for terminal stuff.
 
 Indent with two spaces.
 
@@ -59,10 +57,11 @@ See the `.obsidian` folder.
 
 ## Internal links
 
-Use relative links to local files including the full folder and file name. Example:
+Use relative links to local files including the full folder and file name.
+Example:
 
 ```md
-…if not see [here](/2.guides/3.craft/1.setup.md).
+…if not see [here](2.guides/3.craft-cms/1.setup.md).
 ```
 
 Your editor should offer autocomplete for this. Also such links can be automatically updated when the file name changes. Make use of that to avoid dead links.
@@ -116,8 +115,10 @@ While some implicit technical details are obvious to you, they might not be for 
 
 ### Code examples
 
-- Open and close code blocks with ````shell` where shell is the language for syntax highlighting
-- Try to keep code examples together in one block, avoid mixing paragraphs and code blocks
+- Open and close code blocks with ````shell` where shell is the language for
+  syntax highlighting
+- Try to keep code examples together in one block, avoid mixing paragraphs and
+  code blocks
 - Code blocks follow standard markdown formatting
 - Show output only when necessary
 - Output should be a comment `#`
@@ -138,19 +139,23 @@ While some implicit technical details are obvious to you, they might not be for 
 - Use ASCII art to illustrate topographies and such things
 - Don't use italic > it looks ugly, it's rendered by the browser not the font
 - Don't use a paragraph for every sentence
-- Write speaking links, not like so: `[here](http://somewhere)` but so: `[GitHub project](http…)`
+- Write speaking links, not like so: `[here](http://somewhere)` but so:
+  `[GitHub project](http…)`
 - Don't bullshit. Avoid the use of marketing buzzwords
 
 ### Maintainability
 
-- Find the right balance between being general and being precise (aka Captain Obvious)
-- Very detailed step-by-step articles are easy to follow but get outdated very quickly
+- Find the right balance between being general and being precise (aka Captain
+  Obvious)
+- Very detailed step-by-step articles are easy to follow but get outdated very
+  quickly
 - Don't use screenshots and images, use words and ASCII graphics
 - Don't bury numbers (like prices and limits) in articles
 - All those numbers must be managed in the "pricing" and the "specs" page
 - Keep it DRY! Don't repeat yourself
 - Have one SSOT, link to it
-- Don't fully cover the same topic on different places, just link to the location
+- Don't fully cover the same topic on different places, just link to the
+  location
 
 ### File name conventions
 
@@ -180,7 +185,8 @@ When creating new files:
 - use the same time-zone E V E R Y W H E R E when communicating times
 - the communicated time-zone is UTC
 - use relative times (an hour ago, a few seconds ago)
-- Markup example: `<time datetime="2016-01-01 08:22:10 UTC" title="2018-01-01 08:22:10 UTC">A few minutes ago</time>`
+- Markup example:
+  `<time datetime="2016-01-01 08:22:10 UTC" title="2018-01-01 08:22:10 UTC">A few minutes ago</time>`
 - **ms** — ~~MS~~
 - **s** - ~~scds~~
 - **m** - ~~mins~~, ~~min~~
