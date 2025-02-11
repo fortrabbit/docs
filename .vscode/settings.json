@@ -8,7 +8,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "prettier.proseWrap": "always",
+  // "prettier.proseWrap": "always",
   "cSpell.words": [
     "fortrabbit",
     "Laravel",
