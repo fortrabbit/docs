@@ -1,5 +1,0 @@
----
-title: 
-naviTitle: 
-navigation: false
----
