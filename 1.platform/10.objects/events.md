@@ -1,11 +1,22 @@
 ---
-reviewed: 2025-01-02 15:40:37
+reviewed: 2025-03-06 10:31:19
 title: Events
-navigation.excerpt: Audit log for all
+navigation.excerpt: Interactions within your area of access are recorded in the dashboard. 
 wip: true
-lead: Events capture activities by people on the fortrabbit hosting platform.
+lead: Observability, transparency and accountability are key parts of professional work. The event stream in the dashboard makes it easy to follow along who did what and when; and also what else happened when. Events capture activities by people on the fortrabbit hosting platform.
 ---
 
 <!-- TODO: Extend at least a bit -->
 
 With the dashboard you will find a list of performed actions. This includes your and your teams operations. Seeing who did what when makes your work transparent and helps to increase security.
+
+## People events
+
+1. At 18:23, Liam, the junior developer, changes the PHP version of the website without verifying its functionality afterwards.
+2. At 18:29, Sandra, the lead developer, receives a call from the client about the website being down. She logs in to the fortrabbit dashboard to identify the event that caused the website to break.
+
+Liam will have to wait a little longer for their promotion.
+
+## System events
+
+The platform itself will also post updates on the event stream, like when a deployment ran, or when a [metric threshold](/collaboration/metric-events) is hit.
