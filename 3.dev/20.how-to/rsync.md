@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-11-25 08:30:00
+reviewed: 2025-03-14 14:12:01
 title: rsync deployment
 naviTitle: rsync deployment
 navigation.excerpt: Copy and sync like a boss
@@ -23,7 +23,7 @@ For Windows 10 we recommend to install the Linux subsystem (WSL). For Windows 7 
 
 ## Use cases
 
-You can [deploy with Git](/3.dev/2.deployment/1.intro.md) or [upload files with SFTP](/3.dev/7.code-access/4.sftp.md) and/or [use SSH](/3.dev/7.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
+You can [deploy with Git](/3.dev/2.deployment/1.intro.md) or [upload files with SFTP](/3.dev/7.code-access/4.sftp.md) and/or [use SSH](/3.dev/1.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
 
 ### rsync instead of SFTP
 
@@ -40,7 +40,7 @@ Consider `rsync` as an essential addition. Why? Your dependencies are managed wi
 #
 #      options
 #       ─┴─
-$ rsync -av ./ {{app-env-id}}@ssh.{{region}}.frbit.app:~/
+$ rsync -av ./ {{app-env-id}}@ssh.{{region}}.frbit.app:
 #           ─┬─ ──────────────────┬────────────────────────
 #          source           destination
 ```
@@ -55,10 +55,10 @@ Here are the most common rsync commands. Likely you will even come by using only
 
 ```shell
 # DOWN: from remote to local
-$ rsync -av {{app-env-id}}@ssh.{{region}}.frbit.app:~/ ./
+$ rsync -av {{app-env-id}}@ssh.{{region}}.frbit.app: ./
 
 # UP: from local to remote
-$ rsync -av ./ {{app-env-id}}@ssh.{{region}}.frbit.app:~/
+$ rsync -av ./ {{app-env-id}}@ssh.{{region}}.frbit.app:
 
 
 
@@ -66,7 +66,7 @@ $ rsync -av ./ {{app-env-id}}@ssh.{{region}}.frbit.app:~/
 $ rsync -av ~/projects/{{app-env-id}}/ ~/projects/{{app-env-id}}.copy/
 
 # REMOTE TO REMOTE: from App to App
-$ rsync -av {{app-env-id}}@ssh.{{region}}.frbit.app:~/ {{app-name-2}}@ssh.{{region}}.frbit.app:~/
+$ rsync -av {{app-env-id}}@ssh.{{region}}.frbit.app: {{app-name-2}}@ssh.{{region}}.frbit.app:
 ```
 
 ### Remote paths
