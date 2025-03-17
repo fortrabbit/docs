@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a2e1ab88df440985",
+        "id": "2d2bda6435a32b3e",
         "type": "tabs",
         "children": [
           {
-            "id": "5ca3d1f14a7daf08",
+            "id": "21fc54dc51912c44",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.12"
-              }
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -36,8 +36,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -52,7 +55,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -60,7 +65,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -90,7 +97,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
             }
           },
           {
@@ -101,7 +110,9 @@
               "state": {
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
             }
           },
           {
@@ -111,8 +122,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -120,7 +135,13 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
             }
           }
         ]
@@ -141,8 +162,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "5ca3d1f14a7daf08",
+  "active": "21fc54dc51912c44",
   "lastOpenFiles": [
+    "1.platform/10.objects/2.app-environment.md",
+    "1.platform/01.new/4.changes.md",
+    "0.new-platform/3.changes.md",
+    "1.platform/01.new/1.intro.md",
+    "0.new-platform",
     "Invoice.md",
     "2024-02-11.md",
     "5.more/5.wordpress.md",
@@ -165,10 +191,6 @@
     "15.tips/performance-design.md",
     "10.components/1.php.md",
     "10.components/2.mysql.md",
-    "11.concepts/backup-recovery.md",
-    "11.concepts/components.md",
-    "11.concepts/redis.md",
-    "11.concepts/workers copy.md",
     "10.objects/_dir.yml",
     "4.statamic/_dir.yml",
     "14.integrations/_dir.yml",
