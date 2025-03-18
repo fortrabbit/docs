@@ -55,6 +55,10 @@ See the `.vscode` folder.
 
 See the `.obsidian` folder.
 
+## Links in general
+
+Don't add tailing slashes to links.
+
 ## Internal links
 
 Use relative links to local files including the full folder and file name.
