@@ -15,7 +15,7 @@ Even unsuccessful requests do harm by consuming hosting resources and spamming l
 
 ### Implementation
 
-The current WAF implementation is a 'poor mans WAF'. [nG Firewall](https://perishablepress.com/ng-firewall/) by Perishable Press is used. It blocks out bad requests and most bad bots on the web server level by using a standard set of .htaccess rules.
+The current WAF implementation is a 'poor mans WAF'. [nG Firewall](https://perishablepress.com/ng-firewall) by Perishable Press is used. It blocks out bad requests and most bad bots on the web server level by using a standard set of .htaccess rules.
 
 ## Usage
 
@@ -41,11 +41,11 @@ There are plenty of alternatives to using the WAF setting.
 
 ### Create your own .htaccess
 
-There are rules which may be specific to your use case but which are not necessarily required for everyone. Use an `.htaccess` file to write your own rules. See our [htaccess section](/3.dev/htaccess/) for more.
+There are rules which may be specific to your use case but which are not necessarily required for everyone. Use an `.htaccess` file to write your own rules. See our [htaccess section](/3.dev/htaccess) for more.
 
 ### Use an external service
 
 Some DNS infrastructure providers offer 'bot control' services where bad traffic will be filtered before it even reaches the web server.
 
-- [Cloudflare bot management](https://www.cloudflare.com/application-services/products/bot-management/)
-- [AWS WAF Bot control](https://aws.amazon.com/waf/features/bot-control/)
+- [Cloudflare bot management](https://www.cloudflare.com/application-services/products/bot-management)
+- [AWS WAF Bot control](https://aws.amazon.com/waf/features/bot-control)

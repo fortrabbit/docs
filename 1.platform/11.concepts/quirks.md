@@ -58,7 +58,7 @@ A data center can be chosen for each app individually, but can't be changed late
 
 There is no mailing built-in here. Instead of `sendmail` you can use a mail script that uses SMTP (Simple Mail Transfer Protocol) via your e-mail provider - usually the one that provides your domain - directly.
 
-There are countless possibilities how to use SMTP. Most frameworks and CMS give them to you out of the box. If you use a custom script, have a look at [Swift Mailer](https://swiftmailer.symfony.com/). There are special solutions for [WordPress](), [Laravel]() & [Symfony]().
+There are countless possibilities how to use SMTP. Most frameworks and CMS give them to you out of the box. If you use a custom script, have a look at [Swift Mailer](https://swiftmailer.symfony.com). There are special solutions for [WordPress](), [Laravel]() & [Symfony]().
 
 A better solution might be to use a "transactional mail service", those are built to do the bulk mailing — see [transactional mail](/14.integrations/3.transactional-mail-providers.md).
 
@@ -91,7 +91,7 @@ In some cases you need to know your app environment's IP address, for payment pr
 echo file_get_contents("https://ifconfig.co/");
 ```
 
-Depending on your needs, it is possible to use an HTTP proxy provider like [QuoteGuard](https://www.quotaguard.com/) to get a static IP address. Finally, there is also the [official list of AWS IP ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) and the same list in [JSON](https://ip-ranges.amazonaws.com/ip-ranges.json) format.
+Depending on your needs, it is possible to use an HTTP proxy provider like [QuoteGuard](https://www.quotaguard.com) to get a static IP address. Finally, there is also the [official list of AWS IP ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) and the same list in [JSON](https://ip-ranges.amazonaws.com/ip-ranges.json) format.
 
 ## What this isn't
 

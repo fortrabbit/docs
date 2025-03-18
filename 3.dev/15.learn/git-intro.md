@@ -28,8 +28,8 @@ You should be familiar with Git standard operations and concepts — these are: 
 - [GitHub: Quickstart](https://docs.github.com/en/get-started/quickstart)
 - [Official docs from Git SCM](https://git-scm.com/doc)
 - [Try Git in your browser for free](https://try.github.io/levels/1/challenges/1)
-- [Guides & ebook from Git Tower](https://www.git-tower.com/learn/)
-- [Get Git right from Atlassian](https://www.atlassian.com/git/)
+- [Guides & ebook from Git Tower](https://www.git-tower.com/learn)
+- [Get Git right from Atlassian](https://www.atlassian.com/git)
 - and [many more](http://lmgtfy.com/?q=learn+git)
 
 ## Install Git

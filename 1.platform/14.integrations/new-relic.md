@@ -16,7 +16,7 @@ fortrabbit has a Bring-Your-Own-License integration with New Relic. That basical
 
 ### Over at New Relic
 
-1. Sign up or log in to [New Relic](https://newrelic.com/).
+1. Sign up or log in to [New Relic](https://newrelic.com).
 1. Add a new application
 1. Copy the license key
 

@@ -182,7 +182,7 @@ $ rsync -av --exclude-from .rsyncignore ./ {{app-env-id}}@ssh.{{region}}.frbit.a
 
 NOTE: The file name `.rsyncignore` is just an example name, use any name you want for your excludes.
 
-There is still a lot more you can do with exclude and filtering. Not only is there `--include`, which allows to granulate previous `--exclude` patterns, but there is also `--filter`. Here is a [very interesting blog post by Ira Cooke](http://blog.mudflatsoftware.com/blog/2012/10/31/tricks-with-rsync-filter-rules/).
+There is still a lot more you can do with exclude and filtering. Not only is there `--include`, which allows to granulate previous `--exclude` patterns, but there is also `--filter`. Here is a [very interesting blog post by Ira Cooke](http://blog.mudflatsoftware.com/blog/2012/10/31/tricks-with-rsync-filter-rules).
 
 ### Dealing with obsolete files
 

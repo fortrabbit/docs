@@ -42,4 +42,4 @@ Header add Access-Control-Allow-Origin "*"
 Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
 ```
 
-Use this with care and only open what you really need. Reduce the risk of XSS. Also check out the new Content Security Policy (CSP) for more advanced control on what you allow and what not. This website is a good reference: [content-security-policy.com](https://content-security-policy.com/)
+Use this with care and only open what you really need. Reduce the risk of XSS. Also check out the new Content Security Policy (CSP) for more advanced control on what you allow and what not. This website is a good reference: [content-security-policy.com](https://content-security-policy.com)

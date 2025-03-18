@@ -18,7 +18,7 @@ Using Blackfire in production will gain even better insights, once your App will
 
 ## Pricing
 
-Blackfire is integrated with a BYO (Bring Your Own) license model. Once your project is ready for production and you have routed a domain, you will need a [Blackfire paid plan](https://www.blackfire.io/pricing/).
+Blackfire is integrated with a BYO (Bring Your Own) license model. Once your project is ready for production and you have routed a domain, you will need a [Blackfire paid plan](https://www.blackfire.io/pricing).
 
 ## Integration
 
