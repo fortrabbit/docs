@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2d2bda6435a32b3e",
+        "id": "32c0348277021c32",
         "type": "tabs",
         "children": [
           {
-            "id": "21fc54dc51912c44",
+            "id": "b275334ac69bef80",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -162,8 +162,9 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "21fc54dc51912c44",
+  "active": "b275334ac69bef80",
   "lastOpenFiles": [
+    "Untitled.canvas",
     "1.platform/10.objects/2.app-environment.md",
     "1.platform/01.new/4.changes.md",
     "0.new-platform/3.changes.md",
@@ -190,7 +191,6 @@
     "1.get-started/1.intro.md",
     "15.tips/performance-design.md",
     "10.components/1.php.md",
-    "10.components/2.mysql.md",
     "10.objects/_dir.yml",
     "4.statamic/_dir.yml",
     "14.integrations/_dir.yml",
