@@ -1,7 +1,6 @@
 ---
 title: Collaboration
 navigation.excerpt: Teamwork makes the dream work.
-lead: Teamwork makes the dream work. Share infra resources like code.
+lead: Sharing access infra resources with others.
 navigation: false
-wip: true
 ---
