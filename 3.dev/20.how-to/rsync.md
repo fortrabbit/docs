@@ -1,7 +1,7 @@
 ---
 reviewed: 2025-03-14 14:12:01
 title: rsync deployment
-naviTitle: rsync deployment
+naviTitle: Do rsync deployment
 navigation.excerpt: Copy and sync like a boss
 lead: rsync is one of the best ways to deploy code fast and without hassle. It's also an often overlooked option. Let's change this! This article gives you some direction on how to use it in general and especially here on fortrabbit.
 ---
