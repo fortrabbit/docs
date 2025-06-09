@@ -23,4 +23,4 @@ The fortrabbit Dashboard is supposed to work in modern desktop browsers, includi
 
 ## Regaining access
 
-See [account access recovery](/1.platform/20.support/4.account-recovery.md).
+See [account access recovery](/../../www/content/contact/03.account-recovery.md).
