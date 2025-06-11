@@ -1,5 +1,5 @@
 ---
-reviewed: 2025-06-05 15:18:55
+reviewed: 2025-06-11 09:16:39
 title: Configure .user.ini
 naviTitle: Configure .user.ini
 navigation.excerpt: Control advanced PHP settings
@@ -11,6 +11,9 @@ links:
     property: docs
   - title: PHP settings in dashboard
     route: /platform/objects/app-environment#php-settings
+    property: docs
+  - title: PHP component
+    route: /platform/components/php
     property: docs
 ---
 
@@ -80,7 +83,8 @@ Not seeing desired results?
 4. **Test with phpinfo()**: Use `phpinfo()` to verify which settings are active
 
 ### Memory usage
-You can use `.user.ini` to increase the `memory_limit` setting, but beware that we already set this to the same size as your booked plan. If you increase it further, our platform will start to randomly kill your PHP-FPM process any time it uses more memory than your booked plan. So to safely get more memory, please book a larger plan using our dashboard.
+
+You can use `.user.ini` to increase the `memory_limit` setting, but beware that we already set this to the same size as the booked [PHP plan](/1.platform/09.components/1.php.md). If you increase it further, the platform will start to randomly kill your PHP-FPM process any time it uses more memory than the booked plan. To safely get more PHP memory, book a larger plan using our dashboard.
 
 ### Debugging
 
