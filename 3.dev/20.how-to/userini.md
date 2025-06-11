@@ -3,7 +3,7 @@ reviewed: 2025-06-05 15:18:55
 title: Configure .user.ini
 naviTitle: Configure .user.ini
 navigation.excerpt: Control advanced PHP settings
-lead: Use .user.ini files to configure PHP settings on fortrabbit when .htaccess php_value directives don't work with php-fpm.
+lead: How to use .user.ini files to configure PHP settings on fortrabbit
 wip: true
 links:
   - title: .htaccess intro
@@ -14,7 +14,7 @@ links:
     property: docs
 ---
 
-At fortrabbit, php-fpm is used for performance and security reasons. This means that adding `php_value` directives to `.htaccess` files has no effect. `.user.ini` files can be used to configure PHP settings that aren't available through the fortrabbit dashboard.
+At fortrabbit, php-fpm is used for performance and security reasons. This means that adding `php_value` directives to `.htaccess` files has no effect. You can instead use `.user.ini` files to configure PHP settings that aren't available through the fortrabbit dashboard.
 
 ## When to use .user.ini
 
@@ -27,7 +27,7 @@ While the fortrabbit dashboard provides access to commonly needed PHP settings, 
 
 ## Creating a .user.ini file
 
-The `.user.ini` file should be placed in the document root or in sub-directories settings should be applied. Common locations:
+The `.user.ini` file should be placed in the document root or in the sub-directories where settings should be applied. Common locations:
 
 - `/public/` (for Laravel, Symfony)
 - `/web/` (for Drupal, some Symfony setups)
@@ -35,9 +35,6 @@ The `.user.ini` file should be placed in the document root or in sub-directories
 ### Example .user.ini file
 
 ```ini
-; Increase memory limit
-memory_limit = 256M
-
 ; Set maximum file upload size
 upload_max_filesize = 50M
 post_max_size = 50M
@@ -81,6 +78,9 @@ Not seeing desired results?
 2. **Verify syntax**: Invalid INI syntax will cause the entire file to be ignored
 3. **Check permissions**: The file should be readable by the web server
 4. **Test with phpinfo()**: Use `phpinfo()` to verify which settings are active
+
+### Memory usage
+You can use `.user.ini` to increase the `memory_limit` setting, but beware that we already set this to the same size as your booked plan. If you increase it further, our platform will start to randomly kill your PHP-FPM process any time it uses more memory than your booked plan. So to safely get more memory, please book a larger plan using our dashboard.
 
 ### Debugging
 
