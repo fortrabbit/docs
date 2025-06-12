@@ -23,4 +23,4 @@ The fortrabbit Dashboard is supposed to work in modern desktop browsers, includi
 
 ## Regaining access
 
-See [account access recovery](/../../www/content/contact/03.account-recovery.md).
+:PageLink{text="account access recovery" prefix="wwwUrl" href="/contact/account-recovery"}
