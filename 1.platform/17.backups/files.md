@@ -27,9 +27,11 @@ The fortrabbit [backup component](/1.platform/9.components/5.backups.md) provide
 
 Developers using [git deployment](/3.dev/2.deployment/1.intro.md) already have access to an archive with a complete history of the code base. The fortrabbit backups also contain runtime data such as the vendor folder contents and user uploads. Given the nature of most PHP based applications.
 
-## Backup file sizes differ to metrics
+## Backup file sizes
 
-The size of the backups is unlikely to match what is shown with actual usage for MySQL size and web storage. The backups are compressed.
+The shown size of the backups is unlikely to match what is shown with actual usage for MySQL size and web storage. Mind that the backups are compressed, while the data in production is not.
+
+The size of the backup shown in the dashboard likely will not match with the downloaded files. This is because the sizes with the dashboard are shown in binary (mebibyte) not decimal format (megabyte) like with most Operating Systems. Also the local file system may have a different block size.
 
 ## Excludes
 
