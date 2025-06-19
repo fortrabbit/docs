@@ -7,7 +7,7 @@ lead: Rollback an environment to a prior state.
 siblings: Backups
 links:
   - title: Backup component
-    route: /components/backups
+    route: /platform/components/backups
 ---
 
 ## Requirements

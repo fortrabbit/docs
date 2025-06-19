@@ -7,7 +7,7 @@ lead: What is included and excluded. How to use the files downloaded from the ba
 siblings: Backups
 links:
   - title: Backup component
-    route: /components/backups
+    route: /platform/components/backups
 ---
 
 The fortrabbit [backup component](/1.platform/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/2.app-environment.md) at a given time, see [retention](/1.platform/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
