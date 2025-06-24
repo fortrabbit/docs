@@ -22,7 +22,7 @@ head:
 ## Simple PHP version upgrade path
 
 1. Make sure the software you are using is up-to-date
-2. In the [dashboard](/1.platform/11.concepts/dashboard.md)
+2. In the [dashboard](/1.platform/02.concepts/30.dashboard.md)
 3. Navigate to the app environment and then click on Settings > PHP version
 4. Change to a newer PHP version and hit "save"
 5. Check if your website is still working after a few minutes

@@ -34,7 +34,7 @@ If your App is using a MySQL database, you will need to migrate the database dat
 
 ## 6. Sending e-mails
 
-Take care when you application needs to send mails. Simple `sendmail` won't work, see our [quirks article](/1.platform/11.concepts/4.quirks.md#mailing) on how to send mails, either via SMTP or 3rd party provider.
+Take care when you application needs to send mails. Simple `sendmail` won't work, see our [quirks article](/1.platform/02.concepts/4.quirks.md#mailing) on how to send mails, either via SMTP or 3rd party provider.
 
 ## 7. HTTPS
 

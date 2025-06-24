@@ -42,4 +42,4 @@ As far as we know, by the time of this writing, the following providers do not s
 
 - GoDaddy - see [this SO question](https://webmasters.stackexchange.com/questions/141075/aname-record-not-accepted) ☠️
 
-If your provider does not support CNAME flattening, but you would like to take advantage of it, we recommend switching to that does or consider using our [www forwarding service](/1.platform/11.concepts/domain-forwarding.md).
+If your provider does not support CNAME flattening, but you would like to take advantage of it, we recommend switching to that does or consider using our [www forwarding service](/1.platform/02.concepts/domain-forwarding.md).

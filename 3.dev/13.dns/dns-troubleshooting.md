@@ -47,7 +47,7 @@ The following tips can help you to verify DNS settings for your domain. This is 
 
 ### Use the dashboard as a guidance
 
-When visiting your external domain within the [dashboard](/1.platform/11.concepts/dashboard.md), you'll see the desired and the currently active DNS values for the domain. Those two settings should match.
+When visiting your external domain within the [dashboard](/1.platform/02.concepts/30.dashboard.md), you'll see the desired and the currently active DNS values for the domain. Those two settings should match.
 
 ### Use dig to verify current DNS values
 
