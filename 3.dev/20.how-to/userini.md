@@ -84,7 +84,7 @@ Not seeing desired results?
 
 ### Memory usage
 
-You can use `.user.ini` to increase the `memory_limit` setting, but beware that we already set this to the same size as the booked [PHP plan](/1.platform/09.components/1.php.md). If you increase it further, the platform will start to randomly kill your PHP-FPM process any time it uses more memory than the booked plan. To safely get more PHP memory, book a larger plan using our dashboard.
+You can use `.user.ini` to increase the `memory_limit` setting, but beware that we already set this to the same size as the booked [PHP plan](/1.platform/09.components/01.php.md). If you increase it further, the platform will start to randomly kill your PHP-FPM process any time it uses more memory than the booked plan. To safely get more PHP memory, book a larger plan using our dashboard.
 
 ### Debugging
 
