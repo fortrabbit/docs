@@ -2,7 +2,7 @@
 title: Laravel
 naviTitle: Laravel
 navigation.excerpt: Install and run Laravel on fortrabbit.
-lead: Setup and deploy Laravel on fortrabbit
+lead: Setup, deploy and tune Laravel based web applications on fortrabbit.
 navigation: false
 # figure:
 #   icon: simple-icons:laravel
