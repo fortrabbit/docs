@@ -89,7 +89,7 @@ Those values will be replaced by Javascript when users are logged in:
 ```raw
 region: {{region}}
 environment-id: {{app-env-id}}
-app-env-name: {{app-env-id}}
+app-env-name: {{app-env-name}}
 app-name: {{app-name}}
 ```
 
