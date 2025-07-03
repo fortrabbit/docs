@@ -5,6 +5,7 @@ naviTitle: Restore from backup
 navigation.excerpt: automated rollback
 lead: Rollback an environment to a prior state.
 siblings: Backups
+wip: true
 links:
   - title: Backup component
     route: /platform/components/backups

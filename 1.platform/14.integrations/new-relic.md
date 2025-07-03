@@ -1,10 +1,15 @@
 ---
-reviewed: 2024-02-15 08:20:55
+reviewed: 2025-07-03 21:08:05
 title: New Relic
 navigation.excerpt: Enterprise PHP profiling
 lead: Combine the popular software analysis tool with fortrabbit.
 sidebar: newrelic
+wip: true
 ---
+
+::CallOut{alert}
+It's not yet possible to add an API key.
+::
 
 ## About New Relic
 
