@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-12-19 16:38:33
+reviewed: 2025-07-09 14:38:11
 title: Backup files
 naviTitle: Backup files
 navigation.excerpt: files and database
@@ -39,19 +39,33 @@ Some run-time and cache files are excluded from the backups.
 
 ```raw
 # Craft
-storage/backups
-storage/logs
-storage/runtime
-web/cpresources
+'storage/backups/',
+'storage/logs/',
+'storage/runtime/',
+'web/cpresources/',
 
 # Laravel
-storage/framework
-storage/logs
+'storage/framework/',
+'storage/logs/',
+
+# Symfony
+'var/cache/',
+'var/log/',
+
+# WordPress
+'wp-content/cache/',
+
+# Archives
+'*.zip',
+'*.tar',
+'*.tar.gz',
+'*.tgz',
+'*.tar.bz2',
+'*.tbz',
 
 # Misc
-.git
-.idea
-*.sql
+'.git/',
+'*.sql',
 ```
 
 ## Restore from backup files
