@@ -44,7 +44,7 @@ It can not be guaranteed that the backup restoration will leave the environment 
 
 ## Backup restore VS git deployment
 
-Mind that the backup includes the actual state of files present at the time when the backup was made. When [git deployment](/3.dev/2.deployment/1.intro.md) is used, the head of the connected branch might be ahead. So it's possible that the next git deployment will cause issues. One way to deal with that is to reset the connected git repo to a state that matches the restored backup, but there is no general rule of thumb for that.
+Mind that the backup includes the actual state of files present at the time when the backup was made. When [git deployment](/3.dev/03.deployment/01.intro.md) is used, the head of the connected branch might be ahead. So it's possible that the next git deployment will cause issues. One way to deal with that is to reset the connected git repo to a state that matches the restored backup, but there is no general rule of thumb for that.
 
 ## Backup excludes
 
