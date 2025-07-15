@@ -43,7 +43,7 @@ Remember Git works in [one direction only here](/3.dev/2.deployment/1.intro.md#g
 
 - Login by SFTP and just download what is required - [see here](/3.dev/7.code-access/4.sftp.md)
 - Login by SSH, zip the files and question and them from a public URL - [see here](/3.dev/7.code-access/3.ssh.md)
-- Use rsync to download a folder or even the entire project - [see here](/3.dev/rsync.md)
+- Use rsync to download a folder or even the entire project - [see here](//3.dev/20.how-to/rsync.md)
 
 You can use the methods above for the whole code base when you haven't been deploying with Git before or you are unsure if the git repo contains the latest changes.
 

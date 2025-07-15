@@ -74,7 +74,7 @@ While you can [restore from backup](/1.platform/17.backups/restore.md) using the
 
 ### Restore files
 
-To recover files from a backup, first ensure to have the unpacked files from the backup archive on your local machine. Then upload these files to your environment at using SFTP or [rsync](/3.dev/rsync.md). Be sure to remove any unnecessary files from the remote environment and don't forget to include hidden files.
+To recover files from a backup, first ensure to have the unpacked files from the backup archive on your local machine. Then upload these files to your environment at using SFTP or [rsync](//3.dev/20.how-to/rsync.md). Be sure to remove any unnecessary files from the remote environment and don't forget to include hidden files.
 
 ### Restore database
 

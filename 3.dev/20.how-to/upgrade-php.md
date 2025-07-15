@@ -91,6 +91,6 @@ Changes can take two minutes to be applied. You can also test-run this. When you
 
 #### 4.2 - Deploy changes
 
-Now, quickly after the new PHP version is in place, deploy your updated code from your local development, either with [Git](//3.dev/2.deployment/1.intro.md or simply by [SFTP](/3.dev/7.code-access/4.sftp.md) or by [rsync](/3.dev/rsync.md).
+Now, quickly after the new PHP version is in place, deploy your updated code from your local development, either with [Git](//3.dev/2.deployment/1.intro.md or simply by [SFTP](/3.dev/7.code-access/4.sftp.md) or by [rsync](//3.dev/20.how-to/rsync.md).
 
 Don't forget that you might also have to run database migrations so that your database structure matches the latest code version. WordPress and Craft CMS automatically handle this in the web UI. For any other system, see their documentation on how to properly update the database.
