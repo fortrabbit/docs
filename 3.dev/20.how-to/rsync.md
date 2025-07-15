@@ -8,7 +8,7 @@ lead: rsync is one of the best ways to deploy code fast and without hassle. It's
 
 ## About rsync
 
-`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes. rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/3.dev/7.code-access/3.ssh.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit app environment directly.
+`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes. rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/3.dev/01.code-access/3.ssh.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit app environment directly.
 
 ## Installing rsync
 
