@@ -43,7 +43,7 @@ The private key will be stored in the deployment environment of your App that co
 
 In the script below we generate a global `auth.json` file that contains credentials to access a GitHub repo using oAuth, and another private repo which is protected with Basic HTTP auth, in our example Laravel Nova. This is just for the sake of demonstration, you will probably need to adjust it to your needs.
 
-Since you don't want to keep secrets in your git history, you can store them in [ENV vars](/3.dev/19.env-vars).
+Since you don't want to keep secrets in your git history, you can store them in [ENV vars](/3.dev/19.env-vars/1.intro.md).
 
 ```php [add-auth.php]
 // Github token example
