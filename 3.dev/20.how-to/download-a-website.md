@@ -53,7 +53,7 @@ Last not least you likely will need the contents of your database. Use a local M
 
 ## Using our backups
 
-When the above is not working for you for some reason and your website is hosted with fortrabbit, you might just use our [backups](/1.platform/9.components/5.backups.md) (when booked) as a source. With that you can download the latest state from the dashboard.
+When the above is not working for you for some reason and your website is hosted with fortrabbit, you might just use our [backups](/1.platform/09.components/05.backups.md) (when booked) as a source. With that you can download the latest state from the dashboard.
 
 ## Check for data consistency
 

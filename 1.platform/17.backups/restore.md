@@ -13,7 +13,7 @@ links:
 
 ## Requirements
 
-To restore from a backup, the [backup component](/1.platform/9.components/5.backups.md) needs to be booked and at least one backup already needs to be present with the [environment](/1.platform/10.objects/02.app-environment.md) to be chosen as backup source.
+To restore from a backup, the [backup component](/1.platform/09.components/05.backups.md) needs to be booked and at least one backup already needs to be present with the [environment](/1.platform/10.objects/02.app-environment.md) to be chosen as backup source.
 
 ## Use cases
 
