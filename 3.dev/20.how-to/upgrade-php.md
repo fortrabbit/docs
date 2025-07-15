@@ -38,7 +38,7 @@ First update your local version, once that is working, deploy to fortrabbit and 
 
 ### 1 - Update your local development environment
 
-We recommend to have a local development environment, also see our [help article on that](/3.dev/19.how-to/1.local-development.md). First, make sure that your local PHP version is up-to-date. Depending on how your local development is set up, the path to upgrade is different.
+We recommend to have a local development environment, also see our [help article on that](/3.dev/20.how-to/1.local-development.md). First, make sure that your local PHP version is up-to-date. Depending on how your local development is set up, the path to upgrade is different.
 
 If you are running PHP directly on your computer, then a simple `php -v` prints out the PHP version. Beware, if you are using [MAMP](https://www.mamp.info/en) or [XAMPP](https://www.apachefriends.org/index.html), this is not the version of PHP your code runs on. With these tools you have to use their GUI to select the PHP version you want.
 
@@ -66,7 +66,7 @@ To update a dependency, simply change any required versions in your `composer.js
 
 Many Content Management Systems, like WordPress and Craft CMS come with a built in update feature. So you can simply login to the admin area of the CMS and hit a button to update.
 
-**Beware:** With fortrabbit, those changes only happen on the file system and are not reflected in Git. This is fine when you are using SFTP, otherwise read more in our [setup guide for WordPress](/2.guides/5.more/5.wordpress.md) or [update guide for Craft CMS](/2.guides/3.craft/7.updating.md).
+**Beware:** With fortrabbit, those changes only happen on the file system and are not reflected in Git. This is fine when you are using SFTP, otherwise read more in our [setup guide for WordPress](/2.guides/6.wordpress/01.setup.md) or [update guide for Craft CMS](/2.guides/3.craft/7.updating.md).
 
 ### 3 - Test it locally
 
