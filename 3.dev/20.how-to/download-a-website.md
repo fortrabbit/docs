@@ -31,7 +31,7 @@ When you deployed using Git, you can clone the existing Git repo. Most likely yo
 
 ### Composer dependencies
 
-After cloning the Git repo, you might need to install the dependencies to make your local installation complete. The `composer.json` contains all the instructions. Run `composer install` locally in your root folder. See our [Composer article](/3.dev/2.composer.md) for more details. This insures the installed dependencies are up-to-date and match you local development environment.
+After cloning the Git repo, you might need to install the dependencies to make your local installation complete. The `composer.json` contains all the instructions. Run `composer install` locally in your root folder. See our [Composer article](/3.dev/15.learn/2.composer.md) for more details. This insures the installed dependencies are up-to-date and match you local development environment.
 
 ### Runtime data
 
