@@ -10,7 +10,7 @@ links:
     route: /platform/components/backups
 ---
 
-The fortrabbit [backup component](/1.platform/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/2.app-environment.md) at a given time, see [retention](/1.platform/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
+The fortrabbit [backup component](/1.platform/9.components/5.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/02.app-environment.md) at a given time, see [retention](/1.platform/17.backups/retention.md). This archive contains everything required to restore the state of that backup.
 
 - Files: Everything present on the file system
 - Database: a database dump file, if [database](/1.platform/9.components/2.mysql.md) is booked
