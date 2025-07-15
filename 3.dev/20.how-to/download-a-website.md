@@ -41,7 +41,7 @@ Beside the code base which you might have received via Git, take care to grab as
 
 Remember Git works in [one direction only here](/3.dev/2.deployment/1.intro.md#git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
 
-- Login by SFTP and just download what is required - [see here](/3.dev/7.code-access/4.sftp.md)
+- Login by SFTP and just download what is required - [see here](/3.dev/01.code-access/4.sftp.md)
 - Login by SSH, zip the files and question and them from a public URL - [see here](/3.dev/7.code-access/3.ssh.md)
 - Use rsync to download a folder or even the entire project - [see here](//3.dev/20.how-to/rsync.md)
 

@@ -23,7 +23,7 @@ For Windows 10 we recommend to install the Linux subsystem (WSL). For Windows 7 
 
 ## Use cases
 
-You can [deploy with Git](/3.dev/2.deployment/1.intro.md) or [upload files with SFTP](/3.dev/7.code-access/4.sftp.md) and/or [use SSH](/3.dev/01.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
+You can [deploy with Git](/3.dev/2.deployment/1.intro.md) or [upload files with SFTP](/3.dev/01.code-access/4.sftp.md) and/or [use SSH](/3.dev/01.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
 
 ### rsync instead of SFTP
 
