@@ -1,5 +1,5 @@
 ---
-reviewed: 2025-07-03 21:08:46
+reviewed: 2025-07-16 11:53:46
 title: Blackfire
 navigation.excerpt: PHP profiling - identify performance issues
 lead: Blackfire is a popular PHP profiling tool from the makers of Symfony. Integrate it with fortrabbit.
@@ -12,7 +12,7 @@ head:
 ---
 
 ::CallOut{alert}
-It's not yet possible to add an API key.
+This feature is not implemented yet and subject to change.
 ::
 
 ## About Blackfire
