@@ -3,7 +3,7 @@ reviewed: 2025-07-09 15:32:06
 title: Backup retention
 naviTitle: Backup retention
 navigation.excerpt: monthly, weekly, daily
-lead: Details of the automatic backup retention model.
+# lead: The automatic backup retention model en detail.
 wip: true
 siblings: Backups
 links:
