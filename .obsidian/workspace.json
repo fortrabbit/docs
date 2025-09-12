@@ -11,10 +11,15 @@
             "id": "b275334ac69bef80",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "3.dev/08.mysql/15.advanced-database.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "15.advanced-database"
             }
           }
         ]
