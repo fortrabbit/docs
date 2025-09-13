@@ -45,7 +45,7 @@ Remember Git works in [one direction only here](/3.dev/03.deployment/01.intro.md
 - Login by SSH, zip the files and question and them from a public URL - [see here](/3.dev/01.code-access/3.ssh.md)
 - Use rsync to download a folder or even the entire project - [see here](//3.dev/20.how-to/rsync.md)
 
-You can use the methods above for the whole code base when you haven't been deploying with Git before or you are unsure if the git repo contains the latest changes.
+You can use the methods above for the whole code base when you haven't been deploying with Git before or you are unsure if the Git repo contains the latest changes.
 
 ### Database backup
 
