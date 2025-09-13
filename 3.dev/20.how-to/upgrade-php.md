@@ -50,7 +50,7 @@ Get your dependencies up-to-date:
 
 #### 2.1 - Updating with Composer
 
-Applications based on PHP frameworks like Laravel and Symfony are usually updated with [Composer](/3.dev/15.learn/2.composer.md) which keeps track of all dependencies.
+Applications based on PHP frameworks like Laravel and Symfony are usually updated with [Composer](/3.dev/15.learn/02.composer.md) which keeps track of all dependencies.
 
 Issuing `composer outdated` in the Terminal will give you a list of outdated packages. Those in red need can easily be updated. Those in yellow also need to be updated but might cause trouble because they are major version upgrades.
 

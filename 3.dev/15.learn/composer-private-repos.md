@@ -20,7 +20,7 @@ head:
 
 ## What are private Composer packages?
 
-Modern PHP app development utilizes [Composer](/3.dev/15.learn/2.composer.md) as a dependency manager. There are many great open source packages [out there](http://packagist.org). But your company code is probably not intended to be released to the public or you rely on a third party package which is not open source. That's when you use private Composer repositories.
+Modern PHP app development utilizes [Composer](/3.dev/15.learn/02.composer.md) as a dependency manager. There are many great open source packages [out there](http://packagist.org). But your company code is probably not intended to be released to the public or you rely on a third party package which is not open source. That's when you use private Composer repositories.
 
 ## Hosting private Composer repos
 

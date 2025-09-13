@@ -31,7 +31,7 @@ Consider `rsync` as a replacement for SFTP. With SFTP - unless your SFTP client 
 
 ### rsync in addition to Git
 
-Consider `rsync` as an essential addition. Why? Your dependencies are managed with Composer and thus excluded from Git. They will be installed and managed with [Composer](/3.dev/15.learn/2.composer.md). So you are keeping your Git repo clean by just including the source files of your very own code. But there is more. Your project includes run time data and static assets:
+Consider `rsync` as an essential addition. Why? Your dependencies are managed with Composer and thus excluded from Git. They will be installed and managed with [Composer](/3.dev/15.learn/02.composer.md). So you are keeping your Git repo clean by just including the source files of your very own code. But there is more. Your project includes run time data and static assets:
 
 ## The rsync command structure
 
