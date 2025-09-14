@@ -13,17 +13,17 @@ head:
 ## PHP versions at fortrabbit
 
 - fortrabbit will provide new PHP versions some time after they became available
-- New PHP versions are available to select per app environment in the dashboard
+- New PHP versions are available to select per environment in the dashboard
 - There are usually multiple PHP version to choose from
 - You need to update software you are using
 - You can opt-out of automatic PHP version updates
-- Outdated PHP versions will be removed, remaining app environments will be upgraded then
+- Outdated PHP versions will be removed, remaining environments will be upgraded then
 
 ## Simple PHP version upgrade path
 
 1. Make sure the software you are using is up-to-date
 2. In the [dashboard](/1.platform/02.concepts/30.dashboard.md)
-3. Navigate to the app environment and then click on Settings > PHP version
+3. Navigate to the environment and then click on Settings > PHP version
 4. Change to a newer PHP version and hit "save"
 5. Check if your website is still working after a few minutes
 6. You can safely switch back the version if it doesn't work
@@ -80,7 +80,7 @@ Now, as everything is up-to-date and tested in your **local** development enviro
 
 Updating the PHP version for your fortrabbit App is as simple as pie:
 
-1. Visit your app environment in the fortrabbit dashboard
+1. Visit your environment in the fortrabbit dashboard
 2. Go to the PHP settings
 3. Select a newer PHP version from the drop-down menu
 4. Hit save

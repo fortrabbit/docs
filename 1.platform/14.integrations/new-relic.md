@@ -28,7 +28,7 @@ fortrabbit has a Bring-Your-Own-License integration with New Relic. That basical
 ### At fortrabbit
 
 1. Log in to the dashboard
-1. Navigate to your app environment > settings > New Relic
+1. Navigate to your environment > settings > New Relic
 1. Paste the New Relic license key
 1. Save
 

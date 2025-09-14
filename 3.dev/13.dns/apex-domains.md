@@ -33,7 +33,7 @@ Although not impossible, apex domains should really not be routed using a CNAME 
 
 ## No direct A-record routing here
 
-A host name is more flexible than an IP. Any domain routed to an IP is bound to that IP. This doesn't give us the flexibility to move app environments around, in case of scaling or incidents, for example with a DDoS attack.
+A host name is more flexible than an IP. Any domain routed to an IP is bound to that IP. This doesn't give us the flexibility to move environments around, in case of scaling or incidents, for example with a DDoS attack.
 
 ## Our opinion on apex domains
 

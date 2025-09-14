@@ -33,7 +33,7 @@ Private composer repos can be hosted.
 
 ## A - Using SSH Keys
 
-<!-- 2024-08-30 14:17:25 - TODO: there is a key installed with each app environment (and it could be visible with the dashboard as well.)  -->
+<!-- 2024-08-30 14:17:25 - TODO: there is a key installed with each environment (and it could be visible with the dashboard as well.)  -->
 
 Alternatively you can limit access to a specific SSH keys. To use your private Composer repo in [Git deployment](/3.dev/03.deployment/01.intro.md) you need to set up authentication so your fortrabbit app can access your external repo (probably hosted on GitHub). For this you need a public and private SSH key-pair.
 

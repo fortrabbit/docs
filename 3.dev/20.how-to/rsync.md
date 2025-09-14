@@ -8,7 +8,7 @@ lead: rsync is one of the best ways to deploy code fast and without hassle. It's
 
 ## About rsync
 
-`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes. rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/3.dev/01.code-access/3.ssh.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit app environment directly.
+`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes. rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/3.dev/01.code-access/3.ssh.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit environment directly.
 
 ## Installing rsync
 
@@ -27,7 +27,7 @@ You can [deploy with Git](/3.dev/03.deployment/01.intro.md) or [upload files wit
 
 ### rsync instead of SFTP
 
-Consider `rsync` as a replacement for SFTP. With SFTP - unless your SFTP client has some kind of synchronization method (which still will be slower) - you will copy each file manually, one by one. This is mundane and can also be dangerous when forgetting to copy critical files. `rsync` can work as a two way street directly on the file system. Easily synchronize files up and down from your [local development](/3.dev/20.how-to/1.local-development.md) to the [app environment](/1.platform/10.objects/02.app-environment.md).
+Consider `rsync` as a replacement for SFTP. With SFTP - unless your SFTP client has some kind of synchronization method (which still will be slower) - you will copy each file manually, one by one. This is mundane and can also be dangerous when forgetting to copy critical files. `rsync` can work as a two way street directly on the file system. Easily synchronize files up and down from your [local development](/3.dev/20.how-to/1.local-development.md) to the [environment](/1.platform/10.objects/environment/01.intro.md).
 
 ### rsync in addition to Git
 
