@@ -10,7 +10,7 @@ links:
     route: /dev/how-to/htaccess/intro
     property: docs
   - title: PHP settings in dashboard
-    route: /platform/objects/app-environment#php-settings
+    route: /platform/settings/php
     property: docs
   - title: PHP component
     route: /platform/components/php
