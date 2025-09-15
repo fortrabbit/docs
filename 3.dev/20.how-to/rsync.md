@@ -8,7 +8,7 @@ lead: rsync is one of the best ways to deploy code fast and without hassle. It's
 
 ## About rsync
 
-`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes. rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/3.dev/01.code-access/3.ssh.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit environment directly.
+`rsync` is a shorthand for **r**emote **sync**hronization. It's a command line tool to synchronize files over the network. It's open source. It's old but really good and it's up to **10 times faster than FTP** as it uses compression and diffs to only transfer changes. rsync is a mighty sharp sword. Use it carefully. Please mind that providing the falsy parameters or the wrong order can result in data loss. rsync works on top of [SSH](/1.platform/04.code-access/03.ssh.md). Usually, like most deployment related tasks here, you will **use rsync from your local machine**, not on your fortrabbit environment directly.
 
 ## Installing rsync
 
@@ -23,7 +23,7 @@ For Windows 10 we recommend to install the Linux subsystem (WSL). For Windows 7 
 
 ## Use cases
 
-You can [deploy with Git](/1.platform/05.deployment/01.intro.md) or [upload files with SFTP](/3.dev/01.code-access/4.sftp.md) and/or [use SSH](/3.dev/01.code-access/3.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
+You can [deploy with Git](/1.platform/05.deployment/01.intro.md) or [upload files with SFTP](/1.platform/04.code-access/04.sftp.md) and/or [use SSH](/1.platform/04.code-access/03.ssh.md). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
 
 ### rsync instead of SFTP
 

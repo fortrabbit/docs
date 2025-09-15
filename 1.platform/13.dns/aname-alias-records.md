@@ -21,15 +21,15 @@ links:
 ---
 
 ::CallOut{alert}
-Due to potential upcoming changes, we recommend using the [WWW forwarding service](/3.dev/13.dns/2.domain-forwarding.md) instead of ANAME/ALIAS records with our service at this time.
+Due to potential upcoming changes, we recommend using the [WWW forwarding service](/1.platform/13.dns/2.domain-forwarding.md) instead of ANAME/ALIAS records with our service at this time.
 ::
 
 ## Domain providers with ANAME support
 
-More and more [domain / dns providers](/14.integrations/10.domain-providers.md) are supporting ANAME / ALIAS records:
+More and more [domain / dns providers](/1.platform/15.integrations/10.domain-providers.md) are supporting ANAME / ALIAS records:
 
 - [AWS Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
-- [Cloudflare: CNAME flattening](https://developers.cloudflare.com/dns/cname-flattening), also see [Cloudflare integration](/14.integrations/cloudflare.md)
+- [Cloudflare: CNAME flattening](https://developers.cloudflare.com/dns/cname-flattening), also see [Cloudflare integration](/1.platform/15.integrations/02.cloudflare.md)
 - [DNS made easy: ANAME records](https://support.dnsmadeeasy.com/support/solutions/articles/47001001412-aname-records)
 - [DNSimple: ALIAS records](https://support.dnsimple.com/articles/alias-record)
 - [Dreamhost: Custom DNS records](https://help.dreamhost.com/hc/en-us/articles/360035516812-Adding-custom-DNS-records)
@@ -42,4 +42,4 @@ As far as we know, by the time of this writing, the following providers do not s
 
 - GoDaddy - see [this SO question](https://webmasters.stackexchange.com/questions/141075/aname-record-not-accepted) ☠️
 
-If your provider does not support CNAME flattening, but you would like to take advantage of it, we recommend switching to that does or consider using our [www forwarding service](/1.platform/02.concepts/domain-forwarding.md).
+If your provider does not support CNAME flattening, but you would like to take advantage of it, we recommend switching to that does or consider using our [www forwarding service](/1.platform/03.concepts/domain-forwarding.md).

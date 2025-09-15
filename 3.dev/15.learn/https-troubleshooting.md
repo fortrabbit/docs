@@ -6,7 +6,7 @@ navigation.excerpt: Debugging SSL/TLS errors
 lead: Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
 ---
 
-TLS certificates are provided for all [domains](/1.platform/10.objects/10.domain.md). See the [HTTPS article](/3.dev/13.dns/4.https.md) for general features and configuration.
+TLS certificates are provided for all [domains](/1.platform/10.objects/10.domain.md). See the [HTTPS article](/1.platform/13.dns/6.https.md) for general features and configuration.
 
 ## Review certificates in the browser
 

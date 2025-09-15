@@ -41,8 +41,8 @@ Beside the code base which you might have received via Git, take care to grab as
 
 Remember Git works in [one direction only here](/1.platform/05.deployment/01.intro.md#git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
 
-- Login by SFTP and just download what is required - [see here](/3.dev/01.code-access/4.sftp.md)
-- Login by SSH, zip the files and question and them from a public URL - [see here](/3.dev/01.code-access/3.ssh.md)
+- Login by SFTP and just download what is required - [see here](/1.platform/04.code-access/04.sftp.md)
+- Login by SSH, zip the files and question and them from a public URL - [see here](/1.platform/04.code-access/03.ssh.md)
 - Use rsync to download a folder or even the entire project - [see here](//3.dev/20.how-to/rsync.md)
 
 You can use the methods above for the whole code base when you haven't been deploying with Git before or you are unsure if the Git repo contains the latest changes.
