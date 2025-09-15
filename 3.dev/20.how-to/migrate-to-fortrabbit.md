@@ -12,7 +12,7 @@ This article covers the general basics as well as some deep links for moving you
 
 ## 1. Create your fortrabbit app
 
-Each website or web application is represented by an [app](/1.platform/10.objects/1.app.md) with at least one [environment](/1.platform/10.objects/environment/01.intro.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
+Each website or web application is represented by an [app](/1.platform/10.objects/1.app.md) with at least one [environment](/1.platform/10.objects/02.environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
 
 ## 2. Prepare your domains
 
