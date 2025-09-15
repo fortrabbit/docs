@@ -9,7 +9,7 @@ links:
     route: /platform/objects/domain
     property: docs
   - title: External domains
-    route: /dev/dns/external-domains
+    route: /platform/dns/external-domains
     property: docs
 ---
 

@@ -13,7 +13,7 @@ links:
     route: /platform/objects/domain
     property: docs
   - title: ANAME / ALIAS records
-    route: /dev/dns/aname-alias-records
+    route: /platform/dns/aname-alias-records
     property: docs
 head:
   meta:

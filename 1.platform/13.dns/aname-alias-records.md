@@ -10,13 +10,13 @@ links:
     route: /platform/objects/domain
     property: docs
   - title: External domains
-    route: /dev/dns/external-domains
+    route: /platform/dns/external-domains
     property: docs
   - title: Apex domains
-    route: /dev/dns/apex-domains
+    route: /platform/dns/apex-domains
     property: docs
   - title: WWW forwarding
-    route: /dev/dns/domain-forwarding
+    route: /platform/dns/domain-forwarding
     property: docs
 ---
 
