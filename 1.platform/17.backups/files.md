@@ -25,7 +25,7 @@ The fortrabbit [backup component](/1.platform/09.components/05.backups.md) provi
 
 ## Backups VS git deployment
 
-Developers using [git deployment](/3.dev/03.deployment/01.intro.md) already have access to an archive with a complete history of the code base. The fortrabbit backups also contain runtime data such as the vendor folder contents and user uploads. Given the nature of most PHP based applications.
+Developers using [git deployment](/1.platform/05.deployment/01.intro.md) already have access to an archive with a complete history of the code base. The fortrabbit backups also contain runtime data such as the vendor folder contents and user uploads. Given the nature of most PHP based applications.
 
 ## Backup file sizes
 

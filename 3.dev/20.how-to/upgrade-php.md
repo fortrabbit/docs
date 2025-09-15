@@ -22,7 +22,7 @@ head:
 ## Simple PHP version upgrade path
 
 1. Make sure the software you are using is up-to-date
-2. In the [dashboard](/1.platform/02.concepts/30.dashboard.md)
+2. In the dashboard
 3. Navigate to the environment and then click on Settings > PHP version
 4. Change to a newer PHP version and hit "save"
 5. Check if your website is still working after a few minutes
@@ -91,6 +91,6 @@ Changes can take two minutes to be applied. You can also test-run this. When you
 
 #### 4.2 - Deploy changes
 
-Now, quickly after the new PHP version is in place, deploy your updated code from your local development, either with [Git](//3.dev/03.deployment/01.intro.md or simply by [SFTP](/3.dev/01.code-access/4.sftp.md) or by [rsync](//3.dev/20.how-to/rsync.md).
+Now, quickly after the new PHP version is in place, deploy your updated code from your local development, either with [Git](//1.platform/05.deployment/01.intro.md or simply by [SFTP](/3.dev/01.code-access/4.sftp.md) or by [rsync](//3.dev/20.how-to/rsync.md).
 
 Don't forget that you might also have to run database migrations so that your database structure matches the latest code version. WordPress and Craft CMS automatically handle this in the web UI. For any other system, see their documentation on how to properly update the database.
