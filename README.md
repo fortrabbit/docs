@@ -84,7 +84,7 @@ There is currently no automatic deployment set up.
 
 ## Dynamic code examples
 
-Those values will be replaced by Javascript when users are logged in:
+Those values will be replaced by JavaScript when users are logged in:
 
 ```raw
 region: {{region}}
