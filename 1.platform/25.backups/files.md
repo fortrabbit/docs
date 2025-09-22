@@ -78,4 +78,4 @@ To recover files from a backup, first ensure to have the unpacked files from the
 
 ### Restore database
 
-The database backup file is a standard dump created by the `mysqldump` tool. Restore it by importing the data into your MySQL database. For detailed instructions, refer to our [database export/import guides](/1.platform/08.mysql/02.export-import/07.export-import-intro.md). It may be necessary to drop the old tables before importing the new data.
+The database backup file is a standard dump created by the `mysqldump` tool. Restore it by importing the data into your MySQL database. For detailed instructions, refer to our [database export/import guides](/1.platform/08.mysql/02.export-import/07.intro.md). It may be necessary to drop the old tables before importing the new data.

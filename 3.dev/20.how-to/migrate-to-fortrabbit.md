@@ -30,7 +30,7 @@ Runtime data means all kinds of data, which is created by your App at runtime. U
 
 ## 5. Migrate your databases
 
-If your App is using a MySQL database, you will need to migrate the database data as well. [Export the MySQL database from your old hosting and import](/1.platform/08.mysql/02.export-import/07.export-import-intro.md) it to the fortrabbit database.
+If your App is using a MySQL database, you will need to migrate the database data as well. [Export the MySQL database from your old hosting and import](/1.platform/08.mysql/02.export-import/07.intro.md) it to the fortrabbit database.
 
 ## 6. Sending e-mails
 
