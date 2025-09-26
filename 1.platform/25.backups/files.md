@@ -1,8 +1,8 @@
 ---
-reviewed: 2025-07-09 14:38:11
+reviewed: 2025-09-26 09:25:34
 title: Backup files
 naviTitle: Backup files
-navigation.excerpt: files and database
+navigation.excerpt: Files and database
 lead: What is included and excluded. How to use the files downloaded from the backup component to actually restore a website.
 siblings: Backups
 links:

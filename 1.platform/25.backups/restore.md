@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-12-19 09:25:33
+reviewed: 2025-09-26 09:25:25
 title: Restore from backup
 naviTitle: Restore from backup
 navigation.excerpt: automated rollback
