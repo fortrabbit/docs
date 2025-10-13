@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-02-15 08:20:37
+reviewed: 2025-10-10 16:28:03
 title: SendGrid
 navigation.excerpt: Transactional mail integration
 section: Extending_fortrabbit
