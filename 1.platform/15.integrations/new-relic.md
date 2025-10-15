@@ -1,15 +1,10 @@
 ---
-reviewed: 2025-07-16 11:52:48
+reviewed: 2025-10-15 09:25:51
 title: New Relic
 navigation.excerpt: Enterprise PHP profiling
 lead: Combine the popular software analysis tool with fortrabbit.
 sidebar: newrelic
-wip: true
 ---
-
-::CallOut{alert}
-This feature is not implemented yet and subject to change.
-::
 
 ## About New Relic
 

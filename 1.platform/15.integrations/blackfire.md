@@ -1,19 +1,14 @@
 ---
-reviewed: 2025-07-16 11:53:46
+reviewed: 2025-10-15 09:25:55
 title: Blackfire
 navigation.excerpt: PHP profiling - identify performance issues
 lead: Blackfire is a popular PHP profiling tool from the makers of Symfony. Integrate it with fortrabbit.
 sidebar: blackfire
-wip: true
 head:
   meta:
     - name: 'keywords'
       content: 'profiler, performance, php, advanced, profiling, performance, testing'
 ---
-
-::CallOut{alert}
-This feature is not implemented yet and subject to change.
-::
 
 ## About Blackfire
 
