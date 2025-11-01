@@ -35,7 +35,7 @@ Depending on your browser you might see a _DNS_PROBE_FINISHED_NXDOMAIN_ or _This
 
 ### Certificate errors
 
-Once a domain is correctly routed, the [TLS certificate](/1.platform/13.dns/6.https.md) needs to be installed. This takes some additional time in which requests to the https version of the website will display a certificate warning in the browser. This is actually not a DNS issue, see the [HTTPS troubleshooting guide](/3.dev/https-troubleshooting.md).
+Once a domain is correctly routed, the [TLS certificate](/1.platform/13.dns/6.https.md) needs to be installed. This takes some additional time in which requests to the https version of the website will display a certificate warning in the browser. This is actually not a DNS issue, see the [HTTPS troubleshooting guide](/3.dev/15.learn/https-troubleshooting.md).
 
 ### No domain configured with fortrabbit
 
