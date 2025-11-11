@@ -4,7 +4,6 @@ title: Using Secure Copy
 naviTitle: SCP
 navigation.excerpt: Using secure copy for file transfers
 lead: SCP (Secure Copy Protocol) enables secure file transfers between your local machine and remote servers using SSH encryption.
-siblings: Code access
 links:
   - title: SSH access
     route: /platform/code-access/ssh

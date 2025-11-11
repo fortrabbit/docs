@@ -4,7 +4,6 @@ title: Backup files
 naviTitle: Backup files
 navigation.excerpt: Files and database
 lead: What is included and excluded. How to use the files downloaded from the backup component to actually restore a website.
-siblings: Backups
 links:
   - title: Backup component
     route: /platform/components/backups
