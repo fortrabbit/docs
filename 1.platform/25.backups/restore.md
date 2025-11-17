@@ -32,7 +32,7 @@ The chosen backup will be unpacked and prepared. Once ready, the state will be s
 
 ## Recommendations
 
-- Back up the current state, by manual backup or by [downloading a snapshot](/3.dev/download-a-website.md)
+- Back up the current state, by manual backup or by [downloading a snapshot](/3.dev/20.how-to/download-a-website.md)
 - Know about the state of the backup you are about to roll back to, see [backup files](/1.platform/25.backups/files.md)
 - Don't change anything while the backup rollback is in progress
 
