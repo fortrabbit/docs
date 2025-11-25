@@ -7,7 +7,7 @@ lead: Redirect one domain to another. Here are your options.
 head:
   meta:
     - name: 'keywords'
-      content: 'TLD, Top Level Domain, top-level-domain, registrastion, ordering, zone apex, apex domain, root domain, subdomain, domain masking, domain name server, DNS, ns, lookup'
+      content: 'TLD, Top Level Domain, top-level-domain, registration, ordering, zone apex, apex domain, root domain, subdomain, domain masking, domain name server, DNS, ns, lookup'
 ---
 
 Let's say you have `your-domain.com` pointed to your environment already. Now that other TLD, the domain `your-domain.co.uk` is registered as well. You want your environment to show up under this domain as well. Now there are two main ways how this can be implemented:
