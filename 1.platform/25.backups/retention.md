@@ -10,6 +10,10 @@ links:
     route: /platform/components/backups
 ---
 
+::CallOut{alert}
+The backup retention feature is not implemented yet. So far only daily backups.
+::
+
 The [backup component](/1.platform/09.components/05.backups.md) is available in different plans. Larger ones include more backups. Backup retention determines how long backups are kept. This concept is crucial for ensuring data availability, compliance, and efficient storage management.
 
 Depending on the plan chosen, multiple backups of the same type might be included. If the plan includes three monthly backups, then monthly backups are retained for three months.
@@ -22,12 +26,12 @@ Depending on the plan chosen, multiple backups of the same type might be include
 ## Weekly backups
 
 - retained for a longer period
-- created Sundays
+- Sunday backups are kept
 
 ## Monthly backups
 
 - kept for an extended period
-- created by the start of the month
+- Backups from the start of the month are kept
 
 ## Manual backups
 
