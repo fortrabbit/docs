@@ -1,10 +1,19 @@
 ---
-reviewed: 2025-10-10 16:28:03
+reviewed: 2024-10-10 16:28:03
 title: SendGrid
 navigation.excerpt: Transactional mail integration
+figure:
+  emoji: 📬
+  text: Email delivery service integration.
+  color: rgba(6, 182, 212, 1)
+  textColor: rgba(207, 250, 254, 1)
 section: Extending_fortrabbit
 sidebar: sendgrid
 ---
+
+::CallOut{alert}
+Heads up. SendGrid was bought by Twilio some time ago. We don't plan to update this guide.
+::
 
 ## About SendGrid
 

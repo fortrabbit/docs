@@ -2,6 +2,11 @@
 reviewed: 2025-10-15 09:25:55
 title: Blackfire
 navigation.excerpt: PHP profiling - identify performance issues
+figure:
+  emoji: 🔥
+  text: Profile PHP performance issues.
+  color: rgba(239, 68, 68, 1)
+  textColor: rgba(254, 226, 226, 1)
 lead: Blackfire is a popular PHP profiling tool from the makers of Symfony. Integrate it with fortrabbit.
 sidebar: blackfire
 head:
