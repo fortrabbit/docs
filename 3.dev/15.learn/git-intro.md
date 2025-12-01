@@ -3,6 +3,11 @@ reviewed: 2025-01-15 10:43:16
 title: Git intro
 naviTitle: Git intro
 navigation.excerpt: Install, learn, enjoy
+figure:
+  emoji: 🌱
+  text: Master version control.
+  color: rgba(40, 100, 40, 1)
+  textColor: rgba(209, 250, 229, 1)
 lead: This is a quick intro to Git, how to set it up and how to get started with it on fortrabbit.
 head:
   meta:

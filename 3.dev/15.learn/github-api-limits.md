@@ -3,6 +3,11 @@ reviewed: 2025-09-10 08:26:46
 title: GitHub API limits and Composer
 naviTitle: GitHub API limits
 navigation.excerpt: Code collaboration and deployment.
+figure:
+  emoji: ⏱️
+  text: Handle GitHub API rate limits.
+  color: rgba(180, 68, 68, 1)
+  textColor: rgba(254, 226, 226, 1)
 lead: The reason why you can run into this issue temporarily is that GitHub limits it's API per IP.
 wip: true
 sidebar: github

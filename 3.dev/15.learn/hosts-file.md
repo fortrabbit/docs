@@ -2,6 +2,11 @@
 reviewed: 2024-07-08 15:00:38
 title: Hosts file
 navigation.excerpt: Testing domain routing with your local hosts file
+figure:
+  emoji: 🌐
+  text: Test domains before DNS changes.
+  color: rgba(6, 182, 212, 1)
+  textColor: rgba(207, 250, 254, 1)
 lead: ''
 ---
 

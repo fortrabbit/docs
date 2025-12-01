@@ -2,6 +2,11 @@
 reviewed: 2024-08-17 22:07:15
 title: Composer private repos
 navigation.excerpt: Access during git deployment
+figure:
+  emoji: 🔒
+  text: Access private package repositories.
+  color: rgba(245, 158, 11, 1)
+  textColor: rgba(254, 243, 199, 1)
 lead: How to access private composer repositories during git deployment.
 wip: true
 head:

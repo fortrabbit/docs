@@ -3,6 +3,11 @@ reviewed: 2024-11-29 20:54:10
 title: HTTPS troubleshooting
 naviTitle: HTTPS troubleshooting
 navigation.excerpt: Debugging SSL/TLS errors
+figure:
+  emoji: 🔒
+  text: Debug SSL certificate issues.
+  color: rgba(34, 197, 94, 1)
+  textColor: rgba(220, 252, 231, 1)
 lead: Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
 ---
 

@@ -2,6 +2,11 @@
 reviewed: 2024-11-29 12:53:45
 title: Encoding
 navigation.excerpt: UTF-8 alternatives
+figure:
+  emoji: 📝
+  text: Configure character encoding properly.
+  color: rgba(236, 72, 153, 1)
+  textColor: rgba(252, 231, 243, 1)
 lead: UTF-8 is assumed as the default encoding. You can set a different encoding manually — if you really want. This is on how to change the character encodings with fortrabbit.
 head:
   meta:
