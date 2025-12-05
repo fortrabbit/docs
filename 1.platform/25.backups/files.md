@@ -12,7 +12,7 @@ links:
 The fortrabbit [backup component](/1.platform/09.components/05.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/02.environment.md) at a given time, see [retention](/1.platform/25.backups/retention.md). This archive contains everything required to restore the state of that backup.
 
 - Files: Everything present on the file system
-- Database: a database dump file, if [database](/1.platform/09.components/2.mysql.md) is booked
+- Database: a database dump file, if [database](/1.platform/09.components/02.mysql.md) is booked
 
 ## Use cases
 
