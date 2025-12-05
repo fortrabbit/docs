@@ -6,13 +6,13 @@ navigation.excerpt: Website transfer to fortrabbit
 lead: How to transfer your website to fortrabbit with confidence.
 ---
 
-fortrabbit is not your traditional shared or VPS hosting. It may require some tinkering on your application and we recommend reading the [intro](/.1.get-started/1.intro.md) as well as our specific install guides for various frameworks & CMS to get the concepts and features.
+fortrabbit is not your traditional shared or VPS hosting. It may require some tinkering on your application and we recommend reading the [intro](/1.platform/02.get-started/01.project-organization.md) as well as our specific install guides for various frameworks & CMS to get the concepts and features.
 
-This article covers the general basics as well as some deep links for moving your App from any hosting provider to fortrabbit. This will hopefully cover everything you need to realize a smooth transition. Each App is different, adjust your plan accordingly and don't hesitate to [contact us](/20.get-help/2.contact-us.md) with your specific questions.
+This article covers the general basics as well as some deep links for moving your App from any hosting provider to fortrabbit. This will hopefully cover everything you need to realize a smooth transition. Each App is different, adjust your plan accordingly and don't hesitate to contact us with your specific questions.
 
 ## 1. Create your fortrabbit app
 
-Each website or web application is represented by an [app](/1.platform/10.objects/1.app.md) with at least one [environment](/1.platform/10.objects/02.environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
+Each website or web application is represented by an [app](/1.platform/10.objects/01.app.md) with at least one [environment](/1.platform/10.objects/02.environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
 
 ## 2. Prepare your domains
 
@@ -30,7 +30,7 @@ Runtime data means all kinds of data, which is created by your App at runtime. U
 
 ## 5. Migrate your databases
 
-If your App is using a MySQL database, you will need to migrate the database data as well. [Export the MySQL database from your old hosting and import](/1.platform/08.mysql/02.export-import/07.intro.md) it to the fortrabbit database.
+If your App is using a MySQL database, you will need to migrate the database data as well. Export the MySQL database from your old hosting and import it to the fortrabbit database.
 
 ## 6. Sending e-mails
 
@@ -38,13 +38,13 @@ Take care when you application needs to send mails. Simple `sendmail` won't work
 
 ## 7. HTTPS
 
-All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/3.dev/dns-external-domains.md).
+All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/1.platform/10.objects/10.domain.md).
 
 ## 8 Final switch: DNS
 
 Now that you have migrated your code, runtime data and database - and all the other stuff you needed - you are ready to push the button.
 
-Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](/3.dev/dns-external-domains.md). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
+Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](/1.platform/10.objects/10.domain.md). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
 
 ## Migrating away from fortrabbit
 

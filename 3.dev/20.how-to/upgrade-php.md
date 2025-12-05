@@ -66,7 +66,7 @@ To update a dependency, simply change any required versions in your `composer.js
 
 Many Content Management Systems, like WordPress and Craft CMS come with a built in update feature. So you can simply login to the admin area of the CMS and hit a button to update.
 
-**Beware:** With fortrabbit, those changes only happen on the file system and are not reflected in Git. This is fine when you are using SFTP, otherwise read more in our [setup guide for WordPress](/2.guides/6.wordpress/01.setup.md) or [update guide for Craft CMS](/2.guides/3.craft/7.updating.md).
+**Beware:** With fortrabbit, those changes only happen on the file system and are not reflected in Git. This is fine when you are using SFTP, otherwise read more in our [setup guide for WordPress](/2.guides/6.wordpress/01.setup.md) or [update guide for Craft CMS](/2.guides/3.craft-cms/12.updating.md).
 
 ### 3 - Test it locally
 
@@ -91,6 +91,6 @@ Changes can take two minutes to be applied. You can also test-run this. When you
 
 #### 4.2 - Deploy changes
 
-Now, quickly after the new PHP version is in place, deploy your updated code from your local development, either with [Git](//1.platform/05.deployment/01.intro.md or simply by [SFTP](/1.platform/04.code-access/04.sftp.md) or by [rsync](//3.dev/20.how-to/rsync.md).
+Now, quickly after the new PHP version is in place, deploy your updated code from your local development, either with [Git](/1.platform/05.deployment/01.intro.md) or simply by [SFTP](/1.platform/04.code-access/04.sftp.md) or by [rsync](/3.dev/20.how-to/rsync.md).
 
 Don't forget that you might also have to run database migrations so that your database structure matches the latest code version. WordPress and Craft CMS automatically handle this in the web UI. For any other system, see their documentation on how to properly update the database.
