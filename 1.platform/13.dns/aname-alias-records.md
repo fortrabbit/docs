@@ -26,10 +26,10 @@ Due to potential upcoming changes, we recommend using the [WWW forwarding servic
 
 ## Domain providers with ANAME support
 
-More and more [domain / dns providers](/1.platform/15.integrations/10.domain-providers.md) are supporting ANAME / ALIAS records:
+More and more [domain / dns providers](/1.platform/15.integrations/01.dns/01.intro.md) are supporting ANAME / ALIAS records:
 
 - [AWS Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
-- [Cloudflare: CNAME flattening](https://developers.cloudflare.com/dns/cname-flattening), also see [Cloudflare integration](/1.platform/15.integrations/02.cloudflare.md)
+- [Cloudflare: CNAME flattening](https://developers.cloudflare.com/dns/cname-flattening), also see [Cloudflare integration](/1.platform/15.integrations/01.dns/02.cloudflare.md)
 - [DNS made easy: ANAME records](https://support.dnsmadeeasy.com/support/solutions/articles/47001001412-aname-records)
 - [DNSimple: ALIAS records](https://support.dnsimple.com/articles/alias-record)
 - [Dreamhost: Custom DNS records](https://help.dreamhost.com/hc/en-us/articles/360035516812-Adding-custom-DNS-records)
