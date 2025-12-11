@@ -9,7 +9,7 @@ figure:
   color: rgba(180, 68, 68, 1)
   textColor: rgba(254, 226, 226, 1)
 lead: The reason why you can run into this issue temporarily is that GitHub limits it's API per IP.
-wip: true
+draft: true
 sidebar: github
 ---
 

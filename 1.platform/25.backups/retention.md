@@ -4,7 +4,7 @@ title: Backup retention
 naviTitle: Backup retention
 navigation.excerpt: monthly, weekly, daily
 # lead: The automatic backup retention model en detail.
-wip: true
+draft: true
 links:
   - title: Backup component
     route: /platform/components/backups

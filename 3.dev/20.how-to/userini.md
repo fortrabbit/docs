@@ -4,7 +4,7 @@ title: Configure .user.ini
 naviTitle: Configure .user.ini
 navigation.excerpt: Control advanced PHP settings
 lead: How to use .user.ini files to configure PHP settings on fortrabbit
-wip: true
+draft: true
 links:
   - title: .htaccess intro
     route: /dev/how-to/htaccess/intro
