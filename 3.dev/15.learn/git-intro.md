@@ -53,13 +53,13 @@ Git never forgets. It can bring back any content from any file, even deleted one
 
 Most people probably use Git from the command line (aka bash, terminal, shell). But there are also GUIs (desktop Apps) to manage Git. Those help to get started and to see visually what's going on:
 
-- [Git Desktop GUIs list](https://git-scm.com/downloads/guis)
+- [Git desktop GUIs](/4.integrations/07.git-clients/01.intro.md)
 
 ## About GitHub
 
-You hopefully already know that [GitHub](https://github.com) is the most popular choice for versionized code hosting and collaborating. It is free to use with private and public projects. Similar alternatives are Bitbucket and GitLab (and Gitee if you are from China). They basically work the same, so most concepts of this guide apply as well.
+You hopefully already know that [GitHub](https://github.com) is the most popular choice for versionized code hosting and collaborating. It is free to use with private and public projects. Sometimes people confuse Git with [GitHub](https://github.com). Git is the version control system established by Linus Torvalds. GitHub is the service, which offers Git remote hosting and additional extra magic collaboration features. GitHub has extended Git workflows with neat communication tools around the basic Git usage. Most notable is the "pull request" workflow.
 
-Sometimes people confuse Git with [GitHub](https://github.com). Git is the version control system established by Linus Torvalds. GitHub is the service, which offers Git remote hosting and additional extra magic collaboration features. GitHub has extended Git workflows with neat communication tools around the basic Git usage. Most notable is the "pull request" workflow.
+See our [GitHub intergration guide](/4.integrations/03.git-providers/02.github.md).
 
 ## Large Git repos
 
