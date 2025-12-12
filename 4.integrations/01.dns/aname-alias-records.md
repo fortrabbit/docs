@@ -21,7 +21,7 @@ links:
 ---
 
 ::CallOut{alert}
-Due to potential upcoming changes, we recommend using the [WWW forwarding service](/1.platform/13.dns/domain-forwarding.md) instead of ANAME/ALIAS records with our service at this time.
+Due to potential upcoming changes, we recommend using the [WWW forwarding service](/1.platform/13.dns/5.domain-forwarding-service.md) instead of ANAME/ALIAS records with our service at this time.
 ::
 
 ## Domain providers with ANAME support
