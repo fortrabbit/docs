@@ -13,7 +13,7 @@ links:
     route: /platform/objects/domain
     property: docs
   - title: ANAME / ALIAS records
-    route: /platform/dns/aname-alias-records
+    route: /integrations/dns/aname-alias-records
     property: docs
 head:
   meta:
@@ -24,8 +24,6 @@ head:
 ## Apex routing at fortrabbit
 
 Direct routing of apex domains to environments is not supported at fortrabbit. You can ese a www domain, the [www forwarding service](/1.platform/13.dns/domain-forwarding.md) will redirect all requests.
-
-<!-- - Use a DNS provider that supports [ALIAS / ANAME records](/1.platform/13.dns/aname-alias-records.md) -->
 
 ## No CNAME for apex domains
 
