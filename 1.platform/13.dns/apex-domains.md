@@ -23,7 +23,7 @@ head:
 
 ## Apex routing at fortrabbit
 
-Direct routing of apex domains to environments is not supported at fortrabbit. You can ese a www domain, the [www forwarding service](/1.platform/13.dns/domain-forwarding.md) will redirect all requests.
+Direct routing of apex domains to environments is not supported at fortrabbit. You can ese a www domain, the [www forwarding service](/1.platform/13.dns/5.domain-forwarding-service.md) will redirect all requests.
 
 ## No CNAME for apex domains
 
