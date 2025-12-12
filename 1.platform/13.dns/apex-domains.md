@@ -27,7 +27,7 @@ Direct routing of apex domains to environments is not supported at fortrabbit. Y
 
 ## No CNAME for apex domains
 
-Although not impossible, apex domains should really not be routed using a CNAME record. Use an A-Record instead. This is because of [DNS specs](https://www.ietf.org/rfc/rfc1035.txt). Receiving e-mails like `info@fortrabbit.com` would not be possible when DNS entries have CNAME record at the same time. Modern DNS providers support [ANAME/ALIAS records](#alias--aname-routing) for this.
+Although not impossible, apex domains should really not be routed using a CNAME record. Use an A-Record instead. This is because of [DNS specs](https://www.ietf.org/rfc/rfc1035.txt). Receiving e-mails like `info@fortrabbit.com` would not be possible when DNS entries have CNAME record at the same time. Modern DNS providers support ANAME/ALIAS records for this.
 
 ## No direct A-record routing here
 
