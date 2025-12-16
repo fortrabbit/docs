@@ -24,7 +24,7 @@ Git can help you to collaborate on code projects, keep track of your code change
 - A history of all files included, so you can review or undo changes
 - Powerful file merging which makes collaboration easy
 
-To deploy code to fortrabbit you use Git from your local machine and push to the remote on GitHub. So it should be part of your [local development setup](/3.dev/20.how-to/1.local-development.md).
+To deploy code to fortrabbit you use Git from your local machine and push to the remote on GitHub. So it should be part of your [local development setup](/4.integrations/01.local-development/01.intro.md).
 
 ## Learn Git
 
