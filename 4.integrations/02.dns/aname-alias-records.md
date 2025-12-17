@@ -30,7 +30,7 @@ More and more domain providers - [see intro](/4.integrations/02.dns/01.intro.md)
 
 - [AWS Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
 - [Cloudflare: CNAME flattening](https://developers.cloudflare.com/dns/cname-flattening), also see [Cloudflare integration](/4.integrations/02.dns/05.cloudflare.md)
-- [DNS made easy: ANAME records](https://support.dnsmadeeasy.com/support/solutions/articles/47001001412-aname-records)
+- [DNS made easy: ANAME records](https://support.dnsmadeeasy.com/hc/en-us/articles/34327231731227-What-is-an-ANAME-Record)
 - [DNSimple: ALIAS records](https://support.dnsimple.com/articles/alias-record)
 - [Dreamhost: Custom DNS records](https://help.dreamhost.com/hc/en-us/articles/360035516812-Adding-custom-DNS-records)
 - [Easy DNS: ANAME records](https://kb.easydns.com/knowledge/aname-records)
