@@ -1,11 +1,11 @@
 ---
-title:       .htaccess overview
-naviTitle:   .htaccess
-navigation.excerpt:     'All about .htaccess'
-lead:        'Meet the powerful Apache .htaccess configuration file.'
-navigation:   false
+title: .htaccess overview
+naviTitle: .htaccess
+navigation.excerpt: All about .htaccess
+lead: Meet the powerful Apache .htaccess configuration file.
+navigation: false
 head:
   meta:
-    - name: 'keywords'
-      content: 'HTTP Auth, Apache config, apache2.conf, php, ssi, gzip, Core'
+    - name: keywords
+      content: HTTP Auth, Apache config, apache2.conf, php, ssi, gzip, Core
 ---

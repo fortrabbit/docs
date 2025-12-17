@@ -112,5 +112,5 @@ echo "Max file uploads: " . ini_get('max_file_uploads') . "\n";
 
 ## Related
 
-- [.htaccess introduction](/dev/how-to/htaccess/intro)
+- [.htaccess introduction](/3.dev/21.htaccess/01.intro.md)
 - [php.net/configuration.file.per-user](https://www.php.net/configuration.file.per-user) - Official PHP documentation
