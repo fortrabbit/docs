@@ -36,7 +36,7 @@ We suggest to use [rsync](/3.dev/20.how-to/rsync.md) instead of scp. It's more f
 Before using SCP with fortrabbit, ensure you have:
 
 1. **SSH access configured** - See [SSH access guide](/1.platform/04.code-access/03.ssh.md)
-2. **SSH key pair set up** - See [SSH key setup](/3.dev/15.learn/01.ssh-keys.md)
+2. **SSH key pair set up** - See [SSH key setup](/3.dev/15.learn/01.ssh-key-setup.md)
 3. **SCP installed** - Usually pre-installed on Linux/macOS, via WSL on Windows
 
 ```shell
