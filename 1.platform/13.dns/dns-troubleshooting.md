@@ -27,7 +27,7 @@ Many domain providers default to a long TTL (Time To Live). The TTL value is in 
 
 ### Internal routing issues
 
-When you see a 404 - file not found error after the domain is correctly via DNS and ending up at fortrabbit, then most likely your code configuration is not setup to receive traffic for the domain. This can be a wrong root path setting, or a siteUrl setting that is wrong. Also check our [404 tips](/3.dev/22.http-errors/04.404.md).
+When you see a 404 - file not found error after the domain is correctly via DNS and ending up at fortrabbit, then most likely your code configuration is not setup to receive traffic for the domain. This can be a wrong root path setting, or a siteUrl setting that is wrong. Also check our [404 tips](/3.dev/22.http-errors/404.md).
 
 ### No DNS settings
 
