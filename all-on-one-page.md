@@ -1,11 +1,11 @@
 ---
-reviewed: 2026-01-19 14:05:34
+reviewed: 2026-01-22 10:46:21
 title: All docs on one page
 naviTitle: All docs on one page
 figure:
   emoji: 📖
   color: rgba(80, 100, 120, 1)
-lead: Hello LLMs and HUMANs! This is the all-in-one documentation page for fortrabbit's docs. It contains all the content from our documentation in a single file, making it easy for you to access, reference and search.
+lead: Hello LLMs and HUMANs! This is the all-in-one documentation page for fortrabbit's docs. It contains all the content from our documentation in a single file, making it easy for you to access, reference and search. — 91,097 words · 456 min read.
 ---
 
 ## BETA (now)
@@ -2910,7 +2910,9 @@ When the database is enabled, multiple settings and metrics become available in 
 ### Scaling
 {#scaling-1}
 
-Database plans differ mostly in the available storage, as well as the associated computing power. Usually MySQL and [PHP](#php) are scaled alongside since they rely on each other. Start small, scale on demand.
+Database plans differ mostly in the available storage, as well as the associated computing power. Usually MySQL and [PHP](#php) are scaled alongside since they rely on each other. As a rule of thumb, match PHP XS with MySQL XS, PHP SM with MySQL SM etc.
+
+When [autoscaling](#autoscaling) is enabled, smaller and larger plans are automatically booked, based on usage.
 
 #### MySQL OFF
 {#mysql-off}
@@ -2952,7 +2954,7 @@ The storage is integrated as a persistent file system. You have direct [code acc
 ### Scaling
 {#scaling-2}
 
-The storage is a passive component. The only property is the actual storage used. It may grow over time as your website writes more files to the disk. Autoscaling is available, see [here on autoscaling](#autoscaling).
+When [autoscaling](#autoscaling) is enabled, smaller and larger plans are automatically booked, based on usage. When autoscaling is disabled, the storage is capped at the chosen plan. Once the limit is reached, the environment can not write on the file system until space is cleaned. Web storage may grow over time as your website writes more files to the disk. Keep an eye on the metrics provided in the dashboard.
 
 ### Backups
 {#backups}
@@ -2978,9 +2980,9 @@ Traffic measures the data transfer that is caused by visitors browsing around yo
 ### Scaling
 {#scaling-3}
 
-It's recommended to have autoscaling enabled to allow more visitors. When autoscaling is disabled, the traffic will capped at the chosen level. Once the limit is reached, the environment will go offline until the next billing cycle (next month) or until the plan will be upgraded. When autoscaling is turned on (default), the next tier will be booked automatically once the current limit is reached, you will be billed more. When turned off, the website will go offline, once the limit is reached.
+When [autoscaling](#autoscaling) is enabled, smaller and larger plans are automatically booked, based on usage. When autoscaling is disabled, the traffic will capped at the chosen level. Once the limit is reached, the environment will go offline until the next billing cycle (next month) or until the plan will be upgraded.
 
-In many cases, increased traffic usage will correlate with more website visitors. This also can have an effect on other booked resources.
+In many cases, increased traffic usage will correlate with more website visitors. This also can have an effect on other booked resources. Check the [website performance](/3.dev/02.performance/).
 
 ### Avoid website obesity
 {#avoid-website-obesity}
@@ -5028,7 +5030,7 @@ The chosen backup will be unpacked and prepared. Once ready, the state will be s
 ### No guarantees
 {#no-guarantees}
 
-It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](#troubleshoot-504-errors), which is easy to debug, by looking at the logs.
+It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](#504), which is easy to debug, by looking at the logs.
 
 ### Backup restore VS git deployment
 {#backup-restore-vs-git-deployment}
@@ -5393,6 +5395,59 @@ Setup automatic git deployment for your Laravel application hosted on fortrabbit
 4. Install the [fortrabbit GitHub app](#the-fortrabbit-github-app) with your GitHub account
 5. Completed [Laravel setup steps](#laravel-setup)
 
+### Initialize Git and add GitHub
+{#initialize-git-and-add-github}
+
+Here's an example using Git and [GitHub CLI](#github-cli) to set up a local repository and connect it to GitHub:
+
+```shell
+## Setup local git repo
+{#setup-local-git-repo}
+$ git init
+$ git add -A
+$ git commit -m 'Init'
+
+## GitHub CLI to create/connect remote Git repo
+{#github-cli-to-create-connect-remote-git-repo}
+$ gh repo new
+## Follow the steps
+{#follow-the-steps}
+## Push an existing local repository to github.com
+{#push-an-existing-local-repository-to-github-com}
+## Add as remote and assign current branch as 'origin'
+{#add-as-remote-and-assign-current-branch-as-origin}
+```
+
+At the end, the Git repo at GitHub is created and content already pushed. From now on you only need to run `git add`, `git commit`, and `git push` to send code changes to GitHub.
+
+See the [git deployment intro](#deployment-intro) for more details on how to connect a local repo to a GitHub remote and enable automatic deployment using the [fortrabbit GitHub App](#the-fortrabbit-github-app).
+
+### Connect your GitHub repo with fortrabbit
+{#connect-your-github-repo-with-fortrabbit}
+
+If you already created an app on fortrabbit, connect the repository through the app settings. If not, create a new app on fortrabbit and set up the deployment:
+
+:BlockLink{title="Create a new (free trial) app" path="/new/app"}
+
+Choose Laravel as the software preset. Use Git deployment and select the Git repository you created previously.
+
+---
+
+## Laravel deploymentbuild settings
+{#laravel-deploymentbuild-settings}
+
+Configure git deployment for your Laravel application hosted on fortrabbit.
+
+### Get ready
+{#get-ready-15}
+
+1. Have a [local development environment](#intro-to-local-development-with-php) running
+2. Local [Laravel installation](#install-laravel-locally)
+3. Know about [deployment features](#deployment-intro)
+4. Install the [fortrabbit GitHub app](#the-fortrabbit-github-app) with your GitHub account
+5. Completed [Laravel setup steps](#laravel-setup)
+6. Ready for [Git deployment](#laravel-deployment).
+
 ### Recommended Laravel build steps
 {#recommended-laravel-build-steps}
 
@@ -5471,7 +5526,7 @@ It's possible, but not recommended, to install and use the laravel installer CLI
 Configure Laravel and run on fortrabbit.
 
 ### Get ready
-{#get-ready-15}
+{#get-ready-16}
 
 You have already started your Laravel on fortrabbit journey with the [setup](#laravel-setup) and continued over [deployment](#laravel-deployment). This is the final article to address most common configuration options to successfully run Laravel based applications on fortrabbit.
 
@@ -5686,7 +5741,7 @@ Setup, deploy and tune Laravel based web applications on fortrabbit.
 5. [Assets syncing](#craft-cms-assets-handling)
 
 ### Get ready
-{#get-ready-16}
+{#get-ready-17}
 
 - Have a [local development environment](#intro-to-local-development-with-php) running. [DDEV](#local-development-with-ddev) is recommended.
 - Use the [official Craft CMS install guide](https://craftcms.com/docs/5.x/install.html) as your guideline.
@@ -6153,7 +6208,7 @@ We found a couple of Craft CMS installations blowing up the storage folder. This
 All about performance problems with Craft CMS and how to run Craft CMS fast on not only on fortrabbit.
 
 ### Get ready
-{#get-ready-17}
+{#get-ready-18}
 
 Please check out our general [PHP performance section](/3.dev/02.performance) article as well before looking at specific Craft CMS related performance issues.
 
@@ -6644,7 +6699,7 @@ Special consideration should be taken when deploying Kirby CMS. We assume you ha
 Deploy Kirby CMS on fortrabbit using rsync.
 
 ### Get ready
-{#get-ready-18}
+{#get-ready-19}
 
 Our recommendation is to use a [combination of Git and rsync](#deploy-kirby-with-git-and-rsync) where code is deployed via Git and the content folder is synced down (and up) by rsync. But you can also deploy the whole project using rsync as well. Upload code changes and download content changes.
 
@@ -6716,7 +6771,7 @@ When syncing the whole project folder, the vendor folder will be synced along. I
 This is yje recommended workflow to deploy Kirby using Git. It's a bit more advanced, but worth the mile when maintaining a project.
 
 ### Get ready
-{#get-ready-19}
+{#get-ready-20}
 
 - Read the [Kirby Composer guide](https://getkirby.com/docs/guide/install-guide/composer) from the official Kirby docs.
 - Have a [local development environment](#intro-to-local-development-with-php) including PHP and Composer running.
@@ -6781,26 +6836,26 @@ Here is an example creating a repo from your local code base and using git comma
 
 ```shell
 ## Setup local git repo
-{#setup-local-git-repo}
+{#setup-local-git-repo-1}
 $ git init
 $ git add -A
 $ git commit -am 'Init'
 
 ## GitHub CLI to create/connect remote Git repo
-{#github-cli-to-create-connect-remote-git-repo}
+{#github-cli-to-create-connect-remote-git-repo-1}
 $ gh repo new
 ## Follow the steps
-{#follow-the-steps}
+{#follow-the-steps-1}
 ## Push an existing local repository to github.com
-{#push-an-existing-local-repository-to-github-com}
+{#push-an-existing-local-repository-to-github-com-1}
 ## Add as remote and assign current branch as 'origin'
-{#add-as-remote-and-assign-current-branch-as-origin}
+{#add-as-remote-and-assign-current-branch-as-origin-1}
 ```
 
 At the end, the Git repo at GitHub is created and content already pushed. From now on you only need to run add, commit and `git push` to send code changes to GitHub.
 
 ### Connect your GitHub repo with fortrabbit
-{#connect-your-github-repo-with-fortrabbit}
+{#connect-your-github-repo-with-fortrabbit-1}
 
 Now, the last step is to setup and connect an app on fortrabbit. Start the process in the fortrabbit dashboard:
 
@@ -6860,6 +6915,24 @@ Kirby does not let you set up the Panel by default on public-facing servers, see
 
 We recommend updating your local development environment first. On your local computer enter `composer update` in the terminal at the root level of the project folder to trigger the update. When you have confirmed that everything works, `git push` to push the latest updates to fortrabbit.
 
+### Caching
+{#caching}
+
+We highly recommend to turn on Kirby's native page caching. This is how you can enable it with the config file:
+
+```php
+// /site/config/config.php
+return [
+  'cache' => [
+    'pages' => [
+      'active' => true,
+    ]
+  ]
+];
+```
+
+If the config file does not exist, create it. Check the [official Kirby caching guides](https://getkirby.com/docs/guide/cache) for more options and a video.
+
 ### Sending mails
 {#sending-mails}
 
@@ -6882,7 +6955,7 @@ Install, deploy, run and tune Kirby CMS on fortrabbit.
 Learn here how to install Statamic locally and prepare it to be deployed to fortrabbit.
 
 ### Get ready
-{#get-ready-20}
+{#get-ready-21}
 
 Have a [local development environment](#intro-to-local-development-with-php) with PHP and a web server ready.
 
@@ -6935,7 +7008,7 @@ Installing a plain Statamic will not do much. Now add your templates, design and
 Learn here how to install Statamic on fortrabbit.
 
 ### Get ready
-{#get-ready-21}
+{#get-ready-22}
 
 - Have a [local development environment](#intro-to-local-development-with-php) with PHP and a web server ready.
 - Have [Statamic installed locally](#install-statamic).
@@ -6977,7 +7050,7 @@ Feeling adventurous? Use Git on the App to be able to push/pull contents. Instru
 Learn here our recommended way to deploy Statamic with Git and rsync on fortrabbit. You'll deploy to fortrabbit using Git (and Composer) and (optionally) synchronize contents with rsync.
 
 ### Get ready
-{#get-ready-22}
+{#get-ready-23}
 
 You should have Statamic running on your local machine, have a good understanding of Git and rsync, have an App on fortrabbit ready. Read our [Statamic intro](#install-statamic) first.
 
@@ -7170,7 +7243,7 @@ Create a repo on the environment, which has the same upstream as your local repo
 ```
 
 ### Get ready
-{#get-ready-23}
+{#get-ready-24}
 
 - Statamic running on your local machine
 - a good understanding of Git and rsync
@@ -7463,7 +7536,7 @@ This is work in progress. We are still learning about Drupal. Let us know if som
 ::
 
 ### Get ready
-{#get-ready-24}
+{#get-ready-25}
 
 It's assumed you've already created a new app and chose Drupal in the [software template](#software-templates). If not: You can do so in the fortrabbit dashboard. You should have a [local PHP development environment](#intro-to-local-development-with-php) running on your local machine. Drupal has good backward compatibility and this guide should work for Drupal 9, 10, and 11. We recommend following the [official Drupal installation guide](https://www.drupal.org/docs/installing-drupal) to install Drupal locally first. Here is an idea how to do it with Composer:
 
@@ -7597,7 +7670,7 @@ For your local development setup, you can create a `settings.local.php` file wit
 {#october-cms-guide}
 
 ### Get ready
-{#get-ready-25}
+{#get-ready-26}
 
 Make sure to have a [local development environment](#intro-to-local-development-with-php) up and running. Use the detailed [official October install guide](https://docs.octobercms.com/3.x/setup/installation.html) as your guideline to install October CMS on your local machine first. October CMS is based on Laravel, please have a look at our [Laravel guides](#install-laravel-locally) as well.
 
@@ -7691,7 +7764,7 @@ debugger:
 Symfony has been around for some while — but it doesn't look old. Install and tune Symfony on fortrabbit.
 
 ### Get ready
-{#get-ready-26}
+{#get-ready-27}
 
 You should have a [local PHP development environment](#intro-to-local-development-with-php) running on your local machine.
 
@@ -7877,7 +7950,7 @@ You can not use [sendmail](#mailing) on fortrabbit but you can use the `Swiftmai
 Typo3 has been around for some while. Here are some details running Typo3 on fortrabbit.
 
 ### Get ready
-{#get-ready-27}
+{#get-ready-28}
 
 We assume you've already created a new app and chose Typo3 in the [software template](#software-templates). If not: You can do so in the fortrabbit dashboard.
 
@@ -7980,7 +8053,7 @@ Support requests from customers complaining about server errors asking us to fix
 
 <!-- :ContentQuote{text="My site has crashed. Please fix ASAP!"} -->
 
-We get it. The website may suddenly return a [504 server error](#troubleshoot-504-errors). That looks like something is odd with the hosting. Maybe nobody touched the code for months, it has been running like this for months. Now suddenly an issue pops up. Then suddenly an issue appears, causing confusion, shame and strong emotions.
+We get it. The website may suddenly return a [504 server error](#504). That looks like something is odd with the hosting. Maybe nobody touched the code for months, it has been running like this for months. Now suddenly an issue pops up. Then suddenly an issue appears, causing confusion, shame and strong emotions.
 
 Our job is to explain that this is typically not an infrastructure problem, but an application issue. In most cases, we can help clients identify what's causing their problems. This can be a delicate situation. Sometimes business owners contact us after their web developer told them to do so. We then ask them to contact their developer again so the developer can work with us directly.
 
@@ -8046,7 +8119,7 @@ Identify common slow website culprits. How to uncover performance related proble
 Your website is slow? Feel it! Common signs of performance issues are:
 
 - Pages are slow to load - the browser loading icon spins
-- You see timeout errors - a [504 error](#troubleshoot-504-errors) printed on screen
+- You see timeout errors - a [504 error](#504) printed on screen
 
 ### Check the browser dev tools
 {#check-the-browser-dev-tools}
@@ -8302,7 +8375,7 @@ Congrats. You came all the way to the bottom.
 
 Website performance problems are often caused by misusage of the MySQL database resources provided. Those not only consist of an available storage size, but also computing power - think CPU cycles.
 
-Many [504 errors](#troubleshoot-504-errors) and slow PHP response times are related to slow MySQL queries. It's your job as the responsible developer to make sure no insane MySQL queries are executed with your [environment](#the-environment). When using a framework or CMS you might not write MySQL queries directly. Still you need to take that the requests to the database are executed without waste.
+Many [504 errors](#504) and slow PHP response times are related to slow MySQL queries. It's your job as the responsible developer to make sure no insane MySQL queries are executed with your [environment](#the-environment). When using a framework or CMS you might not write MySQL queries directly. Still you need to take that the requests to the database are executed without waste.
 
 ### Consider real usage scenarios
 {#consider-real-usage-scenarios}
@@ -8570,7 +8643,7 @@ If you generated an SSH key with PuTTY, you will need to make sure that the priv
 Composer is the defacto standard to handle PHP application dependencies, as well as providing mechanisms to keep them up-2-date. Integrate Composer into your development workflow with fortrabbit.
 
 ### Get ready
-{#get-ready-28}
+{#get-ready-29}
 
 It's recommended that you have a [local development environment](#intro-to-local-development-with-php) running including Composer and that you are making use of it already. Have a good understanding of [deployment in general](#deployment-intro) and on fortrabbit.
 
@@ -9467,7 +9540,7 @@ Review your currently selected [components](#components-intro). Compare with vis
 This guide explains how to download all necessary application data from a hosting provider to run a website elsewhere. Technical skills are required.
 
 ### Get ready
-{#get-ready-29}
+{#get-ready-30}
 
 It's assumed that you have access to your hosting provider. We recommend maintaining a local development environment for your website. Development should occur locally first, and the local copy should be kept up-to-date. For more information, see our [local development article](#intro-to-local-development-with-php). That means, under normal situations the developer should always have a working copy of the website running locally already.
 
@@ -9899,7 +9972,7 @@ We suggest to use [rsync](#rsync-deployment) instead of scp. It's more flexible 
 ::
 
 ### Get ready
-{#get-ready-30}
+{#get-ready-31}
 
 Before using SCP with fortrabbit, ensure you have:
 
@@ -10619,6 +10692,64 @@ head:
 
 ---
 
+## Troubleshoot 404 errors
+{#troubleshoot-404-errors}
+
+The 404 HTTP status code means "File Not Found" and is super common.
+
+The server can be reached and is answering but there is nothing to show under this address.
+
+### 404 error behavior
+{#404-error-behavior}
+
+- 404 errors will usually be shown on screen immediately
+- 404 errors often occur during setup or after code or configuration changes
+- 404 errors here are often rendered using a fortrabbit error page template
+
+**In most cases this is not a server issue, but a problem with your code and configuration.** Please check the following common issues first:
+
+### No code deployed
+{#no-code-deployed}
+
+Login by SSH or SFTP to see if anything is there to be delivered.
+
+### Wrong root path
+{#wrong-root-path}
+
+Maybe your software is using a different root path than the one that is currently set? Check the root path settings `htdocs` is the default root path if no specific software has been chosen in the [software template](#software-templates). Now, if you decide to install another software later on, you might have to set the root path accordingly. Best upload all files into `htdocs` directly, not into an extra folder that contains the files.
+
+See your environments root path settings and compare with what is deployed.
+
+#### .htaccess is missing
+{#htaccess-is-missing}
+
+Another common cause for 404 errors is a missing `.htaccess` file. This file is hidden from your Operating System by default (as it starts with a period) but contains important rules for your application to function properly.
+So if you are uploading with SFTP and have dragged the files from your Desktop (Finder) into your SFTP application (Cyberduck, Transmit, FileZilla), this file will likely be missing. You might be able to use the file explorer from your SFTP application or temporarily show hidden files in your OS to make the `.htaccess` file visible to you. Just make sure that when an `.htaccess` file is present (most likely it is), that it gets uploaded as well.
+
+#### Wrong address
+{#wrong-address}
+
+You might have an error with URL. Check for typos in the address bar (URL) of your browser.
+
+#### The app or domain is not yet ready
+{#the-app-or-domain-is-not-yet-ready}
+
+Creating an environment can sometimes take a few minutes. If you visit the test domain during that time, you'll get a 404 error. It's possible that this DNS response gets cached locally. The same is true for new domains.
+
+### It could also be something on our side
+{#it-could-also-be-something-on-our-side}
+
+It is also possible — although less likely - that this error is caused by a network, hardware or configuration issue on the side of your hosting provider — us. Please check our status page under [status.fortrabbit.com](https://status.fortrabbit.com) if there are any ongoing maintenance windows or service issues known.
+
+### Memorize the code
+{#memorize-the-code}
+
+- 4 = file
+- 0 = not
+- 4 = found
+
+---
+
 ## Troubleshoot 500 errors
 {#troubleshoot-500-errors}
 
@@ -10647,7 +10778,7 @@ Since 500 errors often appear during installation, setup or code changes: Review
 Our experience in support shows us that many 500 errors are caused by wrong rules in your `.htaccess` file. See our [main article on `.htaccess`](#htaccess-intro) for some background. Have you made any changes to `.htaccess` lately?
 
 ### It could also be something on our side
-{#it-could-also-be-something-on-our-side}
+{#it-could-also-be-something-on-our-side-1}
 
 It is also possible — although less likely - that this error is caused by a network, hardware or configuration issue on our side, your hosting provider. Please check our status page under [status.fortrabbit.com](https://status.fortrabbit.com) if there are any ongoing maintenance windows or service issues known.
 
@@ -10711,7 +10842,7 @@ If your application uses more memory than the plan allows for, the website will 
 One solution is to upgrade your PHP plan, if possible. Otherwise, you wil have to profile the App to figure out why it's using so much memory.
 
 ### It could also be something on our side
-{#it-could-also-be-something-on-our-side-1}
+{#it-could-also-be-something-on-our-side-2}
 
 It is also possible — although less likely - that this error is caused by a network, hardware or configuration issue on our side, your hosting provider. Please check our status page under [status.fortrabbit.com](https://status.fortrabbit.com) if there are any ongoing maintenance windows or service issues known.
 
@@ -10810,67 +10941,18 @@ There are many technical measurements which can be taken by the client to dramat
 The fortrabbit dashboard provides some useful metrics. You can see 5xx metrics by following the "Show all metrics" link. The 5xx metric is a mix of 500, 502, 503 and 504 errors. Have a look at the PHP response time metric as well. The PHP response time always goes up when there are 504 errors. Aim for no swap usage and a low PHP response time of not more than 200 ms.
 
 #### It could also be something on our side
-{#it-could-also-be-something-on-our-side-2}
+{#it-could-also-be-something-on-our-side-3}
 
 It is also possible — although less likely - that this error is caused by a network, hardware or configuration issue on our side, your hosting provider. Please check our status page under [status.fortrabbit.com](https://status.fortrabbit.com) if there are any ongoing maintenance windows or service issues known.
 
 ---
 
-## Troubleshoot 404 errors
-{#troubleshoot-404-errors}
+## HTTP errors
+{#http-errors}
 
-The 404 HTTP status code means "File Not Found" and is super common.
+HTTP response errors explained by numbers.
 
-The server can be reached and is answering but there is nothing to show under this address.
 
-### 404 error behavior
-{#404-error-behavior}
-
-- 404 errors will usually be shown on screen immediately
-- 404 errors often occur during setup or after code or configuration changes
-- 404 errors here are often rendered using a fortrabbit error page template
-
-**In most cases this is not a server issue, but a problem with your code and configuration.** Please check the following common issues first:
-
-### No code deployed
-{#no-code-deployed}
-
-Login by SSH or SFTP to see if anything is there to be delivered.
-
-### Wrong root path
-{#wrong-root-path}
-
-Maybe your software is using a different root path than the one that is currently set? Check the root path settings `htdocs` is the default root path if no specific software has been chosen in the [software template](#software-templates). Now, if you decide to install another software later on, you might have to set the root path accordingly. Best upload all files into `htdocs` directly, not into an extra folder that contains the files.
-
-See your environments root path settings and compare with what is deployed.
-
-#### .htaccess is missing
-{#htaccess-is-missing}
-
-Another common cause for 404 errors is a missing `.htaccess` file. This file is hidden from your Operating System by default (as it starts with a period) but contains important rules for your application to function properly.
-So if you are uploading with SFTP and have dragged the files from your Desktop (Finder) into your SFTP application (Cyberduck, Transmit, FileZilla), this file will likely be missing. You might be able to use the file explorer from your SFTP application or temporarily show hidden files in your OS to make the `.htaccess` file visible to you. Just make sure that when an `.htaccess` file is present (most likely it is), that it gets uploaded as well.
-
-#### Wrong address
-{#wrong-address}
-
-You might have an error with URL. Check for typos in the address bar (URL) of your browser.
-
-#### The app or domain is not yet ready
-{#the-app-or-domain-is-not-yet-ready}
-
-Creating an environment can sometimes take a few minutes. If you visit the test domain during that time, you'll get a 404 error. It's possible that this DNS response gets cached locally. The same is true for new domains.
-
-### It could also be something on our side
-{#it-could-also-be-something-on-our-side-3}
-
-It is also possible — although less likely - that this error is caused by a network, hardware or configuration issue on the side of your hosting provider — us. Please check our status page under [status.fortrabbit.com](https://status.fortrabbit.com) if there are any ongoing maintenance windows or service issues known.
-
-### Memorize the code
-{#memorize-the-code}
-
-- 4 = file
-- 0 = not
-- 4 = found
 
 ---
 
@@ -11075,15 +11157,6 @@ Examine the logs of your environment. See [here](#logs). There you'll likely fin
 {#it-could-also-be-something-on-our-side-7}
 
 It is also possible that this error is caused by a network, hardware or configuration issue on our side, your hosting provider. Please check our status page under [status.fortrabbit.com](https://status.fortrabbit.com) if there are any ongoing maintenance windows or service issues known.
-
----
-
-## HTTP errors
-{#http-errors}
-
-HTTP response errors explained by numbers.
-
-
 
 ---
 
@@ -11488,7 +11561,7 @@ Focus on high-performance, programmable DNS resolution.
 How to configure the domain provider to point to fortrabbit.
 
 ### Get ready
-{#get-ready-31}
+{#get-ready-32}
 
 You should have a domain created with the fortrabbit dashboard. See the [domain setup guide](#point-a-domain-to-fortrabbit). You should also have a domain registered somewhere. See [domain provider intro](#domain-registration-providers).
 
@@ -11931,7 +12004,12 @@ Application Performance Monitoring (APM) tools are essential for professional so
 
 APM tools help you look inside your running application to identify performance bottlenecks, slow database queries, and runtime errors. Instead of guessing why your app is slow, APM tools give you data-driven insights to optimize your code effectively.
 
-fortrabbit hosting aims to provide you actionable metrics to help you identifying issues without the need of an extra service. But professional APM tools are more than just server metrics. They can be essential.
+fortrabbit hosting aims to provide you [actionable metrics](#metrics) to help you identifying issues without the need of an extra service. But professional APM tools are more than just server metrics. They can be essential.
+
+### Relation to web analytics
+{#relation-to-web-analytics}
+
+APM tools focus on application and infrastructure performance, while [web analytics](/4.integrations/11.web-analytics) track user behavior and traffic patterns. Some modern APM tools like Sentry and PostHog include analytics features, providing error tracking, user insights and more in one platform. Consider using APM tools for sophisticated backend monitoring and web analytics for simple user interactions.
 
 ### Open source alternative
 {#open-source-alternative}
@@ -12390,7 +12468,7 @@ git commit -m "Init"
 {#create-a-new-public-repository-on-github-from-the-current-directory-1}
 gh repo create --public --source=. --push
 ## Follow the steps
-{#follow-the-steps-1}
+{#follow-the-steps-2}
 
 ## Once this is done, just push like this
 {#once-this-is-done-just-push-like-this}
@@ -12886,6 +12964,150 @@ To send e-mails via the API, you'll need to specify your SendGrid API key. There
 {#transactional-mail-providers}
 
 Integrate transactional mail services with fortrabbit.
+
+
+
+---
+
+## Web analytics services
+{#web-analytics-services}
+
+Web analytics help you understand how visitors interact with your website or application.
+
+Web analytics services provide insights into your website's traffic, user behavior, and content performance. They help you make data-driven decisions about content, design, and marketing strategies.
+
+### Privacy-focused analytics
+{#privacy-focused-analytics}
+
+Modern analytics solutions prioritize user privacy while still delivering valuable insights. Privacy-focused alternatives to traditional analytics platforms respect visitor privacy, comply with regulations like GDPR, and often don't require cookie consent banners.
+
+### Integration with fortrabbit
+{#integration-with-fortrabbit-1}
+
+All web analytics services work by including a tracking script in your website's HTML. Since you have full control over your application code, you can integrate any analytics service of your choice. All services provide a JavaScript snippet that you add to your page templates. So, there is no integration with fortrabbit required.
+
+### Relation to fortrabbit metrics
+{#relation-to-fortrabbit-metrics}
+
+fortrabbit provides server-side analytics called [metrics](#metrics) too. What's the difference?
+
+Server side analytics can be an alternative to client-side JavaScript tracking. Instead of sending data from the browser, analytics data is generated and collected on the web server. Server-side analytics work well in combination with client-side solutions to get a complete picture of user behavior and application performance. In many cases server-side analytics can provide enough insights. Mind that the data aggregation and type of data is different and can not be directly compared.
+
+Before modern browser based web analytics become popular, tools like [Webalizer](https://webalizer.net/), [AWStats](https://www.awstats.org/), and [Analog](https://analog.gsp.com/) analyzed web server log files to generate statistics. Those tools where basically a web UI for the server log files. It's kinda sad that these tools are rarely used today.
+
+### Cookie-less tracking
+{#cookie-less-tracking}
+
+Many modern analytics solutions use cookie-less tracking methods that comply with privacy regulations without requiring user consent. This approach often relies on fingerprinting.
+
+#### Limitations of fingerprinting
+{#limitations-of-fingerprinting}
+
+Browser fingerprinting attempts to identify users based on technical characteristics like device type, screen resolution, installed fonts, and other device attributes. There are some gotchas with that.
+
+- Modern browsers include privacy features that limit fingerprinting effectiveness (Safari's Intelligent Tracking Prevention, Firefox's Enhanced Tracking Protection)
+- Browser extensions like uBlock Origin may block tracking requests as well
+
+Fingerprinting-based analytics may miss data from users with privacy-conscious browser settings, resulting in incomplete visitor insights.
+
+### APM tools with analytics features
+{#apm-tools-with-analytics-features}
+
+[Application Performance Monitoring (APM) tools](#application-performance-monitoring) primarily focus on error tracking and performance metrics, but many also include analytics and user behavior features. These tools can also serve as an all-in-one solution for error monitoring and analytics. They may be more expensive and complex than dedicated analytics tools. PostHog is multi-purpose tool, that does error tracking, web analytics, dashboards and more in one go.
+
+---
+
+## Fathom Analytics
+{#fathom-analytics}
+
+Fathom Analytics is a Google Analytics alternative that provides simple, useful insights without tracking or storing personal data.
+
+[Fathom Analytics](https://usefathom.com) is a privacy-focused analytics tool. It doesn't use cookies, doesn't track users across websites, and complies with GDPR and CCPA without requiring cookie consent banners.
+
+Founded by Paul Jarvis and Jack Ellis, Fathom was built as a response to increasing privacy concerns with traditional analytics platforms. The founders advocate for ethical data collection and transparency.
+
+Fathom offers a free trial and paid plans for the hosted version. Pricing scales based on the number of page views.
+
+---
+
+## Plausible analytics
+{#plausible-analytics}
+
+Plausible is a lightweight and open-source web analytics tool that is privacy-friendly and doesn't use cookies.
+
+### About Plausible
+{#about-plausible}
+
+[Plausible Analytics](https://plausible.io) is a web analytics tool. It doesn't use cookies and complies with GDPR and CCPA without requiring consent banners. Plausible offers a  free trial and paid plans for the hosted service. You can also self-host the open-source version for free.
+
+---
+
+## Rybbit analytics
+{#rybbit-analytics}
+
+Rybbit is a privacy-focused web analytics platform designed for developers who want simple, fast insights without compromising user privacy.
+
+### About Rybbit
+{#about-rybbit}
+
+[Rybbit](https://rybbit.com) is a privacy-focused analytics tool. It doesn't track personal data or use cookies, making it GDPR compliant without requiring consent banners Check [rybbit.com](https://rybbit.com/pricing) for current pricing.
+
+---
+
+## Umami Analytics
+{#umami-analytics}
+
+Umami is an open-source analytics tool that can be self-hosted or used as a cloud service.
+
+### About Umami
+{#about-umami}
+
+[Umami](https://umami.is) is an open-source analytics tool. It doesn't track personal data, making it GDPR compliant without requiring cookie consent banners. Available as a cloud service or self-hosted. Umami Cloud offers a free tier and paid plans. Self-hosting is free.
+
+It's bit hard to see who is behind Umami. Business appears to be registered in the US.
+
+---
+
+## Matomo
+{#matomo}
+
+Matomo is an open-source analytics platform that can be self-hosted or used as a managed cloud service.
+
+### About Matomo
+{#about-matomo}
+
+[Matomo](https://matomo.org) is an open-source analytics platform. It doesn't rely on third parties and complies with GDPR, CCPA, and other privacy regulations. Available as a cloud service (paid) or self-hosted (free).
+
+Matomo is well known in the PHP scene and can be self-hosted on fortrabbit services.
+
+---
+
+## Google Analytics
+{#google-analytics}
+
+Google Analytics is the most widely used web analytics service, providing comprehensive insights into website traffic and user behavior.
+
+### About Google Analytics
+{#about-google-analytics}
+
+[Google Analytics](https://analytics.google.com) is a web analytics service from Google. The current version, Google Analytics 4 (GA4), uses an event-based data model.
+
+### Privacy considerations
+{#privacy-considerations}
+
+Google Analytics collects user data and uses cookies. In many jurisdictions, this requires explicit user consent through cookie consent banners. Consider using privacy-focused alternatives like Fathom or Plausible if GDPR compliance without consent banners is important to you. You should review Google's data processing terms and configure Analytics to comply with applicable privacy laws in your region.
+
+### Pricing
+{#pricing-3}
+
+Google Analytics is free for most websites. There is a paid version called Google Analytics 360 designed for enterprise customers with advanced needs.
+
+---
+
+## Web analytics
+{#web-analytics}
+
+Track and understand your website visitors.
 
 
 
