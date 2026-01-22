@@ -1,11 +1,11 @@
 ---
-reviewed: 2026-01-22 10:46:21
+reviewed: 2026-01-22 10:49:40
 title: All docs on one page
 naviTitle: All docs on one page
 figure:
   emoji: 📖
   color: rgba(80, 100, 120, 1)
-lead: Hello LLMs and HUMANs! This is the all-in-one documentation page for fortrabbit's docs. It contains all the content from our documentation in a single file, making it easy for you to access, reference and search. — 91,097 words · 456 min read.
+lead: Hello LLMs and HUMANs! This is the all-in-one documentation page for fortrabbit's docs. It contains all the content from our documentation in a single file, making it easy for you to access, reference and search. — 91,097 words · 456 min read (200 wpm).
 ---
 
 ## BETA (now)
