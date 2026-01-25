@@ -1,11 +1,11 @@
 ---
-reviewed: 2026-01-22 10:49:40
+reviewed: 2026-01-25 09:58:16
 title: All docs on one page
 naviTitle: All docs on one page
 figure:
   emoji: 📖
   color: rgba(80, 100, 120, 1)
-lead: Hello LLMs and HUMANs! This is the all-in-one documentation page for fortrabbit's docs. It contains all the content from our documentation in a single file, making it easy for you to access, reference and search. — 91,097 words · 456 min read (200 wpm).
+lead: Hello LLMs and HUMANs! This is the all-in-one documentation page for fortrabbit's docs. It contains all the content from our documentation in a single file, making it easy for you to access, reference and search. — 90,856 words · 455 min read (200 wpm).
 ---
 
 ## BETA (now)
@@ -375,16 +375,16 @@ The following structural changes in the new platform directly affect pricing:
 The new platform adopts a component-based pricing structure, similar to the former Pro Stack. This allows for individual scaling of resources, enabling you to pay only for what you need.
 
 | Platform               | Model      |
-|------------------------|------------|
+| ---------------------- | ---------- |
 | Old platform Uni Stack | 3 plans    |
 | Old platform Pro Stack | Components |
 | New platform           | Components |
 
 This allows better matching pricing for:
 
-* Standard CMS systems with a LAMP stack
-* Sophisticated web applications with jobs and key-value store
-* Static file systems
+- Standard CMS systems with a LAMP stack
+- Sophisticated web applications with jobs and key-value store
+- Static file systems
 
 #### No more Company Plans
 {#no-more-company-plans}
@@ -427,7 +427,7 @@ The following new platform plan combinations roughly match former Uni App plans:
 formerly priced at €5.0
 
 | Component  |      Spec |    Price |
-|------------|----------:|---------:|
+| ---------- | --------: | -------: |
 | PHP XS     |   128 MiB |       €1 |
 | MySQL SM   |   256 MiB |       €2 |
 | Storage SM |     1 GiB |       €1 |
@@ -441,7 +441,7 @@ formerly priced at €5.0
 formerly priced at €15.0
 
 | Component  |      Spec |     Price |
-|------------|----------:|----------:|
+| ---------- | --------: | --------: |
 | PHP SM     |   256 MiB |        €2 |
 | MySQL MD   |   512 MiB |        €4 |
 | Storage LG |     4 GiB |        €1 |
@@ -456,7 +456,7 @@ formerly priced at €15.0
 formerly priced at €30.0
 
 | Component  |      Spec |     Price |
-|------------|----------:|----------:|
+| ---------- | --------: | --------: |
 | PHP MD     |   512 MiB |        €4 |
 | MySQL LG   |     1 GiB |        €8 |
 | Storage XL |     8 GiB |        €8 |
@@ -468,10 +468,10 @@ formerly priced at €30.0
 ### Further details
 {#further-details}
 
-* [Pricing new platform](https://www.fortrabbit.com/pricing)
-* [Specs Uni Stack (old platform)](https://www.fortrabbit.com/specs)
-* [Specs Pro Stack (old platform)](https://www.fortrabbit.com//specs-pro)
-* <https://web.archive.org/web/20250513173439/https://www.fortrabbit.com/pricing>
+- [Pricing new platform](https://www.fortrabbit.com/pricing)
+- [Specs Uni Stack (old platform)](https://www.fortrabbit.com/specs)
+- [Specs Pro Stack (old platform)](https://www.fortrabbit.com//specs-pro)
+- <https://web.archive.org/web/20250513173439/https://www.fortrabbit.com/pricing>
 
 ---
 
@@ -4287,44 +4287,12 @@ You can also use DNS test websites to rule out caching, those can query your DNS
 ## Collaboration intro
 {#collaboration-intro}
 
-Collaborate on infrastructure just like you collaborate on code. Map real world business requirements related to your hosting. Work with other developers, billing managers and clients.
+The fortrabbit dashboard is build around collaboration. There are some unique concepts about it.
 
-### Collaboration starts with you
-{#collaboration-starts-with-you}
+### Personal access
+{#personal-access}
 
-Sign up to fortrabbit as an individual person, not a company or entity. See [account organization](#account-organization) and the [person object](#the-person) for more details on why and how to use your personal account.
-
-### Build for trust
-{#build-for-trust}
-
-The fortrabbit collaboration features are build to enable productive co-creation. The purpose is to connect people working together as developers and their business owners within the hosting platform. It's not about fine grained access control.
-
-The collaboration features are a powerful sword aimed for professional usage. It's anticipated that you have trust and policies in place within the context of your real word relations and teams to avoid misusage and damage.
-
-### Many to many relations
-{#many-to-many-relations}
-
-The fortrabbit collaboration features are designed without a lot of hierarchy. This enables to map many types of real world scenarios. You can have multiple apps, payment methods and teams connected to your personal account. Apps can be connected to multiple teams and solo developers. Payment methods also can be connected to multiple individuals and teams.
-
-### Co-ownership
-{#co-ownership}
-
-Apps are paid and thus owned by [payment methods](#the-payment-method), not accounts. People with access on the payment method have billing control. Payment methods can be shared with developers, clients and teams. See the [billing collaboration article](#billing-collaboration) for more.
-
-### Use cases
-{#use-cases-7}
-
-- Solo developers working for clients directly
-- Solo developers working for organizations
-- Smaller organizations with a fixed team
-- Bigger organizations with multiple teams
-
-### Example workflows
-{#example-workflows}
-
-- Invite clients and non-devs to take over billing
-- Create teams to share apps with other developers
-- Pass over app access from developer to developer
+Sign up to fortrabbit as an individual person, not a company or entity. See [account organization](#account-organization) and the [person object](#the-person) for more details on why and how to use your personal account. For most scenarios, you a person will only need one account and one login.
 
 ### Two levels of collaboration
 {#two-levels-of-collaboration}
@@ -4346,7 +4314,7 @@ With teams it's practical that the unlimited members have combined control on de
 Share access to a team with fellow developers by inviting them.
 
 ### Use cases
-{#use-cases-8}
+{#use-cases-7}
 
 A [team](#the-team) is group of developers working together on multiple apps. Use this flow to invite a developer to collaborate on multiple (current and future) apps and take part in the team as well. Invite people you know well and trust.
 
@@ -4393,7 +4361,7 @@ You can also invite developers or teams to specific apps, see [the app invite fl
 Share access to a single app. Use this flow to invite an external developer or team of developers to a specific app.
 
 ### Use cases
-{#use-cases-9}
+{#use-cases-8}
 
 The app invite is a flow to share app access between developers who don't know each other so well or don't have to collaborate on a lot of apps.
 
@@ -4452,7 +4420,7 @@ Share access to a payment method. Use this to invite a developer or team to a pa
 Understand that an account at fortrabbit represents a person. [Apps](#the-app) are owned by [payment methods](#the-payment-method), which are objects that are controlled by [people](#the-person). See [billing collaboration](#billing-collaboration) for the concepts.
 
 ### Use cases
-{#use-cases-10}
+{#use-cases-9}
 
 Use the 'invite to payment method' flow to invite someone to access an existing payment method. The invited person can be a non technical business owner (client, see [account types](#account-types)) or a tech-savvy developer to connect a team. Use this flow to invite:
 
@@ -4515,7 +4483,7 @@ Invite someone to take over billing and transfer the payment method of an app - 
 Understand that an account at fortrabbit represents a person. [Apps](#the-app) are owned by [payment methods](#the-payment-method), which are objects that are controlled by [people](#the-person). See [billing collaboration](#billing-collaboration) for the concepts.
 
 ### Use cases
-{#use-cases-11}
+{#use-cases-10}
 
 Use the 'invite to pay' flow to invite your client or the new owner to pay for the apps.
 
@@ -4904,7 +4872,7 @@ The fortrabbit [backup component](#backups) provides you with a downloadable fil
 - Database: a database dump file, if [database](#mysql) is booked
 
 ### Use cases
-{#use-cases-12}
+{#use-cases-11}
 
 - Grab a single file that was deleted
 - Restore only the database but not the files
@@ -5001,7 +4969,7 @@ Rollback an environment to a prior state.
 To restore from a backup, the [backup component](#backups) needs to be booked and at least one backup already needs to be present with the [environment](#the-environment) to be chosen as backup source.
 
 ### Use cases
-{#use-cases-13}
+{#use-cases-12}
 
 - Something broke the site, you want to go back to a working state
 - The site has been hacked
@@ -5030,7 +4998,7 @@ The chosen backup will be unpacked and prepared. Once ready, the state will be s
 ### No guarantees
 {#no-guarantees}
 
-It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](#504), which is easy to debug, by looking at the logs.
+It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](#troubleshoot-504-errors), which is easy to debug, by looking at the logs.
 
 ### Backup restore VS git deployment
 {#backup-restore-vs-git-deployment}
@@ -8053,7 +8021,7 @@ Support requests from customers complaining about server errors asking us to fix
 
 <!-- :ContentQuote{text="My site has crashed. Please fix ASAP!"} -->
 
-We get it. The website may suddenly return a [504 server error](#504). That looks like something is odd with the hosting. Maybe nobody touched the code for months, it has been running like this for months. Now suddenly an issue pops up. Then suddenly an issue appears, causing confusion, shame and strong emotions.
+We get it. The website may suddenly return a [504 server error](#troubleshoot-504-errors). That looks like something is odd with the hosting. Maybe nobody touched the code for months, it has been running like this for months. Now suddenly an issue pops up. Then suddenly an issue appears, causing confusion, shame and strong emotions.
 
 Our job is to explain that this is typically not an infrastructure problem, but an application issue. In most cases, we can help clients identify what's causing their problems. This can be a delicate situation. Sometimes business owners contact us after their web developer told them to do so. We then ask them to contact their developer again so the developer can work with us directly.
 
@@ -8119,7 +8087,7 @@ Identify common slow website culprits. How to uncover performance related proble
 Your website is slow? Feel it! Common signs of performance issues are:
 
 - Pages are slow to load - the browser loading icon spins
-- You see timeout errors - a [504 error](#504) printed on screen
+- You see timeout errors - a [504 error](#troubleshoot-504-errors) printed on screen
 
 ### Check the browser dev tools
 {#check-the-browser-dev-tools}
@@ -8375,7 +8343,7 @@ Congrats. You came all the way to the bottom.
 
 Website performance problems are often caused by misusage of the MySQL database resources provided. Those not only consist of an available storage size, but also computing power - think CPU cycles.
 
-Many [504 errors](#504) and slow PHP response times are related to slow MySQL queries. It's your job as the responsible developer to make sure no insane MySQL queries are executed with your [environment](#the-environment). When using a framework or CMS you might not write MySQL queries directly. Still you need to take that the requests to the database are executed without waste.
+Many [504 errors](#troubleshoot-504-errors) and slow PHP response times are related to slow MySQL queries. It's your job as the responsible developer to make sure no insane MySQL queries are executed with your [environment](#the-environment). When using a framework or CMS you might not write MySQL queries directly. Still you need to take that the requests to the database are executed without waste.
 
 ### Consider real usage scenarios
 {#consider-real-usage-scenarios}
@@ -8687,7 +8655,7 @@ This way Composer will be executed within the web delivery environment, which is
 An app on fortrabbit represents a project or website. It can be connected to a Git repo at GitHub. An environment can be linked to a branch of a Git repo. Each app has at least one environment.
 
 ### Use cases
-{#use-cases-14}
+{#use-cases-13}
 
 - **Feature development**: Build a new version while still being able to fix bugs in the running version without uploading all the new feature code.
 - **Purpose separation**: The backend team can break things while the frontend team can still work uninterrupted.
@@ -9545,7 +9513,7 @@ This guide explains how to download all necessary application data from a hostin
 It's assumed that you have access to your hosting provider. We recommend maintaining a local development environment for your website. Development should occur locally first, and the local copy should be kept up-to-date. For more information, see our [local development article](#intro-to-local-development-with-php). That means, under normal situations the developer should always have a working copy of the website running locally already.
 
 ### Use cases
-{#use-cases-15}
+{#use-cases-14}
 
 But there are some real world scenarios why downloading a website might still be required:
 
@@ -9697,7 +9665,7 @@ rsync --version
 For Windows 10 we recommend to install the Linux subsystem (WSL). For Windows 7 or even below you might use cwRsync which also requires Cygwin. There are some other clones and desktop GUI clients around as well. But don't be afraid of the Terminal, it's easier than you might think.
 
 ### Use cases
-{#use-cases-16}
+{#use-cases-15}
 
 You can [deploy with Git](#deployment-intro) or [upload files with SFTP](#sftp-access) and/or [use SSH](#ssh-access). Hook in rsync, either as an enhancement or as a replacement. These are your main options for using `rsync` to deploy code:
 
@@ -12762,7 +12730,7 @@ Neon runs on AWS. Choose a region that is close to your fortrabbit app.
 It  is a distributed SQL database that makes it easy to store and analyze massive amounts of data in real-time. It is good for IoT and time-series data. CrateDB uses the PostgreSQL wire protocol. So you can use many standard PostgreSQL clients and libraries to interact with it.
 
 ### Use Cases
-{#use-cases-17}
+{#use-cases-16}
 
 CrateDB is often used alongside a primary relational database (like the one provided by fortrabbit) to handle high-volume ingest and analytical queries (OLAP), while the primary DB handles transactional workloads (OLTP).
 
