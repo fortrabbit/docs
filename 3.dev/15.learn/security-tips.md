@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-02-15 08:20:42
+reviewed: 2026-01-29
 title: Security tips
 naviTitle: Security tips
 navigation.excerpt: 'Stay safe online'

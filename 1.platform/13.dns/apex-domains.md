@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-11-29 11:57:06
+reviewed: 2026-01-29
 naviTitle: Apex domains
 title: Apex domains
 navigation.excerpt: Naked, bare, root domains

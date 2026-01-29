@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-11-29 12:53:45
+reviewed: 2026-01-29
 title: Encoding
 navigation.excerpt: UTF-8 alternatives
 figure:

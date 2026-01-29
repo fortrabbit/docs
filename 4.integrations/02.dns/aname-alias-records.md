@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-12-05 11:28:02
+reviewed: 2026-01-29
 naviTitle: ANAME / ALIAS records
 title: ANAME / ALIAS records
 navigation.excerpt: Serve apex domains via host target

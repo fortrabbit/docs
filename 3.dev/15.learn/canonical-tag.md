@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-11-29 11:57:06
+reviewed: 2026-01-29
 naviTitle: Canonical tag
 title: Using a canonical tag
 navigation.excerpt: Landing directory for public access

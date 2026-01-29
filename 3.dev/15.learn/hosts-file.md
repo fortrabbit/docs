@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-07-08 15:00:38
+reviewed: 2026-01-29
 title: Hosts file
 navigation.excerpt: Testing domain routing with your local hosts file
 figure:

@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-11-29 20:54:10
+reviewed: 2026-01-29
 title: HTTPS troubleshooting
 naviTitle: HTTPS troubleshooting
 navigation.excerpt: Debugging SSL/TLS errors

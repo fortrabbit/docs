@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-08-31 14:33:23
+reviewed: 2026-01-29
 title: HTTP headers
 navigation.excerpt: Cache control and CORS
 figure:

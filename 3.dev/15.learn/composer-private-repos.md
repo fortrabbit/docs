@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-08-17 22:07:15
+reviewed: 2026-01-29
 title: Composer private repos
 navigation.excerpt: Access during git deployment
 figure:

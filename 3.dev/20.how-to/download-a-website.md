@@ -1,5 +1,5 @@
 ---
-reviewed: 2024-12-18 19:51:23
+reviewed: 2026-01-29
 title: How to download a full website
 naviTitle: Download a website
 navigation.excerpt: Get all data to have it running locally
