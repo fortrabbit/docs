@@ -5,9 +5,11 @@ title: Apex domains
 navigation.excerpt: Naked, bare, root domains
 lead: Apex domains, also called 'naked domain', 'root domain' or even 'bare domain', have no prefix and look like 'fortrabbit.com'.
 hideExamples: yes
-# figure:
-#   emoji: 🌐
-#   text: Apex domains deep dive
+figure:
+  emoji: '🏔️'
+  text: 'Root domains, no prefix.'
+  color: rgb(150, 140, 120)
+  textColor: rgb(36, 30, 22)
 links:
   - title: Domain
     route: /platform/objects/domain

@@ -4,6 +4,11 @@ title: DNS and domain troubleshooting
 naviTitle: DNS troubleshooting
 navigation.excerpt: Solving domain routing issues.
 lead: Solving common DNS problems when connecting an external domain to fortrabbit.
+figure:
+  emoji: '🔎'
+  text: 'Before going crazy, check DNS records and cache.'
+  color: rgb(135, 140, 160)
+  textColor: rgb(26, 28, 40)
 links:
   - title: Domain intro
     route: /platform/objects/domain
