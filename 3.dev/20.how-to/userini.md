@@ -3,6 +3,11 @@ reviewed: 2025-06-11 09:16:39
 title: Configure .user.ini
 naviTitle: Configure .user.ini
 navigation.excerpt: Control advanced PHP settings
+figure:
+  emoji: ⚙️
+  text: Fine-tune PHP settings beyond dashboard defaults.
+  color: rgba(120, 53, 15, 1)
+  textColor: rgba(254, 243, 199, 1)
 lead: How to use .user.ini files to configure PHP settings on fortrabbit
 draft: true
 links:

@@ -3,7 +3,12 @@ reviewed: 2025-09-26 09:25:25
 title: Restore from backup
 naviTitle: Restore from backup
 navigation.excerpt: automated rollback
-lead: Rollback an environment to a prior state.
+figure:
+  emoji: ⏮️
+  text: Roll back.
+  color: rgba(153, 27, 27, 1)
+  textColor: rgba(254, 226, 226, 1)
+lead: Rollback an environment to a prior state. Gotchas. Details.
 links:
   - title: Backup component
     route: /platform/components/backups

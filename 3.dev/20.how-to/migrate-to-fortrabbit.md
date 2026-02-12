@@ -3,7 +3,12 @@ reviewed: 2026-01-29
 title: Migrate to fortrabbit
 naviTitle: Migrate to fortrabbit
 navigation.excerpt: Website transfer to fortrabbit
-lead: How to transfer your website to fortrabbit with confidence.
+figure:
+  emoji: 🚚
+  text: Move your project here.
+  color: rgba(146, 64, 14, 1)
+  textColor: rgba(254, 243, 199, 1)
+lead: How to transfer your website to fortrabbit.
 ---
 
 fortrabbit is not your traditional shared or VPS hosting. It may require some tinkering on your application and we recommend reading the [intro](/1.platform/02.get-started/01.project-organization.md) as well as our specific install guides for various frameworks & CMS to get the concepts and features.

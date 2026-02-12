@@ -6,6 +6,7 @@ navigation.excerpt: Landing directory for public access
 lead: In the cases above you forward all requests to the ONE main domain you are using. In some cases you might have two domains serving the same content. Now, search engines need to know which page is the one they should show the results for. To help the search bots, you can use a canonical tag.
 hideExamples: yes
 figure:
+  emoji: ⚔️
   text: There can only be one.
 links:
   - title: Domain

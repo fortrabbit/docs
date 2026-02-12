@@ -3,6 +3,10 @@ reviewed: 2026-01-29
 title: PHP version upgrade
 naviTitle: Upgrade PHP
 navigation.excerpt: Switch to a new version with confidence
+figure:
+  emoji: 🐘
+  color: rgba(67, 56, 202, 1)
+  textColor: rgba(224, 231, 255, 1)
 lead: Best practices upgrading the PHP version.
 head:
   meta:

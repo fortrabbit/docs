@@ -3,6 +3,11 @@ reviewed: 2025-03-14 14:12:01
 title: rsync deployment
 naviTitle: rsync
 navigation.excerpt: Copy and sync like a boss
+figure:
+  emoji: rsync
+  text: Sync only what changed, fast and safe.
+  color: rgba(2, 132, 199, 1)
+  textColor: rgba(224, 242, 254, 1)
 lead: rsync is one of the best ways to deploy code fast and without hassle. It's also an often overlooked option. Let's change this! This article gives you some direction on how to use it in general and especially here on fortrabbit.
 ---
 

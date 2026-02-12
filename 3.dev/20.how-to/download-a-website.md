@@ -3,6 +3,11 @@ reviewed: 2026-01-29
 title: How to download a full website
 naviTitle: Download a website
 navigation.excerpt: Get all data to have it running locally
+figure:
+  emoji: 🔻
+  text: Pull files, data and dependencies.
+  color: rgba(30, 64, 175, 1)
+  textColor: rgba(219, 234, 254, 1)
 lead: This guide explains how to download all necessary application data from a hosting provider to run a website elsewhere. Technical skills are required.
 ---
 

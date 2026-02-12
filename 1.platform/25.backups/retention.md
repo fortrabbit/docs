@@ -3,6 +3,11 @@ reviewed: 2025-07-09 15:32:06
 title: Backup retention
 naviTitle: Backup retention
 navigation.excerpt: monthly, weekly, daily
+figure:
+  emoji: 🗓️
+  text: Keep the right backups for the right time.
+  color: rgba(22, 101, 52, 1)
+  textColor: rgba(220, 252, 231, 1)
 # lead: The automatic backup retention model en detail.
 draft: true
 links:

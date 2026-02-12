@@ -3,6 +3,11 @@ reviewed: 2025-09-26 09:25:34
 title: Backup files
 naviTitle: Backup files
 navigation.excerpt: Files and database
+figure:
+  emoji: 📦
+  text: Files and dumps, packed and ready.
+  color: rgba(55, 65, 81, 1)
+  textColor: rgba(229, 231, 235, 1)
 lead: What is included and excluded. How to use the files downloaded from the backup component to actually restore a website.
 links:
   - title: Backup component
