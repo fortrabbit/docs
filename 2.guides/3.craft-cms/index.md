@@ -3,10 +3,11 @@ title: Craft CMS guides
 naviTitle: Craft CMS
 navigation.excerpt: a flexible, user-friendly CMS
 navigation: false
+lead: Install, deploy, develop and tune Craft CMS on fortrabbit.
 figure:
   icon: simple-icons:craftcms
-  text: Install, deploy, develop and tune Craft CMS on fortrabbit.
   size: sm
+  hide: true
 head:
   meta:
     - name: keywords
