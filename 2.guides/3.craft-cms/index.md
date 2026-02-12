@@ -6,8 +6,9 @@ navigation: false
 lead: Install, deploy, develop and tune Craft CMS on fortrabbit.
 figure:
   icon: simple-icons:craftcms
+  color: rgb(229, 66, 43)
   size: sm
-  hide: true
+  hide: false
 head:
   meta:
     - name: keywords

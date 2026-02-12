@@ -1,2 +1,5 @@
 title: Craft CMS
 navigation.excerpt: Flexible, user-friendly CMS for creating custom digital experiences
+figure:
+  icon: simple-icons:craftcms
+  hide: true

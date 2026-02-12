@@ -1,2 +1,5 @@
 title: Kirby
 navigation.excerpt: Install and tune Kirby CMS
+figure:
+  icon: simple-icons:kirby
+  size: sm

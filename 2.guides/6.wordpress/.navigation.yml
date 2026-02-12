@@ -1,2 +1,5 @@
 title: WordPress
 navigation.excerpt: Install and tune WordPress
+figure:
+  icon: simple-icons:wordpress
+  size: sm

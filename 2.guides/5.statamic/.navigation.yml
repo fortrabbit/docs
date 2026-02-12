@@ -1,2 +1,5 @@
 title: Statamic
 navigation.excerpt: An extendable Laravel CMS package
+figure:
+  icon: simple-icons:statamic
+  size: sm
