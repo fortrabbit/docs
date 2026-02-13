@@ -1,5 +1,5 @@
 ---
-reviewed: 2025-01-15 10:43:16
+reviewed: 2026-02-13
 title: Git intro
 naviTitle: Git intro
 navigation.excerpt: Install, learn, enjoy

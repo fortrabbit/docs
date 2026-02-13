@@ -1,5 +1,5 @@
 ---
-reviewed: 2025-01-16 09:53:20
+reviewed: 2026-02-13
 title: Dig
 navigation.excerpt: 'Query public DNS entries from the terminal'
 figure:

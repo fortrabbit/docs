@@ -1,5 +1,5 @@
 ---
-reviewed: 2025-03-14 14:12:01
+reviewed: 2026-02-13
 title: rsync deployment
 naviTitle: rsync
 navigation.excerpt: Copy and sync like a boss
