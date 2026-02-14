@@ -6,5 +6,5 @@ lead: Install, deploy, run and tune Kirby CMS on fortrabbit.
 navigation: false
 figure:
   icon: simple-icons:kirby
-  size: sm
+  hide: true
 ---
