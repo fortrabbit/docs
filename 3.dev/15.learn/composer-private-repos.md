@@ -5,8 +5,8 @@ navigation.excerpt: Access during git deployment
 figure:
   emoji: 🔒
   text: Access private package repositories.
-  color: rgba(245, 158, 11, 1)
-  textColor: rgba(254, 243, 199, 1)
+  color: rgb(245, 158, 11)
+  textColor: rgb(254, 243, 199)
 lead: How to access private composer repositories during git deployment.
 draft: true
 head:

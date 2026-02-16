@@ -366,7 +366,7 @@
 }
 
 .theme-dark .workspace-leaf-content[data-type="diff-view"] .d2h-ins {
-    background-color: rgba(30, 71, 30, 0.5);
+    background-color: rgb(30, 71, 30, 0.5);
     border-color: #13501381;
 }
 
@@ -389,7 +389,7 @@
 }
 
 .theme-dark .workspace-leaf-content[data-type="diff-view"] .d2h-file-diff .d2h-ins.d2h-change {
-    background-color: rgba(37, 78, 37, 0.418);
+    background-color: rgb(37, 78, 37, 0.418);
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-file-list-wrapper {

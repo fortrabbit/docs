@@ -6,8 +6,8 @@ navigation.excerpt: Files and database
 figure:
   emoji: 📦
   text: Files and dumps, packed and ready.
-  color: rgba(55, 65, 81, 1)
-  textColor: rgba(229, 231, 235, 1)
+  color: rgb(55, 65, 81)
+  textColor: rgb(229, 231, 235)
 lead: What is included and excluded. How to use the files downloaded from the backup component to actually restore a website.
 links:
   - title: Backup component

@@ -6,8 +6,8 @@ navigation.excerpt: Code collaboration and deployment.
 figure:
   emoji: ⏱️
   text: Handle GitHub API rate limits.
-  color: rgba(180, 68, 68, 1)
-  textColor: rgba(254, 226, 226, 1)
+  color: rgb(180, 68, 68)
+  textColor: rgb(254, 226, 226)
 lead: The reason why you can run into this issue temporarily is that GitHub limits it's API per IP.
 draft: true
 sidebar: github

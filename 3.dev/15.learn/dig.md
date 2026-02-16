@@ -5,8 +5,8 @@ navigation.excerpt: 'Query public DNS entries from the terminal'
 figure:
   emoji: 🔍
   text: Query DNS records from terminal.
-  color: rgba(99, 102, 241, 1)
-  textColor: rgba(224, 231, 255, 1)
+  color: rgb(99, 102, 241)
+  textColor: rgb(224, 231, 255)
 lead: 'Query public DNS entries from the terminal using the dig command.'
 ---
 

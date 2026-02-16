@@ -6,8 +6,8 @@ navigation.excerpt: Install, learn, enjoy
 figure:
   emoji: 🌱
   text: Master version control.
-  color: rgba(40, 100, 40, 1)
-  textColor: rgba(209, 250, 229, 1)
+  color: rgb(40, 100, 40)
+  textColor: rgb(209, 250, 229)
 lead: This is a quick intro to Git, how to set it up and how to get started with it on fortrabbit.
 head:
   meta:

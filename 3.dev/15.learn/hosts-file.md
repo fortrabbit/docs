@@ -5,8 +5,8 @@ navigation.excerpt: Testing domain routing with your local hosts file
 figure:
   emoji: 🌐
   text: Test domains before DNS changes.
-  color: rgba(6, 182, 212, 1)
-  textColor: rgba(207, 250, 254, 1)
+  color: rgb(6, 182, 212)
+  textColor: rgb(207, 250, 254)
 lead: ''
 ---
 

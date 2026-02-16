@@ -6,8 +6,8 @@ navigation.excerpt: Using secure copy for file transfers
 figure:
   emoji: 🔐
   text: Copy files over SSH.
-  color: rgba(91, 33, 182, 1)
-  textColor: rgba(237, 233, 254, 1)
+  color: rgb(91, 33, 182)
+  textColor: rgb(237, 233, 254)
 lead: SCP (Secure Copy Protocol) enables secure file transfers between your local machine and remote servers using SSH encryption.
 links:
   - title: SSH access

@@ -5,7 +5,7 @@ navigation: false
 # figure:
 #   emoji: 🎛️
 #   text: Customize your hosting configuration.
-#   color: rgba(107, 114, 128, 1)
-#   textColor: rgba(202, 204, 206, 1)
+#   color: rgb(107, 114, 128)
+#   textColor: rgb(202, 204, 206)
 lead: These hosting settings are all exposed through the dashboard, individually for each environment.
 ---

@@ -6,8 +6,8 @@ navigation.excerpt: monthly, weekly, daily
 figure:
   emoji: 🗓️
   text: Keep the right backups for the right time.
-  color: rgba(22, 101, 52, 1)
-  textColor: rgba(220, 252, 231, 1)
+  color: rgb(22, 101, 52)
+  textColor: rgb(220, 252, 231)
 # lead: The automatic backup retention model en detail.
 draft: true
 links:

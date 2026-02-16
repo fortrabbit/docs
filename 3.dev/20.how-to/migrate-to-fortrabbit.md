@@ -6,8 +6,8 @@ navigation.excerpt: Website transfer to fortrabbit
 figure:
   emoji: 🚚
   text: Move your project here.
-  color: rgba(146, 64, 14, 1)
-  textColor: rgba(254, 243, 199, 1)
+  color: rgb(146, 64, 14)
+  textColor: rgb(254, 243, 199)
 lead: How to transfer your website to fortrabbit.
 ---
 
