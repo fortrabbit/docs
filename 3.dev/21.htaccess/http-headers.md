@@ -4,8 +4,8 @@ title: HTTP headers
 navigation.excerpt: Cache control and CORS
 figure:
   text: Control HTTP response headers with .htaccess.
-  color: rgba(99, 102, 241, 1)
-  textColor: rgba(224, 231, 255, 1)
+  color: rgb(99, 102, 241)
+  textColor: rgb(224, 231, 255)
 lead: 'HTTP headers are part of an Hyper Text Transfer Protocol request and response. HTTP headers are defining the operating parameters of an HTTP transaction. Use htaccess to modify these.'
 head:
   meta:
