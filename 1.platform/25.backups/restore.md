@@ -6,8 +6,8 @@ navigation.excerpt: automated rollback
 figure:
   emoji: ⏮️
   text: Roll back.
-  color: rgba(153, 27, 27, 1)
-  textColor: rgba(254, 226, 226, 1)
+  color: rgb(153, 27, 27)
+  textColor: rgb(254, 226, 226)
 lead: Rollback an environment to a prior state. Gotchas. Details.
 links:
   - title: Backup component
