@@ -1,5 +1,5 @@
 ---
-reviewed: 2026-01-29
+reviewed: 2026-02-28 12:56:21
 naviTitle: Apex domains
 title: Apex domains
 navigation.excerpt: Naked, bare, root domains
@@ -35,6 +35,6 @@ Although not impossible, apex domains should really not be routed using a CNAME 
 
 A host name is more flexible than an IP. Any domain routed to an IP is bound to that IP. This doesn't give us the flexibility to move environments around, in case of scaling or incidents, for example with a DDoS attack.
 
-## Our opinion on apex domains
+## Arguments
 
-Some think that the minimal look of an apex domain is aesthetically more pleasing than their subdomain counterparts. But as described above, apex domains don't play well with flexible host name routing. Big players like Google use a `www.` subdomain without you noticing, and most bigger sites do the same. Safari and Chrome don't show the `www.` prefix in the address bar anymore. Firefox greys out the protocol of this trivial domain. The `www.` prefix is so common, you hardly recognize it. Some people think, moving from bare to `www.` will impact SEO negatively. This should not be the case if done properly, as long as the apex domain will forward all requests.
+Some think that the minimal look of an apex domain is aesthetically more pleasing than their subdomain counterparts. But as described above, apex domains don't play well with flexible host name routing. Big players like Google use a `www.` subdomain without you noticing, many other big sites do the same. Safari and Chrome don't show the `www.` prefix in the address bar anymore. Firefox greys out the protocol of this trivial domain. The `www.` prefix is so common, you hardly recognize it. Some people think, moving from bare to `www.` will impact SEO negatively. This should not be the case if done properly, as long as the apex domain will forward all requests, also deep-links with proper 301 moved permanently HTTP status code. It's transparent. People can continue to use the APEX domain in communication, such as social media posts and credit cards.
