@@ -17,6 +17,9 @@ links:
   - title: ANAME / ALIAS records
     route: /integrations/dns/aname-alias-records
     property: docs
+  - title: Domain forwarding service
+    route: /platform/dns/domain-forwarding-service
+    property: docs
 head:
   meta:
     - name: 'keywords'
