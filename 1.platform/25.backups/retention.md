@@ -1,5 +1,5 @@
 ---
-reviewed: 2025-07-09 15:32:06
+reviewed: 2026-03-06 09:16:00
 title: Backup retention
 naviTitle: Backup retention
 navigation.excerpt: monthly, weekly, daily

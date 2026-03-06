@@ -1,5 +1,5 @@
 ---
-reviewed: 2025-06-11 09:16:39
+reviewed: 2026-03-01 09:15:18
 title: Configure .user.ini
 naviTitle: Configure .user.ini
 navigation.excerpt: Control advanced PHP settings
