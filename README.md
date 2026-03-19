@@ -1,5 +1,6 @@
 ---
 navigation: false
+sitemap: false
 ---
 
 # fortrabbit docs
