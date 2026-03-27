@@ -16,7 +16,7 @@ links:
     route: /platform/dns/apex-domains
     property: docs
   - title: WWW forwarding
-    route: /platform/dns/domain-forwarding
+    route: /platform/dns/domain-forwarding-service
     property: docs
 ---
 
