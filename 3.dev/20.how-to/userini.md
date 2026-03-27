@@ -12,7 +12,7 @@ lead: How to use .user.ini files to configure PHP settings on fortrabbit
 draft: true
 links:
   - title: .htaccess intro
-    route: /dev/how-to/htaccess/intro
+    route: /dev/htaccess/intro
     property: docs
   - title: PHP settings in dashboard
     route: /platform/settings/php
