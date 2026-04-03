@@ -21,7 +21,7 @@ links:
 ---
 
 ::CallOut{alert}
-Due to potential upcoming changes, we recommend using the [WWW forwarding service](/1.platform/13.dns/5.domain-forwarding-service.md) instead of ANAME/ALIAS records with our service at this time.
+Due to potential upcoming changes, we recommend using the [WWW forwarding service](/1.platform/13.dns/04.domain-forwarding-service.md) instead of ANAME/ALIAS records with our service at this time.
 ::
 
 ## Domain providers with ANAME support
@@ -42,4 +42,4 @@ As far as we know, by the time of this writing, the following providers do not s
 
 - GoDaddy - see [this SO question](https://webmasters.stackexchange.com/questions/141075/aname-record-not-accepted) ☠️
 
-If your provider does not support CNAME flattening, but you would like to take advantage of it, we recommend switching to that does or consider using our [www forwarding service](/1.platform/13.dns/5.domain-forwarding-service.md).
+If your provider does not support CNAME flattening, but you would like to take advantage of it, we recommend switching to that does or consider using our [www forwarding service](/1.platform/13.dns/04.domain-forwarding-service.md).
