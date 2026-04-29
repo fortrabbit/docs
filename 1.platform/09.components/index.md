@@ -1,4 +1,5 @@
 ---
+reviewed: 2025-09-14
 title: Components
 naviTitle: Components
 navigation.excerpt: Building blocks of environments

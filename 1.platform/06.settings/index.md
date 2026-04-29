@@ -1,4 +1,5 @@
 ---
+reviewed: 2026-02-16
 title: Hosting settings
 naviTitle: Settings
 navigation: false

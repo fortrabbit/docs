@@ -1,4 +1,5 @@
 ---
+reviewed: 2026-02-12
 title: WordPress guides
 naviTitle: WordPress
 lead: Install and run WordPress on fortrabbit.

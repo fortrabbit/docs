@@ -1,4 +1,5 @@
 ---
+reviewed: 2026-02-12
 title: Other HTTP errors
 naviTitle: Others
 navigation.excerpt: 400, 403, 408, 502 …

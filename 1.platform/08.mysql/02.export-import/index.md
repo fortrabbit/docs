@@ -1,4 +1,5 @@
 ---
+reviewed: 2025-09-15
 title: MySQL export/import
 naviTitle: Export/import
 navigation: false

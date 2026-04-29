@@ -1,4 +1,5 @@
 ---
+reviewed: 2026-01-21
 title: HTTP errors
 naviTitle: HTTP errors
 navigation.excerpt: 504,503,404,403 …

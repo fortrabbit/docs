@@ -1,4 +1,5 @@
 ---
+reviewed: 2025-12-17
 title: .htaccess overview
 naviTitle: .htaccess
 navigation.excerpt: All about .htaccess

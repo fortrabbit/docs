@@ -1,4 +1,5 @@
 ---
+reviewed: 2026-04-27
 title: New platform
 navigation.excerpt: New features, changes, access
 lead: The new fortrabbit platform brings GitHub deployment, component-based pricing, persistent storage, and free collaboration to PHP hosting.

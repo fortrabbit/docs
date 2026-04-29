@@ -1,4 +1,5 @@
 ---
+reviewed: 2026-02-12
 title: Laravel
 naviTitle: Laravel
 navigation.excerpt: Install and run Laravel on fortrabbit.
