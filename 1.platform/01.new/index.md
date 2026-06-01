@@ -1,8 +1,9 @@
 ---
-reviewed: 2026-04-27
+reviewed: 2026-06-01 08:36:51
+reviewer: fl
 title: New platform
 navigation.excerpt: New features, changes, access
-lead: 'The new platform is fortrabbit rebuilt around a different model: a single Git workflow with GitHub deployment, components you scale individually instead of fixed plans, and persistent storage that survives every deploy. If you already host on the old platform, the new and old comparison summarises what changed and where to find an equivalent feature for everything you rely on today.'
+lead: 'The new platform: GitHub deployment, components scale individually and persistent storage that survives every deploy.'
 navigation: false
 head:
   meta:
