@@ -24,7 +24,7 @@ Git can help you to collaborate on code projects, keep track of your code change
 - A history of all files included, so you can review or undo changes
 - Powerful file merging which makes collaboration easy
 
-To deploy code to fortrabbit you use Git from your local machine and push to the remote on GitHub. So it should be part of your [local development setup](/4.integrations/01.local-development/01.intro.md).
+On fortrabbit, Git also doubles as the deployment transport — the [git push deploy tutorial](/3.dev/15.learn/git-push-deploy.md) shows that workflow. Git should be part of the [local development setup](/4.integrations/01.local-development/01.intro.md).
 
 ## Learn Git
 
@@ -59,16 +59,12 @@ Most people probably use Git from the command line (aka bash, terminal, shell). 
 
 You hopefully already know that [GitHub](https://github.com) is the most popular choice for versionized code hosting and collaborating. It is free to use with private and public projects. Sometimes people confuse Git with [GitHub](https://github.com). Git is the version control system established by Linus Torvalds. GitHub is the service, which offers Git remote hosting and additional extra magic collaboration features. GitHub has extended Git workflows with neat communication tools around the basic Git usage. Most notable is the "pull request" workflow.
 
-See our [GitHub intergration guide](/4.integrations/03.git-providers/02.github.md).
+See our [GitHub integration guide](/4.integrations/03.git-providers/02.github.md).
 
 ## Large Git repos
 
-A bloated Git repository slows down deployment. You might even hit limits. In most cases the repo can and should be small.
+A bloated Git repository is slow to clone, push, and pull. In most cases the repo can and should be small.
 
 ## Large files in Git
 
-You should not put big binary files (> 2 MB) into your Git repo.
-
-In general we also advise not to put assets and most importantly images or even videos in Git. Some images that belong to your website layout, like your company logo (a small SVG) are ok. But when you have a lot of images in Git, odds are that this is bad practice.
-
-For almost all cases, your uploaded content images (`.jpg`, `.png`, `.gif`) do not belong in Git. Remember that the Git repo and the web-space are different things here at fortrabbit, Git is a one-way street here. The next user upload will not be in Git anyways. It's a good practice to **separate code from content** for many reasons. So we advise to deploy user uploads, static assets and other runtime data separate from the core code deployment done with Git.
+Big binary files (> 2 MiB) do not belong in a Git repo. The same goes for most assets — images, videos, uploads. A small SVG that is part of the website layout is fine; a folder full of content images is not. Since Git never forgets, every large file bloats the history forever, even after deletion. Keep the repo to code; the [deployment intro](/1.platform/05.deployment/01.intro.md) explains how code and content stay separated on fortrabbit.
