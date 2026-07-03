@@ -1,6 +1,6 @@
 ---
-reviewed: 2025-09-15
+reviewed: 2026-07-03
 title: Code access overview
 navigation: false
-lead: Get direct access on the deployed files on the environment.
+lead: Get direct access to the deployed files on the environment.
 ---
