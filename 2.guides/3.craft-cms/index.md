@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-02-12
+reviewed: 2026-07-04
+reviewer: fl
 title: Craft CMS guides
 naviTitle: Craft CMS
 navigation.excerpt: a flexible, user-friendly CMS
@@ -13,5 +14,5 @@ figure:
 head:
   meta:
     - name: keywords
-      content: craft craftCMS, setup, overview, install guide, update, run local
+      content: 'craft cms, setup, overview, install guide, deploy, fortrabbit'
 ---

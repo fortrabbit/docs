@@ -1,5 +1,6 @@
 ---
-reviewed: 2025-09-09
+reviewed: 2026-07-04
+reviewer: fl
 title: Statamic guides
 naviTitle: Statamic
 navigation.excerpt: an extendable Laravel CMS package

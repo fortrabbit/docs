@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-02-14
+reviewed: 2026-07-04
+reviewer: fl
 title: Kirby guides
 naviTitle: Kirby
 navigation.excerpt: Install and run Kirby on fortrabbit
