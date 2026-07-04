@@ -1,5 +1,5 @@
 ---
-reviewed: 2025-09-14
+reviewed: 2026-07-04
 title: Dashboard objects
 naviTitle: Objects
 navigation: false

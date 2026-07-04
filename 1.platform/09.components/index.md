@@ -1,8 +1,8 @@
 ---
-reviewed: 2025-09-14
+reviewed: 2026-07-04
 title: Components
 naviTitle: Components
 navigation.excerpt: Building blocks of environments
 navigation: false
-lead: Individually scalable and billable hosting resources for environments AKA the service you buy here.
+lead: Individually scalable and billable hosting resources for environments.
 ---
