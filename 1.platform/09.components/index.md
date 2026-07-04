@@ -1,5 +1,6 @@
 ---
 reviewed: 2026-07-04
+reviewer: fl
 title: Components
 naviTitle: Components
 navigation.excerpt: Building blocks of environments
