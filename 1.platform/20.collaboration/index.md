@@ -1,7 +1,8 @@
 ---
-reviewed: 2025-09-15
+reviewed: 2026-07-04
+reviewer: fl
 title: Collaboration
 navigation.excerpt: Teamwork makes the dream work.
-lead: Sharing access infra resources with others.
+lead: Share access to infra resources with others.
 navigation: false
 ---

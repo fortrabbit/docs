@@ -1,5 +1,6 @@
 ---
-reviewed: 2025-09-26 09:25:34
+reviewed: 2026-07-04
+reviewer: fl
 title: Backup files
 naviTitle: Backup files
 navigation.excerpt: Files and database
@@ -12,6 +13,10 @@ lead: What is included and excluded. How to use the files downloaded from the ba
 links:
   - title: Backup component
     route: /platform/components/backups
+head:
+  meta:
+    - name: keywords
+      content: 'backup files, restore backup, backup archive, database dump, file recovery, fortrabbit'
 ---
 
 The fortrabbit [backup component](/1.platform/09.components/05.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/02.environment.md) at a given time, see [retention](/1.platform/25.backups/retention.md). This archive contains everything required to restore the state of that backup.
@@ -29,13 +34,13 @@ The fortrabbit [backup component](/1.platform/09.components/05.backups.md) provi
 
 ## Backups VS git deployment
 
-Developers using [git deployment](/1.platform/05.deployment/01.intro.md) already have access to an archive with a complete history of the code base. The fortrabbit backups also contain runtime data such as the vendor folder contents and user uploads. Given the nature of most PHP based applications.
+Developers using [git deployment](/1.platform/05.deployment/01.intro.md) already have access to an archive with a complete history of the code base. The fortrabbit backups also contain runtime data such as vendor folder contents and user uploads, given the nature of most PHP-based applications.
 
 ## Backup file sizes
 
-The shown size of the backups is unlikely to match what is shown with actual usage for MySQL size and web storage. Mind that the backups are compressed, while the data in production is not.
+The shown size of the backups is unlikely to match actual usage for MySQL size and web storage. Note that backups are compressed, while production data is not.
 
-The size of the backup shown in the dashboard likely will not match with the downloaded files. This is because the sizes with the dashboard are shown in binary (mebibyte) not decimal format (megabyte) like with most Operating Systems. Also the local file system may have a different block size.
+The backup size shown in the dashboard likely will not match the downloaded files. Dashboard sizes use binary units (mebibyte), while most operating systems display decimal units (megabyte). Additionally, the local file system may have a different block size.
 
 ## Excludes
 
@@ -78,7 +83,7 @@ While you can [restore from backup](/1.platform/25.backups/restore.md) using the
 
 ### Restore files
 
-To recover files from a backup, first ensure to have the unpacked files from the backup archive on your local machine. Then upload these files to your environment at using SFTP or [rsync](//3.dev/20.how-to/rsync.md). Be sure to remove any unnecessary files from the remote environment and don't forget to include hidden files.
+To recover files from a backup, first ensure to have the unpacked files from the backup archive on your local machine. Then upload these files to your environment using SFTP or [rsync](/3.dev/20.how-to/rsync.md). Be sure to remove any unnecessary files from the remote environment and don't forget to include hidden files.
 
 ### Restore database
 

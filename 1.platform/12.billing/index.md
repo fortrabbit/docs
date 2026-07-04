@@ -1,5 +1,6 @@
 ---
-reviewed: 2025-11-12
+reviewed: 2026-07-04
+reviewer: fl
 title: Billing
 navigation.excerpt: 'Payments, billing, invoices, vat …'
 lead: All stuff related to payments, invoices, VAT and what not.

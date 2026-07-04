@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-02-16
+reviewed: 2026-07-04
+reviewer: fl
 title: Topic backups
 naviTitle: Backups
 navigation.excerpt: Working with backups

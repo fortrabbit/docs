@@ -1,5 +1,6 @@
 ---
-reviewed: 2025-09-26 09:25:25
+reviewed: 2026-07-04
+reviewer: fl
 title: Restore from backup
 naviTitle: Restore from backup
 navigation.excerpt: automated rollback
@@ -8,10 +9,14 @@ figure:
   text: Roll back.
   color: rgb(153, 27, 27)
   textColor: rgb(254, 226, 226)
-lead: Rollback an environment to a prior state. Gotchas. Details.
+lead: Restore your environment from a backup to recover from errors or security issues. Learn how the restore process works and what to expect.
 links:
   - title: Backup component
     route: /platform/components/backups
+head:
+  meta:
+    - name: keywords
+      content: 'restore backup, rollback environment, database restore, file restore, backup recovery, fortrabbit'
 ---
 
 ## Requirements
@@ -29,7 +34,7 @@ To restore from a backup, the [backup component](/1.platform/09.components/05.ba
 - With the list of available backups choose the one you want to restore
 - Click the restore button, confirm, wait until finished
 
-The process can take a while. The time it takes depends on the size of the project. It is usually finished within a couple a couple of minutes but can also take hours. While the backup restore is in progress, the environment will stay online for most of the time, but may have degraded performance. A short downtime is expected.
+The process can take a while. The time it takes depends on the size of the project. It is usually finished within a couple of minutes but can also take hours. While the backup restore is in progress, the environment will stay online for most of the time, but may have degraded performance. A short downtime is expected.
 
 ## What happens during restore
 
@@ -43,7 +48,7 @@ The chosen backup will be unpacked and prepared. Once ready, the state will be s
 
 ## No guarantees
 
-It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](/3.dev/22.http-status-codes/504.md), which is easy to debug, by looking at the logs.
+It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](/3.dev/22.http-status-codes/500.md), which is easy to debug, by looking at the logs.
 
 ## Backup restore VS git deployment
 
