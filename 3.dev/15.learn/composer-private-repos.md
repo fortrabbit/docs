@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-01-29
+reviewed: 2026-07-06
+reviewer: fl
 title: Composer private repos
 navigation.excerpt: Access during git deployment
 figure:
@@ -33,7 +34,7 @@ Private composer repos can be hosted.
 
 - Private GitHub repos
 - Self hosted Satis like service such as [Packeton](https://github.com/vtsykun/packeton)
-- [Packagist.com](https://packagist.com) - commercial by makers of Composer with
+- [Packagist.com](https://packagist.com) - commercial package repository by makers of Composer
 - [Repman.io](https://repman.io) - by Buddy.works
 
 ## A - Using SSH Keys
@@ -42,9 +43,9 @@ Private composer repos can be hosted.
 
 Alternatively you can limit access to a specific SSH keys. To use your private Composer repo in [Git deployment](/1.platform/05.deployment/01.intro.md) you need to set up authentication so your fortrabbit app can access your external repo (probably hosted on GitHub). For this you need a public and private SSH key-pair.
 
-The private key will be stored in the deployment environment of your App that composer can use it but nobody else. The command shows the public key, in the example is starting with `ssh-rsa AAA...` and ending with `..odTimp`. You can now install the key in your private Git repository. You can re-run this command at any time to view or change the current key of your app.
+The private key will be stored in the deployment environment of your App that composer can use it but nobody else. The command shows the public key, which in the example starts with `ssh-rsa AAA...` and ends with `..odTimp`. You can now install the key in your private Git repository. You can re-run this command at any time to view or change the current key of your app.
 
-## B - Using oAuth or HTTP Basic Auth
+## B - Using OAuth or HTTP Basic Auth
 
 In the script below we generate a global `auth.json` file that contains credentials to access a GitHub repo using oAuth, and another private repo which is protected with Basic HTTP auth, in our example Laravel Nova. This is just for the sake of demonstration, you will probably need to adjust it to your needs.
 

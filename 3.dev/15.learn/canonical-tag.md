@@ -1,9 +1,10 @@
 ---
-reviewed: 2026-01-29
+reviewed: 2026-07-06
+reviewer: fl
 naviTitle: Canonical tag
 title: Using a canonical tag
 navigation.excerpt: Landing directory for public access
-lead: In the cases above you forward all requests to the ONE main domain you are using. In some cases you might have two domains serving the same content. Now, search engines need to know which page is the one they should show the results for. To help the search bots, you can use a canonical tag.
+lead: A canonical tag tells search engines which version of a page is the preferred one when you have multiple domains or URLs serving the same content. Use the rel="canonical" link element in your HTML head to consolidate indexing signals.
 hideExamples: yes
 figure:
   emoji: ⚔️
@@ -15,10 +16,14 @@ links:
 head:
   meta:
     - name: 'keywords'
-      content: 'TLD, Top Level Domain, top-level-domain, registration, ordering, zone apex, apex domain, root domain, naked domain, subdomain, domain masking, domain name server, DNS, ns, lookup'
+      content: 'canonical tag, canonical URL, duplicate content, rel=canonical, search engine optimization, SEO, fortrabbit'
 ---
 
-Let's say you have the page `fortrabbit.com` and `fort-rabbit.com` registered. And you want both to display the same content but still keep the originally entered URL. Actually, for this example you might want to create a redirect to the domain that matters most to you, but whatever. Now you want the search engines to prefer and link to the first domain, so you add in the head of each HTML page delivered:
+## Handling duplicate content with canonical tags
+
+A canonical tag is a link element in your HTML that specifies the preferred URL when you have multiple domains or pages with identical content. Search engines use this signal to consolidate duplicate content and avoid diluting your SEO ranking across multiple versions.
+
+Suppose you have `fortrabbit.com` and `fort-rabbit.com` registered, and both display the same content. You want to keep both URLs active but tell search engines that `fortrabbit.com` is the authoritative version. Instead of creating a [redirect](/3.dev/21.htaccess/02.redirects.md) (which might break existing links), you can add a canonical tag to the head of every HTML page:
 
 ```html
 <head>
@@ -30,4 +35,4 @@ Let's say you have the page `fortrabbit.com` and `fort-rabbit.com` registered. A
 </head>
 ```
 
-More on [canonical URLs on Google webmasters](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls)
+This approach is gentler than redirects when you need [multiple domains serving the same environment](/1.platform/13.dns/02.external-domains.md). For more technical details, see [Google's guide to canonical URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls).

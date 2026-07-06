@@ -1,7 +1,8 @@
 ---
-reviewed: 2025-11-10
+reviewed: 2026-07-06
+reviewer: fl
 title: Performance
-lead: Understand and optimize your websites's performance.
+lead: Understand and optimize your website's performance.
 navigation.excerpt: TTFB and more
 navigation: false
 ---

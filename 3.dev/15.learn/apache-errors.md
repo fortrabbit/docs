@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-07-01
+reviewed: 2026-07-06
+reviewer: fl
 ai-author: co-authored
 title: Apache error log codes
 naviTitle: Apache error codes
@@ -49,6 +50,8 @@ On fortrabbit, Apache talks to PHP-FPM over FastCGI (`proxy_fcgi`). The codes be
 
 ## Access and authorization
 
+Apache uses access rules and `Require` directives to control who can reach your app. These errors occur when a request is blocked by those rules.
+
 ### AH01630: client denied by server configuration
 
 ```raw
@@ -71,6 +74,8 @@ Review the `Require user` / `Require group` rules for the protected path and con
 
 ## Missing files and bad requests
 
+Apache logs these errors when it cannot find a requested file or receives a malformed URI that it cannot parse.
+
 ### AH00128: file does not exist
 
 ```raw
@@ -91,6 +96,8 @@ The request line held a malformed URI. Maps to a `400`. These almost always come
 
 ## Redirect loops
 
+Redirect loops occur when rewrite rules in `.htaccess` accidentally redirect requests to themselves, causing Apache to give up after a maximum number of internal redirects.
+
 ### AH00124: request exceeded the limit of internal redirects
 
 ```raw
@@ -102,6 +109,8 @@ A rewrite rule kept redirecting the request to itself until Apache gave up. Maps
 Review recent `.htaccess` changes and the `RewriteRule` targets. See the [.htaccess intro](/3.dev/21.htaccess/01.intro.md).
 
 ## PHP-FPM and FastCGI
+
+Since fortrabbit apps communicate with PHP-FPM over FastCGI, several error codes reflect failures in that connection or crashes in the PHP process.
 
 ### AH01071: PHP-FPM error output
 
