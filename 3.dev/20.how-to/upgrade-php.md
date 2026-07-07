@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-01-29
+reviewed: 2026-07-07
+reviewer: fl
 title: PHP version upgrade
 naviTitle: Upgrade PHP
 navigation.excerpt: Switch to a new version with confidence
@@ -7,23 +8,27 @@ figure:
   emoji: 🐘
   color: rgb(67, 56, 202)
   textColor: rgb(224, 231, 255)
-lead: Best practices upgrading the PHP version.
+lead: How to safely upgrade your PHP version on fortrabbit, with testing steps to ensure your app works after the change.
 head:
   meta:
     - name: 'keywords'
-      content: 'app-design, deprecation, migration, EOl, mcrypt'
+      content: 'PHP upgrade, PHP version, migration, deployment, testing, fortrabbit'
 ---
 
 ## PHP versions at fortrabbit
 
+fortrabbit provides multiple PHP versions available for selection per environment in the dashboard, with options to disable automatic updates and manually switch versions when older versions are retired.
+
 - fortrabbit will provide new PHP versions some time after they became available
 - New PHP versions are available to select per environment in the dashboard
-- There are usually multiple PHP version to choose from
-- You need to update software you are using
+- There are usually multiple PHP versions to choose from
+- You need to update the software you are using
 - You can opt-out of automatic PHP version updates
 - Outdated PHP versions will be removed, remaining environments will be upgraded then
 
 ## Simple PHP version upgrade path
+
+Update your software dependencies, change the PHP version directly in the fortrabbit dashboard, and test immediately to ensure your app works correctly—you can roll back anytime if issues occur.
 
 1. Make sure the software you are using is up-to-date
 2. In the dashboard
@@ -56,7 +61,7 @@ Get your dependencies up-to-date:
 
 Applications based on PHP frameworks like Laravel and Symfony are usually updated with [Composer](/3.dev/15.learn/02.composer.md) which keeps track of all dependencies.
 
-Issuing `composer outdated` in the Terminal will give you a list of outdated packages. Those in red need can easily be updated. Those in yellow also need to be updated but might cause trouble because they are major version upgrades.
+Issuing `composer outdated` in the Terminal will give you a list of outdated packages. Those in red can be updated easily. Those in yellow also need to be updated but might cause trouble because they are major version upgrades.
 
 You can also ask Composer why you currently can not upgrade to a PHP version:
 
@@ -82,14 +87,14 @@ Now, as everything is up-to-date and tested in your **local** development enviro
 
 #### 4.1 - Change the PHP version on fortrabbit
 
-Updating the PHP version for your fortrabbit App is as simple as pie:
+Updating the PHP version for your fortrabbit app is straightforward:
 
 1. Visit your environment in the fortrabbit dashboard
 2. Go to the PHP settings
 3. Select a newer PHP version from the drop-down menu
 4. Hit save
 
-Changes can take two minutes to be applied. You can also test-run this. When your App is not running under the newer version of PHP you can switch back to the deprecated version for another while and find out why first.
+Changes can take two minutes to be applied. You can also test this in advance. When your app is not running under the newer version of PHP, you can switch back to the previous version to troubleshoot first.
 
 :BlockLink{title="Change the PHP version for {{app-env-id}}" path="/environments/{{app-env-id}}/php/php-version"}
 

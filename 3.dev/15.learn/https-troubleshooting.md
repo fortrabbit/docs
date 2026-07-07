@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-01-29
+reviewed: 2026-07-07
+reviewer: fl
 title: HTTPS troubleshooting
 naviTitle: HTTPS troubleshooting
 navigation.excerpt: Debugging SSL/TLS errors
@@ -8,46 +9,50 @@ figure:
   text: Debug SSL certificate issues.
   color: rgb(34, 197, 94)
   textColor: rgb(220, 252, 231)
-lead: Are you seeing a certificate error in the browser? This article aims to help developers troubleshooting such errors.
+lead: Are you seeing a certificate error in the browser? This article helps troubleshoot TLS certificate errors on fortrabbit-hosted domains.
+head:
+  meta:
+    - name: keywords
+      content: 'HTTPS certificate error, SSL/TLS troubleshooting, certificate warning, mixed content, fortrabbit'
 ---
 
 TLS certificates are provided for all [domains](/1.platform/10.objects/10.domain.md). See the [HTTPS article](/1.platform/13.dns/06.https.md) for general features and configuration.
 
 ## Review certificates in the browser
 
-To troubleshoot TLS/SSL issues, it's often helpful to view the certificate in the browser. In Chrome and Firefox you can:
+Viewing the certificate details in your browser is the first step to diagnosing TLS/SSL issues. In Chrome and Firefox:
 
-1. open `https://www.{{domain}}.com` < make sure to use https not http
+1. open `https://www.{{domain}}.com` (use https, not http)
 2. click on the lock icon
-3. click on the "certificate" to reveal the cert
+3. click on certificate to reveal the details
 
 ## You see a certificate warning
 
-You visit your Apps domain under the `https://` address and the browser throws an error that the certificate can't be verified. If you inspect the cert in the browser, you see that the cert is issued for `*.frbit.app` not for your domain. The error might be:
+When visiting your domain under `https://` and the browser shows a certificate error, check the certificate details in the browser. You may see that the cert is issued for `*.frbit.app` rather than your domain. A common error is:
 
 ```raw
 NET::ERR_CERT_COMMON_NAME_INVALID
 ```
 
-This can happen, if the domain is brand new and the cert is not yet installed. It can take up to 24 hours for the certs to get installed. The cert for the apex domain (for forwarding) usually takes a bit longer than the other one.
+This can happen if the domain is brand new and the certificate hasn't been installed yet. Certificates typically take up to 24 hours to provision; apex domain certificates often take longer.
 
-This can also happen, if your domain is not routed to fortrabbit (yet). Only domains that are already routed to fortrabbit will receive a TLS cert. Please see the domain settings in the Dashboard.
+It can also occur if your domain isn't yet routed to fortrabbit. Only domains routed to fortrabbit receive TLS certificates. Check the [domain settings](/1.platform/10.objects/10.domain.md) in the dashboard to verify routing.
 
-There are also other edge cases when this can happen, for example, if your domain has set CAA records with DNS.
+CAA DNS records can also cause certificate provisioning issues if they restrict certificate issuance. See [HTTPS](/1.platform/13.dns/06.https.md) for details on DNS configuration.
 
 ## The browser shows a mixed content warning
 
-The cert is installed but you are seeing an error like this:
+When the certificate is installed but you see an error like this, the page contains insecure resources:
 
 > Mixed Content: The page at '{{domain}}' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint '{{domain}}'. This request has been blocked; the content must be served over HTTPS.
 
-Your website is requesting external resources over non-secure addresses (http). Check the source code of your website and find and replace all `http://` requests. This can be CSS files, fonts, images or AJAX calls.
+The issue is that your website requests external resources via http rather than https. This can be CSS files, fonts, images, or AJAX calls. Check your source code for all `http://` requests and replace them.
 
-You can use `https://` instead or you just leave out the protocol entirely like so: `//`. The last method will use whatever has been used before, so that works especially well, with different environments, for instance when your local development machine doesn't have TLS.
+You have two options: use `https://` explicitly, or omit the protocol entirely with `//`, which uses the same scheme as the current page. The latter approach is especially useful for code that runs in different environments, such as when your local development machine doesn't support TLS.
 
 ## Solve SSL verification errors
 
-This is the fix for verification errors when using ssl_verify. If you are receiving an error like the following:
+When your application fails to verify SSL certificates with errors like the following, you need to configure the CA certificate path:
 
 ```raw
 error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
@@ -63,7 +68,7 @@ stream_context_set_option($context, 'ssl', 'allow_self_signed', false);
 
 $fp = stream_socket_client("thedomain.tld:443", $errno, $errstr, 5, STREAM_CLIENT_CONNECT, $context);
 # ..
-if (stream_socket_enable_crypto($fp, true, STREAM_CRYPTO_METHOD_SSLv3_CLIENT) === false) {
+if (stream_socket_enable_crypto($fp, true, STREAM_CRYPTO_METHOD_TLS_CLIENT) === false) {
     die("Failed to verify certificate");
 }
 #...

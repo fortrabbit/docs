@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-02-13
+reviewed: 2026-07-07
+reviewer: fl
 title: rsync deployment
 naviTitle: rsync
 navigation.excerpt: Copy and sync like a boss
@@ -8,7 +9,11 @@ figure:
   text: Sync only what changed, fast and safe.
   color: rgb(2, 132, 199)
   textColor: rgb(224, 242, 254)
-lead: rsync is one of the best ways to deploy code fast and without hassle. It's also an often overlooked option. Let's change this! This article gives you some direction on how to use it in general and especially here on fortrabbit.
+lead: rsync is a command-line tool to deploy code by syncing only changed files over SSH, making it much faster than SFTP and a powerful complement to Git-based deployment on fortrabbit.
+head:
+  meta:
+    - name: keywords
+      content: 'rsync, deployment, file sync, sftp alternative, git deployment, fortrabbit'
 ---
 
 ## About rsync
@@ -24,7 +29,7 @@ rsync --version
 # If installed, it will output the version number.
 ```
 
-For Windows 10 we recommend to install the Linux subsystem (WSL). For Windows 7 or even below you might use cwRsync which also requires Cygwin. There are some other clones and desktop GUI clients around as well. But don't be afraid of the Terminal, it's easier than you might think.
+For Windows 10 we recommend to install the Linux subsystem (WSL). For Windows 7 and earlier, you might use cwRsync, which also requires Cygwin. There are some other clones and desktop GUI clients available. The Terminal approach is straightforward and worth learning.
 
 ## Use cases
 
@@ -95,7 +100,7 @@ Here are some common options to alter the sync mode:
 | `-p`        | Permissions will be synchronized.                                                                                                                 |
 | `-t`        | Preserve modification times.                                                                                                                      |
 | `-g`        | Set Unix group of file/folder on destination to group in source. Also: use group as check criteria                                                |
-| `-o`        | Set Unix group of file/folder on destination to group in source. Also: use group as check criteria                                                |
+| `-o`        | Set Unix owner of file/folder on destination to owner in source. Also: use owner as check criteria                                                |
 | `-c`        | Instead of modification time and size, use checksum of the file contents. Use with caution when modification time on destination is not reliable. |
 | `-C`        | Shorthand for `--cvs-exclude`. Exclude version control files like `.git`, `.hg`, `.svn`.                                                          |
 | `-h`        | Human readable output: display byte sizes in MiB, GiB instead of plain bytes.                                                                     |
@@ -216,7 +221,7 @@ total size ...
 
 After you confirm that `rsync` will only delete what you want (otherwise: `--exclude` works also to exclude files which are not in your local file set but remote, and you don't want to remove them from remote), you can go ahead and remove the `-n` option and run again.
 
-`rsync` even gives you four different ways to handle deletes: Besides the `--delete` flag, there is also `--delete-before`, `--delete-after`, `--delete-during` and `--delete-delay` (and `--delete-excluded`, but that's another special case of its own). Those four variants of `--delete` just let you control when files are removed. This is actually quite handy: When dealing with larger amounts of changed files to a live website, you might want to use `--delete-after` instead of `--delete-before`, so that first all new files are in place, then obsolete files are removed, which makes it more likely that your website is not "interrupted" when handling a request during the synchronization, which relies on files which would be removed.. I think you get the gist.
+`rsync` offers four variants to control when files are removed: `--delete-before`, `--delete-after`, `--delete-during`, and `--delete-delay` (plus `--delete-excluded` for a special case). When dealing with larger numbers of changed files on a live website, `--delete-after` is often preferable to `--delete-before`, as it ensures all new files are in place before removals occur, reducing the chance of service interruption during synchronization.
 
 ## Advanced topics
 

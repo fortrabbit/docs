@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-03-01 09:15:18
+reviewed: 2026-07-07
+reviewer: fl
 title: Configure .user.ini
 naviTitle: Configure .user.ini
 navigation.excerpt: Control advanced PHP settings
@@ -8,7 +9,7 @@ figure:
   text: Fine-tune PHP settings beyond dashboard defaults.
   color: rgb(120, 53, 15)
   textColor: rgb(254, 243, 199)
-lead: How to use .user.ini files to configure PHP settings on fortrabbit
+lead: How to use .user.ini files to configure PHP settings at fortrabbit
 draft: true
 links:
   - title: .htaccess intro
@@ -22,7 +23,7 @@ links:
     property: docs
 ---
 
-At fortrabbit, php-fpm is used for performance and security reasons. This means that adding `php_value` directives to `.htaccess` files has no effect. You can instead use `.user.ini` files to configure PHP settings that aren't available through the fortrabbit dashboard.
+at fortrabbit, php-fpm is used for performance and security reasons. This means that adding `php_value` directives to `.htaccess` files has no effect. You can instead use `.user.ini` files to configure PHP settings that aren't available through the fortrabbit dashboard.
 
 ## When to use .user.ini
 

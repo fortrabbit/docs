@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-02-13
+reviewed: 2026-07-07
+reviewer: fl
 title: Git intro
 naviTitle: Git intro
 navigation.excerpt: Install, learn, enjoy
@@ -12,7 +13,7 @@ lead: This is a quick intro to Git, how to set it up and how to get started with
 head:
   meta:
     - name: 'keywords'
-      content: 'ssh key, public key, git, ssh, Putty, msysGit, Cygwin, Windows, Git Bash'
+      content: 'git, git basics, version control, ssh key, fortrabbit, learn git'
 ---
 
 ## About Git
@@ -28,7 +29,7 @@ On fortrabbit, Git also doubles as the deployment transport — the [git push de
 
 ## Learn Git
 
-You should be familiar with Git standard operations and concepts — these are: `commit`, `push` and `pull`. If you don't know Git, yet, we recommend to go ahead and learn the basics. You will profit from it either way — whether you keep using fortrabbit or not. It's a cornerstone of todays software development. For developers not used to the shell it might not be very intuitive to start with, but once you got started it soon becomes very, very handy for all kinds of things besides deploying to fortrabbit. There are many good tutorials out there in the interwebs to get started. For example:
+You should be familiar with Git standard operations and concepts — these are: `commit`, `push` and `pull`. If you don't know Git, yet, we recommend to go ahead and learn the basics. You will profit from it either way — whether you keep using fortrabbit or not. It's a cornerstone of today's software development. For developers not used to the shell it might not be very intuitive to start with, but once you got started it soon becomes very, very handy for all kinds of things besides deploying to fortrabbit. There are many good tutorials out there in the interwebs to get started. For example:
 
 - [GitHub: Quickstart](https://docs.github.com/en/get-started/quickstart)
 - [Official docs from Git SCM](https://git-scm.com/doc)

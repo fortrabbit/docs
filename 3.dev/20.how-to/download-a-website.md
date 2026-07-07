@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-01-29
+reviewed: 2026-07-07
+reviewer: fl
 title: How to download a full website
 naviTitle: Download a website
 navigation.excerpt: Get all data to have it running locally
@@ -9,6 +10,10 @@ figure:
   color: rgb(30, 64, 175)
   textColor: rgb(219, 234, 254)
 lead: This guide explains how to download all necessary application data from a hosting provider to run a website elsewhere. Technical skills are required.
+head:
+  meta:
+    - name: keywords
+      content: 'download website, website backup, migrate hosting, database export, SFTP, fortrabbit'
 ---
 
 ## Get ready
@@ -36,25 +41,25 @@ When you deployed using Git, you can clone the existing Git repo. Most likely yo
 
 ### Composer dependencies
 
-After cloning the Git repo, you might need to install the dependencies to make your local installation complete. The `composer.json` contains all the instructions. Run `composer install` locally in your root folder. See our [Composer article](/3.dev/15.learn/02.composer.md) for more details. This insures the installed dependencies are up-to-date and match you local development environment.
+After cloning the Git repo, you might need to install the dependencies to make your local installation complete. The `composer.json` contains all the instructions. Run `composer install` locally in your root folder. See our [Composer article](/3.dev/15.learn/02.composer.md) for more details. This ensures the installed dependencies are up-to-date and match your local development environment.
 
 ### Runtime data
 
-Beside the code base which you might have received via Git, take care to grab assets and runtime data as well. This can be some compiled CSS/JS files that got deployed along with pipelining or uploads done by users of the application.
+Besides the code base you might have received via Git, you need to download assets and runtime data as well. This includes compiled CSS/JS files deployed through build pipelines and user uploads.
 
 ### Assets and other files
 
 Remember Git works in [one direction only here](/1.platform/05.deployment/01.intro.md#git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
 
 - Login by SFTP and just download what is required - [see here](/1.platform/04.code-access/04.sftp.md)
-- Login by SSH, zip the files and question and them from a public URL - [see here](/1.platform/04.code-access/03.ssh.md)
-- Use rsync to download a folder or even the entire project - [see here](//3.dev/20.how-to/rsync.md)
+- Login by SSH, zip the files and serve them from a public URL - [see here](/1.platform/04.code-access/03.ssh.md)
+- Use rsync to download a folder or even the entire project - [see here](/3.dev/20.how-to/rsync.md)
 
 You can use the methods above for the whole code base when you haven't been deploying with Git before or you are unsure if the Git repo contains the latest changes.
 
 ### Database backup
 
-Last not least you likely will need the contents of your database. Use a local MySQL client to connect to your fortrabbit database and export a dump of it. Detailed instructions over [here](/1.platform/08.mysql/01.access/01.intro.md).
+Last but not least, you likely will need the contents of your database. Use a local MySQL client to connect to your fortrabbit database and export a dump of it. Detailed instructions over [here](/1.platform/08.mysql/01.access/01.intro.md).
 
 ## Using our backups
 
@@ -62,4 +67,4 @@ When the above is not working for you for some reason and your website is hosted
 
 ## Check for data consistency
 
-We highly advice to double-check your new backup for completeness. You can run diffs on other copies. We also advice to run your App locally and see it with your eyes.
+We highly advise you to double-check your new backup for completeness. You can run diffs on other copies. We also advise you to run your app locally and verify it with your eyes.

@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-01-29
+reviewed: 2026-07-07
+reviewer: fl
 title: Hosts file
 navigation.excerpt: Testing domain routing with your local hosts file
 figure:
@@ -7,10 +8,14 @@ figure:
   text: Test domains before DNS changes.
   color: rgb(6, 182, 212)
   textColor: rgb(207, 250, 254)
-lead: ''
+lead: Test a custom domain locally before switching DNS routing by adding an entry to your hosts file.
+head:
+  meta:
+    - name: keywords
+      content: 'hosts file, local testing, domain routing, DNS, development, fortrabbit'
 ---
 
-Let's say you are developing a website soon to launch and want to test your custom domain before actually switching the DNS routing it to fortrabbit. Just add the domain to fortrabbit, as you would do with any actually routed domain, then modify your local hosts file, which lets your local machine know ahead of time that the domain is to be served from your fortrabbit e.
+To test a custom domain before actually routing DNS to fortrabbit, add the domain to your fortrabbit app, then modify your local hosts file to tell your local machine that the domain is served from your app on fortrabbit.
 
 ### hosts file location
 

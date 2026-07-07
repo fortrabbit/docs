@@ -1,5 +1,6 @@
 ---
-reviewed: 2025-09-22 09:20:31
+reviewed: 2026-07-07
+reviewer: fl
 title: Using Secure Copy
 naviTitle: SCP
 navigation.excerpt: Using secure copy for file transfers
@@ -38,7 +39,7 @@ We suggest to use [rsync](/3.dev/20.how-to/rsync.md) instead of scp. It's more f
 
 ## Get ready
 
-Before using SCP with fortrabbit, ensure you have:
+To transfer files securely using SCP with your fortrabbit application, ensure you have each of these three prerequisites: SSH access configured on your fortrabbit account, an SSH key pair set up and registered with fortrabbit, and the SCP utility installed on your local system.
 
 1. **SSH access configured** - See [SSH access guide](/1.platform/04.code-access/03.ssh.md)
 2. **SSH key pair set up** - See [SSH key setup](/3.dev/15.learn/01.ssh-key-setup.md)
@@ -52,6 +53,8 @@ which scp
 :BlockLink{title="See SSH access for {{app-name}} / {{env-name}}" path="/environments/{{app-env-id}}/ssh/"}
 
 ## Examples
+
+Here are common SCP commands for uploading files to your fortrabbit application and downloading files from the remote server to your local machine:
 
 ```bash
 # Upload
@@ -88,6 +91,8 @@ scp -r {{app-env-id}}@ssh.{{region}}.frbit.app:storage/logs/ ./
 - `-v` - Verbose output for debugging
 
 ## Comparison with other tools
+
+SCP is effective for straightforward file transfers, but comparing it to SFTP and rsync reveals key differences in features and capabilities that make each tool better suited for different scenarios and use cases with your fortrabbit applications:
 
 | Feature                 | SCP           | SFTP          | rsync         |
 | ----------------------- | ------------- | ------------- | ------------- |

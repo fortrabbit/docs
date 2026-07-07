@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-01-29
+reviewed: 2026-07-07
+reviewer: fl
 title: Migrate to fortrabbit
 naviTitle: Migrate to fortrabbit
 navigation.excerpt: Website transfer to fortrabbit
@@ -9,6 +10,10 @@ figure:
   color: rgb(146, 64, 14)
   textColor: rgb(254, 243, 199)
 lead: How to transfer your website to fortrabbit.
+head:
+  meta:
+    - name: keywords
+      content: 'migrate, website migration, transfer hosting, DNS, domain migration, fortrabbit'
 ---
 
 fortrabbit is not your traditional shared or VPS hosting. It may require some tinkering on your application and we recommend reading the [intro](/1.platform/02.get-started/01.project-organization.md) as well as our specific install guides for various frameworks & CMS to get the concepts and features.
@@ -39,13 +44,13 @@ If your App is using a MySQL database, you will need to migrate the database dat
 
 ## 6. Sending e-mails
 
-Take care when you application needs to send mails. Simple `sendmail` won't work, see our [quirks article](/1.platform/03.concepts/09.limits.md#mailing) on how to send mails, either via SMTP or 3rd party provider.
+Take care when your application needs to send mails. Simple `sendmail` won't work, see our [quirks article](/1.platform/03.concepts/09.limits.md#mailing) on how to send mails, either via SMTP or 3rd party provider.
 
 ## 7. HTTPS
 
 All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/1.platform/10.objects/10.domain.md).
 
-## 8 Final switch: DNS
+## 8. Final switch: DNS
 
 Now that you have migrated your code, runtime data and database - and all the other stuff you needed - you are ready to push the button.
 

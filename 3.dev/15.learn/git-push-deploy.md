@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-06-12 12:00:00
+reviewed: 2026-07-07
+reviewer: fl
 ai: co-authored
 title: Deploy PHP with a git push
 naviTitle: Git push deploy
