@@ -1,5 +1,6 @@
 ---
-reviewed: 2025-12-16
+reviewed: 2026-07-09
+reviewer: fl
 title: DNS
 navigation.excerpt: DNS and domain
 lead: Integrate domain and DNS services.

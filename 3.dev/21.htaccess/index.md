@@ -1,5 +1,6 @@
 ---
-reviewed: 2025-12-17
+reviewed: 2026-07-09
+reviewer: fl
 title: .htaccess overview
 naviTitle: .htaccess
 navigation.excerpt: All about .htaccess
@@ -8,5 +9,5 @@ navigation: false
 head:
   meta:
     - name: keywords
-      content: htaccess, Apache, web server configuration, redirects, access control
+      content: htaccess, fortrabbit, Apache, web server configuration, redirects, access control
 ---

@@ -1,5 +1,6 @@
 ---
-reviewed: 2026-02-12
+reviewed: 2026-07-09
+reviewer: fl
 title: Other HTTP codes
 naviTitle: Others
 navigation.excerpt: 400, 403, 408, 502 …

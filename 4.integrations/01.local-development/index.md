@@ -1,5 +1,6 @@
 ---
-reviewed: 2025-12-16
+reviewed: 2026-07-09
+reviewer: fl
 title: Local development
 lead: It works on my machine. Always develop your PHP projects locally.
 navigation.excerpt: Local dev options.
