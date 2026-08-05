@@ -55,7 +55,7 @@ Apache uses access rules and `Require` directives to control who can reach your 
 ### AH01630: client denied by server configuration
 
 ```raw
-[authz_core:error] AH01630: client denied by server configuration: /srv/app/htdocs/.env
+[authz_core:error] AH01630: client denied by server configuration: /data/www/.env
 ```
 
 An access rule blocked the request before it reached the app. The path at the end of the message is what was requested — often a protected file like `.env` or a directory closed off by a `Require` directive. Maps to a `403`.
@@ -79,7 +79,7 @@ Apache logs these errors when it cannot find a requested file or receives a malf
 ### AH00128: file does not exist
 
 ```raw
-[core:info] AH00128: File does not exist: /srv/app/htdocs/public/favicon.ico
+[core:info] AH00128: File does not exist: /data/www/public/favicon.ico
 ```
 
 Apache could not find the requested file under the root path. Maps to a `404`. Most lines are harmless — browsers and bots probing for `favicon.ico`, `apple-touch-icon.png`, or stale source maps.
