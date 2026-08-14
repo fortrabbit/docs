@@ -68,4 +68,4 @@ A bloated Git repository is slow to clone, push, and pull. In most cases the rep
 
 ## Large files in Git
 
-Big binary files (> 2 MiB) do not belong in a Git repo. The same goes for most assets — images, videos, uploads. A small SVG that is part of the website layout is fine; a folder full of content images is not. Since Git never forgets, every large file bloats the history forever, even after deletion. Keep the repo to code; the [deployment intro](/1.platform/05.deployment/01.intro.md) explains how code and content stay separated on fortrabbit.
+Big binary files (> 2 MiB) do not belong in a Git repo. The same goes for most assets — images, videos, uploads. A small SVG that is part of the website layout is fine; a folder full of content images is not. Since Git never forgets, every large file bloats the history forever, even after deletion. Keep the repo to code; the [deployment intro](/1.platform/06.deployment/01.intro.md) explains how code and content stay separated on fortrabbit.

@@ -41,7 +41,7 @@ We suggest to use [rsync](/3.dev/20.how-to/rsync.md) instead of scp. It's more f
 
 To transfer files securely using SCP with your fortrabbit application, ensure you have each of these three prerequisites: SSH access configured on your fortrabbit account, an SSH key pair set up and registered with fortrabbit, and the SCP utility installed on your local system.
 
-1. **SSH access configured** - See [SSH access guide](/1.platform/04.code-access/03.ssh.md)
+1. **SSH access configured** - See [SSH access guide](/1.platform/05.code-access/03.ssh.md)
 2. **SSH key pair set up** - See [SSH key setup](/3.dev/15.learn/01.ssh-key-setup.md)
 3. **SCP installed** - Usually pre-installed on Linux/macOS, via WSL on Windows
 

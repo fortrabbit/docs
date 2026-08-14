@@ -35,7 +35,7 @@ Every line in the Apache error log carries a unique `AHxxxxx` code — the lette
 
 An Apache log code is not an HTTP status. Apache log codes live in the error log, statuses in the access log, the mapping is many-to-one — several codes share one status, many map to none. That is the value: a `500` only says something failed internally, while the code says whether a PHP-FPM process died, a rewrite loop ran away, or a rule denied the request.
 
-On fortrabbit, Apache talks to PHP-FPM over FastCGI (`proxy_fcgi`). The codes below come from that path, from access control, or from Apache's core. Find them in the `apache` log source — see [logs](/1.platform/06.settings/25.logs.md).
+On fortrabbit, Apache talks to PHP-FPM over FastCGI (`proxy_fcgi`). The codes below come from that path, from access control, or from Apache's core. Find them in the `apache` log source — see [logs](/1.platform/07.settings/25.logs.md).
 
 | Code                                                                   | Meaning               | Module       | HTTP                                             |
 | ---------------------------------------------------------------------- | --------------------- | ------------ | ------------------------------------------------ |
@@ -120,7 +120,7 @@ Since fortrabbit apps communicate with PHP-FPM over FastCGI, several error codes
 
 PHP-FPM wrote to its error output and Apache surfaced it. The quoted text is the PHP message itself — a notice, warning, or fatal. A fatal pairs with a `500`; a warning may still return `200` while noise piles up in the log.
 
-Read the quoted PHP message for the real cause, then open the `php` log source for the full stack trace. See [logs](/1.platform/06.settings/25.logs.md).
+Read the quoted PHP message for the real cause, then open the `php` log source for the full stack trace. See [logs](/1.platform/07.settings/25.logs.md).
 
 ### AH01075: error dispatching request
 

@@ -37,13 +37,13 @@ Git itself is open source and vendor-neutral. A Git remote can live anywhere —
 
 ## From git push to live website
 
-There is no special `fortrabbit` Git remote to configure and push to — pushes go to GitHub as usual. The [fortrabbit GitHub App](/1.platform/05.deployment/02.github-app.md) listens for new commits on the branch that is connected to an [environment](/1.platform/10.objects/02.environment.md). Each push triggers a deployment pipeline:
+There is no special `fortrabbit` Git remote to configure and push to — pushes go to GitHub as usual. The [fortrabbit GitHub App](/1.platform/06.deployment/02.github-app.md) listens for new commits on the branch that is connected to an [environment](/1.platform/10.objects/02.environment.md). Each push triggers a deployment pipeline:
 
 1. The GitHub App gets notified about the push and pulls the latest code into a build container.
-2. The [build commands](/1.platform/05.deployment/03.build-commands.md) run, for example `composer install`.
+2. The [build commands](/1.platform/06.deployment/03.build-commands.md) run, for example `composer install`.
 3. The build result is synced into the web space of the environment with rsync — which again transfers only the files that changed.
 
-The [deployment intro](/1.platform/05.deployment/01.intro.md) covers the pipeline in more detail.
+The [deployment intro](/1.platform/06.deployment/01.intro.md) covers the pipeline in more detail.
 
 ## Get ready
 
@@ -85,14 +85,14 @@ This also works the other way around: when creating an app on fortrabbit, the Gi
 ## Step 3: Connect the repo to fortrabbit
 
 1. Sign up — or log in — with GitHub.
-2. This installs the [fortrabbit GitHub App](/1.platform/05.deployment/02.github-app.md) on GitHub.
+2. This installs the [fortrabbit GitHub App](/1.platform/06.deployment/02.github-app.md) on GitHub.
 3. On fortrabbit, create an [app](/1.platform/10.objects/01.app.md).
 4. Pick the repository and branch:
 
 - The Git repo maps to the app.
 - The Git branch maps to the environment — `main` for production, other branches for [staging](/3.dev/15.learn/03.staging-environments.md).
 
-During setup, fortrabbit inspects the repo and preconfigures the deployment: when it finds a `composer.json`, the [build commands](/1.platform/05.deployment/03.build-commands.md) will include `composer install`.
+During setup, fortrabbit inspects the repo and preconfigures the deployment: when it finds a `composer.json`, the [build commands](/1.platform/06.deployment/03.build-commands.md) will include `composer install`.
 
 ## Step 4: Deploy with a git push
 
@@ -103,15 +103,15 @@ git commit -am "Update homepage"
 git push
 ```
 
-Push to deploy is the default [deployment trigger](/1.platform/05.deployment/05.trigger.md): every push to the connected branch starts a deployment automatically. Follow the progress in the [deployment logs](/1.platform/05.deployment/17.logs.md) in the dashboard, then open the app URL in the browser to see the change live.
+Push to deploy is the default [deployment trigger](/1.platform/06.deployment/05.trigger.md): every push to the connected branch starts a deployment automatically. Follow the progress in the [deployment logs](/1.platform/06.deployment/17.logs.md) in the dashboard, then open the app URL in the browser to see the change live.
 
 ## What gets deployed — and what not
 
-Git only moves code: PHP classes, templates, themes, CSS, JS. Uploads, the database, and other runtime data are not part of the deployment and stay untouched on the environment. Git is also a one-way street here — changes on the web space can not be pulled back into the repo. The [deployment intro](/1.platform/05.deployment/01.intro.md) explains this separation of code and content.
+Git only moves code: PHP classes, templates, themes, CSS, JS. Uploads, the database, and other runtime data are not part of the deployment and stay untouched on the environment. Git is also a one-way street here — changes on the web space can not be pulled back into the repo. The [deployment intro](/1.platform/06.deployment/01.intro.md) explains this separation of code and content.
 
 ## Where to go next
 
 - Follow a framework-specific [install guide](/2.guides/index.md) for Laravel, Craft CMS, Kirby, Statamic, or WordPress.
-- Run database migrations or clear caches after each deployment with [post-deploy commands](/1.platform/05.deployment/04.post-deploy-commands.md).
+- Run database migrations or clear caches after each deployment with [post-deploy commands](/1.platform/06.deployment/04.post-deploy-commands.md).
 - Set up a [staging environment](/3.dev/15.learn/03.staging-environments.md) on a second branch.
-- Something not working? See [deployment troubleshooting](/1.platform/05.deployment/20.troubleshooting.md) or :ContactUs{text="contact us"}.
+- Something not working? See [deployment troubleshooting](/1.platform/06.deployment/20.troubleshooting.md) or :ContactUs{text="contact us"}.
