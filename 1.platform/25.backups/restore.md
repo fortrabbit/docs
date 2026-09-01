@@ -17,6 +17,9 @@ head:
   meta:
     - name: keywords
       content: 'restore backup, rollback environment, database restore, file restore, backup recovery, fortrabbit'
+topics:
+  - backups
+  - troubleshooting
 ---
 
 ## Requirements

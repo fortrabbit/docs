@@ -5,4 +5,6 @@ title: Database clients
 navigation.excerpt: visual GUI for databases.
 lead: fortrabbit does not have phpMyAdmin, use a GUI to access the remote database.
 navigation: false
+topics:
+  - mysql
 ---

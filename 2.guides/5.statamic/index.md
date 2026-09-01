@@ -10,4 +10,8 @@ head:
   meta:
     - name: 'keywords'
       content: 'statamic, starterkit, markdown, laravel, flatfile, headless'
+topics:
+  - statamic
+  - cms
+  - php
 ---

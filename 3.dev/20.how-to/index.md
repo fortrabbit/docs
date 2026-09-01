@@ -15,4 +15,7 @@ head:
   meta:
     - name: keywords
       content: 'how to, practical recipes, deployment workflows, hosting, PHP, migrating, fortrabbit'
+topics:
+  - migration
+  - php
 ---

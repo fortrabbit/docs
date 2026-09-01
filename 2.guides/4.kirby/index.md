@@ -9,4 +9,8 @@ navigation: false
 figure:
   icon: simple-icons:kirby
   hide: true
+topics:
+  - kirby
+  - cms
+  - php
 ---

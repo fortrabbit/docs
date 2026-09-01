@@ -5,4 +5,6 @@ title: Performance
 lead: Understand and optimize your website's performance.
 navigation.excerpt: TTFB and more
 navigation: false
+topics:
+  - performance
 ---

@@ -25,6 +25,10 @@ head:
   meta:
     - name: keywords
       content: 'apache error codes, AH01630, AH00128, AH01071, AH01075, AH01067, mod_proxy_fcgi, php-fpm, apache error log, fortrabbit'
+topics:
+  - troubleshooting
+  - logs
+  - htaccess
 ---
 
 ## About Apache error codes

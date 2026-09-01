@@ -4,4 +4,7 @@ reviewer: fl
 title: Development
 lead: Best practices, tips and tricks
 navigation: false
+topics:
+  - php
+  - performance
 ---

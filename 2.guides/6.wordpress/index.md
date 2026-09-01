@@ -14,4 +14,8 @@ head:
   meta:
     - name: keywords
       content: 'wordpress, wordpress hosting, cms hosting, fortrabbit'
+topics:
+  - wordpress
+  - cms
+  - php
 ---

@@ -17,6 +17,9 @@ head:
   meta:
     - name: 'keywords'
       content: 'canonical tag, canonical URL, duplicate content, rel=canonical, search engine optimization, SEO, fortrabbit'
+topics:
+  - frontend
+  - http
 ---
 
 ## Handling duplicate content with canonical tags

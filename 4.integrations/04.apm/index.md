@@ -6,4 +6,8 @@ naviTitle: APM
 navigation.excerpt: New Relic, Blackfire, Tideways
 lead: Monitor where your app is slow.
 navigation: false
+topics:
+  - monitoring
+  - performance
+  - php
 ---

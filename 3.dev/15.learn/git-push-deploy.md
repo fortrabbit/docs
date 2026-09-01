@@ -25,6 +25,9 @@ head:
   meta:
     - name: 'keywords'
       content: 'deploy php with git, git push deploy, continuous deployment, php hosting'
+topics:
+  - git
+  - deployment
 ---
 
 ## About git push deployment

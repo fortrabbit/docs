@@ -4,4 +4,7 @@ reviewer: fl
 title: Platform
 lead: Familiarize yourself with the building blocks of fortrabbit.
 navigation: false
+topics:
+  - dashboard
+  - deployment
 ---

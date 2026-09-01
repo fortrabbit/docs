@@ -15,4 +15,8 @@ head:
   meta:
     - name: keywords
       content: 'laravel, forge, taylor, laracon, php8, server, herd, artisan, '
+topics:
+  - laravel
+  - frameworks
+  - php
 ---

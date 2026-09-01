@@ -15,4 +15,8 @@ head:
   meta:
     - name: keywords
       content: 'craft cms, setup, overview, install guide, deploy, fortrabbit'
+topics:
+  - craft-cms
+  - cms
+  - php
 ---

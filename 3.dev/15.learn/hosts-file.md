@@ -13,6 +13,9 @@ head:
   meta:
     - name: keywords
       content: 'hosts file, local testing, domain routing, DNS, development, fortrabbit'
+topics:
+  - dns
+  - local-development
 ---
 
 To test a custom domain before actually routing DNS to fortrabbit, add the domain to your fortrabbit app, then modify your local hosts file to tell your local machine that the domain is served from your app on fortrabbit.

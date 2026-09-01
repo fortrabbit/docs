@@ -21,6 +21,8 @@ links:
   - title: PHP component
     route: /platform/components/php
     property: docs
+topics:
+  - php
 ---
 
 at fortrabbit, php-fpm is used for performance and security reasons. This means that adding `php_value` directives to `.htaccess` files has no effect. You can instead use `.user.ini` files to configure PHP settings that aren't available through the fortrabbit dashboard.

@@ -14,6 +14,9 @@ head:
   meta:
     - name: keywords
       content: 'rsync, deployment, file sync, sftp alternative, git deployment, fortrabbit'
+topics:
+  - deployment
+  - ssh
 ---
 
 ## About rsync

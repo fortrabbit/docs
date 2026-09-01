@@ -10,4 +10,6 @@ head:
   meta:
     - name: keywords
       content: htaccess, fortrabbit, Apache, web server configuration, redirects, access control
+topics:
+  - htaccess
 ---

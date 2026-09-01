@@ -14,6 +14,9 @@ head:
   meta:
     - name: keywords
       content: 'HTTPS certificate error, SSL/TLS troubleshooting, certificate warning, mixed content, fortrabbit'
+topics:
+  - https
+  - troubleshooting
 ---
 
 TLS certificates are provided for all [domains](/1.platform/10.objects/10.domain.md). See the [HTTPS article](/1.platform/13.dns/06.https.md) for general features and configuration.

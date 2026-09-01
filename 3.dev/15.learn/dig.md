@@ -13,6 +13,9 @@ head:
   meta:
     - name: keywords
       content: 'dig, DNS, query, terminal, command, lookup, fortrabbit'
+topics:
+  - dns
+  - troubleshooting
 ---
 
 The `dig` command queries public DNS records to show which IP addresses a domain name resolves to. This example shows how to look up a domain.

@@ -9,4 +9,6 @@ head:
   meta:
     - name: keywords
       content: 'new fortrabbit platform, PHP hosting, GitHub deployment, component pricing'
+topics:
+  - migration
 ---

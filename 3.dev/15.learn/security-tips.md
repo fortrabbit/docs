@@ -14,6 +14,8 @@ head:
   meta:
     - name: keywords
       content: 'security, password, SSH key, authentication, account protection, fortrabbit'
+topics:
+  - security
 ---
 
 ## Dashboard and passwords security

@@ -14,6 +14,8 @@ head:
   meta:
     - name: 'keywords'
       content: 'git, git basics, version control, ssh key, fortrabbit, learn git'
+topics:
+  - git
 ---
 
 ## About Git

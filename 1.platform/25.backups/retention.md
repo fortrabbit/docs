@@ -14,6 +14,8 @@ draft: true
 links:
   - title: Backup component
     route: /platform/components/backups
+topics:
+  - backups
 ---
 
 ::CallOut{alert}

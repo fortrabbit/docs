@@ -14,6 +14,8 @@ head:
   meta:
     - name: keywords
       content: 'download website, website backup, migrate hosting, database export, SFTP, fortrabbit'
+topics:
+  - migration
 ---
 
 ## Get ready

@@ -13,6 +13,9 @@ head:
   meta:
     - name: 'keywords'
       content: 'iso-8859-1, iso-8859-15, UTF-8, charset, encoding'
+topics:
+  - mysql
+  - php
 ---
 
 ### PHP

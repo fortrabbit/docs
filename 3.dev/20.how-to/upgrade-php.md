@@ -13,6 +13,9 @@ head:
   meta:
     - name: 'keywords'
       content: 'PHP upgrade, PHP version, migration, deployment, testing, fortrabbit'
+topics:
+  - php
+  - updates
 ---
 
 ## PHP versions at fortrabbit

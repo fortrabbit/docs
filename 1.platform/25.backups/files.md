@@ -17,6 +17,8 @@ head:
   meta:
     - name: keywords
       content: 'backup files, restore backup, backup archive, database dump, file recovery, fortrabbit'
+topics:
+  - backups
 ---
 
 The fortrabbit [backup component](/1.platform/09.components/05.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/02.environment.md) at a given time, see [retention](/1.platform/25.backups/retention.md). This archive contains everything required to restore the state of that backup.

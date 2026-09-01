@@ -23,6 +23,9 @@ links:
   - title: WWW forwarding
     route: /platform/dns/domain-forwarding-service
     property: docs
+topics:
+  - dns
+  - https
 ---
 
 ::CallOut{alert}

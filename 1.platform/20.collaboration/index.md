@@ -5,4 +5,6 @@ title: Collaboration
 navigation.excerpt: Teamwork makes the dream work.
 lead: Share access to infra resources with others.
 navigation: false
+topics:
+  - teams
 ---

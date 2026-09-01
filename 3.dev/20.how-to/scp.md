@@ -21,6 +21,8 @@ head:
   meta:
     - name: 'keywords'
       content: 'scp, secure copy, file transfer, ssh, command line, upload, download'
+topics:
+  - ssh
 ---
 
 ## About SCP

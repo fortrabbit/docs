@@ -14,6 +14,10 @@ head:
   meta:
     - name: 'keywords'
       content: 'Composer, Git, ssh, GitHub, Bitbucket, auth.json, oAuth'
+topics:
+  - composer
+  - git
+  - ssh
 ---
 
 <!-- TODO: Review and finish. -->
