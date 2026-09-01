@@ -2,6 +2,7 @@
 reviewed: 2026-07-04
 reviewer: fl
 title: Backup files
+description: 'What a fortrabbit backup archive contains — the full file system plus a database dump — and how to use it to restore a website.'
 naviTitle: Backup files
 navigation.excerpt: Files and database
 figure:

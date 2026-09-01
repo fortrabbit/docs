@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: How to
+description: 'Practical recipes for a deployed app: migrating a site to fortrabbit, cutting hosting costs, upgrading PHP and moving files around.'
 navigation.excerpt: Practical fixes and workflows for daily operations.
 figure:
   emoji: 🛠️

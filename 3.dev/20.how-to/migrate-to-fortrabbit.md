@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: Migrate to fortrabbit
+description: 'Move an existing website to fortrabbit: what to change in the application, how to get code, database and assets across, and what to test.'
 naviTitle: Migrate to fortrabbit
 navigation.excerpt: Website transfer to fortrabbit
 figure:

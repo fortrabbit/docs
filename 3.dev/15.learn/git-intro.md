@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: Git intro
+description: 'A short introduction to git: what distributed version control does, how to install it, and the commands needed to deploy to fortrabbit.'
 naviTitle: Git intro
 navigation.excerpt: Install, learn, enjoy
 figure:

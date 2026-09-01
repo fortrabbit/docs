@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: How to download a full website
+description: 'Pull a complete website off a hosting provider — code, database and uploaded files — so it can run locally or move somewhere else.'
 naviTitle: Download a website
 navigation.excerpt: Get all data to have it running locally
 figure:

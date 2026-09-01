@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: Using Secure Copy
+description: 'scp copies single files between a local machine and a fortrabbit environment over SSH, with the same keys and encryption as a shell session.'
 naviTitle: SCP
 navigation.excerpt: Using secure copy for file transfers
 figure:

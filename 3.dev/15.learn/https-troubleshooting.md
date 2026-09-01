@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: HTTPS troubleshooting
+description: 'Certificate errors in the browser, explained: how to read the certificate details and fix TLS problems on domains hosted at fortrabbit.'
 naviTitle: HTTPS troubleshooting
 navigation.excerpt: Debugging SSL/TLS errors
 figure:

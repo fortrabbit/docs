@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: Encoding
+description: 'UTF-8 is the default character encoding for fortrabbit apps. How to switch a PHP app, its headers and its MySQL tables to another charset.'
 navigation.excerpt: UTF-8 alternatives
 figure:
   emoji: 📝

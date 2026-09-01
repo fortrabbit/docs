@@ -2,6 +2,7 @@
 reviewed: 2026-07-06
 reviewer: fl
 title: Composer private repos
+description: 'Reach private Composer repositories during a fortrabbit git deployment, using deploy keys or an auth.json with an OAuth token.'
 navigation.excerpt: Access during git deployment
 figure:
   emoji: 🔒

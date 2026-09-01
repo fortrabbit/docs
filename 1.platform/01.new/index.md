@@ -2,6 +2,7 @@
 reviewed: 2026-06-01 08:36:51
 reviewer: fl
 title: New platform
+description: 'The new fortrabbit platform: GitHub deployment, components that scale one by one, and persistent storage that survives every deploy.'
 navigation.excerpt: New features, changes, access
 lead: 'The new platform: GitHub deployment, components scale individually and persistent storage that survives every deploy.'
 navigation: false

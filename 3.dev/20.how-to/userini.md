@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: Configure .user.ini
+description: 'php-fpm ignores php_value in .htaccess. Use a .user.ini file to set the PHP directives the fortrabbit dashboard does not expose.'
 naviTitle: Configure .user.ini
 navigation.excerpt: Control advanced PHP settings
 figure:

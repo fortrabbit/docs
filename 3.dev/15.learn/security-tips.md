@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: Security tips
+description: 'Protect a fortrabbit account and its apps: strong passwords, two-factor authentication, SSH key hygiene, and reviewing who has access.'
 naviTitle: Security tips
 navigation.excerpt: 'Stay safe online'
 figure:

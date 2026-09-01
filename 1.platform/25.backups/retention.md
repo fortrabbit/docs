@@ -2,6 +2,7 @@
 reviewed: 2026-07-04
 reviewer: fl
 title: Backup retention
+description: 'How long fortrabbit keeps backups: daily copies today, with larger backup plans holding more of them. Retention tiers are not built yet.'
 naviTitle: Backup retention
 navigation.excerpt: monthly, weekly, daily
 figure:

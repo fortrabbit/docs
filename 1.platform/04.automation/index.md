@@ -2,6 +2,7 @@
 reviewed: 2026-08-24
 reviewer: fl
 title: Automation
+description: 'Drive fortrabbit from code instead of the dashboard: an MCP server for AI agents, a CLI for terminals and CI, agent skills and a REST API.'
 naviTitle: Automation
 navigation.excerpt: Drive the platform without the dashboard
 navigation: false

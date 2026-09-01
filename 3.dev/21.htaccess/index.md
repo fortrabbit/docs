@@ -2,6 +2,7 @@
 reviewed: 2026-07-09
 reviewer: fl
 title: .htaccess overview
+description: 'Configure the Apache web server on fortrabbit with .htaccess — redirects, access control, compression, HTTP headers and troubleshooting.'
 naviTitle: .htaccess
 navigation.excerpt: All about .htaccess
 lead: Configure the Apache web server on fortrabbit with `.htaccess` — redirects, access control, compression, headers and more.

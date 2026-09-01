@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: Dig
+description: 'Query public DNS records from the terminal with dig, to see which addresses a domain resolves to while pointing it at fortrabbit.'
 navigation.excerpt: 'Query public DNS entries from the terminal'
 figure:
   emoji: 🔍

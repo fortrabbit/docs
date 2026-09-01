@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: Hosts file
+description: 'Test a custom domain against a fortrabbit app before moving DNS, by pointing the domain at the app in the local hosts file.'
 navigation.excerpt: Testing domain routing with your local hosts file
 figure:
   emoji: 🌐

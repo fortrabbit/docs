@@ -3,6 +3,7 @@ reviewed: 2026-07-07
 reviewer: fl
 ai: co-authored
 title: Deploy PHP with a git push
+description: 'Deploy a PHP app with git push — from a local project folder to a live website. Commit, push, and the build and release run on their own.'
 naviTitle: Git push deploy
 navigation.excerpt: From a local folder to a live website with git push
 lead: Deploy a PHP app with git push — this tutorial goes from a local project folder to a live website. Commit code, push it, and the deployment runs on its own.

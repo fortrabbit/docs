@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: rsync deployment
+description: 'rsync copies only the changed files over SSH, which makes it far faster than SFTP for assets and uploads next to git deployment.'
 naviTitle: rsync
 navigation.excerpt: Copy and sync like a boss
 figure:

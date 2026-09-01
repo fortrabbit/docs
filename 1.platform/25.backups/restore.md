@@ -2,6 +2,7 @@
 reviewed: 2026-07-04
 reviewer: fl
 title: Restore from backup
+description: 'Restore a fortrabbit environment from a backup after a broken deploy or a hack: the requirements, the steps, and what the rollback touches.'
 naviTitle: Restore from backup
 navigation.excerpt: automated rollback
 figure:

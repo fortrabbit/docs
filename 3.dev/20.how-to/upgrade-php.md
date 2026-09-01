@@ -2,6 +2,7 @@
 reviewed: 2026-07-07
 reviewer: fl
 title: PHP version upgrade
+description: 'Upgrade the PHP version of a fortrabbit app safely: check the release notes, test on a second environment, then switch and watch the logs.'
 naviTitle: Upgrade PHP
 navigation.excerpt: Switch to a new version with confidence
 figure:

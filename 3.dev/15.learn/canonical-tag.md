@@ -3,6 +3,7 @@ reviewed: 2026-07-06
 reviewer: fl
 naviTitle: Canonical tag
 title: Using a canonical tag
+description: 'A canonical tag tells search engines which URL is the preferred one when several domains serve the same content — useful next to a test domain.'
 navigation.excerpt: Landing directory for public access
 lead: A canonical tag tells search engines which version of a page is the preferred one when you have multiple domains or URLs serving the same content. Use the rel="canonical" link element in your HTML head to consolidate indexing signals.
 hideExamples: yes

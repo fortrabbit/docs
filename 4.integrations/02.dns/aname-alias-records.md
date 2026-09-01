@@ -3,6 +3,7 @@ reviewed: 2026-07-09
 reviewer: fl
 naviTitle: ANAME / ALIAS records
 title: ANAME / ALIAS records
+description: 'ANAME and ALIAS records give apex domains CNAME-like behavior. For fortrabbit the WWW forwarding service is currently the better route.'
 navigation.excerpt: Serve apex domains via host target
 lead: ANAME and ALIAS records allow you to serve apex domains with CNAME-like functionality, also known as CNAME flattening.
 hideExamples: yes
