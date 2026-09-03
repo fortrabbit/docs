@@ -29,7 +29,7 @@ naviTitle: # short title for list views
 navigation.excerpt: # additional details for list views
 lead: blabla # large text shown at the beginning
 navigation: true # lists this page with navigation
-sidebar: craft-cms # shows meta data with
+subject: craft-cms # shows meta data with
 nextNav: true # will show
 ---
 ```
