@@ -1,4 +1,5 @@
 ---
+created: 2025-01-14
 reviewed: 2026-07-06
 reviewer: fl
 title: WordPress guides

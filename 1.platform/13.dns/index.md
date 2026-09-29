@@ -1,4 +1,5 @@
 ---
+created: 2024-11-29
 reviewed: 2026-07-04
 reviewer: fl
 title: DNS and domains

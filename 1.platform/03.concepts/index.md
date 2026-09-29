@@ -1,4 +1,5 @@
 ---
+updated: 2026-04-30
 reviewed: 2026-07-03
 title: Concepts
 description: 'The vocabulary behind fortrabbit: accounts and teams, apps and environments, components, plans and the limits that shape the platform.'

@@ -1,4 +1,6 @@
 ---
+created: 2024-12-18
+updated: 2026-07-07
 reviewed: 2026-07-07
 reviewer: fl
 title: How to download a full website

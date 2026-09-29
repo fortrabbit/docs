@@ -1,4 +1,6 @@
 ---
+created: 2025-09-15
+updated: 2026-04-30
 reviewed: 2026-07-04
 reviewer: fl
 title: Hosting settings

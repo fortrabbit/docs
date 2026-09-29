@@ -1,4 +1,6 @@
 ---
+created: 2025-09-22
+updated: 2026-07-07
 reviewed: 2026-07-07
 reviewer: fl
 title: Using Secure Copy
