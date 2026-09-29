@@ -23,7 +23,10 @@ Please find a good balance in the number of commits contained with a pull reques
 
 ```yml
 ---
-reviewed: 2026-06-12 # Last reviewed date (and time)
+created: 2025-11-23 # first published, YYYY-MM-DD
+updated: 2026-05-02 # last content change; set with every edit
+reviewed: 2026-06-12 # last read end to end and confirmed; set with every review and every edit
+reviewer: fl # initials of the reviewer, see packages/shared-ts/data/team.ts
 title: # Long title with page
 naviTitle: # short title for list views
 navigation.excerpt: # additional details for list views
