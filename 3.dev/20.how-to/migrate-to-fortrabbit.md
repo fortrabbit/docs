@@ -1,5 +1,5 @@
 ---
-updated: 2026-07-07
+updated: 2026-10-18
 reviewed: 2026-07-07
 reviewer: fl
 title: Migrate to fortrabbit
@@ -21,46 +21,36 @@ topics:
   - deployment
 ---
 
-fortrabbit is not your traditional shared or VPS hosting. It may require some tinkering on your application and we recommend reading the [intro](/1.platform/02.get-started/01.project-organization.md) as well as our specific install guides for various frameworks & CMS to get the concepts and features.
+fortrabbit has no control panel and no root shell, so some apps need settings adjusted before the move. Read [project organization](/1.platform/02.get-started/01.project-organization.md) and the install guide for the framework or CMS first. Every project is different: adjust the order to it and ask support when something does not fit.
 
-This article covers the general basics as well as some deep links for moving your App from any hosting provider to fortrabbit. This will hopefully cover everything you need to realize a smooth transition. Each App is different, adjust your plan accordingly and don't hesitate to contact us with your specific questions.
+## 1. Create the app
 
-## 1. Create your fortrabbit app
+Each website or web application is an [app](/1.platform/10.objects/01.app.md) with at least one [environment](/1.platform/10.objects/02.environment.md). Create the app in the dashboard. Its [test domain](/1.platform/13.dns/01.test-domain.md) works right away, with HTTPS, so the whole move can be tested before any DNS changes.
 
-Each website or web application is represented by an [app](/1.platform/10.objects/01.app.md) with at least one [environment](/1.platform/10.objects/02.environment.md) on fortrabbit. You can have as many apps with as many environments as you want. So in order to move your project you need to create an app on fortrabbit first. Do so in the fortrabbit dashboard as a first step.
+## 2. Lower the TTL
 
-## 2. Prepare your domains
+Resolvers cache DNS records for as long as their TTL says. Set the TTL of the domain's records to five minutes at the domain provider, and do it at least one old TTL ahead of the switch: with a TTL of one day, a day before. The switch then takes minutes instead of hours.
 
-To minimize downtimes caused by DNS cache propagation you should change the Time to Live (TTL) of your domains to the lowest possible value. Something like five minutes would be just great. If you have some kind of web control panel with your domain provider, then you can most likely change it yourself. If not, just get in touch with the provider and ask them to reduce your TTL for you. You should do this 48-72 hours before you start with the migration.
+## 3. Deploy the code
 
-After that's done make sure to add all the domains to your new fortrabbit App in the dashboard.
+Code reaches fortrabbit through Git, with the [GitHub integration](/1.platform/06.deployment/02.github-app.md). A project that is not in a Git repository yet needs one first. Composer and npm run in the [build commands](/1.platform/06.deployment/03.build-commands.md), database migrations and cache clearing in the [post-deploy commands](/1.platform/06.deployment/04.post-deploy-commands.md).
 
-## 3. Migrate your code
+## 4. Copy the uploads
 
-If you already subscribe to a Git based workflow, then there is probably not much to do here. If not, then you should familiarize yourself with Git. We promise: You won't regret it. Once you've used it, you won't go back without being forced.
+Files the app writes at runtime, such as user or CMS uploads, are not in Git. Copy them to the environment with [rsync](/3.dev/20.how-to/rsync.md). [Download a website](/3.dev/20.how-to/download-a-website.md) shows how to pull them off the old host.
 
-## 4. Migrate your runtime data
+## 5. Move the database
 
-Runtime data means all kinds of data, which is created by your App at runtime. Usually these are user uploads or uploads from a CMS or some-such. When working with a clean Git workflow, the runtime data and the code should be separated.
+Book a MySQL component, export the database at the old host and import the dump. The [export and import](/1.platform/08.mysql/02.export-import/index.md) section covers the terminal and GUI routes.
 
-## 5. Migrate your databases
+## 6. Set up mail
 
-If your App is using a MySQL database, you will need to migrate the database data as well. Export the MySQL database from your old hosting and import it to the fortrabbit database.
+`sendmail` and PHP `mail()` do not work on fortrabbit. Send mail through a transactional mail service or SMTP, as described under [mailing](/1.platform/03.concepts/09.limits.md#mailing).
 
-## 6. Sending e-mails
+## 7. Switch the DNS
 
-Take care when your application needs to send mails. Simple `sendmail` won't work, see our [quirks article](/1.platform/03.concepts/09.limits.md#mailing) on how to send mails, either via SMTP or 3rd party provider.
+Test the app on its test domain. Then add the domains to the environment and [point their DNS records to fortrabbit](/1.platform/13.dns/03.external-domain-setup.md). Each correctly routed domain gets a free [TLS certificate](/1.platform/13.dns/06.https.md), renewed automatically. With the lowered TTL, traffic moves within minutes. Raise the TTL again once everything runs.
 
-## 7. HTTPS
+## Moving away from fortrabbit
 
-All fortrabbit Apps can be accessed using a free HTTPS URL. There is also a free HTTPS Let's Encrypt certificate for [custom domains](/1.platform/10.objects/10.domain.md).
-
-## 8. Final switch: DNS
-
-Now that you have migrated your code, runtime data and database - and all the other stuff you needed - you are ready to push the button.
-
-Now that your App is fully mirrored on fortrabbit and ready to handle traffic, you can [route your Domains DNS records to fortrabbit](/1.platform/10.objects/10.domain.md). If you waited the 48-72 hours for DNS caches to clear, downtime will be minimal as traffic is routed to your App on fortrabbit.
-
-## Migrating away from fortrabbit
-
-We don't lock you in. You can cancel at any time. Due to the distributed nature of services it's even easier to move somewhere else then. The steps are essentially the same as above.
+Apps can be canceled at any time. Code sits in Git, the database is a MySQL dump, uploads are plain files: the same steps work in reverse.
