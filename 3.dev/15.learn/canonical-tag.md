@@ -41,4 +41,4 @@ Suppose you have `fortrabbit.com` and `fort-rabbit.com` registered, and both dis
 </head>
 ```
 
-This approach is gentler than redirects when you need [multiple domains serving the same environment](/1.platform/13.dns/02.external-domains.md). For more technical details, see [Google's guide to canonical URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls).
+This approach is gentler than redirects when you need [multiple domains serving the same environment](/1.platform/13.domains/03.external-domains.md). For more technical details, see [Google's guide to canonical URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls).

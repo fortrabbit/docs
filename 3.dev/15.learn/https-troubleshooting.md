@@ -21,7 +21,7 @@ topics:
   - troubleshooting
 ---
 
-TLS certificates are provided for all [domains](/1.platform/10.objects/10.domain.md). See the [HTTPS article](/1.platform/13.dns/06.https.md) for general features and configuration.
+TLS certificates are provided for all [domains](/1.platform/10.objects/10.domain.md). See the [HTTPS article](/1.platform/13.domains/06.https.md) for general features and configuration.
 
 ## Review certificates in the browser
 
@@ -43,7 +43,7 @@ This can happen if the domain is brand new and the certificate hasn't been insta
 
 It can also occur if your domain isn't yet routed to fortrabbit. Only domains routed to fortrabbit receive TLS certificates. Check the [domain settings](/1.platform/10.objects/10.domain.md) in the dashboard to verify routing.
 
-CAA DNS records can also cause certificate provisioning issues if they restrict certificate issuance. See [HTTPS](/1.platform/13.dns/06.https.md) for details on DNS configuration.
+CAA DNS records can also cause certificate provisioning issues if they restrict certificate issuance. See [HTTPS](/1.platform/13.domains/06.https.md) for details on DNS configuration.
 
 ## The browser shows a mixed content warning
 

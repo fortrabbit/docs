@@ -18,13 +18,13 @@ links:
     route: /platform/objects/domain
     property: docs
   - title: External domains
-    route: /platform/dns/external-domains
+    route: /platform/domains/external-domains
     property: docs
   - title: Apex domains
-    route: /platform/dns/apex-domains
+    route: /platform/domains/apex-domains
     property: docs
   - title: WWW forwarding
-    route: /platform/dns/domain-forwarding-service
+    route: /platform/domains/domain-forwarding-service
     property: docs
 topics:
   - dns
@@ -32,7 +32,7 @@ topics:
 ---
 
 ::CallOut{alert}
-Due to potential upcoming changes, we recommend using the [WWW forwarding service](/1.platform/13.dns/04.domain-forwarding-service.md) instead of ANAME/ALIAS records with our service at this time.
+Due to potential upcoming changes, we recommend using the [WWW forwarding service](/1.platform/13.domains/05.domain-forwarding-service.md) instead of ANAME/ALIAS records with our service at this time.
 ::
 
 ## Domain providers with ANAME support
@@ -53,4 +53,4 @@ As we know, the following providers do not support ANAME records:
 
 - GoDaddy - see [this SO question](https://webmasters.stackexchange.com/questions/141075/aname-record-not-accepted) ☠️
 
-If your provider does not support CNAME flattening, we recommend switching to one that does or consider using our [www forwarding service](/1.platform/13.dns/04.domain-forwarding-service.md).
+If your provider does not support CNAME flattening, we recommend switching to one that does or consider using our [www forwarding service](/1.platform/13.domains/05.domain-forwarding-service.md).

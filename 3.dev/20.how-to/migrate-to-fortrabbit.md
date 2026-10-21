@@ -25,7 +25,7 @@ fortrabbit has no control panel and no root shell, so some apps need settings ad
 
 ## 1. Create the app
 
-Each website or web application is an [app](/1.platform/10.objects/01.app.md) with at least one [environment](/1.platform/10.objects/02.environment.md). Create the app in the dashboard. Its [test domain](/1.platform/13.dns/01.test-domain.md) works right away, with HTTPS, so the whole move can be tested before any DNS changes.
+Each website or web application is an [app](/1.platform/10.objects/01.app.md) with at least one [environment](/1.platform/10.objects/02.environment.md). Create the app in the dashboard. Its [test domain](/1.platform/13.domains/01.test-domain.md) works right away, with HTTPS, so the whole move can be tested before any DNS changes.
 
 ## 2. Lower the TTL
 
@@ -49,7 +49,7 @@ Book a MySQL component, export the database at the old host and import the dump.
 
 ## 7. Switch the DNS
 
-Test the app on its test domain. Then add the domains to the environment and [point their DNS records to fortrabbit](/1.platform/13.dns/03.external-domain-setup.md). Each correctly routed domain gets a free [TLS certificate](/1.platform/13.dns/06.https.md), renewed automatically. With the lowered TTL, traffic moves within minutes. Raise the TTL again once everything runs.
+Test the app on its test domain. Then add the domains to the environment and [point their DNS records to fortrabbit](/1.platform/13.domains/04.external-domain-setup.md). Each correctly routed domain gets a free [TLS certificate](/1.platform/13.domains/06.https.md), renewed automatically. With the lowered TTL, traffic moves within minutes. Raise the TTL again once everything runs.
 
 ## Moving away from fortrabbit
 
