@@ -3,7 +3,7 @@ created: 2026-07-01
 updated: 2026-08-05
 reviewed: 2026-07-06
 reviewer: fl
-ai-author: co-authored
+ai: co-authored
 title: Apache error log codes
 description: 'Every Apache error log line carries an AHxxxxx code pointing at one condition. The codes seen most often on fortrabbit, decoded.'
 naviTitle: Apache error codes
