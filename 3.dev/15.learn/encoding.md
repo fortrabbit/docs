@@ -1,6 +1,6 @@
 ---
-updated: 2026-07-07
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Encoding
 description: 'UTF-8 is the default character encoding for fortrabbit apps. How to switch a PHP app, its headers and its MySQL tables to another charset.'
@@ -10,7 +10,7 @@ figure:
   text: Configure character encoding properly.
   color: rgb(236, 72, 153)
   textColor: rgb(252, 231, 243)
-lead: UTF-8 is the default encoding for fortrabbit apps. You can configure a different character encoding if needed. This guide explains how.
+lead: Use UTF-8 everywhere. PHP sends UTF-8 by default, static files and the MySQL connection need it set, with utf8mb4 in MySQL.
 head:
   meta:
     - name: 'keywords'
@@ -20,32 +20,36 @@ topics:
   - php
 ---
 
-### PHP
+## Use UTF-8 everywhere
 
-PHP writes the encoding in the `Content-type` header. The default charset is `UTF-8` — `Content-type: text/html; charset=UTF-8`. You can change the charset via `ini_set`. Here is an example:
+Mixed character encodings show up as broken umlauts or `�` characters. Use UTF-8 in PHP, in static files and in the database.
 
-```php
-ini_set('default_charset', 'iso-8859-15');
-```
+## PHP
 
-Make sure to write this in all your root PHP files. Alternatively, you can use the `header()` function to set the charset explicitly:
+PHP sends the charset in the `Content-Type` header, from the `default_charset` setting, `UTF-8` by default. Set another one per response:
 
 ```php
-header('Content-Type: text/html; charset=iso-8859-1');
+header('Content-Type: text/html; charset=UTF-8');
 ```
 
-### HTTP/Apache
+## Static files
 
-Any static file — `.txt` or `.html` — is delivered directly via Apache. By default, Apache assumes the file is `utf-8`. You can change the charset via an `.htaccess` directive. Here is an example:
+Apache delivers static `.html` and `.txt` files directly. Set their charset in `.htaccess`:
 
 ```apache
-AddDefaultCharset iso-8859-1
+AddDefaultCharset UTF-8
 ```
 
-### MySQL
+## MySQL
 
-When you store or fetch data from MySQL, you need to ensure the encoding matches the database when you connect to it. You can also set specific encoding for your columns. To set a different encoding than UTF-8 for your database sessions from PHP, you can use the `mysql_set_charset()` function. Here is an example:
+Use `utf8mb4` for tables and for the connection. The older `utf8` in MySQL stores only three bytes per character and breaks emoji. Set the connection charset in PHP:
 
 ```php
-mysql_set_charset('iso-8859-15', $connection);
+// PDO
+$pdo = new PDO('mysql:host=…;dbname=…;charset=utf8mb4', $user, $password);
+
+// mysqli
+$mysqli->set_charset('utf8mb4');
 ```
+
+Frameworks and CMS set the connection charset in their database configuration.

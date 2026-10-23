@@ -1,6 +1,6 @@
 ---
-updated: 2026-07-07
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: HTTPS troubleshooting
 description: 'Certificate errors in the browser, explained: how to read the certificate details and fix TLS problems on domains hosted at fortrabbit.'
@@ -11,7 +11,7 @@ figure:
   text: Debug SSL certificate issues.
   color: rgb(34, 197, 94)
   textColor: rgb(220, 252, 231)
-lead: Are you seeing a certificate error in the browser? This article helps troubleshoot TLS certificate errors on fortrabbit-hosted domains.
+lead: A certificate warning on fortrabbit usually means the domain does not point to fortrabbit yet. A mixed content warning means the page loads resources over http.
 head:
   meta:
     - name: keywords
@@ -21,62 +21,30 @@ topics:
   - troubleshooting
 ---
 
-TLS certificates are provided for all [domains](/1.platform/10.objects/10.domain.md). See the [HTTPS article](/1.platform/13.domains/06.https.md) for general features and configuration.
+## Check the certificate in the browser
 
-## Review certificates in the browser
+Open the domain with `https://`, click the lock icon or the site settings icon in the address bar, and open the certificate details. They show which domains the certificate covers and when it expires. See [HTTPS](/1.platform/13.domains/06.https.md) for how certificates work on fortrabbit.
 
-Viewing the certificate details in your browser is the first step to diagnosing TLS/SSL issues. In Chrome and Firefox:
+## Certificate warning
 
-1. open `https://www.{{domain}}.com` (use https, not http)
-2. click on the lock icon
-3. click on certificate to reveal the details
+A warning such as `NET::ERR_CERT_COMMON_NAME_INVALID` means the certificate does not cover the domain, often because it shows `*.frbit.app` instead.
 
-## You see a certificate warning
+- **DNS not pointing to fortrabbit yet**: fortrabbit issues a certificate only for a domain routed to it. Check the [domain](/1.platform/10.objects/10.domain.md) in the dashboard and the DNS with [dig](/3.dev/15.learn/dig.md).
+- **New domain**: the certificate follows shortly after the DNS points to fortrabbit.
+- **CAA record**: a CAA record that does not allow Let's Encrypt blocks the certificate, see [HTTPS](/1.platform/13.domains/06.https.md#secure-your-domain-with-a-caa-record).
 
-When visiting your domain under `https://` and the browser shows a certificate error, check the certificate details in the browser. You may see that the cert is issued for `*.frbit.app` rather than your domain. A common error is:
+## Mixed content warning
 
-```raw
-NET::ERR_CERT_COMMON_NAME_INVALID
-```
+The page loads over HTTPS but requests a script, style, image, font or API call over `http://`. Browsers block such requests:
 
-This can happen if the domain is brand new and the certificate hasn't been installed yet. Certificates typically take up to 24 hours to provision; apex domain certificates often take longer.
+> Mixed Content: The page at 'https://example.com' was loaded over HTTPS, but requested an insecure resource 'http://example.com/app.js'. This request has been blocked; the content must be served over HTTPS.
 
-It can also occur if your domain isn't yet routed to fortrabbit. Only domains routed to fortrabbit receive TLS certificates. Check the [domain settings](/1.platform/10.objects/10.domain.md) in the dashboard to verify routing.
+Search the templates, the CSS and the database content for `http://` and change the URLs to `https://`. In a CMS, check the site URL setting first, see the [Craft CMS domain setup](/2.guides/3.craft-cms/20.domain-setup.md) for an example.
 
-CAA DNS records can also cause certificate provisioning issues if they restrict certificate issuance. See [HTTPS](/1.platform/13.domains/06.https.md) for details on DNS configuration.
+## Redirect HTTP to HTTPS
 
-## The browser shows a mixed content warning
+Send all requests to HTTPS with a [redirect in .htaccess](/3.dev/21.htaccess/02.redirects.md).
 
-When the certificate is installed but you see an error like this, the page contains insecure resources:
+## Certificate verify failed in PHP
 
-> Mixed Content: The page at '{{domain}}' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint '{{domain}}'. This request has been blocked; the content must be served over HTTPS.
-
-The issue is that your website requests external resources via http rather than https. This can be CSS files, fonts, images, or AJAX calls. Check your source code for all `http://` requests and replace them.
-
-You have two options: use `https://` explicitly, or omit the protocol entirely with `//`, which uses the same scheme as the current page. The latter approach is especially useful for code that runs in different environments, such as when your local development machine doesn't support TLS.
-
-## Solve SSL verification errors
-
-When your application fails to verify SSL certificates with errors like the following, you need to configure the CA certificate path:
-
-```raw
-error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
-```
-
-You need to set the `capath` as well. Assuming you are using PHP streams, it would look like this:
-
-```php
-$context = stream_context_create();
-stream_context_set_option($context, 'ssl', 'verify_peer', true);
-stream_context_set_option($context, 'ssl', 'capath', '/etc/ssl/certs'); # <<< that's the one
-stream_context_set_option($context, 'ssl', 'allow_self_signed', false);
-
-$fp = stream_socket_client("thedomain.tld:443", $errno, $errstr, 5, STREAM_CLIENT_CONNECT, $context);
-# ..
-if (stream_socket_enable_crypto($fp, true, STREAM_CRYPTO_METHOD_TLS_CLIENT) === false) {
-    die("Failed to verify certificate");
-}
-#...
-```
-
-For cURL, the option `CURLOPT_CAPATH` needs to be set to `/etc/ssl/certs`.
+An error like `SSL certificate problem: unable to get local issuer certificate` or `certificate verify failed` comes from an outgoing request of the app, such as cURL or Guzzle, not from the site itself. The remote server sends an incomplete or expired certificate chain, or the app passes its own outdated CA bundle. Check the remote host with `curl -v https://remote.example.com`, and never turn off verification to get rid of the error.

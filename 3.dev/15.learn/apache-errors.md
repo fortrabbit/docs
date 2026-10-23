@@ -1,7 +1,7 @@
 ---
 created: 2026-07-01
-updated: 2026-08-05
-reviewed: 2026-07-06
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 ai: co-authored
 title: Apache error log codes
@@ -47,7 +47,7 @@ On fortrabbit, Apache talks to PHP-FPM over FastCGI (`proxy_fcgi`). The codes be
 | Code                                                                   | Meaning               | Module       | HTTP                                             |
 | ---------------------------------------------------------------------- | --------------------- | ------------ | ------------------------------------------------ |
 | [`AH01630`](#ah01630-client-denied-by-server-configuration)            | Client denied         | `authz_core` | [403](/3.dev/22.http-status-codes/others/403.md) |
-| [`AH01631`](#ah01631-user-authorization-failure)                       | Authorization failure | `authz_core` | [403](/3.dev/22.http-status-codes/others/403.md) |
+| [`AH01631`](#ah01631-user-authorization-failure)                       | Authorization failure | `authz_core` | 401                                              |
 | [`AH00128`](#ah00128-file-does-not-exist)                              | File does not exist   | `core`       | [404](/3.dev/22.http-status-codes/404.md)        |
 | [`AH00126`](#ah00126-invalid-uri-in-request)                           | Invalid URI           | `core`       | [400](/3.dev/22.http-status-codes/others/400.md) |
 | [`AH00124`](#ah00124-request-exceeded-the-limit-of-internal-redirects) | Redirect loop         | `core`       | [500](/3.dev/22.http-status-codes/500.md)        |
@@ -75,7 +75,7 @@ Check the `.htaccess` rules and any `Require` directives against the requested p
 [authz_core:error] AH01631: user jane: authorization failure for "/admin/":
 ```
 
-Credentials were accepted but the authenticated user was not allowed into the requested area, or the authorization directives for that area are incomplete. Maps to a `403` — or a `401` when `AuthzSendForbiddenOnFailure` is off.
+Credentials were accepted but the authenticated user was not allowed into the requested area, or the authorization directives for that area are incomplete. Maps to a `401` by default, so the browser asks for credentials again. With [`AuthzSendForbiddenOnFailure On`](https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#authzsendforbiddenonfailure), Apache sends a `403` instead.
 
 Review the `Require user` / `Require group` rules for the protected path and confirm the user belongs there.
 

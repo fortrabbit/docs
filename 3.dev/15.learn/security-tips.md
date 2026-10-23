@@ -1,9 +1,9 @@
 ---
-updated: 2026-07-07
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Security tips
-description: 'Protect a fortrabbit account and its apps: strong passwords, two-factor authentication, SSH key hygiene, and reviewing who has access.'
+description: 'Keep a fortrabbit account and its apps secure with strong passwords, a clean list of SSH keys and team members, and current software.'
 naviTitle: Security tips
 navigation.excerpt: 'Stay safe online'
 figure:
@@ -11,7 +11,7 @@ figure:
   text: Stay safe online.
   color: rgb(200, 80, 30)
   textColor: rgb(254, 243, 199)
-lead: 'Security tips to protect your fortrabbit account, SSH keys, and application code from unauthorized access.'
+lead: Use a password manager, share access through the team instead of logins, delete unused SSH keys, and keep secrets and software in order.
 head:
   meta:
     - name: keywords
@@ -20,24 +20,16 @@ topics:
   - security
 ---
 
-## Dashboard and passwords security
+## Account security
 
-Protect your fortrabbit account by using a strong password and regularly reviewing which SSH keys and team members have access.
+- Use a password manager or a long passphrase for the dashboard login.
+- Never share a login. Invite people to the [team](/1.platform/10.objects/04.team.md) instead, and remove them when they leave.
+- Review the [SSH keys](/1.platform/10.objects/12.ssh-key.md) of the account and delete the ones nobody uses.
 
-- The password to log in with the fortrabbit dashboard must be secure.
-  - Use a password manager or a long pass-phrase.
-  - Don't share your account password, use our collaboration features instead.
-- Rotate internal passwords via the dashboard:
-  - Object storage
-  - When team members leave
-- Go over the list of imported SSH public keys periodically and keep only those being used. See [SSH key setup](/3.dev/15.learn/01.ssh-key-setup.md) for more details.
+## Application security
 
-## PHP code security
-
-Follow established security practices to prevent common vulnerabilities in your application code and protect user data.
-
-- Make sure to follow common security guidelines — see [PHP the right way](http://www.phptherightway.com/#security).
-- Mind the [OWASP Cheat Sheets](https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series) to negate attacks before they can start.
-- Best practice is to store secrets like database passwords not with code but with App Secrets or environment variables.
-- Don't store sensitive information in plain text in the database, use ciphertext.
-- Make sure you keep your software up-to-date.
+- Keep the software up to date: framework, CMS, plugins and the [PHP version](/3.dev/20.how-to/upgrade-php.md).
+- Keep secrets in [ENV vars](/3.dev/19.env-vars/20.security.md), not in code or git.
+- Store personal data encrypted where possible, and passwords only as hashes with `password_hash()`.
+- Follow the [security chapter of PHP The Right Way](https://phptherightway.com/#security) and the [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/).
+- Never leave a [phpinfo](/3.dev/15.learn/10.php-info.md) file online.

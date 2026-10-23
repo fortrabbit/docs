@@ -1,13 +1,14 @@
 ---
 created: 2026-06-12
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 ai: co-authored
 title: Deploy PHP with a git push
-description: 'Deploy a PHP app with git push — from a local project folder to a live website. Commit, push, and the build and release run on their own.'
+description: 'Deploy a PHP app with git push, from a local project folder to a live website. Commit, push, and the build and release run on their own.'
 naviTitle: Git push deploy
 navigation.excerpt: From a local folder to a live website with git push
-lead: Deploy a PHP app with git push — this tutorial goes from a local project folder to a live website. Commit code, push it, and the deployment runs on its own.
+lead: Deploy a PHP app with git push, from a local project folder to a live website. Commit code, push it, and the deployment runs on its own.
 figure:
   emoji: 📤
   text: Push code, go live.
@@ -36,17 +37,15 @@ topics:
 
 Git push deployment means that the same `git push` that sends commits to a Git repo also updates the live PHP website. Git is not only a version control system here, but also part of deployment. New to Git? The [Git intro](/3.dev/15.learn/git-intro.md) covers what Git is, how to install it, and where to learn the basics.
 
-Git is efficient. It negotiates with the remote which commits it already has and transfers only the missing objects, compressed into a single packfile. Pushing a one-line fix to a large codebase sends a few kilobytes only. Since every push points to a commit, the deployed state is versioned and reproducible.
-
-Git itself is open source and vendor-neutral. A Git remote can live anywhere — GitHub, GitLab, Bitbucket, or a self-hosted bare repo — the protocol stays the same. fortrabbit integrates with GitHub; see [Git providers](/4.integrations/03.git-providers/01.intro.md) on how to combine it with others with custom pipelines.
+Git transfers only the changed objects, and every deployment points to a commit, so the deployed state is versioned. fortrabbit deploys from GitHub; see [Git providers](/4.integrations/03.git-providers/01.intro.md) for GitLab, Bitbucket and custom pipelines.
 
 ## From git push to live website
 
-There is no special `fortrabbit` Git remote to configure and push to — pushes go to GitHub as usual. The [fortrabbit GitHub App](/1.platform/06.deployment/02.github-app.md) listens for new commits on the branch that is connected to an [environment](/1.platform/10.objects/02.environment.md). Each push triggers a deployment pipeline:
+There is no special `fortrabbit` Git remote: pushes go to GitHub as usual. The [fortrabbit GitHub App](/1.platform/06.deployment/02.github-app.md) listens for new commits on the branch that is connected to an [environment](/1.platform/10.objects/02.environment.md). Each push triggers a deployment pipeline:
 
 1. The GitHub App gets notified about the push and pulls the latest code into a build container.
 2. The [build commands](/1.platform/06.deployment/03.build-commands.md) run, for example `composer install`.
-3. The build result is synced into the web space of the environment with rsync — which again transfers only the files that changed.
+3. The build result is synced into the web space of the environment with rsync, which transfers only the changed files.
 
 The [deployment intro](/1.platform/06.deployment/01.intro.md) covers the pipeline in more detail.
 
@@ -54,7 +53,7 @@ The [deployment intro](/1.platform/06.deployment/01.intro.md) covers the pipelin
 
 - Have [Git installed](/3.dev/15.learn/git-intro.md) on the local machine.
 - Have a [GitHub](https://github.com) account.
-- Have a PHP project — plain PHP is fine, frameworks and CMSs work too.
+- Have a PHP project: plain PHP, a framework or a CMS.
 - Have a fortrabbit account, the :ContentLink{href="/signup" text="free trial" prefix="dash"} is enough.
 
 ## Step 1: Put the project in a Git repo
@@ -74,7 +73,7 @@ Before the first commit, add a `.gitignore` file so generated files and secrets 
 .env
 ```
 
-The `vendor` folder does not belong in Git — dependencies get installed during deployment. See the [Composer article](/3.dev/15.learn/02.composer.md) for the reasoning.
+The `vendor` folder does not belong in Git, the deployment installs the dependencies. See the [Composer article](/3.dev/15.learn/02.composer.md) for the reasoning.
 
 ## Step 2: Push it to GitHub
 
@@ -89,13 +88,13 @@ This also works the other way around: when creating an app on fortrabbit, the Gi
 
 ## Step 3: Connect the repo to fortrabbit
 
-1. Sign up — or log in — with GitHub.
+1. Sign up or log in with GitHub.
 2. This installs the [fortrabbit GitHub App](/1.platform/06.deployment/02.github-app.md) on GitHub.
 3. On fortrabbit, create an [app](/1.platform/10.objects/01.app.md).
 4. Pick the repository and branch:
 
 - The Git repo maps to the app.
-- The Git branch maps to the environment — `main` for production, other branches for [staging](/3.dev/15.learn/03.staging-environments.md).
+- The Git branch maps to the environment: `main` for production, other branches for [staging](/3.dev/15.learn/03.staging-environments.md).
 
 During setup, fortrabbit inspects the repo and preconfigures the deployment: when it finds a `composer.json`, the [build commands](/1.platform/06.deployment/03.build-commands.md) will include `composer install`.
 
@@ -110,9 +109,9 @@ git push
 
 Push to deploy is the default [deployment trigger](/1.platform/06.deployment/05.trigger.md): every push to the connected branch starts a deployment automatically. Follow the progress in the [deployment logs](/1.platform/06.deployment/17.logs.md) in the dashboard, then open the app URL in the browser to see the change live.
 
-## What gets deployed — and what not
+## What gets deployed
 
-Git only moves code: PHP classes, templates, themes, CSS, JS. Uploads, the database, and other runtime data are not part of the deployment and stay untouched on the environment. Git is also a one-way street here — changes on the web space can not be pulled back into the repo. The [deployment intro](/1.platform/06.deployment/01.intro.md) explains this separation of code and content.
+Git only moves code: PHP classes, templates, themes, CSS, JS. Uploads, the database, and other runtime data are not part of the deployment and stay untouched on the environment. Git deployment only goes up: changes on the environment never flow back into the repository. The [deployment intro](/1.platform/06.deployment/01.intro.md) explains this separation of code and content.
 
 ## Where to go next
 

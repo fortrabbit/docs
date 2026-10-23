@@ -1,6 +1,7 @@
 ---
 created: 2025-01-20
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Learn
 description: 'Workflows and practices around the fortrabbit platform: git, SSH keys, Composer, staging environments, headless setups and security.'

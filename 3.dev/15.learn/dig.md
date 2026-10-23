@@ -1,6 +1,6 @@
 ---
-updated: 2026-07-07
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Dig
 description: 'Query public DNS records from the terminal with dig, to see which addresses a domain resolves to while pointing it at fortrabbit.'
@@ -10,7 +10,7 @@ figure:
   text: Query DNS records from terminal.
   color: rgb(99, 102, 241)
   textColor: rgb(224, 231, 255)
-lead: 'Query public DNS entries from the terminal using the dig command.'
+lead: dig +short example.com shows the IP a domain points to. Use dig to check DNS records from the terminal.
 head:
   meta:
     - name: keywords
@@ -20,31 +20,22 @@ topics:
   - troubleshooting
 ---
 
-The `dig` command queries public DNS records to show which IP addresses a domain name resolves to. This example shows how to look up a domain.
+## Look up DNS records with dig
+
+`dig` asks DNS for the records of a domain. Use it to check whether a domain points to fortrabbit, see [DNS troubleshooting](/1.platform/13.domains/08.dns-troubleshooting.md).
 
 ```shell
-$ dig fortrabbit.com
+# A record, short answer
+dig +short example.com
 
-; <<>> DiG 9.10.6 <<>> fortrabbit.com
-;; global options: +cmd
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44565
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+# CNAME record of a subdomain
+dig +short CNAME www.example.com
 
-;; QUESTION SECTION:
-;fortrabbit.com.            IN  A
+# Ask a public resolver instead of the local one
+dig +short www.example.com @1.1.1.1
 
-;; ANSWER SECTION:
-fortrabbit.com.      600    IN  A       52.48.51.144
-
-;; Query time: 24 msec
-;; SERVER: 192.168.178.1#53(192.168.178.1)
-;; MSG SIZE  rcvd: 59
+# IP of the environment
+dig +short {{app-env-id}}.frbit.app
 ```
 
-### Dig an IP
-
-```shell
-# This prints the IP of the app
-$ dig +short {{app-env-id}}.frbit.app
-```
+Without `+short`, dig prints the full answer with TTL and the resolver it used. macOS and most Linux distributions ship with dig. On Windows, use `nslookup example.com` or dig in WSL.

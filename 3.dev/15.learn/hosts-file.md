@@ -1,6 +1,6 @@
 ---
-updated: 2026-07-07
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Hosts file
 description: 'Test a custom domain against a fortrabbit app before moving DNS, by pointing the domain at the app in the local hosts file.'
@@ -10,7 +10,7 @@ figure:
   text: Test domains before DNS changes.
   color: rgb(6, 182, 212)
   textColor: rgb(207, 250, 254)
-lead: Test a custom domain locally before switching DNS routing by adding an entry to your hosts file.
+lead: Point a domain to the IP of a fortrabbit environment in the local hosts file to test it before switching the DNS.
 head:
   meta:
     - name: keywords
@@ -20,27 +20,26 @@ topics:
   - local-development
 ---
 
-To test a custom domain before actually routing DNS to fortrabbit, add the domain to your fortrabbit app, then modify your local hosts file to tell your local machine that the domain is served from your app on fortrabbit.
+## Test a domain before the DNS switch
 
-### hosts file location
+The hosts file maps domain names to IP addresses on one computer only. Use it to see a site on fortrabbit under its own domain before changing the DNS for everyone:
 
-The hosts file is a text file (without file type ending). It can be found here:
-
-- MacOS & Linux: `/etc/hosts`
-- Windows: `c:\windows\system32\drivers\etc\hosts`
-
-### Editing your local hosts file
-
-Your local file contains many entries: do not edit those. Just add a new line with the IP of your App and the domain you want to see routed there like so:
+1. Add the domain to the environment in the dashboard.
+2. Get the IP of the environment with [dig](/3.dev/15.learn/dig.md): `dig +short {{app-env-id}}.frbit.app`
+3. Add a line with that IP and the domain to the hosts file.
 
 ```shell
-# pattern (how it works)
-[your App's IP address] [your fully qualified domain name]
-
-# example (what it looks like)
-12.0.0.1 mydomain.com www.mydomain.com
+# IP of the environment, then the domains
+203.0.113.10 example.com www.example.com
 ```
 
-### Undo changes to your hosts file
+The hosts file has no file extension:
 
-After your domain has been moved/propagated be sure to remove the entry from your hosts file.
+- macOS and Linux: `/etc/hosts`, edit with `sudo`
+- Windows: `C:\Windows\System32\drivers\etc\hosts`, edit as administrator
+
+Leave the existing lines as they are. The browser shows a certificate warning: fortrabbit issues the [TLS certificate](/1.platform/13.domains/06.https.md) only once the DNS points to fortrabbit.
+
+## Remove the entry
+
+Delete the line once the DNS switch is done. The IP of an environment can change, so a forgotten entry breaks the site on that computer later.
