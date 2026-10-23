@@ -11,7 +11,6 @@ figure:
   color: rgb(245, 158, 11)
   textColor: rgb(254, 243, 199)
 lead: How to access private composer repositories during git deployment.
-draft: true
 head:
   meta:
     - name: 'keywords'
