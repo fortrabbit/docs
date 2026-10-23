@@ -1,6 +1,7 @@
 ---
 created: 2026-03-11
-reviewed: 2026-07-11
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: GitHub Actions runners
 description: 'Run CI jobs on third-party or self-hosted GitHub Actions runners and deploy to fortrabbit from the workflow — the providers compared.'
