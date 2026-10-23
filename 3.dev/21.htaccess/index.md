@@ -1,11 +1,12 @@
 ---
-reviewed: 2026-07-09
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: .htaccess overview
-description: 'Configure the Apache web server on fortrabbit with .htaccess — redirects, access control, compression, HTTP headers and troubleshooting.'
+description: 'Configure the Apache web server on fortrabbit with .htaccess: redirects, access control, compression, HTTP headers and troubleshooting.'
 naviTitle: .htaccess
 navigation.excerpt: All about .htaccess
-lead: Configure the Apache web server on fortrabbit with `.htaccess` — redirects, access control, compression, headers and more.
+lead: Configure the Apache web server on fortrabbit with `.htaccess`, for redirects, access control, compression and HTTP headers.
 navigation: false
 head:
   meta:
