@@ -1,7 +1,7 @@
 ---
 created: 2024-12-19
-updated: 2026-07-04
-reviewed: 2026-07-04
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Restore from backup
 description: 'Restore a fortrabbit environment from a backup after a broken deploy or a hack: the requirements, the steps, and what the rollback touches.'
@@ -12,7 +12,7 @@ figure:
   text: Roll back.
   color: rgb(153, 27, 27)
   textColor: rgb(254, 226, 226)
-lead: Restore your environment from a backup to recover from errors or security issues. Learn how the restore process works and what to expect.
+lead: Restore a fortrabbit environment from a backup in the dashboard after a broken update or a hack. The restore replaces files and database with the backup, and the current state is deleted.
 links:
   - title: Backup component
     route: /platform/components/backups
@@ -27,38 +27,38 @@ topics:
 
 ## Requirements
 
-To restore from a backup, the [backup component](/1.platform/09.components/05.backups.md) needs to be booked and at least one backup already needs to be present with the [environment](/1.platform/10.objects/02.environment.md) to be chosen as backup source.
+The [environment](/1.platform/10.objects/02.environment.md) needs the [backup component](/1.platform/09.components/05.backups.md) and at least one backup.
 
 ## Use cases
 
-- Something broke the site, you want to go back to a working state
-- The site has been hacked
+- An update broke the site, and it should go back to a working state
+- The site was hacked
 
 ## How to restore a backup
 
-- Visit the backups section of an environment
-- With the list of available backups choose the one you want to restore
-- Click the restore button, confirm, wait until finished
+1. Open the backups of the environment in the dashboard.
+2. Pick the backup to restore.
+3. Click restore, confirm, and wait until it is finished.
 
-The process can take a while. The time it takes depends on the size of the project. It is usually finished within a couple of minutes but can also take hours. While the backup restore is in progress, the environment will stay online for most of the time, but may have degraded performance. A short downtime is expected.
+A restore takes a few minutes for most projects, and hours for very large ones. The environment stays online for most of that time, slower than usual, with a short downtime at the switch.
 
 ## What happens during restore
 
-The chosen backup will be unpacked and prepared. Once ready, the state will be switched. The environment will serve the state of backup, the **previous state will be deleted**.
+The backup is unpacked and prepared, then the environment switches to it. **The previous state is deleted.**
 
 ## Recommendations
 
-- Back up the current state, by manual backup or by [downloading a snapshot](/3.dev/20.how-to/download-a-website.md)
-- Know about the state of the backup you are about to roll back to, see [backup files](/1.platform/25.backups/files.md)
-- Don't change anything while the backup rollback is in progress
+- Save the current state first, with a manual backup or by [downloading the website](/3.dev/20.how-to/download-a-website.md).
+- Check what the backup holds, see [backup files](/1.platform/25.backups/files.md).
+- Change nothing while the restore runs.
 
 ## No guarantees
 
-It can not be guaranteed that the backup restoration will leave the environment in a working state. It's possible that the environment returns an error after the restoration. In many cases that's a [500 error](/3.dev/22.http-status-codes/500.md), which is easy to debug, by looking at the logs.
+A restored environment can still fail, for example because a dependency or setting changed since the backup. The error is often a [500](/3.dev/22.http-status-codes/500.md), and the [logs](/1.platform/07.settings/25.logs.md) name the cause.
 
 ## Backup restore VS git deployment
 
-Mind that the backup includes the actual state of files present at the time when the backup was made. When [git deployment](/1.platform/06.deployment/01.intro.md) is used, the head of the connected branch might be ahead. So it's possible that the next git deployment will cause issues. One way to deal with that is to reset the connected Git repo to a state that matches the restored backup, but there is no general rule of thumb for that.
+The backup holds the code of the time it was made. With [Git deployment](/1.platform/06.deployment/01.intro.md), the connected branch can be ahead, and the next push deploys that newer code again. Revert the branch to match the backup when the newer code caused the problem.
 
 ## Backup excludes
 

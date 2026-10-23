@@ -1,6 +1,6 @@
 ---
 updated: 2026-10-23
-reviewed: 2026-07-04
+reviewed: 2026-10-23
 reviewer: fl
 title: Backup files
 description: 'What a fortrabbit backup archive contains — the full file system plus a database dump — and how to use it to restore a website.'
@@ -11,7 +11,7 @@ figure:
   text: Files and dumps, packed and ready.
   color: rgb(55, 65, 81)
   textColor: rgb(229, 231, 235)
-lead: What is included and excluded. How to use the files downloaded from the backup component to actually restore a website.
+lead: A fortrabbit backup is a downloadable archive with the files of the environment and, with MySQL booked, a database dump. Caches, logs, archives and Git folders are left out. Use it to restore single files, the database, or a local copy.
 links:
   - title: Backup component
     route: /platform/components/backups
@@ -23,32 +23,32 @@ topics:
   - backups
 ---
 
-The fortrabbit [backup component](/1.platform/09.components/05.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/02.environment.md) at a given time. How many backups are kept depends on the [plan](/1.platform/09.components/05.backups.md). This archive contains everything required to restore the state of that backup.
+The [backup component](/1.platform/09.components/05.backups.md) creates archives of an [environment](/1.platform/10.objects/02.environment.md), and its plan sets how many are kept. An archive holds:
 
-- Files: Everything present on the file system
-- Database: a database dump file, if [database](/1.platform/09.components/02.mysql.md) is booked
+- Files: the file system of the environment, without the [excludes](#excludes)
+- Database: a dump, when the [MySQL component](/1.platform/09.components/02.mysql.md) is booked
 
 ## Use cases
 
-- Grab a single file that was deleted
-- Restore only the database but not the files
-- Additional backups: store backups offsite for long time retention
-- Boarding a new developer: Set up a local development
-- Verifying the state of a backup before [restoring](/1.platform/25.backups/restore.md)
+- Get back a single deleted file
+- Restore the database without the files
+- Keep copies offsite for longer
+- Set up a local development environment for a new developer
+- Check a backup before [restoring](/1.platform/25.backups/restore.md) it
 
 ## Backups VS git deployment
 
-Developers using [git deployment](/1.platform/06.deployment/01.intro.md) already have access to an archive with a complete history of the code base. The fortrabbit backups also contain runtime data such as vendor folder contents and user uploads, given the nature of most PHP-based applications.
+With [Git deployment](/1.platform/06.deployment/01.intro.md), the repository holds the history of the code. A backup adds what Git does not have: the `vendor` folder, uploads and other runtime data.
 
 ## Backup file sizes
 
-The shown size of the backups is unlikely to match actual usage for MySQL size and web storage. Note that backups are compressed, while production data is not.
+The size of a backup differs from the storage and MySQL usage of the environment: backups are compressed, and the excludes are left out.
 
-The backup size shown in the dashboard likely will not match the downloaded files. Dashboard sizes use binary units (mebibyte), while most operating systems display decimal units (megabyte). Additionally, the local file system may have a different block size.
+The size in the dashboard also differs from the downloaded file. The dashboard counts in binary units (MiB), most operating systems in decimal units (MB), and file systems use different block sizes.
 
 ## Excludes
 
-Some run-time and cache files are excluded from the backups.
+Caches, logs, archives and Git folders are left out of every backup:
 
 ```raw
 # Craft
@@ -83,12 +83,12 @@ Some run-time and cache files are excluded from the backups.
 
 ## Restore from backup files
 
-While you can [restore from backup](/1.platform/25.backups/restore.md) using the dashboard, you also have the option to manually revert to a previous state by uploading the necessary files to the environment.
+Besides the [restore in the dashboard](/1.platform/25.backups/restore.md), parts of a backup can be restored by hand.
 
 ### Restore files
 
-To recover files from a backup, first ensure to have the unpacked files from the backup archive on your local machine. Then upload these files to your environment using SFTP or [rsync](/3.dev/20.how-to/rsync.md). Be sure to remove any unnecessary files from the remote environment and don't forget to include hidden files.
+Unpack the archive locally, then upload the files with [SFTP](/1.platform/05.code-access/04.sftp.md) or [rsync](/3.dev/20.how-to/rsync.md). Include hidden files such as `.htaccess`, and remove files from the environment that the backup does not have.
 
 ### Restore database
 
-The database backup file is a standard dump created by the `mysqldump` tool. Restore it by importing the data into your MySQL database. For detailed instructions, refer to our [database export/import guides](/1.platform/08.mysql/02.export-import/07.intro.md). It may be necessary to drop the old tables before importing the new data.
+The database file is a standard `mysqldump` dump. Import it like any other, see [database export and import](/1.platform/08.mysql/02.export-import/07.intro.md). Drop tables that the backup does not contain first.

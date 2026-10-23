@@ -1,12 +1,13 @@
 ---
 created: 2025-09-10
-reviewed: 2026-07-04
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: MySQL access
 description: 'All the ways to reach a fortrabbit MySQL database: terminal, GUI client over an SSH tunnel, and from application code in the environment.'
 naviTitle: Access
 navigation: false
-lead: All the ways to connect to the remote database.
+lead: Connect to a fortrabbit MySQL database from the app through ENV vars, or from a local terminal or GUI through an SSH tunnel.
 topics:
   - mysql
 ---
