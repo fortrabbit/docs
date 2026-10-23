@@ -1,13 +1,13 @@
 ---
 created: 2025-09-15
-updated: 2026-04-30
-reviewed: 2026-07-04
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Hosting settings
-description: 'Environment settings on fortrabbit: PHP version and ini values, environment variables, root path, routing, password protection and firewalls.'
+description: 'Environment settings on fortrabbit: PHP version and ini values, ENV vars, root path, routing, password protection, firewalls, logs and metrics.'
 naviTitle: Settings
 navigation: false
-lead: 'Most of what you configure on fortrabbit lives under the environment settings: the PHP version and ini values, environment variables, the root path for your app, routing rules, password protection, and the incoming and outgoing firewalls. Each environment has its own settings, so production, staging, and feature branches can diverge without breaking each other.'
+lead: 'Each fortrabbit environment has its own settings: the PHP version and ini values, ENV vars, the root path, routing, password protection, and the incoming and outgoing firewalls. Logs and metrics sit next to them. Production and staging can differ without affecting each other.'
 topics:
   - dashboard
   - security
