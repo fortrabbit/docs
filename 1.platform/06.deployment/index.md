@@ -1,12 +1,12 @@
 ---
-updated: 2026-04-30
-reviewed: 2026-07-04
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Deployment overview
-description: 'Deployment on fortrabbit is a git push: connect a GitHub repository, pick a branch per environment, run build commands and go live.'
+description: 'Deployment on fortrabbit is a Git push: connect a GitHub repository, pick a branch per environment, run build commands and go live.'
 naviTitle: Deployment
 navigation:  false
-lead: Deployment on fortrabbit is a Git push. Connect a GitHub repository through the fortrabbit GitHub app, pick a branch per environment, and every push runs your build commands, swaps the new release in, and runs any post-deploy commands. The pages below cover the moving parts in detail, from triggers and deploy hooks to cached directories and troubleshooting.
+lead: Deployment on fortrabbit is a Git push. Connect a GitHub repository with the fortrabbit GitHub App and pick a branch per environment. Every push then runs the build commands, puts the result into the storage of the environment, and runs the post deploy commands.
 topics:
   - deployment
 ---
