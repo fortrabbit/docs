@@ -3,7 +3,7 @@ updated: 2026-10-18
 reviewed: 2026-07-07
 reviewer: fl
 title: Migrate to fortrabbit
-description: 'Move an existing website to fortrabbit: what to change in the application, how to get code, database and assets across, and what to test.'
+description: 'Move an existing website to fortrabbit, with the changes the application needs and the way code, database and assets get across.'
 naviTitle: Migrate to fortrabbit
 navigation.excerpt: Website transfer to fortrabbit
 figure:
@@ -19,6 +19,12 @@ head:
 topics:
   - migration
   - deployment
+faq:
+  - question: Can I test my site on fortrabbit before switching DNS?
+    answer: Yes. Every environment has a default domain with HTTPS that works right away. Deploy the code, copy uploads and database, and test there before changing any DNS records.
+    links:
+      - title: Default domain
+        route: /platform/domains/default-domain
 ---
 
 fortrabbit has no control panel and no root shell, so some apps need settings adjusted before the move. Read [project organization](/1.platform/02.get-started/01.project-organization.md) and the install guide for the framework or CMS first. Every project is different: adjust the order to it and ask support when something does not fit.
@@ -50,6 +56,10 @@ Book a MySQL component, export the database at the old host and import the dump.
 ## 7. Switch the DNS
 
 Test the app on its default domain. Then add the domains to the environment and [point their DNS records to fortrabbit](/1.platform/13.domains/04.external-domain-setup.md). Each correctly routed domain gets a free [TLS certificate](/1.platform/13.domains/06.https.md), renewed automatically. With the lowered TTL, traffic moves within minutes. Raise the TTL again once everything runs.
+
+## Moving from the old fortrabbit platform
+
+Apps on the old fortrabbit platform move with their own guide, see [self-migration](/1.platform/01.new/8.self-migration.md).
 
 ## Moving away from fortrabbit
 

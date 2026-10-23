@@ -1,7 +1,7 @@
 ---
 created: 2024-12-20
-updated: 2026-04-30
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: How to
 description: 'Practical recipes for a deployed app: migrating a site to fortrabbit, cutting hosting costs, upgrading PHP and moving files around.'

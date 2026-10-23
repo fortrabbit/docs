@@ -1,7 +1,7 @@
 ---
 created: 2025-01-13
-updated: 2026-04-30
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: ENV vars
 description: 'Environment variables on fortrabbit: what they are, how to set them per environment, how to read them from PHP, and how to keep them safe.'

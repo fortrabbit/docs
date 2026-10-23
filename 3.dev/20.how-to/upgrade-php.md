@@ -1,16 +1,16 @@
 ---
-updated: 2026-07-07
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
-title: PHP version upgrade
-description: 'Upgrade the PHP version of a fortrabbit app safely: check the release notes, test on a second environment, then switch and watch the logs.'
+title: Upgrade the PHP version
+description: 'Upgrade the PHP version of a fortrabbit environment: update dependencies locally, test, switch the version in the dashboard, deploy.'
 naviTitle: Upgrade PHP
 navigation.excerpt: Switch to a new version with confidence
 figure:
   emoji: 🐘
   color: rgb(67, 56, 202)
   textColor: rgb(224, 231, 255)
-lead: How to safely upgrade your PHP version on fortrabbit, with testing steps to ensure your app works after the change.
+lead: Upgrade PHP locally first, update the dependencies and test, then switch the version of the environment in the dashboard and deploy. Switching back works as long as the old version is available.
 head:
   meta:
     - name: 'keywords'
@@ -18,93 +18,38 @@ head:
 topics:
   - php
   - updates
+faq:
+  - question: Can I switch back to the previous PHP version on fortrabbit?
+    answer: Yes, select it again in the PHP settings of the environment, as long as that version is still available. Retired versions can no longer be selected.
+  - question: What happens when my PHP version reaches end of life?
+    answer: It stays available as is, without security fixes, and can cost a monthly fee on top of the PHP component. When fortrabbit retires the version, environments still on it are upgraded to the next newer version.
+    links:
+      - title: Legacy PHP versions
+        route: /platform/settings/php#legacy-php-versions
+      - title: Update policies
+        route: /legal/policies/update-policies
+        property: www
 ---
 
-## PHP versions at fortrabbit
+## PHP versions on fortrabbit
 
-fortrabbit provides multiple PHP versions available for selection per environment in the dashboard, with options to disable automatic updates and manually switch versions when older versions are retired.
+Each environment runs one PHP version, set in the PHP settings in the dashboard. It applies to the environment, the deployment service and [jobs](/1.platform/09.components/07.jobs.md).
 
-- fortrabbit will provide new PHP versions some time after they became available
-- New PHP versions are available to select per environment in the dashboard
-- There are usually multiple PHP versions to choose from
-- You need to update the software you are using
-- You can opt-out of automatic PHP version updates
-- Outdated PHP versions will be removed, remaining environments will be upgraded then
+- **Latest version** keeps the environment on the newest available PHP version.
+- **A pinned version** stays as it is until fortrabbit retires it. Versions past their end of life can cost extra, see [legacy PHP versions](/1.platform/07.settings/06.php.md#legacy-php-versions).
 
-## Simple PHP version upgrade path
+New PHP versions arrive some time after their release, once the first patch release is out and the extensions are updated. See the [update policies](https://www.fortrabbit.com/legal/policies/update-policies).
 
-Update your software dependencies, change the PHP version directly in the fortrabbit dashboard, and test immediately to ensure your app works correctly—you can roll back anytime if issues occur.
+## Upgrade step by step
 
-1. Make sure the software you are using is up-to-date
-2. In the dashboard
-3. Navigate to the environment and then click on Settings > PHP version
-4. Change to a newer PHP version and hit "save"
-5. Check if your website is still working after a few minutes
-6. You can safely switch back the version if it doesn't work
+1. **Upgrade PHP locally.** How depends on the [local development environment](/4.integrations/01.local-development/01.intro.md); in DDEV, `ddev config --php-version=8.4`.
+2. **Update the dependencies.** `composer outdated` lists outdated packages, `composer why-not php 8.4` names the packages that block the new version. Update a CMS locally too, see the guides for [Craft CMS](/2.guides/3.craft-cms/12.updating.md) and [WordPress](/2.guides/6.wordpress/01.setup.md).
+3. **Test locally.** Click through the site and run the tests. Static analysis, such as PHPStan or Rector, finds deprecated functions in own code.
+4. **Switch the version on fortrabbit** and save:
 
-:BlockLink{title="Change the PHP version for {{app-env-id}}" path="/environments/{{app-env-id}}/php/php-version"}
+   :BlockLink{title="Change the PHP version for {{app-env-id}}" path="/environments/{{app-env-id}}/php/php-version"}
 
-This will update the PHP runtime on fortrabbit. You may also want to update your local development environment as well, read on.
+5. **Deploy** the updated code with [git](/1.platform/06.deployment/01.intro.md), [SFTP](/1.platform/05.code-access/04.sftp.md) or [rsync](/3.dev/20.how-to/rsync.md), and run database migrations if the software needs them.
+6. **Check** the site and the [logs](/1.platform/07.settings/25.logs.md). If it fails, switch back to the previous version and fix the problem locally.
 
-## Sophisticated PHP version upgrade path
-
-First update your local version, once that is working, deploy to fortrabbit and change the version. Here are the steps one by one:
-
-### 1 - Update your local development environment
-
-We recommend to have a local development environment, also see our [help article on that](/4.integrations/01.local-development/01.intro.md). First, make sure that your local PHP version is up-to-date. Depending on how your local development is set up, the path to upgrade is different.
-
-If you are running PHP directly on your computer, then a simple `php -v` prints out the PHP version. Beware, if you are using [MAMP](https://www.mamp.info/en) or [XAMPP](https://www.apachefriends.org/index.html), this is not the version of PHP your code runs on. With these tools you have to use their GUI to select the PHP version you want.
-
-To upgrade your local PHP on macOS, [Homebrew](https://brew.sh) is a popular package manager you can use. Homebrew also controls the PHP version used by [Laravel Valet](https://github.com/laravel/valet). When you are running a more complex setup with PHP virtualized, such as Vagrant, DDEV, Virtual Box or Docker, you have to dig in to your specific virtualization setup to see how to upgrade PHP.
-
-### 2 - Update your software dependencies
-
-Get your dependencies up-to-date:
-
-#### 2.1 - Updating with Composer
-
-Applications based on PHP frameworks like Laravel and Symfony are usually updated with [Composer](/3.dev/15.learn/02.composer.md) which keeps track of all dependencies.
-
-Issuing `composer outdated` in the Terminal will give you a list of outdated packages. Those in red can be updated easily. Those in yellow also need to be updated but might cause trouble because they are major version upgrades.
-
-You can also ask Composer why you currently can not upgrade to a PHP version:
-
-```shell
-composer why-not php 8
-```
-
-To update a dependency, simply change any required versions in your `composer.json` to a newer version and then issue a `composer update` to actually install the required updates. Keep in mind that the `composer outdated` command does not care about PHP versions. It will only tell you about available updates for your dependencies, but hopefully newer packages should support newer PHP versions as well.
-
-#### 2.2 - Updating a CMS
-
-Many Content Management Systems, like WordPress and Craft CMS come with a built in update feature. So you can simply login to the admin area of the CMS and hit a button to update.
-
-**Beware:** With fortrabbit, those changes only happen on the file system and are not reflected in Git. This is fine when you are using SFTP, otherwise read more in our [setup guide for WordPress](/2.guides/6.wordpress/01.setup.md) or [update guide for Craft CMS](/2.guides/3.craft-cms/12.updating.md).
-
-### 3 - Test it locally
-
-When you have upgraded your local PHP version as well as your projects dependencies, it's time to make sure nothing is broken. Open your browser and try out as many views and actions as you can in your local development setup. If you are running a lot of custom code you have written yourself, we recommend that you run an automated code analysis. It checks your code and finds any deprecated functions that might break.
-
-### 4 - Go live with the updated version
-
-Now, as everything is up-to-date and tested in your **local** development environment, it's time to bring the updates to fortrabbit.
-
-#### 4.1 - Change the PHP version on fortrabbit
-
-Updating the PHP version for your fortrabbit app is straightforward:
-
-1. Visit your environment in the fortrabbit dashboard
-2. Go to the PHP settings
-3. Select a newer PHP version from the drop-down menu
-4. Hit save
-
-Changes can take two minutes to be applied. You can also test this in advance. When your app is not running under the newer version of PHP, you can switch back to the previous version to troubleshoot first.
-
-:BlockLink{title="Change the PHP version for {{app-env-id}}" path="/environments/{{app-env-id}}/php/php-version"}
-
-#### 4.2 - Deploy changes
-
-Now, quickly after the new PHP version is in place, deploy your updated code from your local development, either with [Git](/1.platform/06.deployment/01.intro.md) or simply by [SFTP](/1.platform/05.code-access/04.sftp.md) or by [rsync](/3.dev/20.how-to/rsync.md).
-
-Don't forget that you might also have to run database migrations so that your database structure matches the latest code version. WordPress and Craft CMS automatically handle this in the web UI. For any other system, see their documentation on how to properly update the database.
+To try the new version without touching production, create a second environment, switch its version and deploy there first.

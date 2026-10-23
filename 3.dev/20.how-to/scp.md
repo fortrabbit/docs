@@ -1,7 +1,7 @@
 ---
 created: 2025-09-22
-updated: 2026-07-07
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Using Secure Copy
 description: 'scp copies single files between a local machine and a fortrabbit environment over SSH, with the same keys and encryption as a shell session.'
@@ -28,82 +28,44 @@ topics:
   - ssh
 ---
 
-## About SCP
+## About scp
 
-`scp` (Secure Copy Protocol) is a command-line utility for securely transferring files between a local host and a remote host over SSH. It provides the same authentication and security as SSH while enabling efficient file copying operations.
-
-- Encrypted file transfers using SSH
-- Preserves file permissions and timestamps
-- Supports recursive directory copying
-- Works with SSH key authentication
-- Available on most Unix-like systems (Linux, macOS)
+`scp` copies files between the local machine and the environment over [SSH](/1.platform/05.code-access/03.ssh.md), with the same [SSH key](/3.dev/15.learn/01.ssh-key-setup.md). Linux and macOS ship with it, Windows has it in WSL and in the built-in OpenSSH client.
 
 ::CallOut{alert}
-We suggest to use [rsync](/3.dev/20.how-to/rsync.md) instead of scp. It's more flexible with more features. It can upload directories.
+For folders and repeated uploads, use [rsync](/3.dev/20.how-to/rsync.md): it transfers only the changes.
 ::
-
-## Get ready
-
-To transfer files securely using SCP with your fortrabbit application, ensure you have each of these three prerequisites: SSH access configured on your fortrabbit account, an SSH key pair set up and registered with fortrabbit, and the SCP utility installed on your local system.
-
-1. **SSH access configured** - See [SSH access guide](/1.platform/05.code-access/03.ssh.md)
-2. **SSH key pair set up** - See [SSH key setup](/3.dev/15.learn/01.ssh-key-setup.md)
-3. **SCP installed** - Usually pre-installed on Linux/macOS, via WSL on Windows
-
-```shell
-which scp
-# If installed, it will show the path
-```
 
 :BlockLink{title="See SSH access for {{app-name}} / {{env-name}}" path="/environments/{{app-env-id}}/ssh/"}
 
 ## Examples
 
-Here are common SCP commands for uploading files to your fortrabbit application and downloading files from the remote server to your local machine:
+Paths on the environment are relative to its home folder, the project root.
 
 ```bash
-# Upload
-
-## Upload a file to the web root
+# Upload a file to the project root
 scp local-file.php {{app-env-id}}@ssh.{{region}}.frbit.app:
 
-## Upload with verbose output
-scp -v config.json {{app-env-id}}@ssh.{{region}}.frbit.app:
+# Upload several files
+scp file1.php file2.css {{app-env-id}}@ssh.{{region}}.frbit.app:
 
-## Upload multiple files at once
-scp file1.php file2.css file3.js {{app-env-id}}@ssh.{{region}}.frbit.app:
+# Download a file to the current folder
+scp {{app-env-id}}@ssh.{{region}}.frbit.app:composer.lock ./
 
-## Upload with wildcards
-scp *.php {{app-env-id}}@ssh.{{region}}.frbit.app:
-
-
-# Download
-
-## Download a file from the web root
-scp {{app-env-id}}@ssh.{{region}}.frbit.app:config.php ./
-
-## Download to a specific local path
-scp {{app-env-id}}@ssh.{{region}}.frbit.app:.env ./local-config/
-
-## Download log files (Craft CMS)
-scp -r {{app-env-id}}@ssh.{{region}}.frbit.app:storage/logs/ ./
+# Download a folder
+scp -r {{app-env-id}}@ssh.{{region}}.frbit.app:web/uploads ./
 ```
 
-### Common options
+| Option | Effect |
+| -- | -- |
+| `-r` | Copies folders recursively |
+| `-p` | Keeps modification times and permissions |
+| `-v` | Verbose output for debugging the connection |
 
-- `-r` - Recursive copy (for directories)
-- `-p` - Preserve file permissions and timestamps
-- `-v` - Verbose output for debugging
+## scp, SFTP or rsync
 
-## Comparison with other tools
-
-SCP is effective for straightforward file transfers, but comparing it to SFTP and rsync reveals key differences in features and capabilities that make each tool better suited for different scenarios and use cases with your fortrabbit applications:
-
-| Feature                 | SCP           | SFTP          | rsync         |
-| ----------------------- | ------------- | ------------- | ------------- |
-| **Security**            | SSH encrypted | SSH encrypted | SSH encrypted |
-| **Resumable transfers** | No            | Yes           | Yes           |
-| **Bandwidth limiting**  | Yes           | Limited       | Yes           |
-| **Directory sync**      | Basic         | Manual        | Advanced      |
-| **Progress indication** | Limited       | Yes           | Yes           |
-| **File comparison**     | No            | Manual        | Automatic     |
+| Tool | Use it for |
+| -- | -- |
+| scp | Single files, one command |
+| [SFTP](/1.platform/05.code-access/04.sftp.md) | Browsing and copying in a GUI client |
+| [rsync](/3.dev/20.how-to/rsync.md) | Folders, repeated syncs, only the changes |

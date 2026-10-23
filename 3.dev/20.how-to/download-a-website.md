@@ -1,7 +1,7 @@
 ---
 created: 2024-12-18
-updated: 2026-07-07
-reviewed: 2026-07-07
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: How to download a full website
 description: 'Pull a complete website off a hosting provider — code, database and uploaded files — so it can run locally or move somewhere else.'
@@ -21,55 +21,38 @@ topics:
   - migration
 ---
 
-## Get ready
+## When to download
 
-It's assumed that you have access to your hosting provider. We recommend maintaining a local development environment for your website. Development should occur locally first, and the local copy should be kept up-to-date. For more information, see our [local development article](/4.integrations/01.local-development/01.intro.md). That means, under normal situations the developer should always have a working copy of the website running locally already.
+Development happens in a [local development environment](/4.integrations/01.local-development/01.intro.md), so a working copy usually exists. A full download is needed when:
 
-## Use cases
+- a new developer joins and the old copy is gone
+- a previous developer left without handing over the project
+- the local copy is lost
+- the project gets archived or moves to another host
 
-But there are some real world scenarios why downloading a website might still be required:
+A website consists of code, dependencies, files such as uploads, and the database. Each part comes from its own place.
 
-- A new developer is joining the project
-- A previous developer has left without transferring the project
-- Your hard disk crashed
-- You have accidentally deleted your local setup somehow
-- Archiving your project before shutting it down
-- Moving away to a different hosting provider
+## Code
 
-## Downloading data directly
+After git deployments, clone the repository and run `composer install` to get the [Composer](/3.dev/15.learn/02.composer.md) dependencies. Check that the repository holds the deployed state.
 
-A hosting environment of a typical LAMP stack PHP setup consists of different parts that play together to display a functional website or application. The different parts need to be treated separately. The steps required are depending on your previous deployment workflows.
+After SFTP uploads, or when the repository may be behind, download the whole project like the files below.
 
-### Code by Git
+## Uploads and other files
 
-When you deployed using Git, you can clone the existing Git repo. Most likely your Git repo is hosted on GitHub. The benefit is that the Git repo contains all the history of the project as well. Make sure that the Git repo is an up-to-date state.
+[Git only syncs up](/1.platform/06.deployment/01.intro.md#git-only-syncs-up): uploads and other files created on the environment are not in the repository. Download them with:
 
-### Composer dependencies
+- [rsync](/3.dev/20.how-to/rsync.md), for a folder or the whole project
+- [SFTP](/1.platform/05.code-access/04.sftp.md), in a GUI client
 
-After cloning the Git repo, you might need to install the dependencies to make your local installation complete. The `composer.json` contains all the instructions. Run `composer install` locally in your root folder. See our [Composer article](/3.dev/15.learn/02.composer.md) for more details. This ensures the installed dependencies are up-to-date and match your local development environment.
+## Database
 
-### Runtime data
+Export the database and import it locally, see [database down](/1.platform/08.mysql/02.export-import/07.intro.md).
 
-Besides the code base you might have received via Git, you need to download assets and runtime data as well. This includes compiled CSS/JS files deployed through build pipelines and user uploads.
+## Backups
 
-### Assets and other files
+With the [backup component](/1.platform/09.components/05.backups.md) booked, download a backup of files and database from the dashboard, see [working with backup files](/1.platform/25.backups/files.md).
 
-Remember Git works in [one direction only here](/1.platform/06.deployment/01.intro.md#git-works-only-one-way). So you might find files, like uploads, that are not covered with the Git repo, or files in the Git repo are not up-to-date. Options on your disposal:
+## Check the copy
 
-- Login by SFTP and just download what is required - [see here](/1.platform/05.code-access/04.sftp.md)
-- Login by SSH, zip the files and serve them from a public URL - [see here](/1.platform/05.code-access/03.ssh.md)
-- Use rsync to download a folder or even the entire project - [see here](/3.dev/20.how-to/rsync.md)
-
-You can use the methods above for the whole code base when you haven't been deploying with Git before or you are unsure if the Git repo contains the latest changes.
-
-### Database backup
-
-Last but not least, you likely will need the contents of your database. Use a local MySQL client to connect to your fortrabbit database and export a dump of it. Detailed instructions over [here](/1.platform/08.mysql/01.access/01.intro.md).
-
-## Using our backups
-
-When the above is not working for you for some reason and your website is hosted with fortrabbit, you might just use our [backups](/1.platform/09.components/05.backups.md) (when booked) as a source. With that you can download the latest state from the dashboard.
-
-## Check for data consistency
-
-We highly advise you to double-check your new backup for completeness. You can run diffs on other copies. We also advise you to run your app locally and verify it with your eyes.
+Run the downloaded site locally and click through it. Compare file counts and the database size with the environment before deleting anything there.
