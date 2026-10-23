@@ -1,10 +1,11 @@
 ---
 created: 2025-12-16
-reviewed: 2026-07-09
+updated: 2026-10-23
+reviewed: 2026-10-23
 reviewer: fl
 title: Local development
 description: 'Local PHP development environments that pair well with fortrabbit — DDEV, Laravel Herd, Valet, Sail, ServBay and Laragon.'
-lead: It works on my machine. Always develop your PHP projects locally.
+lead: Develop PHP projects on your own computer, then deploy to fortrabbit.
 navigation.excerpt: Local dev options.
 navigation: false
 topics:
