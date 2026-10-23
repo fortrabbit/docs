@@ -1,5 +1,5 @@
 ---
-updated: 2026-07-04
+updated: 2026-10-23
 reviewed: 2026-07-04
 reviewer: fl
 title: Backup files
@@ -23,7 +23,7 @@ topics:
   - backups
 ---
 
-The fortrabbit [backup component](/1.platform/09.components/05.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/02.environment.md) at a given time, see [retention](/1.platform/25.backups/retention.md). This archive contains everything required to restore the state of that backup.
+The fortrabbit [backup component](/1.platform/09.components/05.backups.md) provides you with a downloadable file archive of an [environment](/1.platform/10.objects/02.environment.md) at a given time. How many backups are kept depends on the [plan](/1.platform/09.components/05.backups.md). This archive contains everything required to restore the state of that backup.
 
 - Files: Everything present on the file system
 - Database: a database dump file, if [database](/1.platform/09.components/02.mysql.md) is booked
