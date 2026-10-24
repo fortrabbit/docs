@@ -59,7 +59,7 @@ Test the app on its default domain. Then add the domains to the environment and 
 
 ## Moving from the old fortrabbit platform
 
-Apps on the old fortrabbit platform move with their own guide, see [self-migration](/1.platform/01.new/8.self-migration.md).
+Apps on the old fortrabbit platform move with their own guide, see [self-migration](/1.platform/01.new/8.migration/1.self-migration.md).
 
 ## Moving away from fortrabbit
 
