@@ -1,10 +1,10 @@
 ---
 created: 2025-06-05
-updated: 2026-07-07
-reviewed: 2026-07-07
+updated: 2026-10-24
+reviewed: 2026-10-24
 reviewer: fl
 title: Configure .user.ini
-description: 'php-fpm ignores php_value in .htaccess. Use a .user.ini file to set the PHP directives the fortrabbit dashboard does not expose.'
+description: 'Set PHP directives the fortrabbit dashboard does not expose with a .user.ini file in the root path. php_value in .htaccess does not work with PHP-FPM.'
 naviTitle: Configure .user.ini
 navigation.excerpt: Control advanced PHP settings
 figure:
@@ -12,8 +12,7 @@ figure:
   text: Fine-tune PHP settings beyond dashboard defaults.
   color: rgb(120, 53, 15)
   textColor: rgb(254, 243, 199)
-lead: How to use .user.ini files to configure PHP settings at fortrabbit
-draft: true
+lead: A .user.ini file in the root path sets PHP directives the fortrabbit dashboard does not offer, such as the timezone or session lifetimes. It works for per-directory settings only, and PHP reads changes within five minutes.
 links:
   - title: .htaccess intro
     route: /dev/htaccess/intro
@@ -24,104 +23,47 @@ links:
   - title: PHP component
     route: /platform/components/php
     property: docs
+head:
+  meta:
+    - name: keywords
+      content: '.user.ini, PHP settings, php.ini, PHP-FPM, fortrabbit'
 topics:
   - php
 ---
 
-at fortrabbit, php-fpm is used for performance and security reasons. This means that adding `php_value` directives to `.htaccess` files has no effect. You can instead use `.user.ini` files to configure PHP settings that aren't available through the fortrabbit dashboard.
+fortrabbit runs PHP with PHP-FPM, so `php_value` and `php_flag` lines in `.htaccess` have no effect. A `.user.ini` file takes their place for settings the [PHP settings](/1.platform/07.settings/06.php.md) in the dashboard do not cover.
 
-## When to use .user.ini
+## What .user.ini can change
 
-While the fortrabbit dashboard provides access to commonly needed PHP settings, there are cases where you might need `.user.ini`:
+PHP reads `.user.ini` for settings of the modes `PHP_INI_PERDIR` and `PHP_INI_USER`, see the [php.ini directives list](https://www.php.net/manual/en/ini.list.php). Examples:
 
-- Settings that cannot be changed at runtime (like `max_file_uploads`)
-- Advanced configuration options not exposed in the dashboard
-- Project-specific PHP configurations
-- Settings that need to be version-controlled
+- `date.timezone`
+- `default_charset`, `short_open_tag`
+- `session.*`, such as `session.gc_maxlifetime`
+- `display_errors`, `error_reporting`
+- `max_file_uploads`
 
-## Creating a .user.ini file
+Settings of the mode `PHP_INI_SYSTEM` are ignored, among them `opcache.*`, `apc.*` and `realpath_cache_size`. Set the values the dashboard offers there: `upload_max_filesize`, `post_max_size`, `max_execution_time`, `max_input_vars` and `output_buffering`.
 
-The `.user.ini` file should be placed in the document root or in the sub-directories where settings should be applied. Common locations:
+## Create the file
 
-- `/public/` (for Laravel, Symfony)
-- `/web/` (for Drupal, some Symfony setups)
-
-### Example .user.ini file
+Put `.user.ini` in the [root path](/1.platform/07.settings/12.root-path.md), such as `public/` for Laravel or `web/` for Craft CMS. It applies to the PHP scripts in that folder and below. Commit it to Git, so it deploys with the code.
 
 ```ini
-; Set maximum file upload size
-upload_max_filesize = 50M
-post_max_size = 50M
-
-; Configure file uploads
-max_file_uploads = 50
-
-; Set timezone
+; .user.ini
 date.timezone = "Europe/Berlin"
-
-; Session settings
-session.cookie_lifetime = 7200
 session.gc_maxlifetime = 7200
+session.cookie_lifetime = 7200
 ```
 
-## File placement and inheritance
+PHP caches the file and reads it again after up to five minutes (`user_ini.cache_ttl`), so a change does not show at once.
 
-- Settings in `.user.ini` apply to the directory where the file is located and all subdirectories
-- If multiple `.user.ini` files exist in the path hierarchy, settings are inherited and can be overridden
-- Place the file as close to where it's needed as possible for better organization
+## Memory
 
-## Security
+`memory_limit` follows the [PHP plan](/1.platform/09.components/01.php.md). A higher value in `.user.ini` does not add memory: a PHP process that uses more than the plan holds is killed, see [out of memory](/3.dev/02.performance/10.out-of-memory.md). Book a larger plan instead.
 
-- The `.user.ini` file should not be served by the web server
-- By default, files starting with a dot are not served, but ensure your web server configuration doesn't expose them
-- Never include sensitive information like database credentials in `.user.ini`
+## Check the result
 
-## Performance impact
+[phpinfo](/3.dev/15.learn/10.php-info.md) shows the active value of each setting in the "Local Value" column. A setting that keeps its old value is either of the `PHP_INI_SYSTEM` mode, or the file sits outside the root path, or the cache has not expired yet. A syntax error in the file makes PHP skip it.
 
-- `.user.ini` files are parsed on every request by default
-- Consider the performance impact when adding many settings
-- Use the dashboard settings when possible for better performance
-
-## Troubleshooting
-
-Not seeing desired results?
-
-### Settings not taking effect
-
-1. **Check file location**: Ensure the `.user.ini` file is in the correct directory
-2. **Verify syntax**: Invalid INI syntax will cause the entire file to be ignored
-3. **Check permissions**: The file should be readable by the web server
-4. **Test with phpinfo()**: Use `phpinfo()` to verify which settings are active
-
-### Memory usage
-
-You can use `.user.ini` to increase the `memory_limit` setting, but beware that we already set this to the same size as the booked [PHP plan](/1.platform/09.components/01.php.md). If you increase it further, the platform will start to randomly kill your PHP-FPM process any time it uses more memory than the booked plan. To safely get more PHP memory, book a larger plan using our dashboard.
-
-### Debugging
-
-Create a simple PHP file to check your configuration:
-
-```php
-<?php
-// Show all PHP settings
-phpinfo();
-
-// Or check specific settings
-echo "Memory limit: " . ini_get('memory_limit') . "\n";
-echo "Upload max filesize: " . ini_get('upload_max_filesize') . "\n";
-echo "Max file uploads: " . ini_get('max_file_uploads') . "\n";
-?>
-```
-
-## Best practices
-
-1. **Use dashboard first**: Always check if the setting is available in the fortrabbit dashboard before using `.user.ini`
-2. **Document your changes**: Add comments to explain why specific settings are needed
-3. **Version control**: Include `.user.ini` files in your repository for consistent deployments
-4. **Environment-specific**: Consider different settings for development vs production
-5. **Minimal configuration**: Only override settings that you actually need to change
-
-## Related
-
-- [.htaccess introduction](/3.dev/21.htaccess/01.intro.md)
-- [php.net/configuration.file.per-user](https://www.php.net/configuration.file.per-user) - Official PHP documentation
+See the [PHP docs on .user.ini files](https://www.php.net/configuration.file.per-user).
