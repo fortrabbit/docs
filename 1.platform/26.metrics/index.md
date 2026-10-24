@@ -1,0 +1,72 @@
+---
+created: 2025-09-14
+updated: 2026-10-24
+reviewed: 2026-10-23
+reviewer: fl
+ai: co-authored
+title: Metrics
+description: 'Environment metrics on fortrabbit: storage, traffic, MySQL, PHP, jobs and HTTP errors, measured by the platform and graphed in the dashboard.'
+naviTitle: Metrics
+navigation.excerpt: Charts of storage, traffic, PHP and jobs
+navigation: false
+figure:
+  emoji: 📊
+  text: Watch the numbers move.
+  color: rgb(190, 150, 50)
+  textColor: rgb(60, 45, 10)
+lead: Each environment has a metrics tab in the dashboard. It graphs storage, traffic, MySQL, PHP, jobs, and HTTP errors over time, one bar per hour or day.
+links:
+  - title: Logs
+    route: /platform/settings/logs
+  - title: Monitoring & metrics
+    route: /dev/performance/monitoring
+  - title: Out of memory
+    route: /dev/performance/out-of-memory
+  - title: Autoscaling
+    route: /platform/billing/autoscaling
+head:
+  meta:
+    - name: keywords
+      content: 'metrics, monitoring, PHP response time, PHP memory, OOM kills, fortrabbit'
+topics:
+  - monitoring
+  - performance
+---
+
+## About metrics
+
+Metrics are measured on the platform, outside the app. No code, agent, or extension is needed:
+
+- The load balancer counts requests, traffic, and status codes, and times every PHP request.
+- The containers report memory, storage, and the OPcache fill level.
+
+The platform takes a sample of each metric at short intervals. The charts group the samples into one bar per hour or day, see [samples and bars](/1.platform/26.metrics/2.samples.md). How to read a chart: [reading charts](/1.platform/26.metrics/1.charts.md).
+
+:BlockLink{title="See metrics for {{app-name}} / {{app-env-name}}" path="/environments/{{app-env-id}}/metrics"}
+
+## Available metrics
+
+| Metric            | Measures                                | Read more                                                                                               |
+| ----------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Web storage       | Used disk space                         | [Storage](/1.platform/09.components/03.storage.md#why-storage-grows)                                    |
+| Traffic           | Bytes to and from visitors              | [Traffic](/1.platform/09.components/04.traffic.md#why-traffic-grows)                                    |
+| Static requests   | Files served without PHP                | [Page weight](/3.dev/02.performance/09.page-weight.md#find-the-weight)                                  |
+| MySQL storage     | Used database space                     | [MySQL](/1.platform/09.components/02.mysql.md#why-mysql-storage-grows)                                  |
+| PHP response time | Time to answer, at the load balancer    | [PHP processes](/3.dev/02.performance/06.php-processes.md#php-processes-php-requests-php-response-time) |
+| PHP requests      | Requests that run PHP                   | [PHP processes](/3.dev/02.performance/06.php-processes.md#php-processes-vs-page-views)                  |
+| PHP memory        | Memory peak of PHP                      | [Out of memory](/3.dev/02.performance/10.out-of-memory.md#php)                                          |
+| PHP OPcache       | OPcache fill level                      | [Backend performance](/3.dev/02.performance/05.backend.md#keep-opcache-below-full)                      |
+| OOM kills         | PHP processes killed for lack of memory | [Out of memory](/3.dev/02.performance/10.out-of-memory.md#php)                                          |
+| Jobs memory       | Memory peak of workers and crons        | [Out of memory](/3.dev/02.performance/10.out-of-memory.md#jobs)                                         |
+| Jobs OOM kills    | Jobs killed for lack of memory          | [Out of memory](/3.dev/02.performance/10.out-of-memory.md#jobs)                                         |
+| Jobs processes    | Workers and crons running at once       | [Overlapping jobs](/1.platform/30.jobs/05.tuning.md#overlapping-jobs)                                   |
+| 404 errors        | Not found                               | [404 errors](/3.dev/22.http-status-codes/404.md)                                                        |
+| 500 errors        | Unhandled errors                        | [500 errors](/3.dev/22.http-status-codes/500.md)                                                        |
+| 503 errors        | PHP busy or down                        | [503 errors](/3.dev/22.http-status-codes/503.md)                                                        |
+| 504 errors        | PHP too slow                            | [504 errors](/3.dev/22.http-status-codes/504.md)                                                        |
+
+MySQL storage appears with the [MySQL component](/1.platform/09.components/02.mysql.md), the jobs metrics with the [Jobs component](/1.platform/09.components/07.jobs.md).
+
+## Metrics, logs, and APM
+
+Metrics show that something changed, and when. [Logs](/1.platform/07.settings/25.logs.md) show the single request behind it. An [APM tool](/4.integrations/04.apm/01.intro.md) traces a request through the code. Start with the metric, narrow the time frame, then read the logs for that window.
