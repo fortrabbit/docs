@@ -1,11 +1,11 @@
 ---
 created: 2025-12-11
-updated: 2026-04-30
-reviewed: 2026-07-11
+updated: 2026-10-24
+reviewed: 2026-10-24
 reviewer: fl
 title: Integrations and combinations
 description: 'Connect a fortrabbit app to the services around it: git providers, code editors, DNS, mail, monitoring, database clients and local dev tools.'
-lead: 'fortrabbit gives you a working PHP host out of the box, but most projects need more around it: a Git provider for deployments, an editor that talks to your environment over SSH, a transactional mail service, an APM tool, or a way to keep an eye on uptime. The pages below collect the integrations and combinations we test most often, grouped by what they do.'
+lead: 'Services that work with fortrabbit, grouped by job: local development, DNS and domains, Git hosting, database and SFTP clients, APM, e-mail, transactional mail, analytics, uptime monitoring, code editors and AI coding tools.'
 navigation.excerpt: Extend fortrabbit with other services and tools.
 navigation: false
 topics:
