@@ -7,7 +7,7 @@ description: 'The components an environment is built from — PHP, MySQL, storag
 naviTitle: Components
 navigation.excerpt: Building blocks of environments
 navigation: false
-lead: Each fortrabbit environment is built from components, scaled and billed one by one: PHP, storage, traffic and backups in every environment, MySQL and jobs when needed.
+lead: 'Each fortrabbit environment is built from components, scaled and billed one by one: PHP, storage, traffic and backups in every environment, MySQL and jobs when needed.'
 topics:
   - scaling
   - billing
