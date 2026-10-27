@@ -1,6 +1,6 @@
 ---
 created: 2026-08-14
-updated: 2026-10-23
+updated: 2026-10-27
 reviewed: 2026-10-23
 reviewer: fl
 title: Automation
@@ -8,7 +8,7 @@ description: 'Drive fortrabbit from code instead of the dashboard: an MCP server
 naviTitle: Automation
 navigation.excerpt: Drive the platform without the dashboard
 navigation: false
-lead: The platform can be driven from code, not only from the dashboard. An MCP server connects AI agents, a CLI covers terminals and CI jobs, agent skills carry the platform workflows, and a public API sits underneath all of it.
+lead: 'Create apps, deploy and read logs without opening the dashboard: from a terminal, a CI job or a coding agent like Claude Code. Most setups start with the frbit CLI, which also connects the agent.'
 topics:
   - automation
 ---
