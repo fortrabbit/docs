@@ -16,9 +16,6 @@ head:
   meta:
     - name: keywords
       content: 'migrate, website migration, transfer hosting, DNS, domain migration, fortrabbit'
-topics:
-  - migration
-  - deployment
 faq:
   - question: Can I test my site on fortrabbit before switching DNS?
     answer: Yes. Every environment has a default domain with HTTPS that works right away. Deploy the code, copy uploads and database, and test there before changing any DNS records.
