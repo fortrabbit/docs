@@ -43,12 +43,18 @@ fortrabbit has no control panel and no root shell, so some apps need settings ad
 
 Each guide says where the old host keeps the code, the settings, the database and the uploads:
 
-- [Laravel Forge](https://www.fortrabbit.com/migrate/from-laravel-forge), [Ploi](https://www.fortrabbit.com/migrate/from-ploi), [RunCloud](https://www.fortrabbit.com/migrate/from-runcloud), [ServerPilot](https://www.fortrabbit.com/migrate/from-serverpilot) and [Coolify](https://www.fortrabbit.com/migrate/from-coolify)
-- [Laravel Cloud](https://www.fortrabbit.com/migrate/from-laravel-cloud), [Laravel Vapor](https://www.fortrabbit.com/migrate/from-laravel-vapor) and [DigitalOcean App Platform](https://www.fortrabbit.com/migrate/from-digitalocean-app-platform)
-- [Cloudways](https://www.fortrabbit.com/migrate/from-cloudways) and [DigitalOcean Droplets](https://www.fortrabbit.com/migrate/from-digitalocean-droplets)
-- [cPanel hosting](https://www.fortrabbit.com/migrate/from-cpanel), [SiteGround](https://www.fortrabbit.com/migrate/from-siteground) and [Hostinger](https://www.fortrabbit.com/migrate/from-hostinger)
+- :ContentLink{href="/migrate/from-laravel-forge" text="Laravel Forge" prefix="www"}, :ContentLink{href="/migrate/from-ploi" text="Ploi" prefix="www"}, :ContentLink{href="/migrate/from-runcloud" text="RunCloud" prefix="www"}, :ContentLink{href="/migrate/from-serverpilot" text="ServerPilot" prefix="www"} and :ContentLink{href="/migrate/from-coolify" text="Coolify" prefix="www"}
+- :ContentLink{href="/migrate/from-laravel-cloud" text="Laravel Cloud" prefix="www"}, :ContentLink{href="/migrate/from-laravel-vapor" text="Laravel Vapor" prefix="www"} and :ContentLink{href="/migrate/from-digitalocean-app-platform" text="DigitalOcean App Platform" prefix="www"}
+- :ContentLink{href="/migrate/from-cloudways" text="Cloudways" prefix="www"} and :ContentLink{href="/migrate/from-digitalocean-droplets" text="DigitalOcean Droplets" prefix="www"}
+- :ContentLink{href="/migrate/from-cpanel" text="cPanel hosting" prefix="www"}, :ContentLink{href="/migrate/from-siteground" text="SiteGround" prefix="www"} and :ContentLink{href="/migrate/from-hostinger" text="Hostinger" prefix="www"}
 
-A coding agent connected to fortrabbit can run the whole move: ask it to follow the guide for the old host, see [agent setup](/1.platform/04.automation/01.agents.md).
+A coding agent can run the whole move. Paste this prompt, with the guide for the old host:
+
+```txt
+Read https://www.fortrabbit.com/agents.md and set up fortrabbit. Then move this site to fortrabbit, following https://www.fortrabbit.com/migrate/from-<host>
+```
+
+See :ContentLink{href="/agents" text="agent setup" prefix="www"}.
 
 ## 1. Create the app
 
