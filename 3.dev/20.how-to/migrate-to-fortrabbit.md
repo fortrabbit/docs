@@ -51,7 +51,7 @@ Each guide says where the old host keeps the code, the settings, the database an
 A coding agent can run the whole move. Paste this prompt, with the guide for the old host:
 
 ```txt
-Read https://www.fortrabbit.com/agents.md and set up fortrabbit. Then move this site to fortrabbit, following https://www.fortrabbit.com/migrate/from-<host>
+Read https://www.fortrabbit.com/agents.md and set up fortrabbit. Then move this site to fortrabbit, following https://www.fortrabbit.com/raw/migrate/from-<host>.md
 ```
 
 See :ContentLink{href="/agents" text="agent setup" prefix="www"}.
