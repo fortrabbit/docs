@@ -1,5 +1,5 @@
 ---
-updated: 2026-10-18
+updated: 2026-10-31
 reviewed: 2026-07-07
 reviewer: fl
 title: Migrate to fortrabbit
@@ -25,9 +25,30 @@ faq:
     links:
       - title: Default domain
         route: /platform/domains/default-domain
+  - question: Does fortrabbit offer a migration service?
+    answer: No. A coding agent connected to fortrabbit runs the move, following the guide for the old host and the fortrabbit agent skill. Support answers questions when something does not fit.
+    links:
+      - title: Agent setup
+        route: /platform/automation/agents
+  - question: Can a coding agent do the migration?
+    answer: Yes. Connect Claude Code, Codex, Cursor or another agent to fortrabbit, open the project folder and ask it to move the site, with a link to the guide for the old host. It needs SSH or panel access to the old host.
+    links:
+      - title: Agent skills
+        route: /platform/automation/agent-skills
 ---
 
 fortrabbit has no control panel and no root shell, so some apps need settings adjusted before the move. Read [project organization](/1.platform/02.get-started/01.project-organization.md) and the install guide for the framework or CMS first. Every project is different: adjust the order to it and ask support when something does not fit.
+
+## Guides per host
+
+Each guide says where the old host keeps the code, the settings, the database and the uploads:
+
+- [Laravel Forge](https://www.fortrabbit.com/migrate/from-laravel-forge), [Ploi](https://www.fortrabbit.com/migrate/from-ploi), [RunCloud](https://www.fortrabbit.com/migrate/from-runcloud), [ServerPilot](https://www.fortrabbit.com/migrate/from-serverpilot) and [Coolify](https://www.fortrabbit.com/migrate/from-coolify)
+- [Laravel Cloud](https://www.fortrabbit.com/migrate/from-laravel-cloud), [Laravel Vapor](https://www.fortrabbit.com/migrate/from-laravel-vapor) and [DigitalOcean App Platform](https://www.fortrabbit.com/migrate/from-digitalocean-app-platform)
+- [Cloudways](https://www.fortrabbit.com/migrate/from-cloudways) and [DigitalOcean Droplets](https://www.fortrabbit.com/migrate/from-digitalocean-droplets)
+- [cPanel hosting](https://www.fortrabbit.com/migrate/from-cpanel), [SiteGround](https://www.fortrabbit.com/migrate/from-siteground) and [Hostinger](https://www.fortrabbit.com/migrate/from-hostinger)
+
+A coding agent connected to fortrabbit can run the whole move: ask it to follow the guide for the old host, see [agent setup](/1.platform/04.automation/01.agents.md).
 
 ## 1. Create the app
 
