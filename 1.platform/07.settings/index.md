@@ -1,7 +1,7 @@
 ---
 created: 2025-09-15
 updated: 2026-10-24
-reviewed: 2026-10-23
+reviewed: 2026-10-24
 reviewer: fl
 title: Hosting settings
 description: 'Environment settings on fortrabbit: PHP version and ini values, ENV vars, root path, routing, password protection, firewalls and logs.'
