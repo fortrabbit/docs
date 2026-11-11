@@ -1,0 +1,5 @@
+title: Grav
+navigation.excerpt: Install, deploy and configure Grav CMS
+figure:
+  icon: simple-icons:grav
+  size: sm
