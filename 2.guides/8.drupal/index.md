@@ -2,7 +2,7 @@
 created: 2026-11-15
 reviewed: 2026-11-15
 reviewer: fl
-ai-author: authored
+ai: authored
 title: Drupal guides
 description: 'Install Drupal with DDEV, deploy it to fortrabbit with Git and drush deploy, and sync the database and files with the frbit CLI.'
 naviTitle: Drupal
