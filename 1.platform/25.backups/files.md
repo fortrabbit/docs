@@ -1,6 +1,6 @@
 ---
-updated: 2026-10-23
-reviewed: 2026-10-23
+updated: 2026-11-16
+reviewed: 2026-11-16
 reviewer: fl
 title: Backup files
 description: 'What a fortrabbit backup archive contains — the full file system plus a database dump — and how to use it to restore a website.'
@@ -27,6 +27,21 @@ The [backup component](/1.platform/09.components/05.backups.md) creates archives
 
 - Files: the file system of the environment, without the [excludes](#excludes)
 - Database: a dump, when the [MySQL component](/1.platform/09.components/02.mysql.md) is booked
+
+## Download
+
+Download a backup in the dashboard, or with the [frbit CLI](/1.platform/04.automation/03.cli.md):
+
+:BlockLink{title="See backups for {{app-name}} / {{app-env-name}}" path="/environments/{{app-env-id}}/backups"}
+
+```shell
+# List the backups of the environment, with their IDs
+$ frbit backups list {{app-env-id}}
+
+# Download the files, then the database dump
+$ frbit backups download <backup-id>
+$ frbit backups download <backup-id> --type database
+```
 
 ## Use cases
 

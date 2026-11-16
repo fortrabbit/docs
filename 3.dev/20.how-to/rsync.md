@@ -1,6 +1,6 @@
 ---
-updated: 2026-10-23
-reviewed: 2026-10-23
+updated: 2026-11-16
+reviewed: 2026-11-16
 reviewer: fl
 title: Sync files with rsync
 description: 'Sync files between a local machine and fortrabbit with rsync over SSH: up, down, dry runs, excludes and deleting obsolete files.'
@@ -31,6 +31,23 @@ A wrong option or a swapped source and destination can overwrite or delete files
 
 - **Next to [git deployment](/1.platform/06.deployment/01.intro.md)**: sync what git does not track, such as uploads, assets and CMS content. Add these folders to the [exclude patterns](/1.platform/06.deployment/10.exclude-patterns.md), or a deployment with the replace strategy deletes them.
 - **Instead of [SFTP](/1.platform/05.code-access/04.sftp.md)**: upload a whole project and later only the changes, in one command.
+
+## With the frbit CLI
+
+`frbit files pull` and `frbit files push` of the [frbit CLI](/1.platform/04.automation/03.cli.md) run `rsync -az` over SSH and fill in user and host. Run them from the project root:
+
+```shell
+# DOWN: fortrabbit to local folder
+$ frbit files pull web/uploads -e {{app-env-id}}
+
+# UP: local folder to fortrabbit, by app and environment name
+$ frbit files push web/uploads -e {{app-name}}/{{app-env-name}}
+
+# Preview, then sync and delete what is gone on the environment
+$ frbit files pull web/uploads -e {{app-env-id}} --dry-run --delete
+```
+
+There is one path, not a source and a destination: `web/uploads` syncs `/data/www/web/uploads` on the environment with `./web/uploads` locally. Without a path, the whole project folder syncs. `--dry-run`, `--delete` and `--exclude` are the only rsync options it passes on. A push asks to type the environment ID first. Use plain rsync for other options or for different paths on each side.
 
 ## Commands
 
