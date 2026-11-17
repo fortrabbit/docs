@@ -31,7 +31,7 @@ The [backup component](/1.platform/09.components/05.backups.md) creates archives
 
 ## Download
 
-Download a backup in the dashboard, or with the [frbit CLI](/1.platform/04.automation/03.cli.md):
+Download a backup in the dashboard, or with the [frbit CLI](/1.platform/04.automation/03.cli/01.intro.md):
 
 :BlockLink{title="See backups for {{app-name}} / {{app-env-name}}" path="/environments/{{app-env-id}}/backups"}
 

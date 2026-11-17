@@ -35,7 +35,7 @@ A wrong option or a swapped source and destination can overwrite or delete files
 
 ## With the frbit CLI
 
-`frbit files pull` and `frbit files push` of the [frbit CLI](/1.platform/04.automation/03.cli.md) run `rsync -az` over SSH and fill in user and host. Run them from the project root:
+`frbit files pull` and `frbit files push` of the [frbit CLI](/1.platform/04.automation/03.cli/01.intro.md) run `rsync -az` over SSH and fill in user and host. Run them from the project root:
 
 ```shell
 # DOWN: fortrabbit to local folder
