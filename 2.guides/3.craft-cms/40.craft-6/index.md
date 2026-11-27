@@ -24,7 +24,7 @@ topics:
 Craft CMS 6 is in beta, with a stable release planned for March 2027. Pixel & Tonic says it is not ready for production use. These guides follow the beta and change with it.
 ::
 
-## What changes from Craft 5
+## Differences to Craft 5
 
 Craft 6 is a rewrite on Laravel 13. The deploy setup follows Laravel, not Craft 5:
 
@@ -45,4 +45,4 @@ The Craft CMS [software template](/1.platform/03.concepts/05.software-templates.
 4. [Database syncing](/2.guides/3.craft-cms/40.craft-6/05.database.md)
 5. [Assets](/2.guides/3.craft-cms/40.craft-6/06.assets.md)
 
-Topics not covered here, such as performance, caching or plugins, are in the [Craft CMS 5 guides](/2.guides/3.craft-cms/index.md) for now. Moving from Craft 5 to 6? See the [Craft upgrade guide](https://craftcms.com/docs/6.x/upgrade.html).
+Performance, caching and plugins are covered for Craft 5 only so far, in the [Craft CMS 5 guides](/2.guides/3.craft-cms/index.md). Moving from Craft 5 to 6? See the [Craft upgrade guide](https://craftcms.com/docs/6.x/upgrade.html).
